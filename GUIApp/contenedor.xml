@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfContenedor xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Contenedor>
+    <Id>1</Id>
+    <CapacidadMax>2</CapacidadMax>
+  </Contenedor>
+  <Contenedor>
+    <Id>12</Id>
+    <CapacidadMax>22</CapacidadMax>
+  </Contenedor>
+  <Contenedor>
+    <Id>4</Id>
+    <CapacidadMax>2</CapacidadMax>
+  </Contenedor>
+</ArrayOfContenedor>
