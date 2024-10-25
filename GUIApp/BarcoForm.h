@@ -443,6 +443,7 @@ private: System::Void dgvBarcos_CellClick(System::Object^ sender, System::Window
 }
 private: System::Void BarcoForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	MostrarBarcos();
+	//PRUEBA GERARDO
 }
 };
 }
