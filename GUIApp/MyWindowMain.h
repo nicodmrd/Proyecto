@@ -406,12 +406,12 @@ namespace GUIApp {
 			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Enabled = false;
+			this->pictureBox1->BorderStyle = BorderStyle::FixedSingle;
+			this->pictureBox1->Enabled = true;
 			this->pictureBox1->Location = System::Drawing::Point(9, 6);
 			this->pictureBox1->Name = L"pictureBox1";
 			this->pictureBox1->Size = System::Drawing::Size(767, 771);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;
 			this->pictureBox1->TabIndex = 20;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyWindowMain::pictureBox1_Click);
@@ -635,6 +635,17 @@ namespace GUIApp {
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
+			this->pictureBox1->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyWindowMain::pictureBox1_MouseDown);
+			this->pictureBox1->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyWindowMain::pictureBox1_MouseMove);
+			this->pictureBox1->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &MyWindowMain::pictureBox1_MouseUp);
+			this->pictureBox1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyWindowMain::pictureBox1_Paint);
+
+			this->KeyPreview = true;  // Para habilitar la captura de teclas en el formulario
+			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyWindowMain::MyWindowMain_KeyDown);
+
+
+
+
 		}
 #pragma endregion
 	private: System::Void salirToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -688,7 +699,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 		MessageBox::Show("" + ex->Message);
 	}
 }
-private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+/*private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
 
 	Graphics^ g = e->Graphics;
 	Graphics^ f = e->Graphics;
@@ -711,7 +722,7 @@ private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows:
 			// Dibuja un punto de tamaño 5x5
 		}
 	}
-}
+}*/
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 
@@ -753,5 +764,72 @@ private: System::Void iniciar_proceso_Click(System::Object^ sender, System::Even
 	}
 	*/
 }
+
+private:
+	Point startPoint;  // Punto inicial del rectángulo
+	Point endPoint;    // Punto final del rectángulo
+	bool isDrawing;    // Indica si se está dibujando
+	float rotationAngle = 0; // Ángulo de rotación para el rectángulo
+
+
+private: System::Void pictureBox1_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	if (e->Button == System::Windows::Forms::MouseButtons::Left) {
+		startPoint = e->Location; // Capturar el punto inicial al hacer clic
+		isDrawing = true;         // Activar la bandera de dibujo
+	}
+}
+
+private: System::Void pictureBox1_MouseMove(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	if (isDrawing) {
+		endPoint = e->Location;   // Actualizar el punto final mientras el mouse se mueve
+		pictureBox1->Invalidate(); // Redibujar el PictureBox en cada movimiento
+	}
+}
+
+private: System::Void pictureBox1_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+	if (isDrawing) {
+		endPoint = e->Location;   // Capturar el punto final al soltar el botón
+		isDrawing = false;        // Terminar el dibujo
+		pictureBox1->Invalidate(); // Forzar el redibujo del PictureBox para mostrar el rectángulo final
+	}
+}
+
+
+private: System::Void pictureBox1_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+	if (startPoint != endPoint) {  // Solo dibuja si los puntos son diferentes
+		Graphics^ g = e->Graphics;
+		Pen^ pen = gcnew Pen(Color::Red, 4); // Color rojo y grosor de 4 píxeles
+
+		// Calcular las coordenadas del rectángulo
+		int x = Math::Min(startPoint.X, endPoint.X);
+		int y = Math::Min(startPoint.Y, endPoint.Y);
+		int width = Math::Abs(startPoint.X - endPoint.X);
+		int height = Math::Abs(startPoint.Y - endPoint.Y);
+
+		// Mover el origen de coordenadas al centro del rectángulo
+		g->TranslateTransform(x + width / 2.0f, y + height / 2.0f);
+
+		// Aplicar la rotación
+		g->RotateTransform(rotationAngle);
+
+		// Dibujar el rectángulo con el centro en el nuevo origen
+		g->DrawRectangle(pen, -width / 2, -height / 2, width, height);
+
+		// Restaurar la transformación para futuras operaciones
+		g->ResetTransform();
+	}
+}
+
+
+private: System::Void MyWindowMain_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+	if (e->KeyCode == Keys::R) {
+		rotationAngle += 15;  // Incrementar el ángulo de rotación en 15 grados
+		if (rotationAngle >= 360) {
+			rotationAngle = 0;  // Reiniciar el ángulo si alcanza los 360 grados
+		}
+		pictureBox1->Invalidate();  // Redibujar el PictureBox con la nueva rotación
+	}
+}
+
 };
 }
