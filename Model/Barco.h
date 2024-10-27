@@ -15,6 +15,7 @@ namespace Model {
         int CantCoordendas;
         Contenedor^ Contenedores;
 
+        
         void RecogerDesecho();
 
         void DescargarDesecho();

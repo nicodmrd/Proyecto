@@ -399,6 +399,7 @@ namespace GUIApp {
 			// 
 			// comboBox1
 			// 
+			this->comboBox1->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Location = System::Drawing::Point(182, 219);
 			this->comboBox1->Name = L"comboBox1";
@@ -428,21 +429,21 @@ namespace GUIApp {
 			// nuevoToolStripMenuItem
 			// 
 			this->nuevoToolStripMenuItem->Name = L"nuevoToolStripMenuItem";
-			this->nuevoToolStripMenuItem->Size = System::Drawing::Size(135, 26);
+			this->nuevoToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->nuevoToolStripMenuItem->Text = L"Nuevo";
 			this->nuevoToolStripMenuItem->Click += gcnew System::EventHandler(this, &EncargadosForm::nuevoToolStripMenuItem_Click);
 			// 
 			// módificarToolStripMenuItem
 			// 
 			this->módificarToolStripMenuItem->Name = L"módificarToolStripMenuItem";
-			this->módificarToolStripMenuItem->Size = System::Drawing::Size(135, 26);
+			this->módificarToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->módificarToolStripMenuItem->Text = L"Editar";
 			this->módificarToolStripMenuItem->Click += gcnew System::EventHandler(this, &EncargadosForm::módificarToolStripMenuItem_Click);
 			// 
 			// salirToolStripMenuItem
 			// 
 			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(135, 26);
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(224, 26);
 			this->salirToolStripMenuItem->Text = L"Salir";
 			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &EncargadosForm::salirToolStripMenuItem_Click);
 			// 
@@ -541,6 +542,7 @@ namespace GUIApp {
 				if (control->GetType() == TextBox::typeid) {
 					dynamic_cast<TextBox^>(control)->Text = "";
 				}
+				comboBox1->SelectedIndex = -1;
 			}
 			comboBox1->Items->Equals("");
 			pbEncargadoFoto->Image = nullptr;

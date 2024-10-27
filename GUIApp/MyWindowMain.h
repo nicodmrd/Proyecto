@@ -101,11 +101,11 @@ namespace GUIApp {
 	private: System::Windows::Forms::Label^ label6;
 
 
-	private: System::Windows::Forms::TextBox^ txtAreaY;
-	private: System::Windows::Forms::TextBox^ txtAreaX;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ btnGenerarArea;
+
+
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 
 
@@ -163,7 +163,8 @@ private: System::Windows::Forms::Button^ btnAumentarContenedor;
 
 
 	private: System::Windows::Forms::Button^ btnAsignarDron;
-private: System::Windows::Forms::ComboBox^ comboBox1;
+private: System::Windows::Forms::ComboBox^ cmbIdDron;
+
 private: System::Windows::Forms::Button^ btnValidarDron;
 
 
@@ -183,14 +184,17 @@ private: System::Windows::Forms::Button^ btnRecargarBateria;
 private: System::Windows::Forms::Label^ label15;
 private: System::Windows::Forms::Label^ label14;
 private: System::Windows::Forms::TextBox^ textBox3;
-private: System::Windows::Forms::ComboBox^ comboBox5;
+private: System::Windows::Forms::ComboBox^ cmbIdCamion;
+
 private: System::Windows::Forms::Button^ btnValidarCamion;
 private: System::Windows::Forms::Button^ btnRecargarCmbCamion;
 
 
 private: System::Windows::Forms::Label^ label5;
 private: System::Windows::Forms::TextBox^ textBox2;
-private: System::Windows::Forms::ComboBox^ comboBox4;
+private: System::Windows::Forms::ComboBox^ cmbIdBarco;
+
+
 private: System::Windows::Forms::Button^ btnValidarBarco;
 
 private: System::Windows::Forms::Label^ label17;
@@ -256,15 +260,15 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyWindowMain::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle11 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle12 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle13 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle14 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle15 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle16 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle17 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle18 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->archivoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -283,11 +287,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->txtAreaAncho = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->txtAreaY = (gcnew System::Windows::Forms::TextBox());
-			this->txtAreaX = (gcnew System::Windows::Forms::TextBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->btnGenerarArea = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->btnReiniciar = (gcnew System::Windows::Forms::Button());
@@ -296,19 +295,23 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->IdCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->MatriculaCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->IdBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->CapacidadCoord = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->cmbIdCamion = (gcnew System::Windows::Forms::ComboBox());
 			this->btnValidarCamion = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarCmbCamion = (gcnew System::Windows::Forms::Button());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->cmbIdBarco = (gcnew System::Windows::Forms::ComboBox());
 			this->btnValidarBarco = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarCmbBarco = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarBateria = (gcnew System::Windows::Forms::Button());
@@ -318,7 +321,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->IdDesecho = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->IdCoordX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->CoordY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->cmbIdDron = (gcnew System::Windows::Forms::ComboBox());
 			this->btnValidarDron = (gcnew System::Windows::Forms::Button());
 			this->btnAumentarContenedor = (gcnew System::Windows::Forms::Button());
 			this->btnAsignarBarcos = (gcnew System::Windows::Forms::Button());
@@ -360,10 +363,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->toolTip13 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip14 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->IdBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->CapacidadCoord = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->IdCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->MatriculaCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->menuStrip2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -385,7 +384,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			});
 			this->menuStrip2->Location = System::Drawing::Point(0, 0);
 			this->menuStrip2->Name = L"menuStrip2";
-			this->menuStrip2->Size = System::Drawing::Size(1482, 28);
+			this->menuStrip2->Size = System::Drawing::Size(1482, 30);
 			this->menuStrip2->TabIndex = 1;
 			this->menuStrip2->Text = L"menuStrip2";
 			this->menuStrip2->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyWindowMain::menuStrip1_ItemClicked);
@@ -487,16 +486,20 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// txtAreaLargo
 			// 
 			this->txtAreaLargo->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->txtAreaLargo->Enabled = false;
 			this->txtAreaLargo->Location = System::Drawing::Point(1083, 106);
 			this->txtAreaLargo->Name = L"txtAreaLargo";
+			this->txtAreaLargo->ReadOnly = true;
 			this->txtAreaLargo->Size = System::Drawing::Size(104, 22);
 			this->txtAreaLargo->TabIndex = 33;
 			// 
 			// txtAreaAncho
 			// 
 			this->txtAreaAncho->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->txtAreaAncho->Enabled = false;
 			this->txtAreaAncho->Location = System::Drawing::Point(1083, 76);
 			this->txtAreaAncho->Name = L"txtAreaAncho";
+			this->txtAreaAncho->ReadOnly = true;
 			this->txtAreaAncho->Size = System::Drawing::Size(104, 22);
 			this->txtAreaAncho->TabIndex = 32;
 			// 
@@ -519,53 +522,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->label6->Size = System::Drawing::Size(45, 16);
 			this->label6->TabIndex = 30;
 			this->label6->Text = L"Ancho";
-			// 
-			// txtAreaY
-			// 
-			this->txtAreaY->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->txtAreaY->Location = System::Drawing::Point(1313, 733);
-			this->txtAreaY->Name = L"txtAreaY";
-			this->txtAreaY->Size = System::Drawing::Size(100, 22);
-			this->txtAreaY->TabIndex = 27;
-			// 
-			// txtAreaX
-			// 
-			this->txtAreaX->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->txtAreaX->Location = System::Drawing::Point(1313, 711);
-			this->txtAreaX->Name = L"txtAreaX";
-			this->txtAreaX->Size = System::Drawing::Size(100, 22);
-			this->txtAreaX->TabIndex = 26;
-			// 
-			// label3
-			// 
-			this->label3->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(1284, 739);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(23, 16);
-			this->label3->TabIndex = 25;
-			this->label3->Text = L"Cy";
-			// 
-			// label2
-			// 
-			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(1285, 714);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(22, 16);
-			this->label2->TabIndex = 24;
-			this->label2->Text = L"Cx";
-			// 
-			// btnGenerarArea
-			// 
-			this->btnGenerarArea->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->btnGenerarArea->Location = System::Drawing::Point(1181, 717);
-			this->btnGenerarArea->Name = L"btnGenerarArea";
-			this->btnGenerarArea->Size = System::Drawing::Size(97, 38);
-			this->btnGenerarArea->TabIndex = 23;
-			this->btnGenerarArea->Text = L"Generar Área";
-			this->btnGenerarArea->UseVisualStyleBackColor = true;
-			this->btnGenerarArea->Click += gcnew System::EventHandler(this, &MyWindowMain::btnGenerarArea_Click);
 			// 
 			// label1
 			// 
@@ -601,6 +557,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->btnReiniciar->Size = System::Drawing::Size(54, 54);
 			this->btnReiniciar->TabIndex = 19;
 			this->btnReiniciar->UseVisualStyleBackColor = true;
+			this->btnReiniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnReiniciar_Click);
 			// 
 			// btnDetener
 			// 
@@ -611,6 +568,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->btnDetener->Size = System::Drawing::Size(54, 54);
 			this->btnDetener->TabIndex = 18;
 			this->btnDetener->UseVisualStyleBackColor = true;
+			this->btnDetener->Click += gcnew System::EventHandler(this, &MyWindowMain::btnDetener_Click);
 			// 
 			// btnIniciar
 			// 
@@ -647,19 +605,19 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->tabPage1->Controls->Add(this->label15);
 			this->tabPage1->Controls->Add(this->label14);
 			this->tabPage1->Controls->Add(this->textBox3);
-			this->tabPage1->Controls->Add(this->comboBox5);
+			this->tabPage1->Controls->Add(this->cmbIdCamion);
 			this->tabPage1->Controls->Add(this->btnValidarCamion);
 			this->tabPage1->Controls->Add(this->btnRecargarCmbCamion);
 			this->tabPage1->Controls->Add(this->label5);
 			this->tabPage1->Controls->Add(this->textBox2);
-			this->tabPage1->Controls->Add(this->comboBox4);
+			this->tabPage1->Controls->Add(this->cmbIdBarco);
 			this->tabPage1->Controls->Add(this->btnValidarBarco);
 			this->tabPage1->Controls->Add(this->btnRecargarCmbBarco);
 			this->tabPage1->Controls->Add(this->btnRecargarBateria);
 			this->tabPage1->Controls->Add(this->label4);
 			this->tabPage1->Controls->Add(this->textBox1);
 			this->tabPage1->Controls->Add(this->dataGridView1);
-			this->tabPage1->Controls->Add(this->comboBox1);
+			this->tabPage1->Controls->Add(this->cmbIdDron);
 			this->tabPage1->Controls->Add(this->btnValidarDron);
 			this->tabPage1->Controls->Add(this->btnAumentarContenedor);
 			this->tabPage1->Controls->Add(this->btnAsignarBarcos);
@@ -682,13 +640,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->tabPage1->Controls->Add(this->txtAreaAncho);
 			this->tabPage1->Controls->Add(this->btnDetener);
 			this->tabPage1->Controls->Add(this->btnIniciar);
-			this->tabPage1->Controls->Add(this->btnGenerarArea);
 			this->tabPage1->Controls->Add(this->label7);
-			this->tabPage1->Controls->Add(this->label2);
 			this->tabPage1->Controls->Add(this->label6);
-			this->tabPage1->Controls->Add(this->label3);
-			this->tabPage1->Controls->Add(this->txtAreaX);
-			this->tabPage1->Controls->Add(this->txtAreaY);
 			this->tabPage1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tabPage1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
@@ -702,88 +655,116 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// dataGridView3
 			// 
 			this->dataGridView3->AllowUserToAddRows = false;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle10->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle10->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle10->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle10->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle10->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle10->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
 			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->IdCamion,
 					this->MatriculaCamion
 			});
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView3->DefaultCellStyle = dataGridViewCellStyle2;
-			this->dataGridView3->Location = System::Drawing::Point(1148, 565);
+			dataGridViewCellStyle11->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle11->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle11->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			dataGridViewCellStyle11->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle11->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle11->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView3->DefaultCellStyle = dataGridViewCellStyle11;
+			this->dataGridView3->Location = System::Drawing::Point(1148, 572);
 			this->dataGridView3->Name = L"dataGridView3";
-			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView3->RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle12->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle12->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle12->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle12->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle12->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle12->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView3->RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
 			this->dataGridView3->RowHeadersVisible = false;
 			this->dataGridView3->RowHeadersWidth = 51;
 			this->dataGridView3->RowTemplate->Height = 24;
-			this->dataGridView3->Size = System::Drawing::Size(290, 96);
+			this->dataGridView3->Size = System::Drawing::Size(290, 193);
 			this->dataGridView3->TabIndex = 81;
+			// 
+			// IdCamion
+			// 
+			this->IdCamion->HeaderText = L"Id";
+			this->IdCamion->MinimumWidth = 6;
+			this->IdCamion->Name = L"IdCamion";
+			this->IdCamion->Width = 50;
+			// 
+			// MatriculaCamion
+			// 
+			this->MatriculaCamion->HeaderText = L"Matricula (POO-123)";
+			this->MatriculaCamion->MinimumWidth = 6;
+			this->MatriculaCamion->Name = L"MatriculaCamion";
+			this->MatriculaCamion->Width = 125;
 			// 
 			// dataGridView2
 			// 
 			this->dataGridView2->AllowUserToAddRows = false;
-			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle13->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle13->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle13->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle13->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle13->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle13->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
 			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->IdBarco,
 					this->CapacidadCoord
 			});
-			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView2->DefaultCellStyle = dataGridViewCellStyle5;
-			this->dataGridView2->Location = System::Drawing::Point(1148, 377);
+			dataGridViewCellStyle14->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle14->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle14->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			dataGridViewCellStyle14->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle14->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle14->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView2->DefaultCellStyle = dataGridViewCellStyle14;
+			this->dataGridView2->Location = System::Drawing::Point(1148, 373);
 			this->dataGridView2->Name = L"dataGridView2";
-			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView2->RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle15->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle15->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle15->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle15->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle15->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle15->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
 			this->dataGridView2->RowHeadersVisible = false;
 			this->dataGridView2->RowHeadersWidth = 51;
 			this->dataGridView2->RowTemplate->Height = 24;
-			this->dataGridView2->Size = System::Drawing::Size(290, 160);
+			this->dataGridView2->Size = System::Drawing::Size(290, 193);
 			this->dataGridView2->TabIndex = 80;
+			// 
+			// IdBarco
+			// 
+			this->IdBarco->HeaderText = L"Id";
+			this->IdBarco->MinimumWidth = 6;
+			this->IdBarco->Name = L"IdBarco";
+			this->IdBarco->Width = 50;
+			// 
+			// CapacidadCoord
+			// 
+			this->CapacidadCoord->HeaderText = L"Cantidad Coordenadas";
+			this->CapacidadCoord->MinimumWidth = 6;
+			this->CapacidadCoord->Name = L"CapacidadCoord";
+			this->CapacidadCoord->Width = 125;
 			// 
 			// label17
 			// 
@@ -797,8 +778,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// textBox4
 			// 
 			this->textBox4->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox4->Enabled = false;
 			this->textBox4->Location = System::Drawing::Point(1027, 736);
 			this->textBox4->Name = L"textBox4";
+			this->textBox4->ReadOnly = true;
 			this->textBox4->Size = System::Drawing::Size(100, 22);
 			this->textBox4->TabIndex = 78;
 			// 
@@ -832,18 +815,21 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// textBox3
 			// 
 			this->textBox3->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox3->Enabled = false;
 			this->textBox3->Location = System::Drawing::Point(1021, 617);
 			this->textBox3->Name = L"textBox3";
+			this->textBox3->ReadOnly = true;
 			this->textBox3->Size = System::Drawing::Size(106, 22);
 			this->textBox3->TabIndex = 74;
 			// 
-			// comboBox5
+			// cmbIdCamion
 			// 
-			this->comboBox5->FormattingEnabled = true;
-			this->comboBox5->Location = System::Drawing::Point(958, 615);
-			this->comboBox5->Name = L"comboBox5";
-			this->comboBox5->Size = System::Drawing::Size(50, 24);
-			this->comboBox5->TabIndex = 73;
+			this->cmbIdCamion->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cmbIdCamion->FormattingEnabled = true;
+			this->cmbIdCamion->Location = System::Drawing::Point(958, 615);
+			this->cmbIdCamion->Name = L"cmbIdCamion";
+			this->cmbIdCamion->Size = System::Drawing::Size(50, 24);
+			this->cmbIdCamion->TabIndex = 73;
 			// 
 			// btnValidarCamion
 			// 
@@ -877,18 +863,21 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// textBox2
 			// 
 			this->textBox2->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox2->Enabled = false;
 			this->textBox2->Location = System::Drawing::Point(1021, 513);
 			this->textBox2->Name = L"textBox2";
+			this->textBox2->ReadOnly = true;
 			this->textBox2->Size = System::Drawing::Size(106, 22);
 			this->textBox2->TabIndex = 67;
 			// 
-			// comboBox4
+			// cmbIdBarco
 			// 
-			this->comboBox4->FormattingEnabled = true;
-			this->comboBox4->Location = System::Drawing::Point(956, 513);
-			this->comboBox4->Name = L"comboBox4";
-			this->comboBox4->Size = System::Drawing::Size(50, 24);
-			this->comboBox4->TabIndex = 66;
+			this->cmbIdBarco->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cmbIdBarco->FormattingEnabled = true;
+			this->cmbIdBarco->Location = System::Drawing::Point(956, 513);
+			this->cmbIdBarco->Name = L"cmbIdBarco";
+			this->cmbIdBarco->Size = System::Drawing::Size(50, 24);
+			this->cmbIdBarco->TabIndex = 66;
 			// 
 			// btnValidarBarco
 			// 
@@ -932,48 +921,50 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// textBox1
 			// 
 			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox1->Enabled = false;
 			this->textBox1->Location = System::Drawing::Point(1020, 412);
 			this->textBox1->Name = L"textBox1";
+			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(106, 22);
 			this->textBox1->TabIndex = 59;
 			// 
 			// dataGridView1
 			// 
 			this->dataGridView1->AllowUserToAddRows = false;
-			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle16->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle16->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle16->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle16->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle16->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle16->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->IdDesecho,
 					this->IdCoordX, this->CoordY
 			});
-			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle8;
-			this->dataGridView1->Location = System::Drawing::Point(1214, 13);
+			dataGridViewCellStyle17->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle17->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle17->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			dataGridViewCellStyle17->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle17->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle17->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle17;
+			this->dataGridView1->Location = System::Drawing::Point(1214, 16);
 			this->dataGridView1->Name = L"dataGridView1";
-			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
-			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle18->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle18->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle18->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle18->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle18->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle18->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
 			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
@@ -1001,13 +992,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->CoordY->Name = L"CoordY";
 			this->CoordY->Width = 50;
 			// 
-			// comboBox1
+			// cmbIdDron
 			// 
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(956, 410);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(50, 24);
-			this->comboBox1->TabIndex = 53;
+			this->cmbIdDron->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cmbIdDron->FormattingEnabled = true;
+			this->cmbIdDron->Location = System::Drawing::Point(956, 410);
+			this->cmbIdDron->Name = L"cmbIdDron";
+			this->cmbIdDron->Size = System::Drawing::Size(50, 24);
+			this->cmbIdDron->TabIndex = 53;
 			// 
 			// btnValidarDron
 			// 
@@ -1106,6 +1098,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// 
 			// cmb4Encargado
 			// 
+			this->cmb4Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb4Encargado->FormattingEnabled = true;
 			this->cmb4Encargado->Location = System::Drawing::Point(954, 329);
 			this->cmb4Encargado->Name = L"cmb4Encargado";
@@ -1114,6 +1107,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// 
 			// cmb3Encargado
 			// 
+			this->cmb3Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb3Encargado->FormattingEnabled = true;
 			this->cmb3Encargado->Location = System::Drawing::Point(953, 283);
 			this->cmb3Encargado->Name = L"cmb3Encargado";
@@ -1122,6 +1116,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// 
 			// cmb2Encargado
 			// 
+			this->cmb2Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb2Encargado->FormattingEnabled = true;
 			this->cmb2Encargado->Location = System::Drawing::Point(953, 237);
 			this->cmb2Encargado->Name = L"cmb2Encargado";
@@ -1130,6 +1125,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// 
 			// cmb1Encargado
 			// 
+			this->cmb1Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb1Encargado->FormattingEnabled = true;
 			this->cmb1Encargado->Location = System::Drawing::Point(953, 191);
 			this->cmb1Encargado->Name = L"cmb1Encargado";
@@ -1283,34 +1279,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			// 
 			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
-			// IdBarco
-			// 
-			this->IdBarco->HeaderText = L"Id";
-			this->IdBarco->MinimumWidth = 6;
-			this->IdBarco->Name = L"IdBarco";
-			this->IdBarco->Width = 50;
-			// 
-			// CapacidadCoord
-			// 
-			this->CapacidadCoord->HeaderText = L"Cantidad Coordenadas";
-			this->CapacidadCoord->MinimumWidth = 6;
-			this->CapacidadCoord->Name = L"CapacidadCoord";
-			this->CapacidadCoord->Width = 125;
-			// 
-			// IdCamion
-			// 
-			this->IdCamion->HeaderText = L"Id";
-			this->IdCamion->MinimumWidth = 6;
-			this->IdCamion->Name = L"IdCamion";
-			this->IdCamion->Width = 50;
-			// 
-			// MatriculaCamion
-			// 
-			this->MatriculaCamion->HeaderText = L"Matricula (POO-123)";
-			this->MatriculaCamion->MinimumWidth = 6;
-			this->MatriculaCamion->Name = L"MatriculaCamion";
-			this->MatriculaCamion->Width = 125;
-			// 
 			// MyWindowMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -1319,6 +1287,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip2);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->IsMdiContainer = true;
 			this->KeyPreview = true;
 			this->MainMenuStrip = this->menuStrip2;
@@ -1345,6 +1314,28 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 		}
 #pragma endregion
 		//METODOS
+		void ClearControls() {
+			for each (Control ^ control in this->Controls) {
+				if (control->GetType() == TextBox::typeid) {
+					dynamic_cast<TextBox^>(control)->Text = "";
+				}
+				/*
+				if (control->GetType() == ComboBox::typeid) {
+					dynamic_cast<ComboBox^>(control)->SelectedIndex = -1; // Reiniciar el ComboBox para que no haya selección
+				}
+				*/
+				txtAreaAncho->Text = "";
+				txtAreaLargo->Text = "";
+				cmb1Encargado->SelectedIndex = -1;
+				cmb2Encargado->SelectedIndex = -1;
+				cmb3Encargado->SelectedIndex = -1;
+				cmb4Encargado->SelectedIndex = -1;
+				cmbIdDron->SelectedIndex = -1;
+				cmbIdBarco->SelectedIndex = -1;
+				cmbIdCamion->SelectedIndex = -1;
+			}
+
+		}
 
 		void CargarEncargados() {
 			cmb1Encargado->Items->Clear();
@@ -1367,6 +1358,34 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 					else {
 						cmb4Encargado->Items->Add(encargado);
 					}
+				}
+			}
+		}
+		void CargarDron(){
+			cmbIdBarco->Items->Clear();
+			List<Dron^>^ _dron = Service::QueryDron();
+
+			if (_dron != nullptr) {
+				for each (Dron ^ d in _dron) {
+					cmbIdBarco->Items->Add(d->Id);
+				}
+			}
+		}
+		void CargarIdBarco() {
+			cmbIdBarco->Items->Clear();
+			List<Barco^>^ _barcoList = Service::ConsultarBarcos();
+			if (_barcoList != nullptr) {
+				for each (Barco ^ b in _barcoList) {
+					cmbIdBarco->Items->Add(b->Id); // Agregar solo el ID del barco
+				}
+			}
+		}
+		void CargarIdCamion() {
+			cmbIdCamion->Items->Clear();
+			List<Camion^>^ _camionList = Service::ConsultarCamion();
+			if (_camionList != nullptr) {
+				for each (Camion ^ c in _camionList) {
+					cmbIdCamion->Items->Add(c->Id);
 				}
 			}
 		}
@@ -1431,20 +1450,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 
 	private: System::Void btnGenerarArea_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		if (_area == nullptr) {
-			_area = gcnew Area();
-		}
-		_area->X = Convert::ToDouble(txtAreaX->Text);
-		_area->Y = Convert::ToDouble(txtAreaY->Text);
-		_area->Ancho = Convert::ToDouble(txtAreaAncho->Text);
-		_area->Largo = Convert::ToDouble(txtAreaLargo->Text);
-		pictureBox1->Invalidate();
 	}
 	private: System::Void MyWindowMain_Load(System::Object^ sender, System::EventArgs^ e) {
 		CargarEncargados();
-
-
+		CargarDron();
+		CargarIdBarco();
+		CargarIdCamion();
 	}
+
 	private: System::Void contenedoresToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		ContenedorForm^ form = gcnew ContenedorForm();
 		form->ShowDialog(); // Mostrar el formulario de forma modal
@@ -1501,6 +1514,13 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 			if (isDrawing) {
 				endPoint = e->Location;   // Capturar el punto final al soltar el botón
 				isDrawing = false;        // Terminar el dibujo
+				// Calcular ancho y largo
+				int ancho = Math::Abs(endPoint.X - startPoint.X);
+				int largo = Math::Abs(endPoint.Y - startPoint.Y);
+
+				// Guardar las dimensiones en los TextBox
+				txtAreaAncho->Text = ancho.ToString();
+				txtAreaLargo->Text = largo.ToString();
 				pictureBox1->Invalidate(); // Forzar el redibujo del PictureBox para mostrar el rectángulo final
 			}
 		}
@@ -1586,5 +1606,31 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
 	private: System::Void btnCursor_Click(System::Object^ sender, System::EventArgs^ e) {
 		GenerarAreaPresionado = false;
 	}
-	};
+	private: System::Void btnDetener_Click(System::Object^ sender, System::EventArgs^ e) {
+		btnValidarBarco->Enabled = false;
+		btnValidarDron->Enabled = false;
+		btnValidarCamion->Enabled = false;
+		btnRecargarBateria->Enabled = false;
+		btnRecargarCmbBarco->Enabled = false;
+		btnRecargarCmbCamion->Enabled = false;
+		btnAsignarDron->Enabled = false;
+		btnAsignarBarcos->Enabled = false;
+		btnAsignarCamion->Enabled = false;
+		btnAumentarContenedor->Enabled = false;
+	}
+private: System::Void btnReiniciar_Click(System::Object^ sender, System::EventArgs^ e) {
+	ClearControls();
+	btnValidarBarco->Enabled = true;
+	btnValidarDron->Enabled = true;
+	btnValidarCamion->Enabled = true;
+	btnRecargarBateria->Enabled = true;
+	btnRecargarCmbBarco->Enabled = true;
+	btnRecargarCmbCamion->Enabled = true;
+	btnAsignarDron->Enabled = true;
+	btnAsignarBarcos->Enabled = true;
+	btnAsignarCamion->Enabled = true;
+	btnAumentarContenedor->Enabled = true;
+	
+}
+};
 }
