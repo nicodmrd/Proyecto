@@ -37,11 +37,34 @@ namespace GUIApp {
 			toolTip2 = gcnew ToolTip();
 			toolTip3 = gcnew ToolTip();
 			toolTip4 = gcnew ToolTip();
-
+			toolTip5 = gcnew ToolTip();
+			toolTip6 = gcnew ToolTip();
+			toolTip7 = gcnew ToolTip();
+			toolTip8 = gcnew ToolTip();
+			toolTip9 = gcnew ToolTip();
+			toolTip10 = gcnew ToolTip();
+			toolTip11 = gcnew ToolTip();
+			toolTip12 = gcnew ToolTip();
+			toolTip13 = gcnew ToolTip();
+			toolTip14 = gcnew ToolTip();
+			toolTip15 = gcnew ToolTip();
+			
 			toolTip1->SetToolTip(btnAreaAnalisis, "Realizar área de análisis");
 			toolTip2->SetToolTip(btnReiniciar, "Reiniciar simulación");
 			toolTip3->SetToolTip(btnDetener, "Detener simulación");
 			toolTip4->SetToolTip(btnIniciar, "Iniciar simulación");
+			toolTip5->SetToolTip(btnCursor, "Cursor");
+
+			toolTip6->SetToolTip(btnValidarDron, "Validar batería del dron");
+			toolTip7->SetToolTip(btnValidarBarco, "Validar combustible del barco");
+			toolTip8->SetToolTip(btnValidarCamion, "Validar combustible del camión");
+			toolTip9->SetToolTip(btnRecargarBateria, "Recargar batería del dron");
+			toolTip10->SetToolTip(btnRecargarCmbBarco, "Suministrar combustible al barco");
+			toolTip11->SetToolTip(btnRecargarCmbCamion, "Suministrar combustible al camión");
+			toolTip12->SetToolTip(btnAsignarDron, "Asignar dron");
+			toolTip13->SetToolTip(btnAsignarBarcos, "Asignar barco");
+			toolTip14->SetToolTip(btnAsignarCamion, "Asignar camión");
+			toolTip15->SetToolTip(btnAumentarContenedor, "Agregar un contenedor");
 		}
 
 	protected:
@@ -119,7 +142,7 @@ namespace GUIApp {
 	private: System::Windows::Forms::ToolTip^ toolTip3;
 	private: System::Windows::Forms::ToolTip^ toolTip4;
 	private: System::Windows::Forms::Button^ btnCursor;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label12;
 	private: System::Windows::Forms::Label^ label11;
@@ -132,13 +155,77 @@ namespace GUIApp {
 	private: System::Windows::Forms::ComboBox^ cmb2Encargado;
 
 	private: System::Windows::Forms::ComboBox^ cmb1Encargado;
+private: System::Windows::Forms::Button^ btnAumentarContenedor;
 
-	private: System::Windows::Forms::Button^ btnAgregarContenedor;
+
 	private: System::Windows::Forms::Button^ btnAsignarBarcos;
 	private: System::Windows::Forms::Button^ btnAsignarCamion;
 
 
 	private: System::Windows::Forms::Button^ btnAsignarDron;
+private: System::Windows::Forms::ComboBox^ comboBox1;
+private: System::Windows::Forms::Button^ btnValidarDron;
+
+
+
+private: System::Windows::Forms::DataGridView^ dataGridView1;
+
+
+
+
+private: System::Windows::Forms::Label^ label4;
+
+private: System::Windows::Forms::TextBox^ textBox1;
+private: System::Windows::Forms::Button^ btnRecargarCmbBarco;
+
+private: System::Windows::Forms::Button^ btnRecargarBateria;
+
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::TextBox^ textBox3;
+private: System::Windows::Forms::ComboBox^ comboBox5;
+private: System::Windows::Forms::Button^ btnValidarCamion;
+private: System::Windows::Forms::Button^ btnRecargarCmbCamion;
+
+
+private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::TextBox^ textBox2;
+private: System::Windows::Forms::ComboBox^ comboBox4;
+private: System::Windows::Forms::Button^ btnValidarBarco;
+
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::TextBox^ textBox4;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::DataGridView^ dataGridView2;
+private: System::Windows::Forms::DataGridView^ dataGridView3;
+
+
+
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdDesecho;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCoordX;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ CoordY;
+private: System::Windows::Forms::ToolTip^ toolTip5;
+private: System::Windows::Forms::ToolTip^ toolTip6;
+private: System::Windows::Forms::ToolTip^ toolTip7;
+private: System::Windows::Forms::ToolTip^ toolTip8;
+private: System::Windows::Forms::ToolTip^ toolTip9;
+private: System::Windows::Forms::ToolTip^ toolTip10;
+private: System::Windows::Forms::ToolTip^ toolTip11;
+private: System::Windows::Forms::ToolTip^ toolTip12;
+private: System::Windows::Forms::ToolTip^ toolTip13;
+private: System::Windows::Forms::ToolTip^ toolTip14;
+private: System::Windows::Forms::ToolTip^ toolTip15;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCamion;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ MatriculaCamion;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdBarco;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
+
+
+
+
+
+
 
 
 
@@ -169,6 +256,15 @@ namespace GUIApp {
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyWindowMain::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->archivoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -199,7 +295,32 @@ namespace GUIApp {
 			this->btnIniciar = (gcnew System::Windows::Forms::Button());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
-			this->btnAgregarContenedor = (gcnew System::Windows::Forms::Button());
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->label17 = (gcnew System::Windows::Forms::Label());
+			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->label15 = (gcnew System::Windows::Forms::Label());
+			this->label14 = (gcnew System::Windows::Forms::Label());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
+			this->btnValidarCamion = (gcnew System::Windows::Forms::Button());
+			this->btnRecargarCmbCamion = (gcnew System::Windows::Forms::Button());
+			this->label5 = (gcnew System::Windows::Forms::Label());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
+			this->btnValidarBarco = (gcnew System::Windows::Forms::Button());
+			this->btnRecargarCmbBarco = (gcnew System::Windows::Forms::Button());
+			this->btnRecargarBateria = (gcnew System::Windows::Forms::Button());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->IdDesecho = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->IdCoordX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->CoordY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->btnValidarDron = (gcnew System::Windows::Forms::Button());
+			this->btnAumentarContenedor = (gcnew System::Windows::Forms::Button());
 			this->btnAsignarBarcos = (gcnew System::Windows::Forms::Button());
 			this->btnAsignarCamion = (gcnew System::Windows::Forms::Button());
 			this->btnAsignarDron = (gcnew System::Windows::Forms::Button());
@@ -212,7 +333,6 @@ namespace GUIApp {
 			this->cmb3Encargado = (gcnew System::Windows::Forms::ComboBox());
 			this->cmb2Encargado = (gcnew System::Windows::Forms::ComboBox());
 			this->cmb1Encargado = (gcnew System::Windows::Forms::ComboBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->btnCursor = (gcnew System::Windows::Forms::Button());
 			this->btnAreaAnalisis = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
@@ -229,10 +349,28 @@ namespace GUIApp {
 			this->toolTip2 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip3 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip4 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip5 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip6 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip7 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip8 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip9 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip10 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip11 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip12 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip13 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip14 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->IdBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->CapacidadCoord = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->IdCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->MatriculaCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->menuStrip2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->desechogrid))->BeginInit();
@@ -247,7 +385,7 @@ namespace GUIApp {
 			});
 			this->menuStrip2->Location = System::Drawing::Point(0, 0);
 			this->menuStrip2->Name = L"menuStrip2";
-			this->menuStrip2->Size = System::Drawing::Size(1232, 28);
+			this->menuStrip2->Size = System::Drawing::Size(1482, 28);
 			this->menuStrip2->TabIndex = 1;
 			this->menuStrip2->Text = L"menuStrip2";
 			this->menuStrip2->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyWindowMain::menuStrip1_ItemClicked);
@@ -349,24 +487,24 @@ namespace GUIApp {
 			// txtAreaLargo
 			// 
 			this->txtAreaLargo->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->txtAreaLargo->Location = System::Drawing::Point(1008, 128);
+			this->txtAreaLargo->Location = System::Drawing::Point(1083, 106);
 			this->txtAreaLargo->Name = L"txtAreaLargo";
-			this->txtAreaLargo->Size = System::Drawing::Size(100, 22);
+			this->txtAreaLargo->Size = System::Drawing::Size(104, 22);
 			this->txtAreaLargo->TabIndex = 33;
 			// 
 			// txtAreaAncho
 			// 
 			this->txtAreaAncho->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->txtAreaAncho->Location = System::Drawing::Point(1008, 98);
+			this->txtAreaAncho->Location = System::Drawing::Point(1083, 76);
 			this->txtAreaAncho->Name = L"txtAreaAncho";
-			this->txtAreaAncho->Size = System::Drawing::Size(100, 22);
+			this->txtAreaAncho->Size = System::Drawing::Size(104, 22);
 			this->txtAreaAncho->TabIndex = 32;
 			// 
 			// label7
 			// 
 			this->label7->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(949, 131);
+			this->label7->Location = System::Drawing::Point(1020, 109);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(42, 16);
 			this->label7->TabIndex = 31;
@@ -376,7 +514,7 @@ namespace GUIApp {
 			// 
 			this->label6->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(945, 101);
+			this->label6->Location = System::Drawing::Point(1020, 79);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(45, 16);
 			this->label6->TabIndex = 30;
@@ -385,7 +523,7 @@ namespace GUIApp {
 			// txtAreaY
 			// 
 			this->txtAreaY->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->txtAreaY->Location = System::Drawing::Point(839, 128);
+			this->txtAreaY->Location = System::Drawing::Point(1313, 733);
 			this->txtAreaY->Name = L"txtAreaY";
 			this->txtAreaY->Size = System::Drawing::Size(100, 22);
 			this->txtAreaY->TabIndex = 27;
@@ -393,7 +531,7 @@ namespace GUIApp {
 			// txtAreaX
 			// 
 			this->txtAreaX->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->txtAreaX->Location = System::Drawing::Point(839, 98);
+			this->txtAreaX->Location = System::Drawing::Point(1313, 711);
 			this->txtAreaX->Name = L"txtAreaX";
 			this->txtAreaX->Size = System::Drawing::Size(100, 22);
 			this->txtAreaX->TabIndex = 26;
@@ -402,7 +540,7 @@ namespace GUIApp {
 			// 
 			this->label3->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(804, 131);
+			this->label3->Location = System::Drawing::Point(1284, 739);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(23, 16);
 			this->label3->TabIndex = 25;
@@ -412,7 +550,7 @@ namespace GUIApp {
 			// 
 			this->label2->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(804, 98);
+			this->label2->Location = System::Drawing::Point(1285, 714);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(22, 16);
 			this->label2->TabIndex = 24;
@@ -421,9 +559,9 @@ namespace GUIApp {
 			// btnGenerarArea
 			// 
 			this->btnGenerarArea->Anchor = System::Windows::Forms::AnchorStyles::Right;
-			this->btnGenerarArea->Location = System::Drawing::Point(893, 174);
+			this->btnGenerarArea->Location = System::Drawing::Point(1181, 717);
 			this->btnGenerarArea->Name = L"btnGenerarArea";
-			this->btnGenerarArea->Size = System::Drawing::Size(134, 38);
+			this->btnGenerarArea->Size = System::Drawing::Size(97, 38);
 			this->btnGenerarArea->TabIndex = 23;
 			this->btnGenerarArea->Text = L"Generar Área";
 			this->btnGenerarArea->UseVisualStyleBackColor = true;
@@ -445,7 +583,7 @@ namespace GUIApp {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->pictureBox1->Location = System::Drawing::Point(9, 6);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(767, 771);
+			this->pictureBox1->Size = System::Drawing::Size(917, 767);
 			this->pictureBox1->TabIndex = 20;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyWindowMain::pictureBox1_Click);
@@ -458,7 +596,7 @@ namespace GUIApp {
 			// 
 			this->btnReiniciar->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnReiniciar->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnReiniciar.Image")));
-			this->btnReiniciar->Location = System::Drawing::Point(934, 21);
+			this->btnReiniciar->Location = System::Drawing::Point(1133, 16);
 			this->btnReiniciar->Name = L"btnReiniciar";
 			this->btnReiniciar->Size = System::Drawing::Size(54, 54);
 			this->btnReiniciar->TabIndex = 19;
@@ -468,7 +606,7 @@ namespace GUIApp {
 			// 
 			this->btnDetener->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnDetener->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnDetener.Image")));
-			this->btnDetener->Location = System::Drawing::Point(874, 21);
+			this->btnDetener->Location = System::Drawing::Point(1073, 16);
 			this->btnDetener->Name = L"btnDetener";
 			this->btnDetener->Size = System::Drawing::Size(54, 54);
 			this->btnDetener->TabIndex = 18;
@@ -478,7 +616,7 @@ namespace GUIApp {
 			// 
 			this->btnIniciar->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnIniciar->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnIniciar.Image")));
-			this->btnIniciar->Location = System::Drawing::Point(809, 21);
+			this->btnIniciar->Location = System::Drawing::Point(1013, 15);
 			this->btnIniciar->Name = L"btnIniciar";
 			this->btnIniciar->Size = System::Drawing::Size(54, 54);
 			this->btnIniciar->TabIndex = 17;
@@ -495,13 +633,35 @@ namespace GUIApp {
 			this->tabControl1->Location = System::Drawing::Point(12, 31);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1212, 812);
+			this->tabControl1->Size = System::Drawing::Size(1462, 808);
 			this->tabControl1->TabIndex = 35;
 			// 
 			// tabPage1
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::White;
-			this->tabPage1->Controls->Add(this->btnAgregarContenedor);
+			this->tabPage1->Controls->Add(this->dataGridView3);
+			this->tabPage1->Controls->Add(this->dataGridView2);
+			this->tabPage1->Controls->Add(this->label17);
+			this->tabPage1->Controls->Add(this->textBox4);
+			this->tabPage1->Controls->Add(this->label16);
+			this->tabPage1->Controls->Add(this->label15);
+			this->tabPage1->Controls->Add(this->label14);
+			this->tabPage1->Controls->Add(this->textBox3);
+			this->tabPage1->Controls->Add(this->comboBox5);
+			this->tabPage1->Controls->Add(this->btnValidarCamion);
+			this->tabPage1->Controls->Add(this->btnRecargarCmbCamion);
+			this->tabPage1->Controls->Add(this->label5);
+			this->tabPage1->Controls->Add(this->textBox2);
+			this->tabPage1->Controls->Add(this->comboBox4);
+			this->tabPage1->Controls->Add(this->btnValidarBarco);
+			this->tabPage1->Controls->Add(this->btnRecargarCmbBarco);
+			this->tabPage1->Controls->Add(this->btnRecargarBateria);
+			this->tabPage1->Controls->Add(this->label4);
+			this->tabPage1->Controls->Add(this->textBox1);
+			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->comboBox1);
+			this->tabPage1->Controls->Add(this->btnValidarDron);
+			this->tabPage1->Controls->Add(this->btnAumentarContenedor);
 			this->tabPage1->Controls->Add(this->btnAsignarBarcos);
 			this->tabPage1->Controls->Add(this->btnAsignarCamion);
 			this->tabPage1->Controls->Add(this->btnAsignarDron);
@@ -514,7 +674,6 @@ namespace GUIApp {
 			this->tabPage1->Controls->Add(this->cmb3Encargado);
 			this->tabPage1->Controls->Add(this->cmb2Encargado);
 			this->tabPage1->Controls->Add(this->cmb1Encargado);
-			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->btnCursor);
 			this->tabPage1->Controls->Add(this->btnAreaAnalisis);
 			this->tabPage1->Controls->Add(this->pictureBox1);
@@ -536,27 +695,347 @@ namespace GUIApp {
 			this->tabPage1->Location = System::Drawing::Point(4, 25);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(1204, 783);
+			this->tabPage1->Size = System::Drawing::Size(1454, 779);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Simulación para cada proceso";
 			// 
-			// btnAgregarContenedor
+			// dataGridView3
 			// 
-			this->btnAgregarContenedor->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->btnAgregarContenedor->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAgregarContenedor.Image")));
-			this->btnAgregarContenedor->Location = System::Drawing::Point(810, 628);
-			this->btnAgregarContenedor->Name = L"btnAgregarContenedor";
-			this->btnAgregarContenedor->Size = System::Drawing::Size(54, 54);
-			this->btnAgregarContenedor->TabIndex = 49;
-			this->btnAgregarContenedor->UseVisualStyleBackColor = true;
+			this->dataGridView3->AllowUserToAddRows = false;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView3->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+				this->IdCamion,
+					this->MatriculaCamion
+			});
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView3->DefaultCellStyle = dataGridViewCellStyle2;
+			this->dataGridView3->Location = System::Drawing::Point(1148, 565);
+			this->dataGridView3->Name = L"dataGridView3";
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView3->RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			this->dataGridView3->RowHeadersVisible = false;
+			this->dataGridView3->RowHeadersWidth = 51;
+			this->dataGridView3->RowTemplate->Height = 24;
+			this->dataGridView3->Size = System::Drawing::Size(290, 96);
+			this->dataGridView3->TabIndex = 81;
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->AllowUserToAddRows = false;
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
+				this->IdBarco,
+					this->CapacidadCoord
+			});
+			dataGridViewCellStyle5->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle5->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle5->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView2->DefaultCellStyle = dataGridViewCellStyle5;
+			this->dataGridView2->Location = System::Drawing::Point(1148, 377);
+			this->dataGridView2->Name = L"dataGridView2";
+			dataGridViewCellStyle6->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle6->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle6->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView2->RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			this->dataGridView2->RowHeadersVisible = false;
+			this->dataGridView2->RowHeadersWidth = 51;
+			this->dataGridView2->RowTemplate->Height = 24;
+			this->dataGridView2->Size = System::Drawing::Size(290, 160);
+			this->dataGridView2->TabIndex = 80;
+			// 
+			// label17
+			// 
+			this->label17->AutoSize = true;
+			this->label17->Location = System::Drawing::Point(1020, 717);
+			this->label17->Name = L"label17";
+			this->label17->Size = System::Drawing::Size(116, 16);
+			this->label17->TabIndex = 79;
+			this->label17->Text = L"Cantidad utilizada ";
+			// 
+			// textBox4
+			// 
+			this->textBox4->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox4->Location = System::Drawing::Point(1027, 736);
+			this->textBox4->Name = L"textBox4";
+			this->textBox4->Size = System::Drawing::Size(100, 22);
+			this->textBox4->TabIndex = 78;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Location = System::Drawing::Point(955, 698);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(80, 16);
+			this->label16->TabIndex = 77;
+			this->label16->Text = L"Contenedor ";
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Location = System::Drawing::Point(955, 362);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(122, 16);
+			this->label15->TabIndex = 76;
+			this->label15->Text = L"ASIGNAR UNIDAD";
+			// 
+			// label14
+			// 
+			this->label14->AutoSize = true;
+			this->label14->Location = System::Drawing::Point(955, 596);
+			this->label14->Name = L"label14";
+			this->label14->Size = System::Drawing::Size(124, 16);
+			this->label14->TabIndex = 75;
+			this->label14->Text = L"Camion de traslado";
+			// 
+			// textBox3
+			// 
+			this->textBox3->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox3->Location = System::Drawing::Point(1021, 617);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(106, 22);
+			this->textBox3->TabIndex = 74;
+			// 
+			// comboBox5
+			// 
+			this->comboBox5->FormattingEnabled = true;
+			this->comboBox5->Location = System::Drawing::Point(958, 615);
+			this->comboBox5->Name = L"comboBox5";
+			this->comboBox5->Size = System::Drawing::Size(50, 24);
+			this->comboBox5->TabIndex = 73;
+			// 
+			// btnValidarCamion
+			// 
+			this->btnValidarCamion->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->btnValidarCamion->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnValidarCamion.Image")));
+			this->btnValidarCamion->Location = System::Drawing::Point(957, 645);
+			this->btnValidarCamion->Name = L"btnValidarCamion";
+			this->btnValidarCamion->Size = System::Drawing::Size(50, 50);
+			this->btnValidarCamion->TabIndex = 72;
+			this->btnValidarCamion->UseVisualStyleBackColor = true;
+			// 
+			// btnRecargarCmbCamion
+			// 
+			this->btnRecargarCmbCamion->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->btnRecargarCmbCamion->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRecargarCmbCamion.Image")));
+			this->btnRecargarCmbCamion->Location = System::Drawing::Point(1023, 645);
+			this->btnRecargarCmbCamion->Name = L"btnRecargarCmbCamion";
+			this->btnRecargarCmbCamion->Size = System::Drawing::Size(50, 50);
+			this->btnRecargarCmbCamion->TabIndex = 71;
+			this->btnRecargarCmbCamion->UseVisualStyleBackColor = true;
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Location = System::Drawing::Point(955, 494);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(106, 16);
+			this->label5->TabIndex = 68;
+			this->label5->Text = L"Barco recolector";
+			// 
+			// textBox2
+			// 
+			this->textBox2->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox2->Location = System::Drawing::Point(1021, 513);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(106, 22);
+			this->textBox2->TabIndex = 67;
+			// 
+			// comboBox4
+			// 
+			this->comboBox4->FormattingEnabled = true;
+			this->comboBox4->Location = System::Drawing::Point(956, 513);
+			this->comboBox4->Name = L"comboBox4";
+			this->comboBox4->Size = System::Drawing::Size(50, 24);
+			this->comboBox4->TabIndex = 66;
+			// 
+			// btnValidarBarco
+			// 
+			this->btnValidarBarco->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->btnValidarBarco->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnValidarBarco.Image")));
+			this->btnValidarBarco->Location = System::Drawing::Point(956, 543);
+			this->btnValidarBarco->Name = L"btnValidarBarco";
+			this->btnValidarBarco->Size = System::Drawing::Size(50, 50);
+			this->btnValidarBarco->TabIndex = 65;
+			this->btnValidarBarco->UseVisualStyleBackColor = true;
+			// 
+			// btnRecargarCmbBarco
+			// 
+			this->btnRecargarCmbBarco->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->btnRecargarCmbBarco->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRecargarCmbBarco.Image")));
+			this->btnRecargarCmbBarco->Location = System::Drawing::Point(1021, 543);
+			this->btnRecargarCmbBarco->Name = L"btnRecargarCmbBarco";
+			this->btnRecargarCmbBarco->Size = System::Drawing::Size(50, 50);
+			this->btnRecargarCmbBarco->TabIndex = 63;
+			this->btnRecargarCmbBarco->UseVisualStyleBackColor = true;
+			// 
+			// btnRecargarBateria
+			// 
+			this->btnRecargarBateria->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->btnRecargarBateria->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRecargarBateria.Image")));
+			this->btnRecargarBateria->Location = System::Drawing::Point(1020, 440);
+			this->btnRecargarBateria->Name = L"btnRecargarBateria";
+			this->btnRecargarBateria->Size = System::Drawing::Size(50, 50);
+			this->btnRecargarBateria->TabIndex = 62;
+			this->btnRecargarBateria->UseVisualStyleBackColor = true;
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Location = System::Drawing::Point(954, 391);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(87, 16);
+			this->label4->TabIndex = 61;
+			this->label4->Text = L"Dron scanner";
+			// 
+			// textBox1
+			// 
+			this->textBox1->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->textBox1->Location = System::Drawing::Point(1020, 412);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(106, 22);
+			this->textBox1->TabIndex = 59;
+			// 
+			// dataGridView1
+			// 
+			this->dataGridView1->AllowUserToAddRows = false;
+			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle7->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->IdDesecho,
+					this->IdCoordX, this->CoordY
+			});
+			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle8;
+			this->dataGridView1->Location = System::Drawing::Point(1214, 13);
+			this->dataGridView1->Name = L"dataGridView1";
+			dataGridViewCellStyle9->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle9->BackColor = System::Drawing::SystemColors::Control;
+			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle9->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle9->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle9->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle9->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->dataGridView1->RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			this->dataGridView1->RowHeadersVisible = false;
+			this->dataGridView1->RowHeadersWidth = 51;
+			this->dataGridView1->RowTemplate->Height = 24;
+			this->dataGridView1->Size = System::Drawing::Size(224, 337);
+			this->dataGridView1->TabIndex = 58;
+			// 
+			// IdDesecho
+			// 
+			this->IdDesecho->HeaderText = L"Id";
+			this->IdDesecho->MinimumWidth = 6;
+			this->IdDesecho->Name = L"IdDesecho";
+			this->IdDesecho->Width = 50;
+			// 
+			// IdCoordX
+			// 
+			this->IdCoordX->HeaderText = L"X";
+			this->IdCoordX->MinimumWidth = 6;
+			this->IdCoordX->Name = L"IdCoordX";
+			this->IdCoordX->Width = 50;
+			// 
+			// CoordY
+			// 
+			this->CoordY->HeaderText = L"Y";
+			this->CoordY->MinimumWidth = 6;
+			this->CoordY->Name = L"CoordY";
+			this->CoordY->Width = 50;
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Location = System::Drawing::Point(956, 410);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(50, 24);
+			this->comboBox1->TabIndex = 53;
+			// 
+			// btnValidarDron
+			// 
+			this->btnValidarDron->Anchor = System::Windows::Forms::AnchorStyles::Right;
+			this->btnValidarDron->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnValidarDron.Image")));
+			this->btnValidarDron->Location = System::Drawing::Point(957, 440);
+			this->btnValidarDron->Name = L"btnValidarDron";
+			this->btnValidarDron->Size = System::Drawing::Size(50, 50);
+			this->btnValidarDron->TabIndex = 50;
+			this->btnValidarDron->UseVisualStyleBackColor = true;
+			// 
+			// btnAumentarContenedor
+			// 
+			this->btnAumentarContenedor->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			this->btnAumentarContenedor->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAumentarContenedor.Image")));
+			this->btnAumentarContenedor->Location = System::Drawing::Point(957, 717);
+			this->btnAumentarContenedor->Name = L"btnAumentarContenedor";
+			this->btnAumentarContenedor->Size = System::Drawing::Size(50, 50);
+			this->btnAumentarContenedor->TabIndex = 49;
+			this->btnAumentarContenedor->UseVisualStyleBackColor = true;
 			// 
 			// btnAsignarBarcos
 			// 
 			this->btnAsignarBarcos->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAsignarBarcos->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignarBarcos.Image")));
-			this->btnAsignarBarcos->Location = System::Drawing::Point(811, 508);
+			this->btnAsignarBarcos->Location = System::Drawing::Point(1076, 541);
 			this->btnAsignarBarcos->Name = L"btnAsignarBarcos";
-			this->btnAsignarBarcos->Size = System::Drawing::Size(54, 54);
+			this->btnAsignarBarcos->Size = System::Drawing::Size(50, 50);
 			this->btnAsignarBarcos->TabIndex = 48;
 			this->btnAsignarBarcos->UseVisualStyleBackColor = true;
 			// 
@@ -564,9 +1043,9 @@ namespace GUIApp {
 			// 
 			this->btnAsignarCamion->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAsignarCamion->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignarCamion.Image")));
-			this->btnAsignarCamion->Location = System::Drawing::Point(811, 568);
+			this->btnAsignarCamion->Location = System::Drawing::Point(1077, 645);
 			this->btnAsignarCamion->Name = L"btnAsignarCamion";
-			this->btnAsignarCamion->Size = System::Drawing::Size(54, 54);
+			this->btnAsignarCamion->Size = System::Drawing::Size(50, 50);
 			this->btnAsignarCamion->TabIndex = 47;
 			this->btnAsignarCamion->UseVisualStyleBackColor = true;
 			// 
@@ -574,25 +1053,25 @@ namespace GUIApp {
 			// 
 			this->btnAsignarDron->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAsignarDron->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignarDron.Image")));
-			this->btnAsignarDron->Location = System::Drawing::Point(811, 448);
+			this->btnAsignarDron->Location = System::Drawing::Point(1076, 440);
 			this->btnAsignarDron->Name = L"btnAsignarDron";
-			this->btnAsignarDron->Size = System::Drawing::Size(54, 54);
+			this->btnAsignarDron->Size = System::Drawing::Size(50, 50);
 			this->btnAsignarDron->TabIndex = 46;
 			this->btnAsignarDron->UseVisualStyleBackColor = true;
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(804, 226);
+			this->label13->Location = System::Drawing::Point(950, 146);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(242, 16);
+			this->label13->Size = System::Drawing::Size(234, 16);
 			this->label13->TabIndex = 45;
-			this->label13->Text = L"ENCARGADO POR PROCESO (ÁREA)";
+			this->label13->Text = L"ENCARGADO POR CADA PROCESO";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(807, 365);
+			this->label12->Location = System::Drawing::Point(950, 310);
 			this->label12->Name = L"label12";
 			this->label12->Size = System::Drawing::Size(79, 16);
 			this->label12->TabIndex = 44;
@@ -601,7 +1080,7 @@ namespace GUIApp {
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(804, 331);
+			this->label11->Location = System::Drawing::Point(950, 264);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(73, 16);
 			this->label11->TabIndex = 43;
@@ -610,7 +1089,7 @@ namespace GUIApp {
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(805, 297);
+			this->label10->Location = System::Drawing::Point(950, 218);
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(83, 16);
 			this->label10->TabIndex = 42;
@@ -619,7 +1098,7 @@ namespace GUIApp {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(804, 263);
+			this->label9->Location = System::Drawing::Point(950, 172);
 			this->label9->Name = L"label9";
 			this->label9->Size = System::Drawing::Size(61, 16);
 			this->label9->TabIndex = 41;
@@ -628,50 +1107,40 @@ namespace GUIApp {
 			// cmb4Encargado
 			// 
 			this->cmb4Encargado->FormattingEnabled = true;
-			this->cmb4Encargado->Location = System::Drawing::Point(912, 357);
+			this->cmb4Encargado->Location = System::Drawing::Point(954, 329);
 			this->cmb4Encargado->Name = L"cmb4Encargado";
-			this->cmb4Encargado->Size = System::Drawing::Size(200, 24);
+			this->cmb4Encargado->Size = System::Drawing::Size(233, 24);
 			this->cmb4Encargado->TabIndex = 40;
 			// 
 			// cmb3Encargado
 			// 
 			this->cmb3Encargado->FormattingEnabled = true;
-			this->cmb3Encargado->Location = System::Drawing::Point(912, 323);
+			this->cmb3Encargado->Location = System::Drawing::Point(953, 283);
 			this->cmb3Encargado->Name = L"cmb3Encargado";
-			this->cmb3Encargado->Size = System::Drawing::Size(200, 24);
+			this->cmb3Encargado->Size = System::Drawing::Size(234, 24);
 			this->cmb3Encargado->TabIndex = 39;
 			// 
 			// cmb2Encargado
 			// 
 			this->cmb2Encargado->FormattingEnabled = true;
-			this->cmb2Encargado->Location = System::Drawing::Point(912, 289);
+			this->cmb2Encargado->Location = System::Drawing::Point(953, 237);
 			this->cmb2Encargado->Name = L"cmb2Encargado";
-			this->cmb2Encargado->Size = System::Drawing::Size(200, 24);
+			this->cmb2Encargado->Size = System::Drawing::Size(234, 24);
 			this->cmb2Encargado->TabIndex = 38;
 			// 
 			// cmb1Encargado
 			// 
 			this->cmb1Encargado->FormattingEnabled = true;
-			this->cmb1Encargado->Location = System::Drawing::Point(912, 255);
+			this->cmb1Encargado->Location = System::Drawing::Point(953, 191);
 			this->cmb1Encargado->Name = L"cmb1Encargado";
-			this->cmb1Encargado->Size = System::Drawing::Size(200, 24);
+			this->cmb1Encargado->Size = System::Drawing::Size(234, 24);
 			this->cmb1Encargado->TabIndex = 37;
-			// 
-			// button1
-			// 
-			this->button1->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			this->button1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.Image")));
-			this->button1->Location = System::Drawing::Point(1127, 278);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(54, 54);
-			this->button1->TabIndex = 36;
-			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// btnCursor
 			// 
 			this->btnCursor->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnCursor->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCursor.Image")));
-			this->btnCursor->Location = System::Drawing::Point(1054, 21);
+			this->btnCursor->Location = System::Drawing::Point(953, 15);
 			this->btnCursor->Name = L"btnCursor";
 			this->btnCursor->Size = System::Drawing::Size(54, 54);
 			this->btnCursor->TabIndex = 35;
@@ -682,7 +1151,7 @@ namespace GUIApp {
 			// 
 			this->btnAreaAnalisis->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAreaAnalisis->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAreaAnalisis.Image")));
-			this->btnAreaAnalisis->Location = System::Drawing::Point(994, 21);
+			this->btnAreaAnalisis->Location = System::Drawing::Point(953, 79);
 			this->btnAreaAnalisis->Name = L"btnAreaAnalisis";
 			this->btnAreaAnalisis->Size = System::Drawing::Size(54, 54);
 			this->btnAreaAnalisis->TabIndex = 34;
@@ -702,7 +1171,7 @@ namespace GUIApp {
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(1204, 783);
+			this->tabPage2->Size = System::Drawing::Size(1454, 779);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Simulación separador de desecho";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -814,11 +1283,39 @@ namespace GUIApp {
 			// 
 			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
+			// IdBarco
+			// 
+			this->IdBarco->HeaderText = L"Id";
+			this->IdBarco->MinimumWidth = 6;
+			this->IdBarco->Name = L"IdBarco";
+			this->IdBarco->Width = 50;
+			// 
+			// CapacidadCoord
+			// 
+			this->CapacidadCoord->HeaderText = L"Cantidad Coordenadas";
+			this->CapacidadCoord->MinimumWidth = 6;
+			this->CapacidadCoord->Name = L"CapacidadCoord";
+			this->CapacidadCoord->Width = 125;
+			// 
+			// IdCamion
+			// 
+			this->IdCamion->HeaderText = L"Id";
+			this->IdCamion->MinimumWidth = 6;
+			this->IdCamion->Name = L"IdCamion";
+			this->IdCamion->Width = 50;
+			// 
+			// MatriculaCamion
+			// 
+			this->MatriculaCamion->HeaderText = L"Matricula (POO-123)";
+			this->MatriculaCamion->MinimumWidth = 6;
+			this->MatriculaCamion->Name = L"MatriculaCamion";
+			this->MatriculaCamion->Width = 125;
+			// 
 			// MyWindowMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1232, 857);
+			this->ClientSize = System::Drawing::Size(1482, 853);
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip2);
@@ -835,6 +1332,9 @@ namespace GUIApp {
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->tabPage2->ResumeLayout(false);
 			this->tabPage2->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
