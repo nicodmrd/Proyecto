@@ -20,6 +20,21 @@ namespace Model {
         String^ Observaciones;
         array<Byte>^ Foto;
 
+        Encargado() {
+
+        }
+
+        Encargado(int id, String^ nombre, String^ apellido, String^ cargo) {
+            this->Id = id; // Asignación correcta
+            this->Nombre = nombre;
+            this->Apellido = apellido;
+            this->Cargo = cargo;
+        }
+
+        String^ ToString() override {
+            return Id + " - " + Nombre + " " + Apellido; // Formato para mostrar en el ComboBox
+        }
+
         void ObtenerDatosEncargado();
 
         void AgregarObservacion();
