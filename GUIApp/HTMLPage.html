@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Map with Route</title>
-    <style>
+    <title>Mapa de Google</title>
+	<style>
         html, body, #map {
             height: 100%;
             margin: 0;
             padding: 0;
         }
     </style>
+    <meta charset="utf-8">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqbRoP6tXUTJob1HSGLXhiMNck4LvC_4&callback=initMap" async defer></script>
     <script>
-        let map;
-        let directionsService;
-        let directionsRenderer;
-
-        function initMap() {
+		 function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -12.07488, lng: -77.155983 },
+                center: { lat: -12.07488, lng: -77.155983 }, 
                 zoom: 14,
             });
-
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
@@ -45,6 +41,8 @@
     </script>
 </head>
 <body>
-    <div id="map"></div>
+    <div id="map" style="width: 100%; height: 100vh;"></div>
 </body>
 </html>
+
+
