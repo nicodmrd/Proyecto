@@ -57,6 +57,10 @@ namespace GUIApp {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdContenedor;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadContenedor;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Button^ Ok_button;
+	private: System::Windows::Forms::Button^ Cancel_button;
+
+
 	private: System::Windows::Forms::TextBox^ txtId;
 
 	protected:	
@@ -92,6 +96,8 @@ namespace GUIApp {
 			this->CapacidadContenedor = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->txtId = (gcnew System::Windows::Forms::TextBox());
+			this->Ok_button = (gcnew System::Windows::Forms::Button());
+			this->Cancel_button = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imgContenedor))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvContenedores))->BeginInit();
 			this->SuspendLayout();
@@ -145,35 +151,33 @@ namespace GUIApp {
 			// 
 			// dgvContenedores
 			// 
-			this->dgvContenedores->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgvContenedores->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dgvContenedores->ColumnHeadersHeight = 29;
 			this->dgvContenedores->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->IdContenedor,
 					this->CapacidadContenedor
 			});
 			this->dgvContenedores->Location = System::Drawing::Point(23, 214);
 			this->dgvContenedores->Name = L"dgvContenedores";
-			this->dgvContenedores->RowHeadersWidth = 51;
+			this->dgvContenedores->RowHeadersVisible = false;
+			this->dgvContenedores->RowHeadersWidth = 60;
 			this->dgvContenedores->RowTemplate->Height = 24;
 			this->dgvContenedores->Size = System::Drawing::Size(479, 132);
 			this->dgvContenedores->TabIndex = 70;
-			//this->dgvContenedores->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ContenedorForm::dgvContenedores_CellClick);
 			this->dgvContenedores->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ContenedorForm::dgvContenedores_CellClick);
 			this->dgvContenedores->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ContenedorForm::dgvContenedores_CellContentClick);
-			// 
 			// 
 			// IdContenedor
 			// 
 			this->IdContenedor->HeaderText = L"Id";
 			this->IdContenedor->MinimumWidth = 6;
 			this->IdContenedor->Name = L"IdContenedor";
-			this->IdContenedor->Width = 50;
 			// 
 			// CapacidadContenedor
 			// 
 			this->CapacidadContenedor->HeaderText = L"Capacidad Max (kg)";
 			this->CapacidadContenedor->MinimumWidth = 6;
 			this->CapacidadContenedor->Name = L"CapacidadContenedor";
-			this->CapacidadContenedor->Width = 80;
 			// 
 			// label1
 			// 
@@ -192,11 +196,42 @@ namespace GUIApp {
 			this->txtId->Size = System::Drawing::Size(121, 22);
 			this->txtId->TabIndex = 72;
 			// 
+			// Ok_button
+			// 
+			this->Ok_button->CausesValidation = false;
+			this->Ok_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Ok_button->Location = System::Drawing::Point(81, 356);
+			this->Ok_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Ok_button->Name = L"Ok_button";
+			this->Ok_button->Size = System::Drawing::Size(115, 37);
+			this->Ok_button->TabIndex = 73;
+			this->Ok_button->Text = L"Aceptar";
+			this->Ok_button->UseVisualStyleBackColor = true;
+			this->Ok_button->Click += gcnew System::EventHandler(this, &ContenedorForm::Ok_button_Click);
+			// 
+			// Cancel_button
+			// 
+			this->Cancel_button->CausesValidation = false;
+			this->Cancel_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Cancel_button->Location = System::Drawing::Point(326, 356);
+			this->Cancel_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Cancel_button->Name = L"Cancel_button";
+			this->Cancel_button->Size = System::Drawing::Size(115, 37);
+			this->Cancel_button->TabIndex = 19;
+			this->Cancel_button->Text = L"Cancelar";
+			this->Cancel_button->UseVisualStyleBackColor = true;
+			this->Cancel_button->Click += gcnew System::EventHandler(this, &ContenedorForm::Cancel_button_Click);
+			// 
 			// ContenedorForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(521, 371);
+			this->ClientSize = System::Drawing::Size(521, 404);
+			this->ControlBox = false;
+			this->Controls->Add(this->Cancel_button);
+			this->Controls->Add(this->Ok_button);
 			this->Controls->Add(this->txtId);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->dgvContenedores);
@@ -217,6 +252,7 @@ namespace GUIApp {
 #pragma endregion
 
 	public:
+		List<Contenedor^>^ lista_contenedores_original = Service::QueryAllContenedor();
 		void MostrarContenedores() {
 			List<Contenedor^>^ contenedorList = Service::QueryAllContenedor();
 			if (contenedorList != nullptr) {
@@ -295,5 +331,13 @@ private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e)
 	}
 	private: System::Void dgvContenedores_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
+private: System::Void Ok_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void Cancel_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	Service::RevertirCambiosContenedor(lista_contenedores_original);
+	MostrarContenedores();
+	this->Close();
+}
 };
 }
