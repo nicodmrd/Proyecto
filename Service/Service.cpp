@@ -60,6 +60,11 @@ Encargado^ SimuladorService::Service::ConsultarEncargadoPorId(int EncargadoId)
     return nullptr;
 }
 
+void SimuladorService::Service::RevertirCambiosEncargado(List<Encargado^>^ listaoriginal)
+{
+    Persistance::PersistBinaryFile(BIN_ENCARGADO_FILE_NAME, listaoriginal);
+}
+
 
 //--------------------------------------------Camiones------------------------------------------
 void SimuladorService::Service::AgregarCamion(Camion^ camion)
@@ -118,6 +123,11 @@ Camion^ SimuladorService::Service::ConsultarCamionPorId(int CamionId)
     return nullptr;
 }
 
+void SimuladorService::Service::RevertirCambiosCamion(List<Camion^>^ listaoriginal)
+{
+    Persistance::PersistBinaryFile(BIN_CAMION_FILE_NAME, listaoriginal);
+}
+
 //------------------------------------------Barcos--------------------------------------------------
 void SimuladorService::Service::AgregarBarco(Barco^ barco_center) {
     for each (Barco ^ barco in barcoList) {
@@ -165,6 +175,10 @@ Barco^ SimuladorService::Service::ConsultarBarcoPorId(int barco_center) {
         }
     }
     return nullptr;
+}
+void SimuladorService::Service::RevertirCambiosBarco(List<Barco^>^ listaoriginal)
+{
+    Persistance::PersistBinaryFile(BIN_BARCO_FILE_NAME, listaoriginal);
 }
 
 //-----------------------------------------Contenedores--------------------------------------------------
@@ -224,6 +238,11 @@ Contenedor^ SimuladorService::Service::QueryContenedorById(int contenedor_center
     return nullptr;
 }
 
+void SimuladorService::Service::RevertirCambiosContenedor(List<Contenedor^>^ listaoriginal)
+{
+    Persistance::PersistBinaryFile(BIN_CONTENEDOR_FILE_NAME, listaoriginal);
+}
+
 //-----------------------------------------Dron--------------------------------------------------
 void SimuladorService::Service::AddDron(Dron^ DronId) {
     if (dronList->Count > 0) {
@@ -277,6 +296,11 @@ Dron^ SimuladorService::Service::QueryDronById(int DronId) {
     }
     return nullptr;
 
+}
+
+void SimuladorService::Service::RevertirCambiosDron(List<Dron^>^ listaoriginal)
+{
+    Persistance::PersistBinaryFile(BIN_DRON_FILE_NAME, listaoriginal);
 }
 
 String^ SimuladorService::Service::TiposDesechosSistema(Protocol protocol, int _cantPlastico, int _cantVidrio, int _cantCarton, int _cantOtros)

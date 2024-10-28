@@ -66,6 +66,10 @@ namespace GUIApp {
 	private: System::Windows::Forms::Button^ btnAgregar;
 	private: System::Windows::Forms::Button^ btnActualizar;
 	private: System::Windows::Forms::Button^ btnEliminar;
+	private: System::Windows::Forms::Button^ Cancel_button;
+
+	private: System::Windows::Forms::Button^ Ok_button;
+
 
 
 
@@ -112,6 +116,8 @@ namespace GUIApp {
 			this->btnAgregar = (gcnew System::Windows::Forms::Button());
 			this->btnActualizar = (gcnew System::Windows::Forms::Button());
 			this->btnEliminar = (gcnew System::Windows::Forms::Button());
+			this->Cancel_button = (gcnew System::Windows::Forms::Button());
+			this->Ok_button = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imgDron))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvDron))->BeginInit();
 			this->SuspendLayout();
@@ -119,86 +125,82 @@ namespace GUIApp {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(79, 17);
-			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label1->Location = System::Drawing::Point(105, 21);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(96, 13);
+			this->label1->Size = System::Drawing::Size(118, 16);
 			this->label1->TabIndex = 54;
 			this->label1->Text = L"CONFIGURACIÓN";
 			// 
 			// imgDron
 			// 
-			this->imgDron->Location = System::Drawing::Point(282, 28);
-			this->imgDron->Margin = System::Windows::Forms::Padding(2);
+			this->imgDron->Location = System::Drawing::Point(376, 34);
+			this->imgDron->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->imgDron->Name = L"imgDron";
-			this->imgDron->Size = System::Drawing::Size(203, 224);
+			this->imgDron->Size = System::Drawing::Size(271, 276);
 			this->imgDron->TabIndex = 53;
 			this->imgDron->TabStop = false;
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(67, 139);
-			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label8->Location = System::Drawing::Point(89, 171);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(108, 13);
+			this->label8->Size = System::Drawing::Size(134, 16);
 			this->label8->TabIndex = 52;
 			this->label8->Text = L"ÁREA DE ESCANEO";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(26, 162);
-			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label7->Location = System::Drawing::Point(35, 199);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(84, 13);
+			this->label7->Size = System::Drawing::Size(102, 16);
 			this->label7->TabIndex = 50;
 			this->label7->Text = L"Alcance-scan L:";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(26, 80);
-			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label6->Location = System::Drawing::Point(35, 98);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(91, 13);
+			this->label6->Size = System::Drawing::Size(112, 16);
 			this->label6->TabIndex = 49;
 			this->label6->Text = L"Velocidad (km/h):";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(26, 104);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(35, 128);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(45, 13);
+			this->label2->Size = System::Drawing::Size(53, 16);
 			this->label2->TabIndex = 48;
 			this->label2->Text = L"Batería:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(26, 56);
-			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label3->Location = System::Drawing::Point(35, 69);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(19, 13);
+			this->label3->Size = System::Drawing::Size(21, 16);
 			this->label3->TabIndex = 60;
 			this->label3->Text = L"Id:";
 			this->label3->Click += gcnew System::EventHandler(this, &DronForm::label3_Click);
 			// 
 			// dgvDron
 			// 
-			this->dgvDron->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgvDron->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dgvDron->ColumnHeadersHeight = 29;
 			this->dgvDron->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->IdDron, this->VelocidadDron,
 					this->BateriaDron, this->AlcanceDron
 			});
-			this->dgvDron->Location = System::Drawing::Point(11, 273);
-			this->dgvDron->Margin = System::Windows::Forms::Padding(2);
+			this->dgvDron->Location = System::Drawing::Point(15, 336);
+			this->dgvDron->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->dgvDron->Name = L"dgvDron";
+			this->dgvDron->RowHeadersVisible = false;
 			this->dgvDron->RowHeadersWidth = 51;
 			this->dgvDron->RowTemplate->Height = 24;
-			this->dgvDron->Size = System::Drawing::Size(506, 76);
+			this->dgvDron->Size = System::Drawing::Size(675, 94);
 			this->dgvDron->TabIndex = 62;
 			this->dgvDron->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &DronForm::dgvDron_CellClick);
 			this->dgvDron->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &DronForm::dgvDron_CellContentClick);
@@ -208,67 +210,65 @@ namespace GUIApp {
 			this->IdDron->HeaderText = L"Id";
 			this->IdDron->MinimumWidth = 6;
 			this->IdDron->Name = L"IdDron";
-			this->IdDron->Width = 50;
 			// 
 			// VelocidadDron
 			// 
 			this->VelocidadDron->HeaderText = L"Velocidad";
 			this->VelocidadDron->MinimumWidth = 6;
 			this->VelocidadDron->Name = L"VelocidadDron";
-			this->VelocidadDron->Width = 150;
 			// 
 			// BateriaDron
 			// 
 			this->BateriaDron->HeaderText = L"Batería";
 			this->BateriaDron->MinimumWidth = 6;
 			this->BateriaDron->Name = L"BateriaDron";
-			this->BateriaDron->Width = 150;
 			// 
 			// AlcanceDron
 			// 
 			this->AlcanceDron->HeaderText = L"Alcance";
+			this->AlcanceDron->MinimumWidth = 6;
 			this->AlcanceDron->Name = L"AlcanceDron";
 			// 
 			// txtId
 			// 
-			this->txtId->Location = System::Drawing::Point(150, 53);
-			this->txtId->Margin = System::Windows::Forms::Padding(2);
+			this->txtId->Location = System::Drawing::Point(200, 65);
+			this->txtId->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtId->Name = L"txtId";
-			this->txtId->Size = System::Drawing::Size(76, 20);
+			this->txtId->Size = System::Drawing::Size(100, 22);
 			this->txtId->TabIndex = 63;
 			// 
 			// txtVelocidad
 			// 
-			this->txtVelocidad->Location = System::Drawing::Point(150, 77);
-			this->txtVelocidad->Margin = System::Windows::Forms::Padding(2);
+			this->txtVelocidad->Location = System::Drawing::Point(200, 95);
+			this->txtVelocidad->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtVelocidad->Name = L"txtVelocidad";
-			this->txtVelocidad->Size = System::Drawing::Size(76, 20);
+			this->txtVelocidad->Size = System::Drawing::Size(100, 22);
 			this->txtVelocidad->TabIndex = 64;
 			// 
 			// txtBateria
 			// 
-			this->txtBateria->Location = System::Drawing::Point(150, 101);
-			this->txtBateria->Margin = System::Windows::Forms::Padding(2);
+			this->txtBateria->Location = System::Drawing::Point(200, 124);
+			this->txtBateria->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtBateria->Name = L"txtBateria";
-			this->txtBateria->Size = System::Drawing::Size(76, 20);
+			this->txtBateria->Size = System::Drawing::Size(100, 22);
 			this->txtBateria->TabIndex = 65;
 			// 
 			// txtAlcance
 			// 
-			this->txtAlcance->Location = System::Drawing::Point(150, 159);
-			this->txtAlcance->Margin = System::Windows::Forms::Padding(2);
+			this->txtAlcance->Location = System::Drawing::Point(200, 196);
+			this->txtAlcance->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->txtAlcance->Name = L"txtAlcance";
-			this->txtAlcance->Size = System::Drawing::Size(76, 20);
+			this->txtAlcance->Size = System::Drawing::Size(100, 22);
 			this->txtAlcance->TabIndex = 66;
 			// 
 			// btnAgregar
 			// 
 			this->btnAgregar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAgregar->Location = System::Drawing::Point(31, 196);
-			this->btnAgregar->Margin = System::Windows::Forms::Padding(2);
+			this->btnAgregar->Location = System::Drawing::Point(41, 241);
+			this->btnAgregar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnAgregar->Name = L"btnAgregar";
-			this->btnAgregar->Size = System::Drawing::Size(79, 24);
+			this->btnAgregar->Size = System::Drawing::Size(105, 30);
 			this->btnAgregar->TabIndex = 67;
 			this->btnAgregar->Text = L"Agregar";
 			this->btnAgregar->UseVisualStyleBackColor = true;
@@ -278,10 +278,10 @@ namespace GUIApp {
 			// 
 			this->btnActualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnActualizar->Location = System::Drawing::Point(131, 196);
-			this->btnActualizar->Margin = System::Windows::Forms::Padding(2);
+			this->btnActualizar->Location = System::Drawing::Point(175, 241);
+			this->btnActualizar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnActualizar->Name = L"btnActualizar";
-			this->btnActualizar->Size = System::Drawing::Size(79, 24);
+			this->btnActualizar->Size = System::Drawing::Size(105, 30);
 			this->btnActualizar->TabIndex = 68;
 			this->btnActualizar->Text = L"Actualizar";
 			this->btnActualizar->UseVisualStyleBackColor = true;
@@ -291,20 +291,51 @@ namespace GUIApp {
 			// 
 			this->btnEliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnEliminar->Location = System::Drawing::Point(82, 224);
-			this->btnEliminar->Margin = System::Windows::Forms::Padding(2);
+			this->btnEliminar->Location = System::Drawing::Point(109, 276);
+			this->btnEliminar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->btnEliminar->Name = L"btnEliminar";
-			this->btnEliminar->Size = System::Drawing::Size(79, 24);
+			this->btnEliminar->Size = System::Drawing::Size(105, 30);
 			this->btnEliminar->TabIndex = 69;
 			this->btnEliminar->Text = L"Eliminar";
 			this->btnEliminar->UseVisualStyleBackColor = true;
 			this->btnEliminar->Click += gcnew System::EventHandler(this, &DronForm::btnEliminar_Click);
 			// 
+			// Cancel_button
+			// 
+			this->Cancel_button->CausesValidation = false;
+			this->Cancel_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Cancel_button->Location = System::Drawing::Point(421, 448);
+			this->Cancel_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Cancel_button->Name = L"Cancel_button";
+			this->Cancel_button->Size = System::Drawing::Size(115, 37);
+			this->Cancel_button->TabIndex = 71;
+			this->Cancel_button->Text = L"Cancelar";
+			this->Cancel_button->UseVisualStyleBackColor = true;
+			this->Cancel_button->Click += gcnew System::EventHandler(this, &DronForm::Cancel_button_Click);
+			// 
+			// Ok_button
+			// 
+			this->Ok_button->CausesValidation = false;
+			this->Ok_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Ok_button->Location = System::Drawing::Point(175, 448);
+			this->Ok_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Ok_button->Name = L"Ok_button";
+			this->Ok_button->Size = System::Drawing::Size(115, 37);
+			this->Ok_button->TabIndex = 70;
+			this->Ok_button->Text = L"Aceptar";
+			this->Ok_button->UseVisualStyleBackColor = true;
+			this->Ok_button->Click += gcnew System::EventHandler(this, &DronForm::Ok_button_Click);
+			// 
 			// DronForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(528, 360);
+			this->ClientSize = System::Drawing::Size(704, 496);
+			this->ControlBox = false;
+			this->Controls->Add(this->Cancel_button);
+			this->Controls->Add(this->Ok_button);
 			this->Controls->Add(this->btnEliminar);
 			this->Controls->Add(this->btnActualizar);
 			this->Controls->Add(this->btnAgregar);
@@ -320,7 +351,7 @@ namespace GUIApp {
 			this->Controls->Add(this->label7);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->label2);
-			this->Margin = System::Windows::Forms::Padding(2);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"DronForm";
 			this->Text = L"Menu drone scanner";
 			this->Load += gcnew System::EventHandler(this, &DronForm::DronForm_Load);
@@ -332,6 +363,7 @@ namespace GUIApp {
 		}
 #pragma endregion
 	public:
+		List<Dron^>^ lista_drones_original = Service::QueryDron();
 		void ShowDron() {
 			List<Dron^>^ dronList = Service::QueryDron();
 			if (dronList != nullptr) {
@@ -487,5 +519,13 @@ namespace GUIApp {
 		txtBateria->Text = "" + _dron->Bateria;
 		txtAlcance->Text = "" + _dron->Alcance;
 	}
-	};
+	private: System::Void Ok_button_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+private: System::Void Cancel_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	Service::RevertirCambiosDron(lista_drones_original);
+	ShowDron();
+	this->Close();
+}
+};
 }

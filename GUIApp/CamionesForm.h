@@ -69,6 +69,10 @@ namespace GUIApp {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCamion;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ MatriculaCamion;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CamionContenedores;
+	private: System::Windows::Forms::Button^ Ok_button;
+	private: System::Windows::Forms::Button^ Cancel_button;
+
+
 
 
 
@@ -142,6 +146,8 @@ namespace GUIApp {
 			this->btnModificarCamion = (gcnew System::Windows::Forms::Button());
 			this->btnEliminarCamion = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->Ok_button = (gcnew System::Windows::Forms::Button());
+			this->Cancel_button = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamion))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
@@ -238,13 +244,15 @@ namespace GUIApp {
 			// 
 			// dgvCamion
 			// 
-			this->dgvCamion->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgvCamion->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->dgvCamion->ColumnHeadersHeight = 35;
 			this->dgvCamion->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->IdCamion, this->MatriculaCamion,
 					this->CamionContenedores
 			});
 			this->dgvCamion->Location = System::Drawing::Point(12, 223);
 			this->dgvCamion->Name = L"dgvCamion";
+			this->dgvCamion->RowHeadersVisible = false;
 			this->dgvCamion->RowHeadersWidth = 51;
 			this->dgvCamion->RowTemplate->Height = 24;
 			this->dgvCamion->Size = System::Drawing::Size(459, 269);
@@ -257,21 +265,18 @@ namespace GUIApp {
 			this->IdCamion->HeaderText = L"Id";
 			this->IdCamion->MinimumWidth = 6;
 			this->IdCamion->Name = L"IdCamion";
-			this->IdCamion->Width = 50;
 			// 
 			// MatriculaCamion
 			// 
 			this->MatriculaCamion->HeaderText = L"Matricula";
 			this->MatriculaCamion->MinimumWidth = 6;
 			this->MatriculaCamion->Name = L"MatriculaCamion";
-			this->MatriculaCamion->Width = 150;
 			// 
 			// CamionContenedores
 			// 
 			this->CamionContenedores->HeaderText = L"Contenedores";
 			this->CamionContenedores->MinimumWidth = 6;
 			this->CamionContenedores->Name = L"CamionContenedores";
-			this->CamionContenedores->Width = 150;
 			// 
 			// btnModificarCamion
 			// 
@@ -301,11 +306,34 @@ namespace GUIApp {
 			this->pictureBox1->TabIndex = 31;
 			this->pictureBox1->TabStop = false;
 			// 
+			// Ok_button
+			// 
+			this->Ok_button->Location = System::Drawing::Point(89, 684);
+			this->Ok_button->Name = L"Ok_button";
+			this->Ok_button->Size = System::Drawing::Size(118, 31);
+			this->Ok_button->TabIndex = 32;
+			this->Ok_button->Text = L"Aceptar";
+			this->Ok_button->UseVisualStyleBackColor = true;
+			this->Ok_button->Click += gcnew System::EventHandler(this, &CamionesForm::Ok_button_Click);
+			// 
+			// Cancel_button
+			// 
+			this->Cancel_button->Location = System::Drawing::Point(277, 684);
+			this->Cancel_button->Name = L"Cancel_button";
+			this->Cancel_button->Size = System::Drawing::Size(118, 31);
+			this->Cancel_button->TabIndex = 33;
+			this->Cancel_button->Text = L"Cancelar";
+			this->Cancel_button->UseVisualStyleBackColor = true;
+			this->Cancel_button->Click += gcnew System::EventHandler(this, &CamionesForm::Cancel_button_Click);
+			// 
 			// CamionesForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(487, 684);
+			this->ClientSize = System::Drawing::Size(483, 727);
+			this->ControlBox = false;
+			this->Controls->Add(this->Cancel_button);
+			this->Controls->Add(this->Ok_button);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->btnEliminarCamion);
 			this->Controls->Add(this->btnModificarCamion);
@@ -332,6 +360,7 @@ namespace GUIApp {
 		}
 #pragma endregion
 	public:
+		List<Camion^>^ lista_camiones_original = Service::ConsultarCamion();
 		void MostrarDatosCamiones() {
 			List<Camion^>^ lista_camiones = Service::ConsultarCamion();
 			if (lista_camiones != nullptr) {
@@ -431,6 +460,14 @@ private: System::Void dgvCamion_CellClick(System::Object^ sender, System::Window
 	
 
 private: System::Void dgvCamion_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void Ok_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void Cancel_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	Service::RevertirCambiosCamion(lista_camiones_original);
+	MostrarDatosCamiones();
+	this->Close();
 }
 };
 }

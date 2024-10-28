@@ -85,6 +85,10 @@ namespace GUIApp {
 	private: System::Windows::Forms::ToolStripMenuItem^ nuevoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ módificarToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ salirToolStripMenuItem;
+	private: System::Windows::Forms::Button^ Ok_button;
+	private: System::Windows::Forms::Button^ Cancel_button;
+
+
 
 
 
@@ -134,6 +138,8 @@ namespace GUIApp {
 			this->nuevoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->módificarToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->Ok_button = (gcnew System::Windows::Forms::Button());
+			this->Cancel_button = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pbEncargadoFoto))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvEncargados))->BeginInit();
 			this->menuStrip1->SuspendLayout();
@@ -429,30 +435,61 @@ namespace GUIApp {
 			// nuevoToolStripMenuItem
 			// 
 			this->nuevoToolStripMenuItem->Name = L"nuevoToolStripMenuItem";
-			this->nuevoToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->nuevoToolStripMenuItem->Size = System::Drawing::Size(135, 26);
 			this->nuevoToolStripMenuItem->Text = L"Nuevo";
 			this->nuevoToolStripMenuItem->Click += gcnew System::EventHandler(this, &EncargadosForm::nuevoToolStripMenuItem_Click);
 			// 
 			// módificarToolStripMenuItem
 			// 
 			this->módificarToolStripMenuItem->Name = L"módificarToolStripMenuItem";
-			this->módificarToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->módificarToolStripMenuItem->Size = System::Drawing::Size(135, 26);
 			this->módificarToolStripMenuItem->Text = L"Editar";
 			this->módificarToolStripMenuItem->Click += gcnew System::EventHandler(this, &EncargadosForm::módificarToolStripMenuItem_Click);
 			// 
 			// salirToolStripMenuItem
 			// 
 			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(224, 26);
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(135, 26);
 			this->salirToolStripMenuItem->Text = L"Salir";
 			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &EncargadosForm::salirToolStripMenuItem_Click);
+			// 
+			// Ok_button
+			// 
+			this->Ok_button->CausesValidation = false;
+			this->Ok_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Ok_button->Location = System::Drawing::Point(164, 632);
+			this->Ok_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Ok_button->Name = L"Ok_button";
+			this->Ok_button->Size = System::Drawing::Size(115, 37);
+			this->Ok_button->TabIndex = 19;
+			this->Ok_button->Text = L"Aceptar";
+			this->Ok_button->UseVisualStyleBackColor = true;
+			this->Ok_button->Click += gcnew System::EventHandler(this, &EncargadosForm::Ok_button_Click);
+			// 
+			// Cancel_button
+			// 
+			this->Cancel_button->CausesValidation = false;
+			this->Cancel_button->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Cancel_button->Location = System::Drawing::Point(428, 632);
+			this->Cancel_button->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Cancel_button->Name = L"Cancel_button";
+			this->Cancel_button->Size = System::Drawing::Size(115, 37);
+			this->Cancel_button->TabIndex = 20;
+			this->Cancel_button->Text = L"Cancelar";
+			this->Cancel_button->UseVisualStyleBackColor = true;
+			this->Cancel_button->Click += gcnew System::EventHandler(this, &EncargadosForm::Cancel_button_Click);
 			// 
 			// EncargadosForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(686, 658);
+			this->ClientSize = System::Drawing::Size(686, 680);
+			this->ControlBox = false;
+			this->Controls->Add(this->Cancel_button);
 			this->Controls->Add(this->comboBox1);
+			this->Controls->Add(this->Ok_button);
 			this->Controls->Add(this->btnActualizarEncargado);
 			this->Controls->Add(this->dgvEncargados);
 			this->Controls->Add(this->btnEliminarFoto);
@@ -524,6 +561,7 @@ namespace GUIApp {
 		}
 	}
 	public:
+		List<Encargado^>^ lista_encargados_original = Service::ConsultarEncargados();
 		void MostrarEncargado() {
 			List<Encargado^>^ lista_encargados = Service::ConsultarEncargados();
 			if (lista_encargados != nullptr) {
@@ -683,6 +721,14 @@ private: System::Void módificarToolStripMenuItem_Click(System::Object^ sender, S
 }
 private: System::Void salirToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Application::Exit();
+}
+private: System::Void Ok_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void Cancel_button_Click(System::Object^ sender, System::EventArgs^ e) {
+	Service::RevertirCambiosEncargado(lista_encargados_original);
+	MostrarEncargado();
+	this->Close();
 }
 };
 }

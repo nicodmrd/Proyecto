@@ -42,6 +42,7 @@ namespace SimuladorService {
 			static void EliminarEncargado(int EncargadoId);
 			static List<Encargado^>^ ConsultarEncargados();
 			static Encargado^ ConsultarEncargadoPorId(int EncargadoId);
+			static void RevertirCambiosEncargado(List<Encargado^>^ listaoriginal);
 
 			//---------Camiones------------------
 			static void AgregarCamion(Camion^);
@@ -49,13 +50,15 @@ namespace SimuladorService {
 			static void EliminarCamion(int CarmionId);
 			static List<Camion^>^ ConsultarCamion();
 			static Camion^ ConsultarCamionPorId(int CamionId);
-			
+			static void RevertirCambiosCamion(List<Camion^>^ listaoriginal);
+
 			//----------Barco---------------------
 			static void AgregarBarco(Barco^);
 			static void ActualizarBarco(Barco^);
 			static void EliminarBarco(int BarcoId);
 			static List<Barco^>^ ConsultarBarcos();
 			static Barco^ ConsultarBarcoPorId(int BarcoId);
+			static void RevertirCambiosBarco(List<Barco^>^ listaoriginal);
 
 			//----------Contenedores---------------
 			static void AddContenedor(Contenedor^);
@@ -63,6 +66,7 @@ namespace SimuladorService {
 			static void DeleteContenedor(int ContenedorId);
 			static List<Contenedor^>^ QueryAllContenedor();
 			static Contenedor^ QueryContenedorById(int ContenedorId);
+			static void RevertirCambiosContenedor(List<Contenedor^>^ listaoriginal);
 
 			//---------Dron-----------------------
 			static void AddDron(Dron^);
@@ -70,7 +74,7 @@ namespace SimuladorService {
 			static void DeleteDron(int DronId);
 			static List<Dron^>^ QueryDron();
 			static Dron^ QueryDronById(int DronId);
-
+			static void RevertirCambiosDron(List<Dron^>^ listaoriginal);
 
 			//Diccionario con los protocolos de comunicación UART y NMEA
 			static Dictionary<String^, Protocol>^ protocolDictionary = gcnew Dictionary<String^, Protocol>();
