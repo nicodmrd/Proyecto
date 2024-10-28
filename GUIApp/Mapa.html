@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa de Google</title>
+    <style>
+        html, body, #map {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqbRoP6tXUTJob1HSGLXhiMNck4LvC_4&callback=initMap" async defer></script>
+    <script>
+		 function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -12.07488, lng: -77.155983 },
+                zoom: 14,
+            });
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+        }
+
+        function calculateAndDisplayRoute(origin, destination) {
+            directionsService.route(
+                {
+                    origin: origin,
+                    destination: destination,
+                    travelMode: google.maps.TravelMode.DRIVING,
+                },
+                (response, status) => {
+                    if (status === "OK") {
+                        directionsRenderer.setDirections(response);
+                    } else {
+                        alert("No se pudo generar la ruta: " + status);
+                    }
+                }
+            );
+        }
+    </script>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 100vh;"></div>
+</body>
+</html>
+
