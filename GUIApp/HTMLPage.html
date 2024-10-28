@@ -3,7 +3,6 @@
 <head>
     <title>Mapa de Google</title>
 	<style>
-        /* Estilos para que el mapa ocupe todo el espacio disponible */
         html, body, #map {
             height: 100%;
             margin: 0;
@@ -14,13 +13,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqbRoP6tXUTJob1HSGLXhiMNck4LvC_4&callback=initMap" async defer></script>
     <script>
 		 function initMap() {
-            // Inicializa el mapa centrado en un punto genérico
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -12.07488, lng: -77.155983 }, // Coordenadas de ejemplo
+                center: { lat: -12.07488, lng: -77.155983 }, 
                 zoom: 14,
             });
-
-            // Inicializa el servicio y el renderizador de direcciones
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
@@ -31,7 +27,7 @@
                 {
                     origin: origin,
                     destination: destination,
-                    travelMode: google.maps.TravelMode.DRIVING, // Puedes cambiar a WALKING o BICYCLING
+                    travelMode: google.maps.TravelMode.DRIVING,
                 },
                 (response, status) => {
                     if (status === "OK") {
