@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mapa de Google</title>
+    <meta charset="utf-8">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqbRoP6tXUTJob1HSGLXhiMNck4LvC_4&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var location = { lat: -12.07488, lng: -77.155983 }; // Coordenadas iniciales
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: location,
+                disableDefaultUI: true // Oculta los controles predeterminados de la interfaz
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="map" style="width:800px;height:500px;"></div>
+</body>
+</html>
