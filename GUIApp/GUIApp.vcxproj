@@ -194,6 +194,7 @@
     <Image Include="interceptor3.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="HTMLPage.html" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
