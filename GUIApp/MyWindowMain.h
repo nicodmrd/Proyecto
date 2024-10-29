@@ -10,6 +10,7 @@
 namespace GUIApp {
 
 	using namespace System;
+	using namespace System::IO;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
@@ -31,7 +32,7 @@ namespace GUIApp {
 			LoadImage();
 
 			//
-			//TODO: agregar código de constructor aquí
+			//TODO: agregar cÃ³digo de constructor aquÃ­
 			//
 			toolTip1 = gcnew ToolTip();
 			toolTip2 = gcnew ToolTip();
@@ -49,27 +50,27 @@ namespace GUIApp {
 			toolTip14 = gcnew ToolTip();
 			toolTip15 = gcnew ToolTip();
 			
-			toolTip1->SetToolTip(btnAreaAnalisis, "Realizar área de análisis");
-			toolTip2->SetToolTip(btnReiniciar, "Reiniciar simulación");
-			toolTip3->SetToolTip(btnDetener, "Detener simulación");
-			toolTip4->SetToolTip(btnIniciar, "Iniciar simulación");
+			toolTip1->SetToolTip(btnAreaAnalisis, "Realizar Ã¡rea de anÃ¡lisis");
+			toolTip2->SetToolTip(btnReiniciar, "Reiniciar simulaciÃ³n");
+			toolTip3->SetToolTip(btnDetener, "Detener simulaciÃ³n");
+			toolTip4->SetToolTip(btnIniciar, "Iniciar simulaciÃ³n");
 			toolTip5->SetToolTip(btnCursor, "Cursor");
 
-			toolTip6->SetToolTip(btnValidarDron, "Validar batería del dron");
+			toolTip6->SetToolTip(btnValidarDron, "Validar baterÃ­a del dron");
 			toolTip7->SetToolTip(btnValidarBarco, "Validar combustible del barco");
-			toolTip8->SetToolTip(btnValidarCamion, "Validar combustible del camión");
-			toolTip9->SetToolTip(btnRecargarBateria, "Recargar batería del dron");
+			toolTip8->SetToolTip(btnValidarCamion, "Validar combustible del camiÃ³n");
+			toolTip9->SetToolTip(btnRecargarBateria, "Recargar baterÃ­a del dron");
 			toolTip10->SetToolTip(btnRecargarCmbBarco, "Suministrar combustible al barco");
-			toolTip11->SetToolTip(btnRecargarCmbCamion, "Suministrar combustible al camión");
+			toolTip11->SetToolTip(btnRecargarCmbCamion, "Suministrar combustible al camiÃ³n");
 			toolTip12->SetToolTip(btnAsignarDron, "Asignar dron");
 			toolTip13->SetToolTip(btnAsignarBarcos, "Asignar barco");
-			toolTip14->SetToolTip(btnAsignarCamion, "Asignar camión");
+			toolTip14->SetToolTip(btnAsignarCamion, "Asignar camiÃ³n");
 			toolTip15->SetToolTip(btnAumentarContenedor, "Agregar un contenedor");
 		}
 
 	protected:
 		/// <summary>
-		/// Limpiar los recursos que se estén usando.
+		/// Limpiar los recursos que se estÃ©n usando.
 		/// </summary>
 		~MyWindowMain()
 		{
@@ -87,10 +88,10 @@ namespace GUIApp {
 
 	private: System::Windows::Forms::ToolStripMenuItem^ salirToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ ayudaToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ guíaDelSoftwareToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ guÃ­aDelSoftwareToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ acercaDeToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ integrantesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ informaciónDelProyectoToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ informaciÃ³nDelProyectoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ mantenimientoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ encargadosToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ barcosToolStripMenuItem;
@@ -248,20 +249,20 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 
 			   // Cargar la imagen desde una ruta relativa
 			   pictureBox1->Image = Image::FromFile(mapa->Imagen);
-			   pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  // Para ajustar la imagen al tamaño del PictureBox
+			   pictureBox1->SizeMode = PictureBoxSizeMode::StretchImage;  // Para ajustar la imagen al tamaÃ±o del PictureBox
 
 		   }
 	private: System::ComponentModel::IContainer^ components;
 	private:
 		/// <summary>
-		/// Variable del diseñador necesaria.
+		/// Variable del diseÃ±ador necesaria.
 		/// </summary>
 
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// Método necesario para admitir el Diseñador. No se puede modificar
-		/// el contenido de este método con el editor de código.
+		/// MÃ©todo necesario para admitir el DiseÃ±ador. No se puede modificar
+		/// el contenido de este mÃ©todo con el editor de cÃ³digo.
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -277,10 +278,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->camionesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->contenedoresToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ayudaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->guíaDelSoftwareToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->guÃ­aDelSoftwareToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->acercaDeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->integrantesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->informaciónDelProyectoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->informaciÃ³nDelProyectoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->txtAreaLargo = (gcnew System::Windows::Forms::TextBox());
 			this->txtAreaAncho = (gcnew System::Windows::Forms::TextBox());
 			this->label7 = (gcnew System::Windows::Forms::Label());
@@ -451,22 +452,22 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// ayudaToolStripMenuItem
 			// 
-			this->ayudaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->guíaDelSoftwareToolStripMenuItem });
+			this->ayudaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->guÃ­aDelSoftwareToolStripMenuItem });
 			this->ayudaToolStripMenuItem->Name = L"ayudaToolStripMenuItem";
 			this->ayudaToolStripMenuItem->Size = System::Drawing::Size(65, 24);
 			this->ayudaToolStripMenuItem->Text = L"Ayuda";
 			// 
-			// guíaDelSoftwareToolStripMenuItem
-			// 
-			this->guíaDelSoftwareToolStripMenuItem->Name = L"guíaDelSoftwareToolStripMenuItem";
-			this->guíaDelSoftwareToolStripMenuItem->Size = System::Drawing::Size(208, 26);
-			this->guíaDelSoftwareToolStripMenuItem->Text = L"Guía del software";
+			// guÃ­aDelSoftwareToolStripMenuItem
+			//
+			this->guï¿½aDelSoftwareToolStripMenuItem->Name = L"guï¿½aDelSoftwareToolStripMenuItem";
+			this->guï¿½aDelSoftwareToolStripMenuItem->Size = System::Drawing::Size(208, 26);
+			this->guï¿½aDelSoftwareToolStripMenuItem->Text = L"Guï¿½a del software";
 			// 
 			// acercaDeToolStripMenuItem
 			// 
 			this->acercaDeToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->integrantesToolStripMenuItem,
-					this->informaciónDelProyectoToolStripMenuItem
+					this->informaciÃ³nDelProyectoToolStripMenuItem
 			});
 			this->acercaDeToolStripMenuItem->Name = L"acercaDeToolStripMenuItem";
 			this->acercaDeToolStripMenuItem->Size = System::Drawing::Size(89, 24);
@@ -478,11 +479,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->integrantesToolStripMenuItem->Size = System::Drawing::Size(260, 26);
 			this->integrantesToolStripMenuItem->Text = L"Integrantes";
 			// 
-			// informaciónDelProyectoToolStripMenuItem
+			// informaciÃ³nDelProyectoToolStripMenuItem
 			// 
-			this->informaciónDelProyectoToolStripMenuItem->Name = L"informaciónDelProyectoToolStripMenuItem";
-			this->informaciónDelProyectoToolStripMenuItem->Size = System::Drawing::Size(260, 26);
-			this->informaciónDelProyectoToolStripMenuItem->Text = L"Información del proyecto";
+
+			this->informaciï¿½nDelProyectoToolStripMenuItem->Name = L"informaciï¿½nDelProyectoToolStripMenuItem";
+			this->informaciï¿½nDelProyectoToolStripMenuItem->Size = System::Drawing::Size(260, 26);
+			this->informaciï¿½nDelProyectoToolStripMenuItem->Text = L"Informaciï¿½n del proyecto";
+
 			// 
 			// txtAreaLargo
 			// 
@@ -533,7 +536,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(260, 16);
 			this->label1->TabIndex = 22;
-			this->label1->Text = L"INGRESE DATOS PARA LA SIMULACIÓN";
+			this->label1->Text = L"INGRESE DATOS PARA LA SIMULACIÃ“N";
 			// 
 			// pictureBox1
 			// 
@@ -660,7 +663,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage1->Size = System::Drawing::Size(1453, 778);
 			this->tabPage1->TabIndex = 0;
-			this->tabPage1->Text = L"Simulación para cada proceso";
+			this->tabPage1->Text = L"SimulaciÃ³n para cada proceso";
 			// 
 			// MapaWeb
 			// 
@@ -1054,7 +1057,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->label10->Name = L"label10";
 			this->label10->Size = System::Drawing::Size(83, 16);
 			this->label10->TabIndex = 42;
-			this->label10->Text = L"Recolección";
+			this->label10->Text = L"RecolecciÃ³n";
 			// 
 			// label9
 			// 
@@ -1145,7 +1148,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->tabPage2->Size = System::Drawing::Size(1453, 778);
 			this->tabPage2->TabIndex = 1;
-			this->tabPage2->Text = L"Simulación separador de desecho";
+			this->tabPage2->Text = L"SimulaciÃ³n separador de desecho";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
 			// pictureBox2
@@ -1224,7 +1227,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// plasticobox
 			// 
-			this->plasticobox->HeaderText = L"PLÁSTICO";
+			this->plasticobox->HeaderText = L"PLÃSTICO";
 			this->plasticobox->MinimumWidth = 100;
 			this->plasticobox->Name = L"plasticobox";
 			this->plasticobox->Resizable = System::Windows::Forms::DataGridViewTriState::False;
@@ -1233,7 +1236,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// cartonbox
 			// 
-			this->cartonbox->HeaderText = L"CARTÓN";
+			this->cartonbox->HeaderText = L"CARTÃ“N";
 			this->cartonbox->MinimumWidth = 100;
 			this->cartonbox->Name = L"cartonbox";
 			this->cartonbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
@@ -1273,7 +1276,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->MainMenuStrip = this->menuStrip2;
 			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->Name = L"MyWindowMain";
-			this->Text = L"Simulador para la gestión de basura marina";
+			this->Text = L"Simulador para la gestiÃ³n de basura marina";
 			this->Load += gcnew System::EventHandler(this, &MyWindowMain::MyWindowMain_Load);
 			this->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyWindowMain::MyWindowMain_KeyDown);
 			this->menuStrip2->ResumeLayout(false);
@@ -1303,7 +1306,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				}
 				/*
 				if (control->GetType() == ComboBox::typeid) {
-					dynamic_cast<ComboBox^>(control)->SelectedIndex = -1; // Reiniciar el ComboBox para que no haya selección
+					dynamic_cast<ComboBox^>(control)->SelectedIndex = -1; // Reiniciar el ComboBox para que no haya selecciÃ³n
 				}
 				*/
 				txtAreaAncho->Text = "";
@@ -1326,12 +1329,12 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			cmb4Encargado->Items->Clear();
 			List<Encargado^>^ _encargadoList = Service::ConsultarEncargados();
 			if (_encargadoList != nullptr) {
-				// Filtrar y añadir a ComboBox1 (Escaneo)
+				// Filtrar y aÃ±adir a ComboBox1 (Escaneo)
 				for each (Encargado ^ encargado in _encargadoList) {
 					if (encargado->Cargo == "Escaneo") {
 						cmb1Encargado->Items->Add(encargado);
 					}
-					else if (encargado->Cargo == "Recolección") {
+					else if (encargado->Cargo == "RecolecciÃ³n") {
 						cmb2Encargado->Items->Add(encargado);
 					}
 					else if (encargado->Cargo == "Transporte") {
@@ -1424,7 +1427,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			}
 
 			// Volver a dibujar el PictureBox
-			pictureBox1->Invalidate(); // Esto forzará el redibujo del PictureBox
+			pictureBox1->Invalidate(); // Esto forzarÃ¡ el redibujo del PictureBox
 		}
 		catch (Exception^ ex) {
 			MessageBox::Show("" + ex->Message);
@@ -1435,7 +1438,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	}
 
 	private: System::Void btnGenerarArea_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		//g
 	}
 	private: System::Void MyWindowMain_Load(System::Object^ sender, System::EventArgs^ e) { 
 		//Cambiar el directorio, entre C:/..../.../... HASTA Proyecto, que es TU carpeta del proyecto	
@@ -1455,11 +1458,11 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	private: System::Void iniciar_proceso_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private:
-		Point startPoint;  // Punto inicial del rectángulo
-		Point endPoint;    // Punto final del rectángulo
-		bool isDrawing = false;  // Indica si se está dibujando
-		bool GenerarAreaPresionado = false; // Indica si se ha hecho clic en el botón
-		float rotationAngle = 0; // Ángulo de rotación para el rectángulo
+		Point startPoint;  // Punto inicial del rectÃ¡ngulo
+		Point endPoint;    // Punto final del rectÃ¡ngulo
+		bool isDrawing = false;  // Indica si se estÃ¡ dibujando
+		bool GenerarAreaPresionado = false; // Indica si se ha hecho clic en el botÃ³n
+		float rotationAngle = 0; // Ãngulo de rotaciÃ³n para el rectÃ¡ngulo
 
 	private: System::Void pictureBox1_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (GenerarAreaPresionado) {
@@ -1482,7 +1485,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	private: System::Void pictureBox1_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
 		if (GenerarAreaPresionado) {
 			if (isDrawing) {
-				endPoint = e->Location;   // Capturar el punto final al soltar el botón
+				endPoint = e->Location;   // Capturar el punto final al soltar el botÃ³n
 				isDrawing = false;        // Terminar el dibujo
 				// Calcular ancho y largo
 				int ancho = Math::Abs(endPoint.X - startPoint.X);
@@ -1491,7 +1494,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				// Guardar las dimensiones en los TextBox
 				txtAreaAncho->Text = ancho.ToString();
 				txtAreaLargo->Text = largo.ToString();
-				pictureBox1->Invalidate(); // Forzar el redibujo del PictureBox para mostrar el rectángulo final
+				pictureBox1->Invalidate(); // Forzar el redibujo del PictureBox para mostrar el rectÃ¡ngulo final
 			}
 		}
 	}
@@ -1515,10 +1518,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 
 			for each (Desecho ^ d in _desecho) {
 				// Dibuja la coordenada del Desecho
-				if (d->Posicion != nullptr) {  // Verificar que la posición no sea nula
-					Coordenadas^ coord = d->Posicion; // Acceder directamente a la posición
+				if (d->Posicion != nullptr) {  // Verificar que la posiciÃ³n no sea nula
+					Coordenadas^ coord = d->Posicion; // Acceder directamente a la posiciÃ³n
 					g->DrawEllipse(pen, static_cast<int>(coord->X), static_cast<int>(coord->Y), 5, 5);
-					// Dibuja un punto de tamaño 5x5
+					// Dibuja un punto de tamaÃ±o 5x5
 				}
 			}
 		}
@@ -1526,24 +1529,24 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 		if (GenerarAreaPresionado) {
 			if (startPoint != endPoint) {  // Solo dibuja si los puntos son diferentes
 				Graphics^ g = e->Graphics;
-				Pen^ pen = gcnew Pen(Color::Black, 2); // Color rojo y grosor de 4 píxeles
+				Pen^ pen = gcnew Pen(Color::Black, 2); // Color rojo y grosor de 4 pÃ­xeles
 
-				// Calcular las coordenadas del rectángulo
+				// Calcular las coordenadas del rectÃ¡ngulo
 				int x = Math::Min(startPoint.X, endPoint.X);
 				int y = Math::Min(startPoint.Y, endPoint.Y);
 				int width = Math::Abs(startPoint.X - endPoint.X);
 				int height = Math::Abs(startPoint.Y - endPoint.Y);
 
-				// Mover el origen de coordenadas al centro del rectángulo
+				// Mover el origen de coordenadas al centro del rectÃ¡ngulo
 				g->TranslateTransform(x + width / 2.0f, y + height / 2.0f);
 
-				// Aplicar la rotación
+				// Aplicar la rotaciÃ³n
 				g->RotateTransform(rotationAngle);
 
-				// Dibujar el rectángulo con el centro en el nuevo origen
+				// Dibujar el rectÃ¡ngulo con el centro en el nuevo origen
 				g->DrawRectangle(pen, -width / 2, -height / 2, width, height);
 
-				// Restaurar la transformación para futuras operaciones
+				// Restaurar la transformaciÃ³n para futuras operaciones
 				g->ResetTransform();
 
 			}
@@ -1555,11 +1558,11 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	private: System::Void MyWindowMain_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
 		if (GenerarAreaPresionado) {
 			if (e->KeyCode == Keys::R) {
-				rotationAngle += 15;  // Incrementar el ángulo de rotación en 15 grados
+				rotationAngle += 15;  // Incrementar el Ã¡ngulo de rotaciÃ³n en 15 grados
 				if (rotationAngle >= 360) {
-					rotationAngle = 0;  // Reiniciar el ángulo si alcanza los 360 grados
+					rotationAngle = 0;  // Reiniciar el Ã¡ngulo si alcanza los 360 grados
 				}
-				pictureBox1->Invalidate();  // Redibujar el PictureBox con la nueva rotación
+				pictureBox1->Invalidate();  // Redibujar el PictureBox con la nueva rotaciÃ³n
 			}
 		}
 	}
@@ -1572,13 +1575,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	}
 	private: System::Void btnAreaAnalisis_Click(System::Object^ sender, System::EventArgs^ e) {
 		GenerarAreaPresionado = true;
-		// Define las coordenadas para las esquinas del rectángulo
+		// Define las coordenadas para las esquinas del rectï¿½ngulo
 		double lat1 = -12.07488;
 		double lng1 = -77.155983;
 		double lat2 = -12.07588;
 		double lng2 = -77.156983;
 
-		// Genera el script en JavaScript para dibujar el rectángulo
+		// Genera el script en JavaScript para dibujar el rectï¿½ngulo
 		String^ script = String::Format("dibujarRectangulo({0}, {1}, {2}, {3});", lat1, lng1, lat2, lng2);
 
 		// Ejecuta el script en WebView2
@@ -1627,7 +1630,7 @@ private: System::Void btnAsignarCamion_Click(System::Object^ sender, System::Eve
 		if (camionSeleccionado != nullptr) {
 			for (int i = 0; i < dgvCamionesAsignados->Rows->Count; i++) {
 				if (dgvCamionesAsignados->Rows[i]->Cells[0]->Value->ToString() == idSeleccionado) {
-					MessageBox::Show("Este camión ya ha sido asignado.", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+					MessageBox::Show("Este camiï¿½n ya ha sido asignado.", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Warning);
 					return; 
 				}
 			}
@@ -1751,14 +1754,14 @@ private: System::Void btnValidarBarco_Click(System::Object^ sender, System::Even
 	MostrarNivelCombustible(cmbIdBarco, txtBarcoCombustible, "barco");
 }
 private: System::Void btnValidarCamion_Click(System::Object^ sender, System::EventArgs^ e) {
-	MostrarNivelCombustible(cmbIdCamion, txtCamionCombustible, "camión");
+	MostrarNivelCombustible(cmbIdCamion, txtCamionCombustible, "camiï¿½n");
 }
 private: System::Void btnRecargarCmbBarco_Click(System::Object^ sender, System::EventArgs^ e) {
 	RecargarCombustible(cmbIdBarco, "barco");
 	txtBarcoCombustible->Text = "100%";
 }
 private: System::Void btnRecargarCmbCamion_Click(System::Object^ sender, System::EventArgs^ e) {
-	RecargarCombustible(cmbIdCamion, "camión");
+	RecargarCombustible(cmbIdCamion, "camiï¿½n");
 	txtCamionCombustible->Text = "100%";
 }
 private: System::Void btnValidarDron_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1767,6 +1770,7 @@ private: System::Void btnValidarDron_Click(System::Object^ sender, System::Event
 private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::EventArgs^ e) {
 	RecargarCombustible(cmbIdDron, "dron");
 	txtDronBateria->Text = "100%";
+
 }
 };
 }
