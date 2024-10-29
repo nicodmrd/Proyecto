@@ -10,6 +10,7 @@
 namespace GUIApp {
 
 	using namespace System;
+	using namespace System::IO;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
@@ -1436,7 +1437,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	}
 	private: System::Void MyWindowMain_Load(System::Object^ sender, System::EventArgs^ e) { //Cambio mapa
 		//Cambiar el directorio, entre C:/..../.../... HASTA Proyecto, que es TU carpeta del proyecto																											//
-		this->MapaWeb->Source = gcnew System::Uri("file://C:/Users/User/source/repos/Proyecto/GUIApp/HTMLPage.html"); 
+		this->MapaWeb->Source = gcnew System::Uri("file://C:/Users/User/source/repos/Proyecto2/GUIApp/HTMLPage.html"); 
 		CargarEncargados();
 		CargarDron();
 		CargarIdBarco();
