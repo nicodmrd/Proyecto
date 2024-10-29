@@ -12,7 +12,15 @@
     <meta charset="utf-8">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqbRoP6tXUTJob1HSGLXhiMNck4LvC_4&callback=initMap" async defer></script>
     <script>
-		 function initMap() {
+
+        let map;
+        let directionsService;
+        let directionsRenderer;
+        let marcadores = [];
+        let rectangle;
+        let bounds;
+
+        function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: -12.07488, lng: -77.155983 }, 
                 zoom: 14,
@@ -39,12 +47,12 @@
             );
         }
         function dibujarRectangulo(lat1, lng1, lat2, lng2) {
-            const bounds = new google.maps.LatLngBounds(
+            bounds = new google.maps.LatLngBounds(
                 new google.maps.LatLng(lat1, lng1),
                 new google.maps.LatLng(lat2, lng2)
             );
 
-            const rectangle = new google.maps.Rectangle({
+            rectangle = new google.maps.Rectangle({
                 bounds: bounds,
                 editable: true,
                 draggable: true,
@@ -55,12 +63,44 @@
                 fillColor: '#FF0000',
                 fillOpacity: 0.35,
             });
+
+            google.maps.event.addListener(rectangle, 'bounds_changed', () => {
+                bounds = rectangle.getBounds();
+            });
         }
+
+        function generarPuntoAleatorio() {
+            if (!bounds) {
+                alert("Debe seleccionar el área.");
+                return;
+            }
+            const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
+            const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
+
+            const position = { lat: lat, lng: lng };
+
+            // Crea el marcador dentro de los límites del rectángulo
+            const marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: `Latitud: ${lat}, Longitud: ${lng}`
+            });
+
+            // Almacena el marcador en la lista para poder borrarlo después
+            marcadores.push(marker);
+            map.panTo(position);
+        }
+
+        function borrarPuntos() {
+            for (let marker of marcadores) {
+                marker.setMap(null);
+            }
+            marcadores = [];
+        }
+
     </script>
 </head>
 <body>
     <div id="map" style="width: 100%; height: 100vh;"></div>
 </body>
 </html>
-
-
