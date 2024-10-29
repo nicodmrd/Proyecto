@@ -12,7 +12,12 @@
     <meta charset="utf-8">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBXqbRoP6tXUTJob1HSGLXhiMNck4LvC_4&callback=initMap" async defer></script>
     <script>
-		 function initMap() {
+
+        let map;
+        let directionsService;
+        let directionsRenderer;
+
+        function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: -12.07488, lng: -77.155983 }, 
                 zoom: 14,
@@ -20,6 +25,12 @@
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
+
+            map.addListener("click", (event) => {
+                const lat = event.latLng.lat();
+                const lng = event.latLng.lng();
+                alert(`Latitud: ${lat}, Longitud: ${lng}`);
+            });
         }
 
         function calculateAndDisplayRoute(origin, destination) {
@@ -49,6 +60,7 @@
                 editable: true,
                 draggable: true,
                 map: map,
+                map: map,
                 strokeColor: '#FF0000',
                 strokeOpacity: 0.8,
                 strokeWeight: 2,
@@ -56,10 +68,31 @@
                 fillOpacity: 0.35,
             });
         }
+
+        function generarPuntoAleatorio() {
+            const bounds = map.getBounds();
+            const southWest = bounds.getSouthWest();
+            const northEast = bounds.getNorthEast();
+
+            const lat = Math.random() * (northEast.lat() - southWest.lat()) + southWest.lat();
+            const lng = Math.random() * (northEast.lng() - southWest.lng()) + southWest.lng();
+
+            const position = { lat: lat, lng: lng };
+            new google.maps.Marker({
+                position: position,
+                map: map,
+                title: `Latitud: ${lat}, Longitud: ${lng}`
+            });
+
+            map.panTo(position);
+        }
+
     </script>
 </head>
 <body>
     <div id="map" style="width: 100%; height: 100vh;"></div>
+    <button onclick="generarPuntoAleatorio()">Generar Punto Aleatorio</button>
+
 </body>
 </html>
 

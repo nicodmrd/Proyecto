@@ -35,6 +35,7 @@ namespace GUIApp {
 		VideoCaptureDevice^ MiWebCam;
 	private: System::Windows::Forms::ComboBox^ cbCamara;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ btnPruebas;
 
 	private: int camaraActual = -1;
 	
@@ -43,6 +44,13 @@ namespace GUIApp {
 		{
 			InitializeComponent();
 			LoadImage();
+
+			//Inicialización del WebView2
+			this->MapaWeb->Source = gcnew System::Uri("file:///ruta/a/tu/HTMLPage.html");
+
+			// Vincular el evento Click del botón btnPruebas
+			this->btnPruebas->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas_Click);
+
 
 			// DE LA CÁMARA 
 			
@@ -460,6 +468,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->toolTip13 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip14 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->btnPruebas = (gcnew System::Windows::Forms::Button());
 			this->menuStrip2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -482,8 +491,8 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			});
 			this->menuStrip2->Location = System::Drawing::Point(0, 0);
 			this->menuStrip2->Name = L"menuStrip2";
-			this->menuStrip2->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-			this->menuStrip2->Size = System::Drawing::Size(1483, 28);
+			this->menuStrip2->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
+			this->menuStrip2->Size = System::Drawing::Size(1112, 24);
 			this->menuStrip2->TabIndex = 1;
 			this->menuStrip2->Text = L"menuStrip2";
 			this->menuStrip2->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyWindowMain::menuStrip1_ItemClicked);
@@ -492,13 +501,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->archivoToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->salirToolStripMenuItem });
 			this->archivoToolStripMenuItem->Name = L"archivoToolStripMenuItem";
-			this->archivoToolStripMenuItem->Size = System::Drawing::Size(73, 24);
+			this->archivoToolStripMenuItem->Size = System::Drawing::Size(60, 20);
 			this->archivoToolStripMenuItem->Text = L"Archivo";
 			// 
 			// salirToolStripMenuItem
 			// 
 			this->salirToolStripMenuItem->Name = L"salirToolStripMenuItem";
-			this->salirToolStripMenuItem->Size = System::Drawing::Size(121, 26);
+			this->salirToolStripMenuItem->Size = System::Drawing::Size(96, 22);
 			this->salirToolStripMenuItem->Text = L"Salir";
 			this->salirToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::salirToolStripMenuItem_Click);
 			// 
@@ -509,41 +518,41 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 					this->barcosToolStripMenuItem, this->dronToolStripMenuItem, this->camionesToolStripMenuItem, this->contenedoresToolStripMenuItem
 			});
 			this->mantenimientoToolStripMenuItem->Name = L"mantenimientoToolStripMenuItem";
-			this->mantenimientoToolStripMenuItem->Size = System::Drawing::Size(124, 24);
+			this->mantenimientoToolStripMenuItem->Size = System::Drawing::Size(101, 20);
 			this->mantenimientoToolStripMenuItem->Text = L"Mantenimiento";
 			// 
 			// encargadosToolStripMenuItem
 			// 
 			this->encargadosToolStripMenuItem->Name = L"encargadosToolStripMenuItem";
-			this->encargadosToolStripMenuItem->Size = System::Drawing::Size(184, 26);
+			this->encargadosToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->encargadosToolStripMenuItem->Text = L"Encargados";
 			this->encargadosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::encargadosToolStripMenuItem_Click);
 			// 
 			// barcosToolStripMenuItem
 			// 
 			this->barcosToolStripMenuItem->Name = L"barcosToolStripMenuItem";
-			this->barcosToolStripMenuItem->Size = System::Drawing::Size(184, 26);
+			this->barcosToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->barcosToolStripMenuItem->Text = L"Barcos";
 			this->barcosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::barcosToolStripMenuItem_Click);
 			// 
 			// dronToolStripMenuItem
 			// 
 			this->dronToolStripMenuItem->Name = L"dronToolStripMenuItem";
-			this->dronToolStripMenuItem->Size = System::Drawing::Size(184, 26);
+			this->dronToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->dronToolStripMenuItem->Text = L"Dron";
 			this->dronToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::dronToolStripMenuItem_Click);
 			// 
 			// camionesToolStripMenuItem
 			// 
 			this->camionesToolStripMenuItem->Name = L"camionesToolStripMenuItem";
-			this->camionesToolStripMenuItem->Size = System::Drawing::Size(184, 26);
+			this->camionesToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->camionesToolStripMenuItem->Text = L"Camiones";
 			this->camionesToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::camionesToolStripMenuItem_Click);
 			// 
 			// contenedoresToolStripMenuItem
 			// 
 			this->contenedoresToolStripMenuItem->Name = L"contenedoresToolStripMenuItem";
-			this->contenedoresToolStripMenuItem->Size = System::Drawing::Size(184, 26);
+			this->contenedoresToolStripMenuItem->Size = System::Drawing::Size(148, 22);
 			this->contenedoresToolStripMenuItem->Text = L"Contenedores";
 			this->contenedoresToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::contenedoresToolStripMenuItem_Click);
 			// 
@@ -551,13 +560,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->ayudaToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->guíaDelSoftwareToolStripMenuItem });
 			this->ayudaToolStripMenuItem->Name = L"ayudaToolStripMenuItem";
-			this->ayudaToolStripMenuItem->Size = System::Drawing::Size(65, 24);
+			this->ayudaToolStripMenuItem->Size = System::Drawing::Size(53, 20);
 			this->ayudaToolStripMenuItem->Text = L"Ayuda";
 			// 
 			// guíaDelSoftwareToolStripMenuItem
 			// 
 			this->guíaDelSoftwareToolStripMenuItem->Name = L"guíaDelSoftwareToolStripMenuItem";
-			this->guíaDelSoftwareToolStripMenuItem->Size = System::Drawing::Size(208, 26);
+			this->guíaDelSoftwareToolStripMenuItem->Size = System::Drawing::Size(165, 22);
 			this->guíaDelSoftwareToolStripMenuItem->Text = L"Guía del software";
 			// 
 			// acercaDeToolStripMenuItem
@@ -567,50 +576,51 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 					this->informaciónDelProyectoToolStripMenuItem
 			});
 			this->acercaDeToolStripMenuItem->Name = L"acercaDeToolStripMenuItem";
-			this->acercaDeToolStripMenuItem->Size = System::Drawing::Size(89, 24);
+			this->acercaDeToolStripMenuItem->Size = System::Drawing::Size(71, 20);
 			this->acercaDeToolStripMenuItem->Text = L"Acerca de";
 			// 
 			// integrantesToolStripMenuItem
 			// 
 			this->integrantesToolStripMenuItem->Name = L"integrantesToolStripMenuItem";
-			this->integrantesToolStripMenuItem->Size = System::Drawing::Size(260, 26);
+			this->integrantesToolStripMenuItem->Size = System::Drawing::Size(208, 22);
 			this->integrantesToolStripMenuItem->Text = L"Integrantes";
 			// 
 			// informaciónDelProyectoToolStripMenuItem
 			// 
 			this->informaciónDelProyectoToolStripMenuItem->Name = L"informaciónDelProyectoToolStripMenuItem";
-			this->informaciónDelProyectoToolStripMenuItem->Size = System::Drawing::Size(260, 26);
+			this->informaciónDelProyectoToolStripMenuItem->Size = System::Drawing::Size(208, 22);
 			this->informaciónDelProyectoToolStripMenuItem->Text = L"Información del proyecto";
 			// 
 			// txtAreaLargo
 			// 
 			this->txtAreaLargo->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->txtAreaLargo->Enabled = false;
-			this->txtAreaLargo->Location = System::Drawing::Point(1083, 106);
-			this->txtAreaLargo->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txtAreaLargo->Location = System::Drawing::Point(812, 86);
+			this->txtAreaLargo->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txtAreaLargo->Name = L"txtAreaLargo";
 			this->txtAreaLargo->ReadOnly = true;
-			this->txtAreaLargo->Size = System::Drawing::Size(104, 22);
+			this->txtAreaLargo->Size = System::Drawing::Size(79, 19);
 			this->txtAreaLargo->TabIndex = 33;
 			// 
 			// txtAreaAncho
 			// 
 			this->txtAreaAncho->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->txtAreaAncho->Enabled = false;
-			this->txtAreaAncho->Location = System::Drawing::Point(1083, 76);
-			this->txtAreaAncho->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txtAreaAncho->Location = System::Drawing::Point(812, 62);
+			this->txtAreaAncho->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txtAreaAncho->Name = L"txtAreaAncho";
 			this->txtAreaAncho->ReadOnly = true;
-			this->txtAreaAncho->Size = System::Drawing::Size(104, 22);
+			this->txtAreaAncho->Size = System::Drawing::Size(79, 19);
 			this->txtAreaAncho->TabIndex = 32;
 			// 
 			// label7
 			// 
 			this->label7->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(1020, 110);
+			this->label7->Location = System::Drawing::Point(765, 89);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(42, 16);
+			this->label7->Size = System::Drawing::Size(34, 13);
 			this->label7->TabIndex = 31;
 			this->label7->Text = L"Largo";
 			// 
@@ -618,18 +628,20 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->label6->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(1020, 79);
+			this->label6->Location = System::Drawing::Point(765, 64);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(45, 16);
+			this->label6->Size = System::Drawing::Size(38, 13);
 			this->label6->TabIndex = 30;
 			this->label6->Text = L"Ancho";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(888, -17);
+			this->label1->Location = System::Drawing::Point(666, -14);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(260, 16);
+			this->label1->Size = System::Drawing::Size(212, 13);
 			this->label1->TabIndex = 22;
 			this->label1->Text = L"INGRESE DATOS PARA LA SIMULACIÓN";
 			// 
@@ -638,10 +650,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->pictureBox1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->pictureBox1->Location = System::Drawing::Point(9, 6);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->pictureBox1->Location = System::Drawing::Point(7, 5);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(917, 767);
+			this->pictureBox1->Size = System::Drawing::Size(688, 623);
 			this->pictureBox1->TabIndex = 20;
 			this->pictureBox1->TabStop = false;
 			this->pictureBox1->Click += gcnew System::EventHandler(this, &MyWindowMain::pictureBox1_Click);
@@ -654,10 +666,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnReiniciar->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnReiniciar->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnReiniciar.Image")));
-			this->btnReiniciar->Location = System::Drawing::Point(1133, 16);
-			this->btnReiniciar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnReiniciar->Location = System::Drawing::Point(850, 13);
+			this->btnReiniciar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnReiniciar->Name = L"btnReiniciar";
-			this->btnReiniciar->Size = System::Drawing::Size(53, 54);
+			this->btnReiniciar->Size = System::Drawing::Size(40, 44);
 			this->btnReiniciar->TabIndex = 19;
 			this->btnReiniciar->UseVisualStyleBackColor = true;
 			this->btnReiniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnReiniciar_Click);
@@ -666,10 +678,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnDetener->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnDetener->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnDetener.Image")));
-			this->btnDetener->Location = System::Drawing::Point(1073, 16);
-			this->btnDetener->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnDetener->Location = System::Drawing::Point(805, 13);
+			this->btnDetener->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnDetener->Name = L"btnDetener";
-			this->btnDetener->Size = System::Drawing::Size(53, 54);
+			this->btnDetener->Size = System::Drawing::Size(40, 44);
 			this->btnDetener->TabIndex = 18;
 			this->btnDetener->UseVisualStyleBackColor = true;
 			this->btnDetener->Click += gcnew System::EventHandler(this, &MyWindowMain::btnDetener_Click);
@@ -678,10 +690,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnIniciar->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnIniciar->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnIniciar.Image")));
-			this->btnIniciar->Location = System::Drawing::Point(1013, 15);
-			this->btnIniciar->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnIniciar->Location = System::Drawing::Point(760, 12);
+			this->btnIniciar->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnIniciar->Name = L"btnIniciar";
-			this->btnIniciar->Size = System::Drawing::Size(53, 54);
+			this->btnIniciar->Size = System::Drawing::Size(40, 44);
 			this->btnIniciar->TabIndex = 17;
 			this->btnIniciar->UseVisualStyleBackColor = true;
 			this->btnIniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::button1_Click);
@@ -693,16 +705,17 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
-			this->tabControl1->Location = System::Drawing::Point(12, 31);
-			this->tabControl1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabControl1->Location = System::Drawing::Point(9, 25);
+			this->tabControl1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			this->tabControl1->Size = System::Drawing::Size(1461, 807);
+			this->tabControl1->Size = System::Drawing::Size(1096, 656);
 			this->tabControl1->TabIndex = 35;
 			// 
 			// tabPage1
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::White;
+			this->tabPage1->Controls->Add(this->btnPruebas);
 			this->tabPage1->Controls->Add(this->MapaWeb);
 			this->tabPage1->Controls->Add(this->dgvCamionesAsignados);
 			this->tabPage1->Controls->Add(this->dgvBarcosAsignados);
@@ -752,11 +765,11 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->tabPage1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->tabPage1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
-			this->tabPage1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage1->Location = System::Drawing::Point(4, 22);
+			this->tabPage1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->tabPage1->Size = System::Drawing::Size(1453, 778);
+			this->tabPage1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->tabPage1->Size = System::Drawing::Size(1088, 630);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Simulación para cada proceso";
 			// 
@@ -765,10 +778,9 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->MapaWeb->AllowExternalDrop = true;
 			this->MapaWeb->CreationProperties = nullptr;
 			this->MapaWeb->DefaultBackgroundColor = System::Drawing::Color::White;
-			this->MapaWeb->Location = System::Drawing::Point(7, 5);
-			this->MapaWeb->Margin = System::Windows::Forms::Padding(4);
+			this->MapaWeb->Location = System::Drawing::Point(5, 4);
 			this->MapaWeb->Name = L"MapaWeb";
-			this->MapaWeb->Size = System::Drawing::Size(917, 767);
+			this->MapaWeb->Size = System::Drawing::Size(688, 623);
 			this->MapaWeb->TabIndex = 82;
 			this->MapaWeb->ZoomFactor = 1;
 			// 
@@ -780,13 +792,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				this->IdCamion,
 					this->MatriculaCamion
 			});
-			this->dgvCamionesAsignados->Location = System::Drawing::Point(1148, 572);
-			this->dgvCamionesAsignados->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dgvCamionesAsignados->Location = System::Drawing::Point(861, 465);
+			this->dgvCamionesAsignados->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dgvCamionesAsignados->Name = L"dgvCamionesAsignados";
 			this->dgvCamionesAsignados->RowHeadersVisible = false;
 			this->dgvCamionesAsignados->RowHeadersWidth = 51;
 			this->dgvCamionesAsignados->RowTemplate->Height = 24;
-			this->dgvCamionesAsignados->Size = System::Drawing::Size(291, 193);
+			this->dgvCamionesAsignados->Size = System::Drawing::Size(218, 157);
 			this->dgvCamionesAsignados->TabIndex = 81;
 			// 
 			// IdCamion
@@ -811,13 +823,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				this->IdBarco,
 					this->CapacidadCoord
 			});
-			this->dgvBarcosAsignados->Location = System::Drawing::Point(1148, 373);
-			this->dgvBarcosAsignados->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dgvBarcosAsignados->Location = System::Drawing::Point(861, 303);
+			this->dgvBarcosAsignados->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dgvBarcosAsignados->Name = L"dgvBarcosAsignados";
 			this->dgvBarcosAsignados->RowHeadersVisible = false;
 			this->dgvBarcosAsignados->RowHeadersWidth = 51;
 			this->dgvBarcosAsignados->RowTemplate->Height = 24;
-			this->dgvBarcosAsignados->Size = System::Drawing::Size(291, 193);
+			this->dgvBarcosAsignados->Size = System::Drawing::Size(218, 157);
 			this->dgvBarcosAsignados->TabIndex = 80;
 			// 
 			// IdBarco
@@ -837,9 +849,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(1020, 718);
+			this->label17->Location = System::Drawing::Point(765, 583);
+			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(116, 16);
+			this->label17->Size = System::Drawing::Size(93, 13);
 			this->label17->TabIndex = 79;
 			this->label17->Text = L"Cantidad utilizada ";
 			// 
@@ -847,37 +860,40 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->textBox4->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->textBox4->Enabled = false;
-			this->textBox4->Location = System::Drawing::Point(1027, 736);
-			this->textBox4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox4->Location = System::Drawing::Point(770, 598);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox4->Name = L"textBox4";
 			this->textBox4->ReadOnly = true;
-			this->textBox4->Size = System::Drawing::Size(100, 22);
+			this->textBox4->Size = System::Drawing::Size(76, 19);
 			this->textBox4->TabIndex = 78;
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(955, 698);
+			this->label16->Location = System::Drawing::Point(716, 567);
+			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(80, 16);
+			this->label16->Size = System::Drawing::Size(65, 13);
 			this->label16->TabIndex = 77;
 			this->label16->Text = L"Contenedor ";
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(955, 362);
+			this->label15->Location = System::Drawing::Point(716, 294);
+			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(122, 16);
+			this->label15->Size = System::Drawing::Size(100, 13);
 			this->label15->TabIndex = 76;
 			this->label15->Text = L"ASIGNAR UNIDAD";
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(955, 596);
+			this->label14->Location = System::Drawing::Point(716, 484);
+			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(124, 16);
+			this->label14->Size = System::Drawing::Size(97, 13);
 			this->label14->TabIndex = 75;
 			this->label14->Text = L"Camion de traslado";
 			// 
@@ -885,31 +901,31 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->txtCamionCombustible->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->txtCamionCombustible->Enabled = false;
-			this->txtCamionCombustible->Location = System::Drawing::Point(1021, 617);
-			this->txtCamionCombustible->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txtCamionCombustible->Location = System::Drawing::Point(766, 501);
+			this->txtCamionCombustible->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txtCamionCombustible->Name = L"txtCamionCombustible";
 			this->txtCamionCombustible->ReadOnly = true;
-			this->txtCamionCombustible->Size = System::Drawing::Size(105, 22);
+			this->txtCamionCombustible->Size = System::Drawing::Size(80, 19);
 			this->txtCamionCombustible->TabIndex = 74;
 			// 
 			// cmbIdCamion
 			// 
 			this->cmbIdCamion->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmbIdCamion->FormattingEnabled = true;
-			this->cmbIdCamion->Location = System::Drawing::Point(957, 615);
-			this->cmbIdCamion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmbIdCamion->Location = System::Drawing::Point(718, 500);
+			this->cmbIdCamion->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmbIdCamion->Name = L"cmbIdCamion";
-			this->cmbIdCamion->Size = System::Drawing::Size(49, 24);
+			this->cmbIdCamion->Size = System::Drawing::Size(38, 21);
 			this->cmbIdCamion->TabIndex = 73;
 			// 
 			// btnValidarCamion
 			// 
 			this->btnValidarCamion->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnValidarCamion->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnValidarCamion.Image")));
-			this->btnValidarCamion->Location = System::Drawing::Point(957, 645);
-			this->btnValidarCamion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnValidarCamion->Location = System::Drawing::Point(718, 524);
+			this->btnValidarCamion->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnValidarCamion->Name = L"btnValidarCamion";
-			this->btnValidarCamion->Size = System::Drawing::Size(51, 50);
+			this->btnValidarCamion->Size = System::Drawing::Size(38, 41);
 			this->btnValidarCamion->TabIndex = 72;
 			this->btnValidarCamion->UseVisualStyleBackColor = true;
 			this->btnValidarCamion->Click += gcnew System::EventHandler(this, &MyWindowMain::btnValidarCamion_Click);
@@ -918,10 +934,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnRecargarCmbCamion->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnRecargarCmbCamion->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRecargarCmbCamion.Image")));
-			this->btnRecargarCmbCamion->Location = System::Drawing::Point(1023, 645);
-			this->btnRecargarCmbCamion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnRecargarCmbCamion->Location = System::Drawing::Point(767, 524);
+			this->btnRecargarCmbCamion->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnRecargarCmbCamion->Name = L"btnRecargarCmbCamion";
-			this->btnRecargarCmbCamion->Size = System::Drawing::Size(51, 50);
+			this->btnRecargarCmbCamion->Size = System::Drawing::Size(38, 41);
 			this->btnRecargarCmbCamion->TabIndex = 71;
 			this->btnRecargarCmbCamion->UseVisualStyleBackColor = true;
 			this->btnRecargarCmbCamion->Click += gcnew System::EventHandler(this, &MyWindowMain::btnRecargarCmbCamion_Click);
@@ -929,9 +945,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(955, 494);
+			this->label5->Location = System::Drawing::Point(716, 401);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(106, 16);
+			this->label5->Size = System::Drawing::Size(85, 13);
 			this->label5->TabIndex = 68;
 			this->label5->Text = L"Barco recolector";
 			// 
@@ -939,31 +956,31 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->txtBarcoCombustible->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->txtBarcoCombustible->Enabled = false;
-			this->txtBarcoCombustible->Location = System::Drawing::Point(1021, 513);
-			this->txtBarcoCombustible->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txtBarcoCombustible->Location = System::Drawing::Point(766, 417);
+			this->txtBarcoCombustible->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txtBarcoCombustible->Name = L"txtBarcoCombustible";
 			this->txtBarcoCombustible->ReadOnly = true;
-			this->txtBarcoCombustible->Size = System::Drawing::Size(105, 22);
+			this->txtBarcoCombustible->Size = System::Drawing::Size(80, 19);
 			this->txtBarcoCombustible->TabIndex = 67;
 			// 
 			// cmbIdBarco
 			// 
 			this->cmbIdBarco->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmbIdBarco->FormattingEnabled = true;
-			this->cmbIdBarco->Location = System::Drawing::Point(956, 513);
-			this->cmbIdBarco->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmbIdBarco->Location = System::Drawing::Point(717, 417);
+			this->cmbIdBarco->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmbIdBarco->Name = L"cmbIdBarco";
-			this->cmbIdBarco->Size = System::Drawing::Size(49, 24);
+			this->cmbIdBarco->Size = System::Drawing::Size(38, 21);
 			this->cmbIdBarco->TabIndex = 66;
 			// 
 			// btnValidarBarco
 			// 
 			this->btnValidarBarco->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnValidarBarco->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnValidarBarco.Image")));
-			this->btnValidarBarco->Location = System::Drawing::Point(956, 543);
-			this->btnValidarBarco->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnValidarBarco->Location = System::Drawing::Point(717, 441);
+			this->btnValidarBarco->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnValidarBarco->Name = L"btnValidarBarco";
-			this->btnValidarBarco->Size = System::Drawing::Size(51, 50);
+			this->btnValidarBarco->Size = System::Drawing::Size(38, 41);
 			this->btnValidarBarco->TabIndex = 65;
 			this->btnValidarBarco->UseVisualStyleBackColor = true;
 			this->btnValidarBarco->Click += gcnew System::EventHandler(this, &MyWindowMain::btnValidarBarco_Click);
@@ -972,10 +989,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnRecargarCmbBarco->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnRecargarCmbBarco->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRecargarCmbBarco.Image")));
-			this->btnRecargarCmbBarco->Location = System::Drawing::Point(1021, 543);
-			this->btnRecargarCmbBarco->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnRecargarCmbBarco->Location = System::Drawing::Point(766, 441);
+			this->btnRecargarCmbBarco->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnRecargarCmbBarco->Name = L"btnRecargarCmbBarco";
-			this->btnRecargarCmbBarco->Size = System::Drawing::Size(51, 50);
+			this->btnRecargarCmbBarco->Size = System::Drawing::Size(38, 41);
 			this->btnRecargarCmbBarco->TabIndex = 63;
 			this->btnRecargarCmbBarco->UseVisualStyleBackColor = true;
 			this->btnRecargarCmbBarco->Click += gcnew System::EventHandler(this, &MyWindowMain::btnRecargarCmbBarco_Click);
@@ -984,10 +1001,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnRecargarBateria->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnRecargarBateria->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnRecargarBateria.Image")));
-			this->btnRecargarBateria->Location = System::Drawing::Point(1020, 441);
-			this->btnRecargarBateria->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnRecargarBateria->Location = System::Drawing::Point(765, 358);
+			this->btnRecargarBateria->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnRecargarBateria->Name = L"btnRecargarBateria";
-			this->btnRecargarBateria->Size = System::Drawing::Size(51, 50);
+			this->btnRecargarBateria->Size = System::Drawing::Size(38, 41);
 			this->btnRecargarBateria->TabIndex = 62;
 			this->btnRecargarBateria->UseVisualStyleBackColor = true;
 			this->btnRecargarBateria->Click += gcnew System::EventHandler(this, &MyWindowMain::btnRecargarBateria_Click);
@@ -995,9 +1012,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(955, 391);
+			this->label4->Location = System::Drawing::Point(716, 318);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(87, 16);
+			this->label4->Size = System::Drawing::Size(71, 13);
 			this->label4->TabIndex = 61;
 			this->label4->Text = L"Dron scanner";
 			// 
@@ -1005,11 +1023,11 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->txtDronBateria->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->txtDronBateria->Enabled = false;
-			this->txtDronBateria->Location = System::Drawing::Point(1020, 412);
-			this->txtDronBateria->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->txtDronBateria->Location = System::Drawing::Point(765, 335);
+			this->txtDronBateria->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->txtDronBateria->Name = L"txtDronBateria";
 			this->txtDronBateria->ReadOnly = true;
-			this->txtDronBateria->Size = System::Drawing::Size(105, 22);
+			this->txtDronBateria->Size = System::Drawing::Size(80, 19);
 			this->txtDronBateria->TabIndex = 59;
 			// 
 			// dataGridView1
@@ -1020,13 +1038,13 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				this->IdDesecho,
 					this->IdCoordX, this->CoordY
 			});
-			this->dataGridView1->Location = System::Drawing::Point(1213, 16);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dataGridView1->Location = System::Drawing::Point(910, 13);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersVisible = false;
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(224, 337);
+			this->dataGridView1->Size = System::Drawing::Size(168, 274);
 			this->dataGridView1->TabIndex = 58;
 			// 
 			// IdDesecho
@@ -1054,20 +1072,20 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->cmbIdDron->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmbIdDron->FormattingEnabled = true;
-			this->cmbIdDron->Location = System::Drawing::Point(956, 410);
-			this->cmbIdDron->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmbIdDron->Location = System::Drawing::Point(717, 333);
+			this->cmbIdDron->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmbIdDron->Name = L"cmbIdDron";
-			this->cmbIdDron->Size = System::Drawing::Size(49, 24);
+			this->cmbIdDron->Size = System::Drawing::Size(38, 21);
 			this->cmbIdDron->TabIndex = 53;
 			// 
 			// btnValidarDron
 			// 
 			this->btnValidarDron->Anchor = System::Windows::Forms::AnchorStyles::Right;
 			this->btnValidarDron->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnValidarDron.Image")));
-			this->btnValidarDron->Location = System::Drawing::Point(957, 441);
-			this->btnValidarDron->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnValidarDron->Location = System::Drawing::Point(718, 358);
+			this->btnValidarDron->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnValidarDron->Name = L"btnValidarDron";
-			this->btnValidarDron->Size = System::Drawing::Size(51, 50);
+			this->btnValidarDron->Size = System::Drawing::Size(38, 41);
 			this->btnValidarDron->TabIndex = 50;
 			this->btnValidarDron->UseVisualStyleBackColor = true;
 			this->btnValidarDron->Click += gcnew System::EventHandler(this, &MyWindowMain::btnValidarDron_Click);
@@ -1076,10 +1094,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnAumentarContenedor->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAumentarContenedor->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAumentarContenedor.Image")));
-			this->btnAumentarContenedor->Location = System::Drawing::Point(957, 718);
-			this->btnAumentarContenedor->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnAumentarContenedor->Location = System::Drawing::Point(718, 583);
+			this->btnAumentarContenedor->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnAumentarContenedor->Name = L"btnAumentarContenedor";
-			this->btnAumentarContenedor->Size = System::Drawing::Size(51, 50);
+			this->btnAumentarContenedor->Size = System::Drawing::Size(38, 41);
 			this->btnAumentarContenedor->TabIndex = 49;
 			this->btnAumentarContenedor->UseVisualStyleBackColor = true;
 			// 
@@ -1087,10 +1105,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnAsignarBarcos->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAsignarBarcos->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignarBarcos.Image")));
-			this->btnAsignarBarcos->Location = System::Drawing::Point(1076, 542);
-			this->btnAsignarBarcos->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnAsignarBarcos->Location = System::Drawing::Point(807, 440);
+			this->btnAsignarBarcos->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnAsignarBarcos->Name = L"btnAsignarBarcos";
-			this->btnAsignarBarcos->Size = System::Drawing::Size(51, 50);
+			this->btnAsignarBarcos->Size = System::Drawing::Size(38, 41);
 			this->btnAsignarBarcos->TabIndex = 48;
 			this->btnAsignarBarcos->UseVisualStyleBackColor = true;
 			this->btnAsignarBarcos->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAsignarBarcos_Click);
@@ -1099,10 +1117,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnAsignarCamion->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAsignarCamion->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignarCamion.Image")));
-			this->btnAsignarCamion->Location = System::Drawing::Point(1077, 645);
-			this->btnAsignarCamion->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnAsignarCamion->Location = System::Drawing::Point(808, 524);
+			this->btnAsignarCamion->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnAsignarCamion->Name = L"btnAsignarCamion";
-			this->btnAsignarCamion->Size = System::Drawing::Size(51, 50);
+			this->btnAsignarCamion->Size = System::Drawing::Size(38, 41);
 			this->btnAsignarCamion->TabIndex = 47;
 			this->btnAsignarCamion->UseVisualStyleBackColor = true;
 			this->btnAsignarCamion->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAsignarCamion_Click);
@@ -1111,55 +1129,60 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnAsignarDron->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAsignarDron->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAsignarDron.Image")));
-			this->btnAsignarDron->Location = System::Drawing::Point(1076, 441);
-			this->btnAsignarDron->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnAsignarDron->Location = System::Drawing::Point(807, 358);
+			this->btnAsignarDron->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnAsignarDron->Name = L"btnAsignarDron";
-			this->btnAsignarDron->Size = System::Drawing::Size(51, 50);
+			this->btnAsignarDron->Size = System::Drawing::Size(38, 41);
 			this->btnAsignarDron->TabIndex = 46;
 			this->btnAsignarDron->UseVisualStyleBackColor = true;
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(949, 146);
+			this->label13->Location = System::Drawing::Point(712, 119);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(234, 16);
+			this->label13->Size = System::Drawing::Size(188, 13);
 			this->label13->TabIndex = 45;
 			this->label13->Text = L"ENCARGADO POR CADA PROCESO";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(949, 310);
+			this->label12->Location = System::Drawing::Point(712, 252);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(79, 16);
+			this->label12->Size = System::Drawing::Size(63, 13);
 			this->label12->TabIndex = 44;
 			this->label12->Text = L"Tratamiento";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(949, 263);
+			this->label11->Location = System::Drawing::Point(712, 214);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(73, 16);
+			this->label11->Size = System::Drawing::Size(58, 13);
 			this->label11->TabIndex = 43;
 			this->label11->Text = L"Transporte";
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(949, 218);
+			this->label10->Location = System::Drawing::Point(712, 177);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(83, 16);
+			this->label10->Size = System::Drawing::Size(67, 13);
 			this->label10->TabIndex = 42;
 			this->label10->Text = L"Recolección";
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(949, 172);
+			this->label9->Location = System::Drawing::Point(712, 140);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(61, 16);
+			this->label9->Size = System::Drawing::Size(49, 13);
 			this->label9->TabIndex = 41;
 			this->label9->Text = L"Escaneo";
 			// 
@@ -1167,50 +1190,50 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->cmb4Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb4Encargado->FormattingEnabled = true;
-			this->cmb4Encargado->Location = System::Drawing::Point(955, 329);
-			this->cmb4Encargado->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmb4Encargado->Location = System::Drawing::Point(716, 267);
+			this->cmb4Encargado->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmb4Encargado->Name = L"cmb4Encargado";
-			this->cmb4Encargado->Size = System::Drawing::Size(233, 24);
+			this->cmb4Encargado->Size = System::Drawing::Size(176, 21);
 			this->cmb4Encargado->TabIndex = 40;
 			// 
 			// cmb3Encargado
 			// 
 			this->cmb3Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb3Encargado->FormattingEnabled = true;
-			this->cmb3Encargado->Location = System::Drawing::Point(953, 283);
-			this->cmb3Encargado->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmb3Encargado->Location = System::Drawing::Point(715, 230);
+			this->cmb3Encargado->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmb3Encargado->Name = L"cmb3Encargado";
-			this->cmb3Encargado->Size = System::Drawing::Size(233, 24);
+			this->cmb3Encargado->Size = System::Drawing::Size(176, 21);
 			this->cmb3Encargado->TabIndex = 39;
 			// 
 			// cmb2Encargado
 			// 
 			this->cmb2Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb2Encargado->FormattingEnabled = true;
-			this->cmb2Encargado->Location = System::Drawing::Point(953, 238);
-			this->cmb2Encargado->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmb2Encargado->Location = System::Drawing::Point(715, 193);
+			this->cmb2Encargado->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmb2Encargado->Name = L"cmb2Encargado";
-			this->cmb2Encargado->Size = System::Drawing::Size(233, 24);
+			this->cmb2Encargado->Size = System::Drawing::Size(176, 21);
 			this->cmb2Encargado->TabIndex = 38;
 			// 
 			// cmb1Encargado
 			// 
 			this->cmb1Encargado->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cmb1Encargado->FormattingEnabled = true;
-			this->cmb1Encargado->Location = System::Drawing::Point(953, 191);
-			this->cmb1Encargado->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->cmb1Encargado->Location = System::Drawing::Point(715, 155);
+			this->cmb1Encargado->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->cmb1Encargado->Name = L"cmb1Encargado";
-			this->cmb1Encargado->Size = System::Drawing::Size(233, 24);
+			this->cmb1Encargado->Size = System::Drawing::Size(176, 21);
 			this->cmb1Encargado->TabIndex = 37;
 			// 
 			// btnCursor
 			// 
 			this->btnCursor->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnCursor->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnCursor.Image")));
-			this->btnCursor->Location = System::Drawing::Point(953, 15);
-			this->btnCursor->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnCursor->Location = System::Drawing::Point(715, 12);
+			this->btnCursor->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnCursor->Name = L"btnCursor";
-			this->btnCursor->Size = System::Drawing::Size(53, 54);
+			this->btnCursor->Size = System::Drawing::Size(40, 44);
 			this->btnCursor->TabIndex = 35;
 			this->btnCursor->UseVisualStyleBackColor = true;
 			this->btnCursor->Click += gcnew System::EventHandler(this, &MyWindowMain::btnCursor_Click);
@@ -1219,10 +1242,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->btnAreaAnalisis->ForeColor = System::Drawing::SystemColors::ActiveBorder;
 			this->btnAreaAnalisis->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"btnAreaAnalisis.Image")));
-			this->btnAreaAnalisis->Location = System::Drawing::Point(953, 79);
-			this->btnAreaAnalisis->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->btnAreaAnalisis->Location = System::Drawing::Point(715, 64);
+			this->btnAreaAnalisis->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->btnAreaAnalisis->Name = L"btnAreaAnalisis";
-			this->btnAreaAnalisis->Size = System::Drawing::Size(53, 54);
+			this->btnAreaAnalisis->Size = System::Drawing::Size(40, 44);
 			this->btnAreaAnalisis->TabIndex = 34;
 			this->btnAreaAnalisis->UseVisualStyleBackColor = true;
 			this->btnAreaAnalisis->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAreaAnalisis_Click);
@@ -1239,31 +1262,33 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->tabPage2->Controls->Add(this->desechogrid);
 			this->tabPage2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
-			this->tabPage2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->tabPage2->Location = System::Drawing::Point(4, 22);
+			this->tabPage2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->tabPage2->Size = System::Drawing::Size(1453, 778);
+			this->tabPage2->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->tabPage2->Size = System::Drawing::Size(1088, 630);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Simulación separador de desecho";
 			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
 			// cbCamara
 			// 
-			this->cbCamara->FormattingEnabled = true;
-			this->cbCamara->Location = System::Drawing::Point(234, 59);
-			this->cbCamara->Name = L"cbCamara";
-			this->cbCamara->Size = System::Drawing::Size(272, 24);
-			this->cbCamara->TabIndex = 15;
 			this->cbCamara->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cbCamara->FormattingEnabled = true;
+			this->cbCamara->Location = System::Drawing::Point(176, 48);
+			this->cbCamara->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->cbCamara->Name = L"cbCamara";
+			this->cbCamara->Size = System::Drawing::Size(205, 21);
+			this->cbCamara->TabIndex = 15;
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10));
-			this->label2->Location = System::Drawing::Point(46, 63);
+			this->label2->Location = System::Drawing::Point(34, 51);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(168, 20);
+			this->label2->Size = System::Drawing::Size(141, 17);
 			this->label2->TabIndex = 14;
 			this->label2->Text = L"Seleccionar cámara: ";
 			// 
@@ -1271,11 +1296,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->videoCamara->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->videoCamara->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->videoCamara->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"videoCamara.Image")));
-			this->videoCamara->Location = System::Drawing::Point(20, 214);
-			this->videoCamara->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->videoCamara->Location = System::Drawing::Point(15, 174);
+			this->videoCamara->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->videoCamara->Name = L"videoCamara";
-			this->videoCamara->Size = System::Drawing::Size(642, 349);
+			this->videoCamara->Size = System::Drawing::Size(482, 284);
 			this->videoCamara->TabIndex = 13;
 			this->videoCamara->TabStop = false;
 			// 
@@ -1284,19 +1308,20 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->label8->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->label8->AutoSize = true;
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->label8->Location = System::Drawing::Point(777, 37);
+			this->label8->Location = System::Drawing::Point(583, 30);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(299, 25);
+			this->label8->Size = System::Drawing::Size(244, 20);
 			this->label8->TabIndex = 12;
 			this->label8->Text = L"Cantidad detectada por el sensor";
 			// 
 			// detener_proceso
 			// 
 			this->detener_proceso->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->detener_proceso->Location = System::Drawing::Point(972, 101);
-			this->detener_proceso->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->detener_proceso->Location = System::Drawing::Point(729, 82);
+			this->detener_proceso->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->detener_proceso->Name = L"detener_proceso";
-			this->detener_proceso->Size = System::Drawing::Size(175, 34);
+			this->detener_proceso->Size = System::Drawing::Size(131, 28);
 			this->detener_proceso->TabIndex = 11;
 			this->detener_proceso->Text = L"DETENER PROCESO";
 			this->detener_proceso->UseVisualStyleBackColor = true;
@@ -1304,10 +1329,10 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// iniciar_proceso
 			// 
 			this->iniciar_proceso->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->iniciar_proceso->Location = System::Drawing::Point(743, 101);
-			this->iniciar_proceso->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->iniciar_proceso->Location = System::Drawing::Point(557, 82);
+			this->iniciar_proceso->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->iniciar_proceso->Name = L"iniciar_proceso";
-			this->iniciar_proceso->Size = System::Drawing::Size(175, 34);
+			this->iniciar_proceso->Size = System::Drawing::Size(131, 28);
 			this->iniciar_proceso->TabIndex = 10;
 			this->iniciar_proceso->Text = L"INICIAR PROCESO";
 			this->iniciar_proceso->UseVisualStyleBackColor = true;
@@ -1326,8 +1351,8 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 				this->plasticobox,
 					this->cartonbox, this->vidriobox, this->otrosbox
 			});
-			this->desechogrid->Location = System::Drawing::Point(683, 164);
-			this->desechogrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->desechogrid->Location = System::Drawing::Point(512, 133);
+			this->desechogrid->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->desechogrid->Name = L"desechogrid";
 			this->desechogrid->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->desechogrid->RowHeadersVisible = false;
@@ -1337,7 +1362,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->desechogrid->RowTemplate->ReadOnly = true;
 			this->desechogrid->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			this->desechogrid->ScrollBars = System::Windows::Forms::ScrollBars::None;
-			this->desechogrid->Size = System::Drawing::Size(507, 587);
+			this->desechogrid->Size = System::Drawing::Size(380, 477);
 			this->desechogrid->TabIndex = 9;
 			this->desechogrid->VirtualMode = true;
 			// 
@@ -1378,11 +1403,21 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
+			// btnPruebas
+			// 
+			this->btnPruebas->Location = System::Drawing::Point(783, 130);
+			this->btnPruebas->Name = L"btnPruebas";
+			this->btnPruebas->Size = System::Drawing::Size(75, 23);
+			this->btnPruebas->TabIndex = 83;
+			this->btnPruebas->Text = L"Pruebas";
+			this->btnPruebas->UseVisualStyleBackColor = true;
+			this->btnPruebas->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas_Click);
+			// 
 			// MyWindowMain
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1483, 853);
+			this->ClientSize = System::Drawing::Size(1112, 693);
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip2);
@@ -1390,7 +1425,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->IsMdiContainer = true;
 			this->KeyPreview = true;
 			this->MainMenuStrip = this->menuStrip2;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MyWindowMain";
 			this->Text = L"Simulador para la gestión de basura marina";
 			this->Load += gcnew System::EventHandler(this, &MyWindowMain::MyWindowMain_Load);
@@ -1701,7 +1736,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 		double lng2 = -77.156983;
 
 		// Genera el script en JavaScript para dibujar el rect�ngulo
-		String^ script = String::Format("dibujarRectangulo({0}, {1}, {2}, {3});", lat1, lng1, lat2, lng2);
+		String^ script = String::Format("dibujarRectangulo({0}, {1}, {2}, {3});", lat2, lng2, lat1, lng1);
 
 		// Ejecuta el script en WebView2
 		MapaWeb->CoreWebView2->ExecuteScriptAsync(script);
@@ -1890,6 +1925,9 @@ private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::E
 	RecargarCombustible(cmbIdDron, "dron");
 	txtDronBateria->Text = "100%";
 
+}
+private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs^ e) {
+	MapaWeb->ExecuteScriptAsync("generarPuntoAleatorio();");
 }
 };
 }

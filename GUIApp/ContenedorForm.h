@@ -21,6 +21,8 @@ namespace GUIApp {
 		ContenedorForm(void)
 		{
 			InitializeComponent();
+			this->MinimizeBox = false;
+			this->MaximizeBox = false;
 			//
 			//TODO: agregar código de constructor aquí
 			//
