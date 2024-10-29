@@ -1432,7 +1432,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	}
 
 	private: System::Void btnGenerarArea_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		//g
 	}
 	private: System::Void MyWindowMain_Load(System::Object^ sender, System::EventArgs^ e) { //Cambio mapa
 		//Cambiar el directorio, entre C:/..../.../... HASTA Proyecto, que es TU carpeta del proyecto																											//
