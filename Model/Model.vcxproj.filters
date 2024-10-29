@@ -127,10 +127,4 @@
       <Filter>Archivos de recursos</Filter>
     </Image>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\mscorlib.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.dll" />
-  </ItemGroup>
 </Project>

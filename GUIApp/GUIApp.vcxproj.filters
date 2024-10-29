@@ -88,15 +88,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.Core.dll" />
-    <None Include="..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.WinForms.dll" />
-    <None Include="..\x64\Debug\Model.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\mscorlib.dll" />
-    <None Include="..\x64\Debug\Service.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Data.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Drawing.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Windows.Forms.dll" />
-    <None Include="..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.Xml.dll" />
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="HTMLPage.html" />
