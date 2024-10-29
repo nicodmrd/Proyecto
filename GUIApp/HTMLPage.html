@@ -16,6 +16,9 @@
         let map;
         let directionsService;
         let directionsRenderer;
+        let marcadores = [];
+        let rectangle;
+        let bounds;
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -25,12 +28,6 @@
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
-
-            map.addListener("click", (event) => {
-                const lat = event.latLng.lat();
-                const lng = event.latLng.lng();
-                alert(`Latitud: ${lat}, Longitud: ${lng}`);
-            });
         }
 
         function calculateAndDisplayRoute(origin, destination) {
@@ -50,16 +47,15 @@
             );
         }
         function dibujarRectangulo(lat1, lng1, lat2, lng2) {
-            const bounds = new google.maps.LatLngBounds(
+            bounds = new google.maps.LatLngBounds(
                 new google.maps.LatLng(lat1, lng1),
                 new google.maps.LatLng(lat2, lng2)
             );
 
-            const rectangle = new google.maps.Rectangle({
+            rectangle = new google.maps.Rectangle({
                 bounds: bounds,
                 editable: true,
                 draggable: true,
-                map: map,
                 map: map,
                 strokeColor: '#FF0000',
                 strokeOpacity: 0.8,
@@ -67,24 +63,39 @@
                 fillColor: '#FF0000',
                 fillOpacity: 0.35,
             });
+
+            google.maps.event.addListener(rectangle, 'bounds_changed', () => {
+                bounds = rectangle.getBounds();
+            });
         }
 
         function generarPuntoAleatorio() {
-            const bounds = map.getBounds();
-            const southWest = bounds.getSouthWest();
-            const northEast = bounds.getNorthEast();
-
-            const lat = Math.random() * (northEast.lat() - southWest.lat()) + southWest.lat();
-            const lng = Math.random() * (northEast.lng() - southWest.lng()) + southWest.lng();
+            if (!bounds) {
+                alert("P2.");
+                return;
+            }
+            const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
+            const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
 
             const position = { lat: lat, lng: lng };
-            new google.maps.Marker({
+
+            // Crea el marcador dentro de los límites del rectángulo
+            const marker = new google.maps.Marker({
                 position: position,
                 map: map,
                 title: `Latitud: ${lat}, Longitud: ${lng}`
             });
 
+            // Almacena el marcador en la lista para poder borrarlo después
+            marcadores.push(marker);
             map.panTo(position);
+        }
+
+        function borrarPuntos() {
+            for (let marker of marcadores) {
+                marker.setMap(null);
+            }
+            marcadores = [];
         }
 
     </script>
@@ -93,5 +104,3 @@
     <div id="map" style="width: 100%; height: 100vh;"></div>
 </body>
 </html>
-
-

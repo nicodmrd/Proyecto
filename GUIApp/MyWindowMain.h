@@ -36,6 +36,7 @@ namespace GUIApp {
 	private: System::Windows::Forms::ComboBox^ cbCamara;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ btnPruebas;
+	private: System::Windows::Forms::Button^ btnPruebas2;
 
 	private: int camaraActual = -1;
 	
@@ -469,6 +470,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->toolTip13 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip14 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->btnPruebas2 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->tabControl1->SuspendLayout();
@@ -715,6 +717,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// tabPage1
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::White;
+			this->tabPage1->Controls->Add(this->btnPruebas2);
 			this->tabPage1->Controls->Add(this->btnPruebas);
 			this->tabPage1->Controls->Add(this->MapaWeb);
 			this->tabPage1->Controls->Add(this->dgvCamionesAsignados);
@@ -775,11 +778,11 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// btnPruebas
 			// 
-			this->btnPruebas->Location = System::Drawing::Point(783, 130);
+			this->btnPruebas->Location = System::Drawing::Point(760, 130);
 			this->btnPruebas->Name = L"btnPruebas";
-			this->btnPruebas->Size = System::Drawing::Size(75, 23);
+			this->btnPruebas->Size = System::Drawing::Size(33, 23);
 			this->btnPruebas->TabIndex = 83;
-			this->btnPruebas->Text = L"Pruebas";
+			this->btnPruebas->Text = L"P1";
 			this->btnPruebas->UseVisualStyleBackColor = true;
 			this->btnPruebas->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas_Click);
 			// 
@@ -1413,6 +1416,16 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
+			// btnPruebas2
+			// 
+			this->btnPruebas2->Location = System::Drawing::Point(799, 130);
+			this->btnPruebas2->Name = L"btnPruebas2";
+			this->btnPruebas2->Size = System::Drawing::Size(33, 23);
+			this->btnPruebas2->TabIndex = 84;
+			this->btnPruebas2->Text = L"P2";
+			this->btnPruebas2->UseVisualStyleBackColor = true;
+			this->btnPruebas2->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas2_Click);
+			// 
 			// MyWindowMain
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1929,6 +1942,8 @@ private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::E
 private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs^ e) {
 	MapaWeb->ExecuteScriptAsync("generarPuntoAleatorio();");
 }
+private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
+	MapaWeb->ExecuteScriptAsync("borrarPuntos();");
+}
 };
 }
-//1717
