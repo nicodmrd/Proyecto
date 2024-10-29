@@ -114,7 +114,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Web.WebView2.Core">
-      <HintPath>Microsoft.Web.WebView2.Core</HintPath>
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.WinForms">
       <HintPath>..\packages\Microsoft.Web.WebView2.1.0.2849.39\lib\net462\Microsoft.Web.WebView2.WinForms.dll</HintPath>
@@ -194,7 +194,8 @@
     <Image Include="interceptor3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mapa.html" />
+    <CopyFileToFolders Include="HTMLPage.html" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -174,17 +174,13 @@ void SimuladorService::Service::AddContenedor(Contenedor^ contenedor_center) {
             throw gcnew DuplicatedException("El contenedor ya existe en la base de datos.");
     }
     contenedorList->Add(contenedor_center);
-    //Persistance::PersistXMLFile(XML_CONTENEDOR_FILE_NAME, contenedorList);
     Persistance::PersistBinaryFile(BIN_CONTENEDOR_FILE_NAME, contenedorList);
-    //Persistance::PersistBinaryFile(BIN_COORDENADAS_FILE_NAME, coordendas_list);
 }
 void SimuladorService::Service::UpdateContenedor(Contenedor^ contenedor_center) {
     for (int i = 0; i < contenedorList->Count; i++) {
         if (contenedorList[i]->Id == contenedor_center->Id) {
             contenedorList[i] = contenedor_center;
-            //Persistance::PersistXMLFile(XML_CONTENEDOR_FILE_NAME, contenedorList);
             Persistance::PersistBinaryFile(BIN_CONTENEDOR_FILE_NAME, contenedorList);
-            //Persistance::PersistBinaryFile(BIN_COORDENADAS_FILE_NAME, coordendas_list);
             return;
         }
     }
@@ -195,17 +191,13 @@ void SimuladorService::Service::DeleteContenedor(int contenedor_center) {
         if (contenedorList[i]->Id == contenedor_center) {
             contenedorList->RemoveAt(i);
             Persistance::PersistBinaryFile(BIN_CONTENEDOR_FILE_NAME, contenedorList);
-            //Persistance::PersistBinaryFile(BIN_COORDENADAS_FILE_NAME, coordendas_list);
             return;
         }
     }
     throw gcnew DoesNotExistException("El contenedor no existe en la base de datos.");
 }
 List<Contenedor^>^ SimuladorService::Service::QueryAllContenedor() {
-    //contenedorList = gcnew List<Contenedor^>();
     try {
-        //robotsList = (List<RobotWaiter^>^)Persistance::LoadRobotWaitersTextFile(TXT_ROBOT_FILE_NAME);
-        //contenedorList = (List<Contenedor^>^)Persistance::LoadContenedorXmlFile(XML_CONTENEDOR_FILE_NAME);
         contenedorList = (List<Contenedor^>^)Persistance::LoadBinaryFile(BIN_CONTENEDOR_FILE_NAME);
         if (contenedorList == nullptr)
             contenedorList = gcnew List<Contenedor^>();
@@ -226,38 +218,33 @@ Contenedor^ SimuladorService::Service::QueryContenedorById(int contenedor_center
 
 //-----------------------------------------Dron--------------------------------------------------
 void SimuladorService::Service::AddDron(Dron^ DronId) {
-    if (dronList->Count > 0) {
-        throw gcnew Exception("Solo se puede agregar un único dron.");
+    for each (Dron ^ _dron in dronList) {
+        if (DronId->Id == _dron->Id)
+            throw gcnew DuplicatedException("El dron con el id ingresado ya existe en la base de datos.");
     }
     dronList->Add(DronId);
     Persistance::PersistBinaryFile(BIN_DRON_FILE_NAME, dronList);
 }
 
 void SimuladorService::Service::UpdateDron(Dron^ DronId) {
-    if (dronList->Count == 0) {
-        throw gcnew DoesNotExistException("No hay dron en la base de datos para actualizar.");
+    for (int i = 0; i < dronList->Count; i++) {
+        if (dronList[i]->Id == DronId->Id) {
+            dronList[i] = DronId;
+            Persistance::PersistBinaryFile(BIN_DRON_FILE_NAME, dronList);
+            return;
+        }
     }
-
-    if (dronList[0]->Id == DronId->Id) {
-        dronList[0] = DronId;
-        Persistance::PersistBinaryFile(BIN_DRON_FILE_NAME, dronList);
-    }
-    else {
-        throw gcnew DoesNotExistException("El código del dron no existe en la base de datos.");
-    }
+    throw gcnew DoesNotExistException("El dron no existe en la base de datos.");
 }
 void SimuladorService::Service::DeleteDron(int DronId) {
-    if (dronList->Count == 0) {
-        throw gcnew DoesNotExistException("No hay dron en la base de datos para eliminar.");
+    for (int i = 0; i < dronList->Count; i++) {
+        if (dronList[i]->Id == DronId) {
+            dronList->RemoveAt(i);
+            Persistance::PersistBinaryFile(BIN_DRON_FILE_NAME, dronList);
+            return;
+        }
     }
-
-    if (dronList[0]->Id == DronId) {
-        dronList->Clear();  // Elimina el único dron
-        Persistance::PersistBinaryFile(BIN_DRON_FILE_NAME, dronList);
-    }
-    else {
-        throw gcnew DoesNotExistException("El código del dron no existe en la base de datos.");
-    }
+    throw gcnew DoesNotExistException("El dron no existe en la base de datos.");
 }
 List<Dron^>^ SimuladorService::Service::QueryDron() {
     try {
@@ -270,10 +257,13 @@ List<Dron^>^ SimuladorService::Service::QueryDron() {
     }
     return dronList;
 }
+
 Dron^ SimuladorService::Service::QueryDronById(int DronId) {
     dronList = QueryDron();
-    if (dronList->Count > 0 && dronList[0]->Id == DronId) {
-        return dronList[0];
+    for (int i = 0; i < dronList->Count; i++) {
+        if (dronList[i]->Id == DronId) {
+            return dronList[i];
+        }
     }
     return nullptr;
 

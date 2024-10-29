@@ -90,4 +90,7 @@
     <None Include="Mapa.html" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="HTMLPage.html" />
+  </ItemGroup>
 </Project>
