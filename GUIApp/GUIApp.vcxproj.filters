@@ -89,5 +89,6 @@
   <ItemGroup>
     <None Include="Mapa.html" />
     <None Include="packages.config" />
+    <None Include="HTMLPage.html" />
   </ItemGroup>
 </Project>
