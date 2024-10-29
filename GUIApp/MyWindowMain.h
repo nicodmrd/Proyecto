@@ -1450,13 +1450,16 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	}
 
 	private: System::Void btnGenerarArea_Click(System::Object^ sender, System::EventArgs^ e) {
-		//g
+	}
+
+	void LoadHTMLPage()
+	{
+		String^ outputPath = Application::StartupPath;
+		String^ htmlFilePath = Path::Combine(outputPath, "HTMLPage.html");
+		MapaWeb->Source = gcnew Uri(htmlFilePath);
 	}
 	private: System::Void MyWindowMain_Load(System::Object^ sender, System::EventArgs^ e) { 
-		//Cambiar el directorio, entre C:/..../.../... HASTA Proyecto, que es TU carpeta del proyecto	
-		String^ htmlFilePath = "C:/Users/User/source/repos/ProyectoEditable/GUIApp/HTMLPage.html";
-		
-		this->MapaWeb->Source = gcnew System::Uri(htmlFilePath);
+		LoadHTMLPage();
 		CargarEncargados();
 		CargarDron();
 		CargarIdBarco();

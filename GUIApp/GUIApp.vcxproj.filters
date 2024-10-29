@@ -87,8 +87,9 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mapa.html" />
     <None Include="packages.config" />
-    <None Include="HTMLPage.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="HTMLPage.html" />
   </ItemGroup>
 </Project>

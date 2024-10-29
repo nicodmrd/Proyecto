@@ -124,9 +124,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-
-</ItemGroup>
-  
+  </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BarcoForm.cpp" />
     <ClCompile Include="CamionesForm.cpp" />
@@ -196,7 +194,7 @@
     <Image Include="interceptor3.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HTMLPage.html" />
+    <CopyFileToFolders Include="HTMLPage.html" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
