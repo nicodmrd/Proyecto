@@ -71,7 +71,7 @@
 
         function generarPuntoAleatorio() {
             if (!bounds) {
-                alert("P2.");
+                alert("Debe seleccionar el área.");
                 return;
             }
             const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
