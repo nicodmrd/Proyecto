@@ -1942,7 +1942,7 @@ private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::E
 
 }
 private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs^ e) {
-	MapaWeb->ExecuteScriptAsync("generarPuntoAleatorio();");
+	MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");
 }
 private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
 	MapaWeb->ExecuteScriptAsync("eliminarPuntos();");

@@ -47,6 +47,11 @@
             );
         }
         function dibujarRectangulo(lat1, lng1, lat2, lng2) {
+            if (rectangle) {
+                alert("Ya existe un rectángulo. No se puede crear otro.");
+                return;
+            }
+
             bounds = new google.maps.LatLngBounds(
                 new google.maps.LatLng(lat1, lng1),
                 new google.maps.LatLng(lat2, lng2)
@@ -66,35 +71,58 @@
 
             google.maps.event.addListener(rectangle, 'bounds_changed', () => {
                 bounds = rectangle.getBounds();
+                eliminarPuntosFueraDeRectangulo();
             });
         }
 
-        function generarPuntoAleatorio() {
+        function generarPuntosAleatorios() {
             if (!bounds) {
                 alert("Debe seleccionar el área.");
                 return;
             }
-            const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
-            const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
 
-            const position = { lat: lat, lng: lng };
+            const puntosRestantes = 100 - marcadores.length;
+            if (puntosRestantes <= 0) {
+                alert("No se pueden generar más de 100 puntos.");
+                return;
+            }
 
-            // Crea el marcador dentro de los límites del rectángulo
-            const marker = new google.maps.Marker({
-                position: position,
-                map: map,
-                title: `Latitud: ${lat}, Longitud: ${lng}`
-            });
+            const cantidadPuntos = Math.floor(Math.random() * puntosRestantes) + 1;
 
-            // Almacena el marcador en la lista para poder borrarlo después
-            marcadores.push(marker);
-            map.panTo(position);
+            for (let i = 0; i < cantidadPuntos; i++) {
+                const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
+                const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
+
+                const position = { lat: lat, lng: lng };
+
+                const marker = new google.maps.Marker({
+                    position: position,
+                    map: map,
+                    title: `Latitud: ${lat}, Longitud: ${lng}`
+                });
+
+                marcadores.push(marker);
+            }
+
+            if (marcadores.length > 0) {
+                map.panTo(marcadores[marcadores.length - 1].getPosition());
+            }
         }
         function eliminarPuntos() {
             for (let marker of marcadores) {
                 marker.setMap(null);
             }
-            marcadores = []; // Vaciar el array de marcadores
+            marcadores = [];
+        }
+
+        function eliminarPuntosFueraDeRectangulo() {
+            marcadores = marcadores.filter(marker => {
+                if (!bounds.contains(marker.getPosition())) {
+                    marker.setMap(null);
+                    return false;
+                }
+                return true;
+            });
         }
 
     </script>
