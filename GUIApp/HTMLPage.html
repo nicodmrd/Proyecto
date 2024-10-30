@@ -19,7 +19,10 @@
         let marcadores = [];
         let rectangle;
         let bounds;
+<<<<<<< HEAD
 
+=======
+>>>>>>> AA
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
                 center: { lat: -12.07488, lng: -77.155983 }, 
@@ -63,7 +66,10 @@
                 fillColor: '#FF0000',
                 fillOpacity: 0.35,
             });
+<<<<<<< HEAD
 
+=======
+>>>>>>> AA
             google.maps.event.addListener(rectangle, 'bounds_changed', () => {
                 bounds = rectangle.getBounds();
             });
@@ -91,11 +97,19 @@
             map.panTo(position);
         }
 
+<<<<<<< HEAD
         function borrarPuntos() {
             for (let marker of marcadores) {
                 marker.setMap(null);
             }
             marcadores = [];
+=======
+        function eliminarPuntos() {
+            for (let marker of marcadores) {
+                marker.setMap(null);
+            }
+            marcadores = []; // Vaciar el array de marcadores
+>>>>>>> AA
         }
 
     </script>

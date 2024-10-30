@@ -778,9 +778,15 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// btnPruebas
 			// 
+<<<<<<< HEAD
 			this->btnPruebas->Location = System::Drawing::Point(760, 130);
 			this->btnPruebas->Name = L"btnPruebas";
 			this->btnPruebas->Size = System::Drawing::Size(33, 23);
+=======
+			this->btnPruebas->Location = System::Drawing::Point(783, 130);
+			this->btnPruebas->Name = L"btnPruebas";
+			this->btnPruebas->Size = System::Drawing::Size(30, 23);
+>>>>>>> AA
 			this->btnPruebas->TabIndex = 83;
 			this->btnPruebas->Text = L"P1";
 			this->btnPruebas->UseVisualStyleBackColor = true;
@@ -1418,9 +1424,15 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// btnPruebas2
 			// 
+<<<<<<< HEAD
 			this->btnPruebas2->Location = System::Drawing::Point(799, 130);
 			this->btnPruebas2->Name = L"btnPruebas2";
 			this->btnPruebas2->Size = System::Drawing::Size(33, 23);
+=======
+			this->btnPruebas2->Location = System::Drawing::Point(819, 130);
+			this->btnPruebas2->Name = L"btnPruebas2";
+			this->btnPruebas2->Size = System::Drawing::Size(30, 23);
+>>>>>>> AA
 			this->btnPruebas2->TabIndex = 84;
 			this->btnPruebas2->Text = L"P2";
 			this->btnPruebas2->UseVisualStyleBackColor = true;
@@ -1943,7 +1955,13 @@ private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs
 	MapaWeb->ExecuteScriptAsync("generarPuntoAleatorio();");
 }
 private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
+<<<<<<< HEAD
 	MapaWeb->ExecuteScriptAsync("borrarPuntos();");
+=======
+	MapaWeb->ExecuteScriptAsync("eliminarPuntos();");
+}
+};
+>>>>>>> AA
 }
 };
 }
