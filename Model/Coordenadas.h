@@ -16,5 +16,8 @@ namespace Model {
             X = x;
             Y = y;
         }
+        String^ ToString() override {
+            return "{ lat: " + X.ToString() + ", lng: " + Y.ToString() + " }";
+        }
     };
 }

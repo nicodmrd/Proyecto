@@ -4,11 +4,10 @@
 namespace Model {
     public ref class Area {
     public: 
-        //int Id;
-        double X;
-        double Y;
-        double Ancho;
-        double Largo;
+        double long1;
+        double long2;
+        double long3;
+        double long4;
     
     void DefinirArea();
     

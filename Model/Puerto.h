@@ -7,7 +7,3 @@ namespace Model {
         Coordenadas^ Posicion;
     };
 }
-
-ref class Puerto
-{
-};

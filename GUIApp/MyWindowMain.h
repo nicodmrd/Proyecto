@@ -1286,26 +1286,36 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 		form->ShowDialog(); // Mostrar el formulario de forma modal
 	}
 
-		   //DECLARAR OBJETOS:
-		   
-	private: 
-		Area^ _area = gcnew Area();
-		List<Desecho^>^ _desecho = gcnew List<Desecho^>();
+	private:
 		int segundos = 0;
 		int minutos = 0;
 		int horas = 0;
 
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		//GENERA RUTA DEL CAMION
-		System::String^ origin = "{ lat: -12.053763093969444, lng: -77.14634104154212}";
-		System::String^ destination = "{ lat: -12.069060413055682, lng: -77.07815928837975 }";
-		this->MapaWeb->CoreWebView2->ExecuteScriptAsync("calculateAndDisplayRoute(" + origin + ", " + destination + ");");
+		//UBICACIONES FIJAS
+	private:
+		Puerto^ puerto = gcnew Puerto();
+		Acopio^ pucp = gcnew Acopio();
+		Area^ area = gcnew Area();
+		int cantBtnInicio = 0;
 
-		segundos = 0;
-		minutos = 0;
-		horas = 0;
-		lblCronometro->Text = "00:00:00";  // Reinicia el texto del cronómetro
-		timer1->Enabled = true;             // Activa el Timer
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		cantBtnInicio++;
+		if (cantBtnInicio == 1) {
+			//GENERA RUTA DEL CAMION
+			puerto->Posicion = gcnew Coordenadas(-12.069060413055682, -77.07815928837975);
+			pucp->Posicion = gcnew Coordenadas(-12.053763093969444, -77.14634104154212);
+
+			this->MapaWeb->CoreWebView2->ExecuteScriptAsync("calculateAndDisplayRoute(" + puerto->Posicion + ", " + pucp->Posicion + ");");
+
+			segundos = 0;
+			minutos = 0;
+			horas = 0;
+			lblCronometro->Text = "00:00:00";  
+			timer1->Enabled = true;             // Activa el Timer
+		}
+		else {
+			MessageBox::Show("La simulación se ejecutando");
+		}
 	
 	}
 
@@ -1329,11 +1339,16 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 
 
 	private: System::Void btnAreaAnalisis_Click(System::Object^ sender, System::EventArgs^ e) {
-		// Define las coordenadas para las esquinas del rect�ngulo
-		double lat1 = -12.07488;
-		double lng1 = -77.155983;
-		double lat2 = -12.07588;
-		double lng2 = -77.156983;
+		area->long1 = -12.07488;
+		area->long2 = -77.155983;
+		area->long3 = -12.07588;
+		area->long4 = -77.156983;
+
+		double lat1 = area->long1;
+		double lng1 = area->long2;
+		double lat2 = area->long3;
+		double lng2 = area->long4;
+
 
 		// Genera el script en JavaScript para dibujar el rect�ngulo
 		String^ script = String::Format("dibujarRectangulo({0}, {1}, {2}, {3});", lat2, lng2, lat1, lng1);
@@ -1361,6 +1376,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 		btnAsignarBarcos->Enabled = false;
 		btnAsignarCamion->Enabled = false;
 		btnAumentarContenedor->Enabled = false;
+		timer1->Enabled = false;
 	}
 private: System::Void btnReiniciar_Click(System::Object^ sender, System::EventArgs^ e) {
 	ClearControls();
@@ -1397,6 +1413,10 @@ private: System::Void btnAsignarCamion_Click(System::Object^ sender, System::Eve
 			dgvCamionesAsignados->Rows->Add(camionSeleccionado->Id, camionSeleccionado->Placa);
 		}
 	}
+	puerto->Posicion = gcnew Coordenadas(-12.069060413055682, -77.07815928837975);
+	pucp->Posicion = gcnew Coordenadas(-12.053763093969444, -77.14634104154212);
+	MapaWeb->ExecuteScriptAsync("moverCamion("+puerto->Posicion+","+""+pucp->Posicion+"); ");
+
 }
 private: System::Void btnAsignarBarcos_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ idSeleccionado = cmbIdBarco->SelectedItem->ToString();
@@ -1554,7 +1574,6 @@ private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) 
 			horas++;
 		}
 	}
-	// Actualiza el Label con el tiempo formateado
 	lblCronometro->Text = String::Format("{0:D2}:{1:D2}:{2:D2}", horas, minutos, segundos);
 }
 };

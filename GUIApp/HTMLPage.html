@@ -19,6 +19,8 @@
         let marcadores = [];
         let rectangle;
         let bounds;
+        let markerCamion; // marcador para el camión
+        let rutaPuntos = []; //almacenar los puntos de la ruta
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -40,11 +42,38 @@
                 (response, status) => {
                     if (status === "OK") {
                         directionsRenderer.setDirections(response);
+                        routePoints = response.routes[0].overview_path;
                     } else {
                         alert("No se pudo generar la ruta: " + status);
                     }
                 }
             );
+        }
+        function moverCamion(inicio, fin) {
+            if (!routePoints.length) {
+                alert("Debe generar una ruta primero.");
+                return;
+            }
+
+            if (markerCamion) markerCamion.setMap(null); // Eliminar el marcador anterior si existe
+            markerCamion = new google.maps.Marker({
+                position: routePoints[0],
+                map: map,
+                title: "Camión",
+                icon: "https://maps.google.com/mapfiles/ms/icons/truck.png"
+            });
+
+            let pasoActual = 0;
+
+            function animarPaso() {
+                if (pasoActual < routePoints.length) {
+                    markerCamion.setPosition(routePoints[pasoActual]);
+                    map.panTo(routePoints[pasoActual]);
+                    pasoActual++;
+                    setTimeout(animarPaso, 100); // Ajusta el tiempo para velocidad de la animación
+                }
+            }
+            animarPaso();
         }
         function dibujarRectangulo(lat1, lng1, lat2, lng2) {
             if (rectangle) {
