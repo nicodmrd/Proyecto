@@ -87,7 +87,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mapa.html" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

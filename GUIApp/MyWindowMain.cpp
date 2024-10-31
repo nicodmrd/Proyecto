@@ -10,3 +10,4 @@ void Main(array<String^>^ args) {
 	GUIApp::MyWindowMain form;
 	Application::Run(% form);
 }
+

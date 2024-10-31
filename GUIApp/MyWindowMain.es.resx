@@ -1,0 +1,3193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="menuStrip2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="menuStrip2.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaLargo.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAreaAncho.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label7.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label6.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label1.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="pictureBox1.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnReiniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAICSURBVFhH7ZZN
+        SxVRHIdvqIEoIlkLbaMLC0wzcuEHcKGhbkSiXdCihUs3te4DKNUqI7RFCGrrlr5Ai3ClFmWLXpVExZYR
+        pfY8RycizDtzZ7pQ+MADc/5zzu/MnTlzz+SO+B/owjd4JbSKzCX8grt400Ix6cRo8nEswaIxhDvo5Fv4
+        BG9jB5bhX+cjOvlBruJ1LMVMqMITe4c/qcXX6ISfcRCH8d1+TZ9hHaaiHv1Fa/j7M67EWXSydWxC+1zD
+        T2h9Bc9iQZzEZTRozsIBeBGes493IOI0zqP1V1iNiXmABrzEGgt/oAIH0MfyK07q5GY8tJCEi7iN37HF
+        QoE04zc064KFuNxHr/xeaKVjBM0aC60Y+Pq4qBzUZiElZpi1ibFezVZ0gCv4mIWUmOGbZGasx9CNdp4J
+        rWwwy0yz83IV7fw4tLJhCs00Oy+9aOfp0MqG6A70hFYeokXzIbSywSwzfb3z4m7mDueA8xZS4sIzyz0j
+        9k75CB10J7TScRfNMjM27eh+/xUbLRTIGTTDLDMTMYle+QK66STFMYtoxoSFpJzCt2iA2667Y1wcG+2S
+        ZtguCBfhBhrkx0Y/Hvbv6LnL+B4d49jUC7kBo1upz/EW+lF6Dt3xPLb2AqN+S+jYTDiOfudFm9Rh+grf
+        wHLMHD8++nAUn6K3Wj225jn7HPGvkMv9ALlZi59y4wcaAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnReiniciar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnReiniciar.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAN2SURBVFhHtZdZ
+        qE1RGMevmZChSJT5QckcikQKhczzAw+myCxD5geUuZChkCkKJSUPZLzGyDzPQuJBiTz7/9Z392rbZ+1z
+        jnuPX/26/7PPPufsvfZa3/pu0T/SVs6W+2WxvCMfyCvyoJwn28mCUklOls/kG7lZjpM9ZSvZXHaQI+R6
+        yTnPJRdaWZaJ0fKlPCK5+3zpJA/JF3IIB/6VKnK3vCbbc6CUdJY3JI8s79GoK/kQF1DmIRQ8wj3youS7
+        s8KdX5aL3avCskxel1lviufGnf8vGImdFjMZL69KhixOOckEZGIxH5j1jSXHI6rKjpJz2kjOaSCTMMK3
+        5Bj3KkZ1+UXyJUlWycfynOTDrP1Xcq2MOCmZN5zD+/hJsoqSsGQ/Sn7TM18esJjBUdnfoqeHPG3R8VQ2
+        suiZKVdbzOC45H0HQ8la58pCnJB9LHp6S+46ghGpb9FDVVxpMQMeJYXNwYvXFoOckr0sevrJYxYd72Ud
+        i55FcqnFIG8l88UNPyU0jTOyu0XPQEl1jPgsa1j08OMLLQbZLmcR2ESGE1I4K7ta9AyV8TnzTbIS4jB5
+        51oMMlJSId1Olvb8gQqWXB2jJGs64rusYNGzRs6wGITvvER4KJsSUqA2uGcVg90wXlB+lPyNw2OdajFI
+        C3mPcF9SONJg7bPtxpkgt1p0hC5gi5xoMUgzSS/hGotsj+CubGnRM0nSF0SELmCbpLqmQdV0jyDXJHwk
+        m1j0TJPrLLpnzxxIskuOtRiEebSPMEdytWlQMBpa9LB8oirH7P9q8S/2SrqkNDZKuibXw9FGpUGRqmfR
+        Q+2IqlxNSd1PwsgOtpgB1fedbO1eCXq4tJbrg6xt0UO/sMSiazKohEnYQwZYzIBOiQ3OQ9MZL61xqHK1
+        LHpWyAUW3R5AWU3CHtLXYgaH5XSLBj0AG1Ko/2N+/JS/JJMtspsEJuF5+VuyGqL3eSyhnoCqyrxK9h1u
+        72bN0zTkonzJ32yEzuFH+Y1B7lUAlk5aX1AI+H639NKgYaRxpIEsNMvlBZkx9EnY19mA2GxynpwH1Alq
+        QrHM2ZZHMBJslTdlFw6UEna823KHLNX/GJRSliHLhrWbL9QUliGzfRgHykI1Scl8IqlemyR1nM2EXRS5
+        U8ruBskOx7lTZEVZUCidXAwzmXlCL8FuSVPDMfYIX15zU1T0B2Vwp2wShnDIAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnDetener.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnDetener.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        GwAAARsBjfdO5QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPfSURBVFhHrZdL
+        SJVBGIaPUVQELay83wgJiqKFRFGLSDeVULiINrVoI7SRCpEgiCihIIuCLi6TaBOtKoNSo5t0p+hGFytI
+        IUIJ05KI8vS8hxmZ85/vHE+p8OjMfO/3fvPPzPnPGIvH41lRUVExo6SkZB2cKC4uvgPvYBi+w3vohtPE
+        11ZWVk63PCzMwRAKF7iiPyDu6CsqKnrI38twER7AJ/DxIThWUFAwz/IMMQdFVVXVNEyawRfuZiINZWVl
+        8y29YFJl6LbDdZczTM4+eVl6YQ5q5iTecibPaK+3dJkgrxq0MnEmdhPmWrqUgcLCwoUkfVQihQ/HYrEp
+        UU228JND4b14jcpT3imasKNZuuI/YWsYmwg8SB1+Oqwfo+dirKF90lIh0rJPWnEP3hvwHdXWhmdiTEBg
+        n4pr2f3YZIP/HveAB/xY4pdben10nmfac8XQLM3Pz59lxbOBfL0vhv1W+MEjoNO6MRSH8DMVzTXpYAT2
+        /89EWOHVzuOI+t54kMCjqDiEE1zlEs9Au2v3kbcFjxwrJx3kdcKgaquzRmY8fZMl9qBZIR3sUJ/C62m/
+        cWP36C+P5qQDbb3LWyPjFnXYk0WW2IMmaQLCfXIaMfzGuD7rbeXl5YVhngV6pAmvFr8cA5YwBE3KBDzu
+        EJ+C36DX7+7xvpDQ9UCnkl/QeGqJQtCknYCntLR0MfEOp+tR39IJ4jdUW41+aLdEIWjGnYAHY710+qDD
+        igs054j3y3gALlmiEDRZT4AtqKPAZ/5+sOICn7MwIPFLGg8sUQiacSeA1xLiXU73hS1YZukE8WuqrYYS
+        ei1RCJrxDuFJ0CH8BS25ubmzo7oQNM+hS42jEM900RBoUibgLi27eBJ9DBXTDWlBmGeh1zC6P3BUxjWg
+        5J2W2EM8aQIUXUv7tRt7pX40Jx2s2DaXV+OfQl9E9y2xx33ElNQGl1z7K4Ub9Eq1ctJBzlVyh1Q7McCM
+        jsuQQMarF5rHrvBvtLqozrF0maDWKnmopvqJQd18GdTl80mmLxa3WrUkl1rxbCBXl54fqql+GDiomUGz
+        H5tsqNGoGqrlx8aCencTvOsEm/34ZMGWrcNbJ/9u+D2RJHJb0Qu6cGwKYxNBZws/HfRev/SeJKFArLeZ
+        JqHtOPCvl40orGYTPnryXnlH40kdj1sJvx36F6za0mWCvJXk3ZaHvKJP7kkZ8GifMDlEsrZDJl08QT0U
+        W3qRl5eXT45eMldczog8Mt0NzMEQXkBFGLXKzJkKXSb0dBfgPJPSv3FvQbeiRGFoVa7lGWIOWlBkJqa1
+        oJuPrtaahP7bEWprTLFaaS2PVOKxv3+E+yQDsMj6AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnIniciar.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnIniciar.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas2.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnPruebas.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MapaWeb.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvCamionesAsignados.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dgvBarcosAsignados.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label17.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCantContenedores.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label16.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label15.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label14.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCamionCombustible.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdCamion.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
+        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
+        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
+        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
+        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
+        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
+        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
+        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
+        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
+        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
+        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
+        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnValidarCamion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarCamion.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVFhH1Ze7
+        SiRBGEZHQcXEBRUFAw1cwVR9Al9CAwUfw1uo7oIYiU9gLigGXgMvb2AmKsjCwgoLCiYaiH5nqnuobnro
+        37Yq8MCBf6qrq762p6as2ndlSJ7KV/lukH4nclAGgckXZXv9Uzn0W5LH9U8B4IkY9FdSFz11KtfXZEdS
+        V2ZE/nBlfWBgwG5XNqVHvriycZ+Zcflb3so/8q/sl28SrAOm/cwBJuVNIn/mMdklL+W13JcQLcCZnJNM
+        Oiv35JPclTOyTcJ/yaBl0g+oS+mUF/JKMimTE4IwX8UUgPV6IENN6mMKwBes1ZXBMQXId7Ks9VS+tHAn
+        0/XvQ59S8p0sa70If/2nVApguqkJlcay3tQitxOpi4gaYEWeJ1IXES3AtLyXfYnUUzJPlAC9kj2Bn+cU
+        9gzauOYTJcCWXHdlhg256coGUQI8yGFXZvgp/7myQZQAz3LAlRlo45pPlACHct6VGRYk13yiBJiQj5IQ
+        PDVS08Y1nygBYFTuSN45UtOWJ1oAK0ECsBmxsXyWYJsRW6p1O/blnlXpQ3sppk4VMY1NcuuJ5zNwMMm/
+        kkL4n5BjVMgQjLUsTUczDp50rPLem8lYRzLY4TQQtdoHu2PVSH8+PNIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbCamion.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label5.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtBarcoCombustible.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdBarco.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
+        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
+        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
+        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
+        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
+        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
+        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
+        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
+        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
+        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
+        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
+        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnValidarBarco.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarBarco.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVFhH1Ze7
+        SiRBGEZHQcXEBRUFAw1cwVR9Al9CAwUfw1uo7oIYiU9gLigGXgMvb2AmKsjCwgoLCiYaiH5nqnuobnro
+        37Yq8MCBf6qrq762p6as2ndlSJ7KV/lukH4nclAGgckXZXv9Uzn0W5LH9U8B4IkY9FdSFz11KtfXZEdS
+        V2ZE/nBlfWBgwG5XNqVHvriycZ+Zcflb3so/8q/sl28SrAOm/cwBJuVNIn/mMdklL+W13JcQLcCZnJNM
+        Oiv35JPclTOyTcJ/yaBl0g+oS+mUF/JKMimTE4IwX8UUgPV6IENN6mMKwBes1ZXBMQXId7Ks9VS+tHAn
+        0/XvQ59S8p0sa70If/2nVApguqkJlcay3tQitxOpi4gaYEWeJ1IXES3AtLyXfYnUUzJPlAC9kj2Bn+cU
+        9gzauOYTJcCWXHdlhg256coGUQI8yGFXZvgp/7myQZQAz3LAlRlo45pPlACHct6VGRYk13yiBJiQj5IQ
+        PDVS08Y1nygBYFTuSN45UtOWJ1oAK0ECsBmxsXyWYJsRW6p1O/blnlXpQ3sppk4VMY1NcuuJ5zNwMMm/
+        kkL4n5BjVMgQjLUsTUczDp50rPLem8lYRzLY4TQQtdoHu2PVSH8+PNIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarCmbBarco.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJLSURBVFhH7ZZL
+        6E1BHIBPyPudx4oUEgsWiJKFkpIFKVEe2UnZYGVn8VcsLJQFNhR5laTEBkvFljw2FGKjEIU8v2/OObl3
+        uPfM3P5Z3a++Or+559z5nZnfzJyiT59BYgG+wtkh6oEZeBAv4OUGz6H31wzD+/gTJ9sAGzB+7hiuwr9Y
+        iO/xOV7B+MHYOIEB/IWPQ1TyrwTuoknuxzZu4R0cEaI8luM3/IFnbGhgH37FaSGq+IQ7y8ssxuBT9AU+
+        4i5sYiw6WmtDVGHDpvIyixP4Dteh/7EIU/Bep+MoTq8bchNYg87nZvTNHUWLMYUjaE28RKc+O4Ep+BrP
+        hqgoTuPt8jKLHWg9ZCdwCV3zk0JUVv+h8jKLLfjdi5wEtqFDvzpERTEBjd0H4mV3HmdhJ7ITcO1bdG4o
+        NcPxFMade5910W1nzEpgCDrPj3CUDV1Yj46Kc9yNrAT2ohvO0hB1Zi5+wOMh6k5yAnPwM77BeKhP4mgU
+        N6YHeA9TdtXkBCwkCyru/CGamLubuCzf4swQNZNdhDE38Gp5WexGz4O2LbaBA+gh2FMCE9FNZCtaF1/Q
+        4zyFZ2ifetiGXhLw8LJTp8c/9EAaiinYn+fAshCB26pVnsP1SqfhBU7FFNxLTGBFiCpcMlb4Skx5C3c/
+        396j2GnwmyAFO7+JfviMtKFmHPo29bzE2slirNmO9W97bKhYgt7b+mysnXfcS+bjRrQeWnVna13X19A/
+        uxiiP3iP98bP1zrsbW/eC46Wa/8JjrfhfzMPLTo/w/v0GQSK4jdXMLN0JgXKFAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecargarBateria.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnRecargarBateria.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label4.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtDronBateria.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="dataGridView1.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmbIdDron.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
+        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
+        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
+        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
+        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
+        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
+        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
+        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
+        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
+        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
+        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
+        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnValidarDron.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnValidarDron.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAF7SURBVFhH7ZdN
+        KwVRGMdnw0ryspASC2zIVj6KBR8AZaV0E1KK70B5WUnZWOKrYOM15aVYsOH3P2fudO81MuecmRH51W/u
+        c+rOef7Nnbn3udE/Me04g+slOY3qaejEc9zC+ZLcxjPswGgTLzEtaZFe4QZG75iWsgzV2xx+UntoYAWX
+        bGnIe13F9L7DZRU1jOCwLQ15r8Uiqre5E99UlMwLJo9i2sdQNHU9f32AMWyxZWaCAgziAT7iAz7hKrrg
+        HWAIb3EWdRNNoM7X17kL3gEOcc6WQXgHeMYuW35CVyMr3gHG49dGevDelpnwDvAVC7hvy0wEBbhAnTOJ
+        3ahftmscwKwEBVhDPX43qDB72I8uBAVoxVFbehMUIA/qer5isy1LQb3UM+EEK9hkVsWiHup1ZFYxfagQ
+        mgt0aYpUPY6xF1PRm1KHR0e899GorJG5Oj5rZDfjsyON434yhn+HRjT9adiJPcVkdHKgdp9ddNqnDadi
+        VfuS1z5/lij6ADZW1fUMdoPKAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAumentarContenedor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAumentarContenedor.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAQfSURBVFhHxZd7
+        aI1hHMeH5H6LckviD5NrdpBCLTu7b0dLo7TQYk0tUgqjdlbMLRJiRCP5xy0lyiX8JTMyt8x1M9YMGcnd
+        Hz7f1+89zXEczs6Rb337XZ/f7znP+z7P8564WCEtLW2Cqf8FbVJTU594vd4eZsceiYmJHWFPM+M8Hk97
+        mnrhdjVPSUn50DIec9DkDvxCo2PwAHojPIVekJSU1Be9NngCxLrAIWZGBxrMhE9hE0U3p6end7eQg1AT
+        4L3w4a8wMzokJydPptgruAPW87yHWshBqAngm84k9pkZHVSIX76EolqFBdg5yGILByaALIKfyG1GvoXv
+        4WdYQ1qbH9kRQm83BZ77fL5uyDkUv4gshNWWEpiA3+9vKz9jxmVmZvYSmeyb3NzcTpYaOWi4EJabqWab
+        aFCAbMSfbz53BfrDuzwyHzGPPbp3UDsmQGLp8O9eUAZco9B4Mx3g00rsRdbDBFjLbhiB1COqgefhWXiG
+        FbiJPBTEavwbrdzvQeJYeMPMAPCtYQKPmFgSeg26zoKLsMBSlJNAk1yX2PMVF9HP45trqb9C24xED0mH
+        SV4v3aX2Pf5F+BuQfnzl6DojTtlwB9j5xHe5JGcbXGd8AUda6q9gQB4Jr6GW8wLUcjokNg+WwTrs28hz
+        8CUNB9nwsCB3DOOumxkaWgGSGrOzszub6yfQbDnxZWaGhVaipWQCm9GXSg8Lkg6QnGfmTyBWApeYGRbU
+        mOLKjIyMfky8QdvTCQr82kkEAy+LSxJLkTeD/cajcE+Q74+k5iW4Hz2HbdvVmYCWA0fgZQniyRA+UVvp
+        YAj/n1jFuN3Sg4/ziEABHTSjzIw9aDCBmbpbZh3NynhU4yysVSuHs6STqy1ZZP5ZLce1JHkh36eQ4GUZ
+        RjHn0HApn4V1yFRQMEe6JPYM0xODx7kklqqciEDhsQzeqgvJXA7w6/lnmBlb2CmYD3Xr6UrVKdekpshk
+        u/GOQK8NccCE1uILHFgi+RssHB5WNI0BukR0f+tSKYYNnPd7WP7F6LNpchqpE/C+JmPDHZA3AF/gyBbl
+        s/DvQbGp8LEVf8AhoesyG70e2USRUvRKS9cK6dbTR8dwc7Uettxqro/Oe5oAHw/tOCQ6agJwBjwBtSpT
+        NYb8lehbnALRgsYrKOg8J4rqlNLF8xC/bsH98rP8g9Gb8a3V6YX+NCsra6BiUYNit+AmOBHe1btAo3h0
+        NWyEfnSdXGVIrdQqZGx+vcCvvwyPU1Qfj8e563tj6zCRru/99fAb3Mm7cAX5Ima/XtAvhFvhM4qvhvrD
+        8UqTUBxZgl0Bz8Gv5J12BsYK3Pd9aKJP6IOyaaA/E7VIbcNK+FG2JhLV5REOFB5NE72AV2Edzato+Bzq
+        g1KnXeu+5yMFzeJ5zoU0nsb27GDuf4i4uO/+7EckPEIJJAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAsignarBarcos.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarBarcos.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIaSURBVFhH3dax
+        axRBFIDxBVGQNNoEQQlpbMXOSpsg2sRCsbGViARUBAs7bey0txBBSJFC/wFrK0EQRCWgEBIUVKKJoIIg
+        5/eds8dk912i4XYCDvzCzsybd29ndu9S9Xq9bRUOlhQOlhQOlvTnT1VN4PCI7Gt+yEZst/EFiyOyhivR
+        h0VsP3AwmtwK2nG8juYiNv/uiSa3guYxLEZzEdt/WcAKLjacx3gQ30kB3zCfOPgID/EZU434bo+ANshP
+        OwWLOJTNlysg9T2Od5hI/bIFpLFbeIm9dooXkMYfwGdk2woYx08vui7gKeZwveEm+gFdFzAJz/xuw310
+        X8AwfiYGBZzByRGZxYesfxQ7NirgMX7hFZ5jAU7oY3bta1PP+/B4XVuGP+l139g8h++9x7CzVUDqrGIy
+        XftwPMER7MYxPMNsmm9tMc0vl/ms7y64xrXmMJc5L2cx6wp4i9M4AItxwT14p3dwAt6Fr45bugQT1K7C
+        73uvjTHWNa41h7nM+Qn7YdwUVuoCzsFzs+OWWbULTfwVu/Adzv8NY13jWnOYy5z5kfqLeaFfQLYtY3gP
+        79LqTXAD03iDwRkOY0yKdY1rzWEuj8PcY+vi805/oKpm4Pm5hd6FiXyozjZjhzE2rfHXzxzmMudMK7Y1
+        wCuDa3gBt9KFl5pxm3FNWmsOc5mz/To2B3K0f/oXO7JZjnCwpHCwpHCwpHCwnF71G9+JwD1dhIXLAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnAsignarCamion.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarCamion.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJzSURBVFhH7dZL
+        qE1RHMfxU0jekZsJkSilGCBXwoAMEFNKRDE1QHncKFGUJDEgjzyKlNcE5TlRBh5JkSJF5DWQSBng+917
+        L627zrnZd8ts/+rj7vtfa/33Ovbj3EadOnVapEfx83+kZe/12Bl5jJNJbQbSWNtQmG4hyUzEPexp77i2
+        Dtk/cfElLia1eAP94PgbHCq8xQX0RYhr4h6usXdcW4s/GYvVeIKDWIKeSHMAV9An+y2Px1exP/utc3rB
+        Xva09yqMQVMe4hrOFl7AT+bP2DcMR5oRcCydH3qEvp7jAZripEn5YRZ3vA/WYqPRVRxL59vDXiHWPFdT
+        nmMpwsLzuIzxqBrX2sNeoa/n8FxN2QIHwn/dIxzBZ9yF98dA/C3Oca5rXGsPe4W+nqMDpXMdh3EHXuPj
+        8BEbnLDmmHOc65ob+KcMwXcMxUZ492+DN9avhI+lY85xrmtca4/KWY6b+WH2EpmfH2bX8hMGoD8+YCrM
+        Avi4mVtYlh9WyzmsgSf0JL1xAh/xE18KHltzzDnOdY1r7VEpvly+YhT2wsdpGl5hHHzkYtYca4dzXeNa
+        e8QvrdJZhPvwbfgOkzEH92DacAp+wmEWiGPOmYL38C3oS2chup1j8NH0uj+zQOIN7MIl+B2w3QIJGzBP
+        MQ9bcdRCd+LXptd0As5gE0y8gRV4XVhsgcQb2IzTmAhv2FbfK11mFnxpDILXcCRMvAEzG3PzwyzxBlzj
+        WnvYy56lsxt7sBK3LRTxpvKudyz+WpU1x8JmjWvt4Zg9S8e/EXy5/EB6A/lJdiDdgLX0U7rWHvbq9N1f
+        Jr5gKj0+Sexhrzp16rRIo/EbFOexAxc6Vl8AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnAsignarDron.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAsignarDron.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label13.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label12.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label11.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label10.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label9.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb4Encargado.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb3Encargado.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb2Encargado.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cmb1Encargado.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGTSURBVEhLtZS9
+        LwVBFEe3FgURHSIKrU4oFFqNRhQaapFQeYkEodKIyh+gohWUCgktUWl8RCcRGlFIfP3OzE7evMnuejtv
+        neTkzZ3k3Tt7d+4mTbAgD+3yf9iRN3bZGoNyxi4byCswLCfssjlI/iPXTVQnq8C4fJd7JipBTYZFwgJj
+        8k2eyXY2ykJyiiybyLZizi6TUcnJT2UbG7GQfNcuG6CN+7Kl5JUzL7cCaYujQ06nv1EcyTvPW+l6DlOS
+        d/Ihj+WsjC6WBclIfi4v5Hcau2KdsjQj0h86kpEceuSipOCX/EzX7HXLP3FDdGAiCyfl5L0mqkOxJek/
+        2YmclJnkDZFrE8nyoNi25H1dsRHCzSkaIr9NWfB0XJBHOcBGCB8uvi15Q+TaxEmzuJQvst9EEXBbitq0
+        JmnPioki4QUWtWlDUmTVRBEwgK5NfZK2cHKfTRn9JK5N3JZ7+SpJRlIfV4TPf2loE39+kLxQThoW6ZJP
+        kkOUhiG6lv5t8YuQnDl4lkOyMlwRTl55cgc9py1p8iT5BaYAaAA60cALAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnCursor.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnCursor.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAT
+        qwAAE6sBnBsJ0QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAGySURBVFhH7ZU/
+        S8NQFMXbKlJFkXZ1KQXxG+iin8Ch0Kk0g1uWfo8Ql+rSxaGFKkVKN3FzcHDov03QVQT/bKKLi3g9J+RK
+        haS2edLFHPjxSN7LvSfv5d4kYsWKNUYLYB88ApmQD3ANCsBYLghK8iupVOoT4yYw0gOQer0uw+FwIvr9
+        vpTLZTVyyCAm8gIFJRqH67pqoM0gJooNRDJQq9XUwBGDmCjUQKPRkGKxKNVqVbrd7o+5wWAgjuNc4tlV
+        L4qBQg0wuc5nMhkplUrSbDZH1xhvPxVqgG+u86PkcjmxbVtardY5ro3lBQ0y0Ov1JJvNamILsGk9+deS
+        TCbZiK6ADVZAJIUaINx2f80BF0PzYBecgneg8y9gA0ytsQZ45v6aZ8DkqiXALqjzb2AdTC3+WLz2GmSA
+        5PN5TcI3p7bBPeA9HsMJWAORxL+aWJblNReFdc5So4FKpaIGuO2L4I7X6XT6FiPNGKng/9U0yTescxho
+        dzqdM/+D45l7247kNxjnwJ9oCzAw61phhxttMhdAzdHMDpip9oAaOOaNWWsZsNReQeQPzlSs80ilFivW
+        f1ci8QW6bDPqIBxtsQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnAreaAnalisis.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="btnAreaAnalisis.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage1.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="cbCamara.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label2.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="videoCamara.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="label8.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="detener_proceso.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="iniciar_proceso.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="desechogrid.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabPage2.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="tabControl1.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAOwAAADsAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAHQ4MBoAZFwy6ERAJkgAAAC0AAAABAAAANxQSCpwZGAy4CwkEdQAA
+        ABYAAAAHAwMAVRkWDK8ZFgyuBAQARgAAAAAAAAASCwsEdKqfUUimmU0oAAAAMgAAAAEAAAAtExEJkxkX
+        DLoODAaAAAAAHAAAAAAAAAAAAAAAAB4bDo8mIhLthno/+cGwW/+Yi0n9Mi0Y7BMRCvE6NhzsoZNM/sCv
+        W/97cTv3Hx0P7RYUC+9YUCnxqptR/6qbUf+cj0rm9uJ0k2xiNMt8cjv37tlx/9rHZ/46NRzsExEK8TIt
+        GOyYi0n9wbBb/4Z6P/klIRHtHxsOjgAAAAAAAAAA9990QPfhdf/34XX/9+F1/+7Zcf/p1W//9+F1//fh
+        df/34XX/9+F1//fhdf/34XX/9+F1//fhdf/34XX/9+F1//fhdf/34XX/9+F1//fhdf/34XX/9+F1//fh
+        df/34XX/9+F1//fhdf/34XX/9+F1//fhdf/333RAAAAAAAAAAAD333RA9+F1//fhdf/34XX/saFU/5iL
+        SP/34XX/9+F1//fhdf/34XX/9+F1//fhdf/34XX/9+F1//fhdf/34XX/9d90/8OxXP/34XX/9+F1//fh
+        df/34XX/9+F1/8e1Xv9xZTL/zLph//fhdf/34XX/9+F1//ffdEAAAAAAAAAAAPffdED34XX/9+F1//fh
+        df/34XX/9+F1//fhdf/34XX/9+F1/5eJRv+Ddzz/8Nty//fhdf/34XX/9+F1//fhdf/ax2f/GBYL/+/a
+        cf/34XX/9+F1//fhdf/34XX/KSQP/6CEHv8xKxL/9+F1//fhdf/34XX/9990QAAAAAAAAAAA9990QPfh
+        df/34XX/9+F1//fhdf/34XX/9+F1//fhdf+0pFX/QzgR/15PFP+OgkL/9+F1//fhdf/34XX/9+F1//fh
+        df/34XX/9+F1//fhdf/34XX/9+F1//fhdf89Nhn/UEMU/0tDH//34XX/9+F1//fhdf/333RAAAAAAAAA
+        AAD333RArJ1S/4N3Pv/34XX/9+F1//fhdf/34XX/9+F1/8u5YP8oIwz/NS0O/6+gUv/34XX/9+F1//fh
+        df/34XX/9+F1//fhdf/34XX/9+F1//fhdf/34XX/9+F1/+vWb/+8q1n/79px//fhdf/w23L/1cJl//ff
+        dEAAAAAAAAAAAPffdEDJuF//qZpQ//fhdf/34XX/9+F1//fhdf/34XX/9+F1/9K/ZP/JuF//9+F1//fh
+        df/hzWr/eG08/0I9Jv+ml1D/9+F1//fhdf/34XX/9+F1/5+RS//GtF7/9+F1//fhdf/34XX/9+F1/9TB
+        ZP+He0D/9990QAAAAAAAAAAA9990QPfhdf/34XX/9+F1//Dbcv/34XX/9+F1//fhdf/34XX/9+F1//fh
+        df/UwWT/ZFsz/yUhGP+PgHD/0Lul/yYiGf/ax2f/9+F1//fhdf/34XX/i39C/7OjVf/34XX/9+F1//fh
+        df/34XX/9+F1//fhdf/333RAAAAAAAAAAAD333RA9+F1//fhdf+yolX/FhQN/+LOa//34XX/9+F1//fh
+        df/HtV7/VEwt/y0pH/+gkH3/+uHG///lyv//5cr/mIh3/21jOP/34XX/9+F1//fhdf/34XX/9+F1//fh
+        df/34XX/8t1z/+bRbf/34XX/9+F1//ffdEAAAAAAAAAAAPffdED34XX/8t1z/yomGf94bF7/Ukor//fh
+        df/34XX/hXlC/zUvJf+yoIz//uTJ///lyv//5cr//+XK///lyv/33sT/Ih8X/+XQbP/34XX/9+F1//fh
+        df9ORyn/e288/6ydUv8vKxv/Qjwl//fhdf/34XX/9990QAAAAAAAAAAA9990QPfhdf/CsFz/UEg6///l
+        yv9JQjb/ppdP//fhdf8mIxf/69O6///lyv//5cr//+XK///lyv//5cr//+XK///lyv+HeWn/fHE9//fh
+        df/34XX/9+F1/xsYEf+UhXT/U0s9/8i0nv8iHxf/7dhw//fhdf/333RAAAAAAAAAAAD333RA9+F1/4yA
+        RP+Je2v//+XK/9bAqv87NSL/9+F1/2JZM/+kk4H//+XK///lyv//5cr//+XK///lyv//5cr//+XK//DY
+        vv8iHxb/7dhw//fhdf/24HX/IR0V///lyv//5cr//+XK/2BWRv+xoVT/9+F1//ffdEAAAAAAAAAAAPff
+        dED34XX/em89/5+Pfv//5cr//+XK/y8rIP/cyGj/0b9j/y8rIf/+5Mn//+XK///lyv//5cr//+XK///l
+        yv//5cr//+XK/3dqW/+NgUX/9+F1//Dbcv8nIxr//+XK///lyv//5cr/ppWD/25kOP/34XX/9990QAAA
+        AAAAAAAA3shnRcCvW/9AOh72HRoW/FpRRPy1o4//cGRX/1tTLP9GPyHtBgUD/WddUP7NuKL/38ix/4+C
+        cf9APDP7QDwz+4x/b//Uvqj/qpmH/xQSDf4uKhbrQz0g7SUhGf/dxq//sZ+M/1xTRvw1MCj7HhsS/MCv
+        W//eyGdFAAAAAAAAAAAVEwqDGBcMwAICAn87OjbuuLWo/1dVTfUfHhv6EhEM1gAAAD8AAABJCgoJ+0RC
+        PPQ2NS/2enhw+NPQwf/T0MH/enhw+DU0LvZDQjv0OTg09gQEBHsAAABBEA8M7CAeG/lXVEz0tbKl/7az
+        pv8NDQzjGBYMwRYUCoEAAAAAAAAAAAAAAAAAAAAAAAAADx0dG+78+Ob//Pjm/09OR/AAAABJAAAAAAAA
+        AAAVFRLPxMGz//z45v/8+Ob//Pjm//z45v/8+Ob//Pjm/+nm1f9oZl//EREQ4QAAAAEAAAA+JSUi7/fz
+        4f/8+Ob/lpSJ/Q8PDYgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAO7vr25P/v69r/EBAP7AAA
+        AAQAAAAAAAAAAAAAAEdBQDvu/Pjm//z45v/8+Ob//Pjm/97by/9ubGT/IyIg/4WDev9DQj3xAwMDTAAA
+        AAASEhGaVVRN9O7q2f9LSkXtAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFBOwExIR8CMj
+        IPIUEhGaAAAAAAAAAAAAAAAAAAAAABISEd3T0MH//Pjm/9LOv/9dW1X/KSgl/5aUif/z797/sK2h/zEx
+        Lf8TExLTAAAAAAAAAAMLCwt5FhYU7Q8PDvMAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAFAAAAKAAAAA0AAAAAAAAAAAAAAAAAAAAAAwMDWUA/O/RMS0X/MzMv/6ekmP/08N//n52R/y0t
+        Kf9VVE7/y8e5/zU0MO0AAAA3AAAAAAAAAAAAAAAmCQkHbwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADDg4N6p6ckP/x7dz/joyC/yYl
+        Iv9nZV7/2dbG//z45v/8+Ob/mZeM/g0NC44AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJCQltNDMv+SMi
+        IP94dm3/5eLR//z45v/8+Ob//Pjm//z45v+em5D+Dg4MkgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAkMDAvy3drK//z45v/8+Ob//Pjm//z45v/8+Ob//Pjm/0A/O+4AAABCAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA4ODn9qaWH0/Pjm//z45v/8+Ob//Pjm//z45v/W08T/EhIR3wAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACRAQD9JbWVPx4+DP//z45v/8+Ob//Pjm/4eEe/sICAiBAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgUFBWWGg3xh1dPEkoiHffP8+Ob/zcm7/wsL
+        C+0FChRlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEhIQ6GZn
+        ZfcNERn3HTh09wQJEewAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAECAwb0IT+F+jtx7P8sVK/+BQkU8wAAAEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAQKFa0ZMGX9CBAi8QULF7sAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAJAMHDZkAAAAlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA/////8AAIAOAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
+        AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAHgYAAH8GABB/DwAQf48ADP//AA///4AP//+AD///wB///8
+        Af///gD////Af///wH///+D////j//////8=
+</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip3" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip4" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip5" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip6" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ToolTip14" xml:space="preserve">
+    <value />
+  </data>
+</root>

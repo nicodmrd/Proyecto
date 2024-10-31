@@ -188,6 +188,9 @@
     <EmbeddedResource Include="EncargadosForm.resx">
       <DependentUpon>EncargadosForm.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyWindowMain.es.resx">
+      <DependentUpon>MyWindowMain.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyWindowMain.resx">
       <DependentUpon>MyWindowMain.h</DependentUpon>
     </EmbeddedResource>
