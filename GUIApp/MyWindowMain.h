@@ -19,6 +19,8 @@ namespace GUIApp {
 	using namespace Model;
 	using namespace System::Collections::Generic;
 	using namespace SimuladorService;
+	using namespace System::Threading;
+	using namespace System::IO::Ports;
 	//LIBRERIAS DE LA CAMARA
 	using namespace AForge::Video;
 	using namespace AForge::Video::DirectShow;
@@ -141,6 +143,24 @@ namespace GUIApp {
 			toolTip14->SetToolTip(btnAsignarCamion, "Asignar camión");
 			toolTip15->SetToolTip(btnAumentarContenedor, "Agregar un contenedor");
 		}
+
+
+	private: void InitializeDataGrid()
+	{
+		// Definir el número de filas
+		this->desechogrid->Rows->Add("0"); // Plástico (ROJO)
+		this->desechogrid->Rows->Add("0"); // Cartón (VERDE)
+		this->desechogrid->Rows->Add("0"); // Vidrio (AZUL)
+		this->desechogrid->Rows->Add("0"); // Otros
+
+		// Configurar las celdas como numéricas
+		for (int i = 0; i < this->desechogrid->Rows->Count; i++) {
+			this->desechogrid->Rows[i]->Cells[0]->Value = "0"; // Inicializar valores en cero
+			this->desechogrid->Rows[i]->Cells[1]->Value = "0";
+			this->desechogrid->Rows[i]->Cells[2]->Value = "0";
+			this->desechogrid->Rows[i]->Cells[3]->Value = "0";
+		}
+	}
 
 	protected:
 
@@ -1106,16 +1126,28 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			// detener_proceso
 			// 
-			resources->ApplyResources(this->detener_proceso, L"detener_proceso");
+			this->detener_proceso->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->detener_proceso->Location = System::Drawing::Point(972, 101);
+			this->detener_proceso->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->detener_proceso->Name = L"detener_proceso";
+			this->detener_proceso->Size = System::Drawing::Size(175, 34);
+			this->detener_proceso->TabIndex = 11;
+			this->detener_proceso->Text = L"DETENER PROCESO";
 			this->detener_proceso->UseVisualStyleBackColor = true;
 			// 
 			// iniciar_proceso
 			// 
-			resources->ApplyResources(this->iniciar_proceso, L"iniciar_proceso");
+			this->iniciar_proceso->Anchor = System::Windows::Forms::AnchorStyles::None;
+			this->iniciar_proceso->Location = System::Drawing::Point(743, 101);
+			this->iniciar_proceso->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->iniciar_proceso->Name = L"iniciar_proceso";
+			this->iniciar_proceso->Size = System::Drawing::Size(175, 34);
+			this->iniciar_proceso->TabIndex = 10;
+			this->iniciar_proceso->Text = L"INICIAR PROCESO";
 			this->iniciar_proceso->UseVisualStyleBackColor = true;
-			/ desechogrid
+			this->iniciar_proceso->Click += gcnew System::EventHandler(this, &MyWindowMain::iniciar_proceso_Click);
+			// 
+			// desechogrid
 			// 
 			this->desechogrid->AllowUserToDeleteRows = false;
 			this->desechogrid->AllowUserToResizeColumns = false;
@@ -1174,14 +1206,14 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->otrosbox->Name = L"otrosbox";
 			this->otrosbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->otrosbox->Width = 125;
-			// timer1
-			// 
-			this->timer1->Tick += gcnew System::EventHandler(this, &MyWindowMain::timer1_Tick);
-			// 
 
 			// toolTip1
 			// 
 			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
+			// 
+			// timer1
+			// 
+			this->timer1->Tick += gcnew System::EventHandler(this, &MyWindowMain::timer1_Tick);
 			// 
 			// MyWindowMain
 			// 
@@ -1386,6 +1418,8 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			desechogrid->Rows[0]->Cells["otrosbox"]->Value = otros;
 		}
 
+	private:
+		bool procesoIniciado = false; // Bandera para verificar si el proceso ha iniciado
 
 	private: System::Void iniciar_proceso_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (ArduinoPort != nullptr && ArduinoPort->IsOpen) {
@@ -1463,6 +1497,8 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 		CargarDron();
 		CargarIdBarco();
 		CargarIdCamion();
+
+		OpenPort();
 	}
 	private: System::Void contenedoresToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		ContenedorForm^ form = gcnew ContenedorForm();
@@ -1708,5 +1744,17 @@ private: System::Void timer1_Tick(System::Object^ sender, System::EventArgs^ e) 
 	}
 	lblCronometro->Text = String::Format("{0:D2}:{1:D2}:{2:D2}", horas, minutos, segundos);
 }
+
+// Asegúrate de cerrar el puerto cuando se cierre el formulario
+private: System::Void MyWindowMain_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	if (readThread != nullptr && readThread->IsAlive) {
+		readThread->Abort();
+	}
+	ClosePort();
+}
+private: System::Void toolTip1_Popup(System::Object^ sender, System::Windows::Forms::PopupEventArgs^ e) {
+
+}
+
 };
 }
