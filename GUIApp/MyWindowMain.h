@@ -33,6 +33,11 @@ namespace GUIApp {
 		bool HayDispositivos;
 		FilterInfoCollection^ MisDispositivos;
 		VideoCaptureDevice^ MiWebCam;
+
+		static SerialPort^ ArduinoPort;
+		// Definición del delegado
+		static Thread^ readThread;
+		delegate void UpdateGridDelegate(int, int, int, int);
 	private: System::Windows::Forms::ComboBox^ cbCamara;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ btnPruebas;
@@ -71,7 +76,9 @@ namespace GUIApp {
 		MyWindowMain(void)
 		{
 			InitializeComponent();
+			ResetGrid();
 			LoadImage();
+			OpenPort();
 
 			//Inicialización del WebView2
 			this->MapaWeb->Source = gcnew System::Uri("file:///ruta/a/tu/HTMLPage.html");
@@ -209,6 +216,7 @@ namespace GUIApp {
 				MiWebCam->SignalToStop();
 				MiWebCam->WaitForStop();
 			}
+			ClosePort();
 		}
 	private: System::Windows::Forms::MenuStrip^ menuStrip2;
 	protected:
@@ -1107,19 +1115,21 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			resources->ApplyResources(this->iniciar_proceso, L"iniciar_proceso");
 			this->iniciar_proceso->Name = L"iniciar_proceso";
 			this->iniciar_proceso->UseVisualStyleBackColor = true;
-			// 
-			// desechogrid
+			/ desechogrid
 			// 
 			this->desechogrid->AllowUserToDeleteRows = false;
 			this->desechogrid->AllowUserToResizeColumns = false;
 			this->desechogrid->AllowUserToResizeRows = false;
-			resources->ApplyResources(this->desechogrid, L"desechogrid");
+			this->desechogrid->Anchor = System::Windows::Forms::AnchorStyles::None;
 			this->desechogrid->BackgroundColor = System::Drawing::SystemColors::Menu;
+			this->desechogrid->ColumnHeadersHeight = 60;
 			this->desechogrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->desechogrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->plasticobox,
 					this->cartonbox, this->vidriobox, this->otrosbox
 			});
+			this->desechogrid->Location = System::Drawing::Point(683, 164);
+			this->desechogrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->desechogrid->Name = L"desechogrid";
 			this->desechogrid->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->desechogrid->RowHeadersVisible = false;
@@ -1128,36 +1138,50 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->desechogrid->RowTemplate->Height = 90;
 			this->desechogrid->RowTemplate->ReadOnly = true;
 			this->desechogrid->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::False;
-			this->desechogrid->VirtualMode = true;
+			this->desechogrid->ScrollBars = System::Windows::Forms::ScrollBars::None;
+			this->desechogrid->Size = System::Drawing::Size(644, 587);
+			this->desechogrid->TabIndex = 9;
 			// 
 			// plasticobox
 			// 
-			resources->ApplyResources(this->plasticobox, L"plasticobox");
+			this->plasticobox->HeaderText = L"PLÁSTICO";
+			this->plasticobox->MinimumWidth = 100;
 			this->plasticobox->Name = L"plasticobox";
 			this->plasticobox->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			this->plasticobox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->plasticobox->Width = 125;
 			// 
 			// cartonbox
 			// 
-			resources->ApplyResources(this->cartonbox, L"cartonbox");
+			this->cartonbox->HeaderText = L"CARTÓN";
+			this->cartonbox->MinimumWidth = 100;
 			this->cartonbox->Name = L"cartonbox";
 			this->cartonbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->cartonbox->Width = 125;
 			// 
 			// vidriobox
 			// 
-			resources->ApplyResources(this->vidriobox, L"vidriobox");
+			this->vidriobox->HeaderText = L"VIDRIO";
+			this->vidriobox->MinimumWidth = 100;
 			this->vidriobox->Name = L"vidriobox";
 			this->vidriobox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			this->vidriobox->Width = 125;
 			// 
 			// otrosbox
 			// 
-			resources->ApplyResources(this->otrosbox, L"otrosbox");
+			this->otrosbox->HeaderText = L"OTROS";
+			this->otrosbox->MinimumWidth = 100;
 			this->otrosbox->Name = L"otrosbox";
 			this->otrosbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			// 
+			this->otrosbox->Width = 125;
 			// timer1
 			// 
 			this->timer1->Tick += gcnew System::EventHandler(this, &MyWindowMain::timer1_Tick);
+			// 
+
+			// toolTip1
+			// 
+			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
 			// MyWindowMain
 			// 
@@ -1264,7 +1288,115 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			}
 		}
 
+		// Método para abrir el puerto serial
+		void OpenPort() {
+			try {
+				// Si el puerto ya está abierto, ciérralo
+				if (ArduinoPort != nullptr && ArduinoPort->IsOpen) {
+					ArduinoPort->Close();
+				}
+		
+				if (ArduinoPort == nullptr) {
+					ArduinoPort = gcnew SerialPort("COM11", 9600, Parity::None, 8, StopBits::One);
+				}
+		
+				// Ahora abre el puerto
+				ArduinoPort->Open();
+				ArduinoPort->DataReceived += gcnew SerialDataReceivedEventHandler(this, &MyWindowMain::OnDataReceived);
+			}
+			catch (UnauthorizedAccessException^ e) {
+				MessageBox::Show("Acceso denegado al puerto COM11: " + e->Message);
+			}
+			catch (IOException^ e) {
+				MessageBox::Show("Error de E/S en el puerto COM11: " + e->Message);
+			}
+			catch (Exception^ e) {
+				MessageBox::Show("Error al abrir el puerto COM11: " + e->Message);
+			}
+		}
+		
+		
+		
+		// Método para cerrar el puerto
+		void ClosePort() {
+			try {
+				if (ArduinoPort->IsOpen)
+					ArduinoPort->Close();
+			}
+			catch (Exception^ ex) {
+				throw ex;
+			}
+		}
+		
+		// Método para restablecer los valores del DataGridView
+		void ResetGrid() {
+			// Asegúrate de que el DataGridView tenga al menos una fila
+			if (desechogrid->Rows->Count == 0) {
+				desechogrid->Rows->Add(); // Añade una fila si está vacío
+			}
+		
+			// Restablece todos los valores a cero
+			desechogrid->Rows[0]->Cells["plasticobox"]->Value = 0;
+			desechogrid->Rows[0]->Cells["cartonbox"]->Value = 0;
+			desechogrid->Rows[0]->Cells["vidriobox"]->Value = 0;
+			desechogrid->Rows[0]->Cells["otrosbox"]->Value = 0;
+		}
+		
+		
+		// Método que se llama al recibir datos del puerto serial
+		void OnDataReceived(Object^ sender, SerialDataReceivedEventArgs^ e) {
+			try {
+				// Leer línea completa desde el puerto serial
+				String^ data = ArduinoPort->ReadLine();
+		
+				// Ignorar si el proceso no ha comenzado
+				if (!procesoIniciado) {
+					return; // Salir sin procesar
+				}
+		
+				// Divide los datos por comas
+				array<String^>^ valores = data->Split(',');
+		
+				if (valores->Length == 4) { // Verifica que haya exactamente cuatro valores
+					int plastico = Int32::Parse(valores[0]);
+					int carton = Int32::Parse(valores[1]);
+					int vidrio = Int32::Parse(valores[2]);
+					int otros = Int32::Parse(valores[3]);
+		
+					// Actualiza el DataGridView en el hilo principal
+					this->Invoke(gcnew UpdateGridDelegate(this, &MyWindowMain::UpdateDesechoGrid), plastico, carton, vidrio, otros);
+				}
+			}
+			catch (Exception^ ex) {
+				// Muestra un mensaje de error en caso de fallos
+				MessageBox::Show("Error al leer los datos del puerto serial: " + ex->Message);
+			}
+		}
+		
+		void UpdateDesechoGrid(int plastico, int carton, int vidrio, int otros) {
+			// Restablece los valores antes de la actualización
+			if (desechogrid->Rows->Count == 0) {
+				desechogrid->Rows->Add();
+			}
+		
+			// Actualiza los valores directamente
+			desechogrid->Rows[0]->Cells["plasticobox"]->Value = plastico;
+			desechogrid->Rows[0]->Cells["cartonbox"]->Value = carton;
+			desechogrid->Rows[0]->Cells["vidriobox"]->Value = vidrio;
+			desechogrid->Rows[0]->Cells["otrosbox"]->Value = otros;
+		}
 
+
+	private: System::Void iniciar_proceso_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (ArduinoPort != nullptr && ArduinoPort->IsOpen) {
+			ArduinoPort->WriteLine("R"); // Enviar comando 'R' para reiniciar los contadores
+		}
+	
+		// Reiniciar los valores en el DataGridView a cero
+		UpdateDesechoGrid(0, 0, 0, 0);
+		procesoIniciado = true; // Marcar que el proceso ha comenzado
+
+	}	
 	private: System::Void salirToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		Application::Exit();
 	}
