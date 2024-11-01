@@ -30,6 +30,21 @@
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
+            elevator = new google.maps.ElevationService();  // Elevation API
+
+        }
+
+        function verificarSiEsMar(position, callback) {
+            elevator.getElevationForLocations({
+                locations: [position]
+            }, (results, status) => {
+                if (status === "OK" && results[0]) {
+                    const elevacion = results[0].elevation;
+                    callback(elevacion <= 0);  // Si es menor o igual a 0, es mar
+                } else {
+                    alert("No se pudo obtener la elevación: " + status);
+                }
+            });
         }
 
         function calculateAndDisplayRoute(origin, destination) {
@@ -119,18 +134,7 @@
             const cantidadPuntos = Math.floor(Math.random() * puntosRestantes) + 1;
 
             for (let i = 0; i < cantidadPuntos; i++) {
-                const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
-                const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
-
-                const position = { lat: lat, lng: lng };
-
-                const marker = new google.maps.Marker({
-                    position: position,
-                    map: map,
-                    title: `Latitud: ${lat}, Longitud: ${lng}`
-                });
-
-                marcadores.push(marker);
+                generarPuntoMar();
             }
 
             if (marcadores.length > 0) {
@@ -142,6 +146,26 @@
                 marker.setMap(null);
             }
             marcadores = [];
+        }
+
+        function generarPuntoMar() {
+            const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
+            const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
+            const position = { lat: lat, lng: lng };
+
+            verificarSiEsMar(position, (esMar) => {
+                if (esMar) {
+                    const marker = new google.maps.Marker({
+                        position: position,
+                        map: map,
+                        title: `Latitud: ${lat}, Longitud: ${lng}`,
+                        icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+                    });
+                    marcadores.push(marker);
+                } else {
+                    generarPuntoMar();  // Intenta generar otro punto si no está sobre el mar
+                }
+            });
         }
 
         function eliminarPuntosFueraDeRectangulo() {
