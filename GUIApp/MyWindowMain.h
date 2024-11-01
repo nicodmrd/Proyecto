@@ -162,10 +162,6 @@ namespace GUIApp {
 			ResetGrid();
 			LoadImage();
 			OpenPort();
-
-			//Inicialización del WebView2
-			this->MapaWeb->Source = gcnew System::Uri("file:///ruta/a/tu/HTMLPage.html");
-
 			// Vincular el evento Click del botón btnPruebas
 			this->btnPruebas->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas_Click);
 
