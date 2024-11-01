@@ -19,8 +19,8 @@
         let marcadores = [];
         let rectangle;
         let bounds;
-        let markerCamion; // marcador para el camión
-        let rutaPuntos = []; //almacenar los puntos de la ruta
+        let markerCamion; 
+        let rutaPuntos = [];
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -30,7 +30,7 @@
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
-            elevator = new google.maps.ElevationService();  // Elevation API
+            elevator = new google.maps.ElevationService();  
 
         }
 
@@ -40,7 +40,7 @@
             }, (results, status) => {
                 if (status === "OK" && results[0]) {
                     const elevacion = results[0].elevation;
-                    callback(elevacion <= 0);  // Si es menor o igual a 0, es mar
+                    callback(elevacion <= 0); 
                 } else {
                     alert("No se pudo obtener la elevación: " + status);
                 }
@@ -70,7 +70,7 @@
                 return;
             }
 
-            if (markerCamion) markerCamion.setMap(null); // Eliminar el marcador anterior si existe
+            if (markerCamion) markerCamion.setMap(null);
             markerCamion = new google.maps.Marker({
                 position: routePoints[0],
                 map: map,
@@ -163,7 +163,7 @@
                     });
                     marcadores.push(marker);
                 } else {
-                    generarPuntoMar();  // Intenta generar otro punto si no está sobre el mar
+                    generarPuntoMar();
                 }
             });
         }
