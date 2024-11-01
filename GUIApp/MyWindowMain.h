@@ -1,6 +1,8 @@
 #pragma once
 
 #include "EncargadosForm.h"
+#include "EmployeesReportForm.h"
+#include "GarbageReportForm.h"
 #include "DronForm.h"
 #include "CamionesForm.h"
 #include "BarcoForm.h"
@@ -40,31 +42,110 @@ namespace GUIApp {
 		// Definición del delegado
 		static Thread^ readThread;
 		delegate void UpdateGridDelegate(int, int, int, int);
+
+
+
+
+
+	private: System::Windows::Forms::Timer^ timer1;
+	private: System::Windows::Forms::ToolStripMenuItem^ reportesToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ empleadosPorÁreaToolStripMenuItem;
+	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::ComboBox^ cbCamara;
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ btnPruebas;
-	private: System::Windows::Forms::Button^ btnPruebas2;
-	private: System::Windows::Forms::Label^ lblCronometro;
-	private: System::Windows::Forms::Timer^ timer1;
-
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Button^ button1;
-
-	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::PictureBox^ videoCamara;
+	private: System::Windows::Forms::Label^ label8;
+	private: System::Windows::Forms::Button^ detener_proceso;
+	private: System::Windows::Forms::Button^ iniciar_proceso;
+	public: System::Windows::Forms::DataGridView^ desechogrid;
+	private:
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ plasticobox;
+	public:
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ cartonbox;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vidriobox;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
+	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::Label^ label7;
-
-
-
-
+	private: System::Windows::Forms::Label^ label19;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Label^ lblCronometro;
+	private: System::Windows::Forms::Button^ btnPruebas2;
+	private: System::Windows::Forms::Button^ btnPruebas;
+	private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
+	private: System::Windows::Forms::DataGridView^ dgvCamionesAsignados;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCamion;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ MatriculaCamion;
+	private: System::Windows::Forms::DataGridView^ dgvBarcosAsignados;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdBarco;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
+	private: System::Windows::Forms::Label^ label17;
+	private: System::Windows::Forms::TextBox^ txtCantContenedores;
+	private: System::Windows::Forms::TextBox^ txtCamionCombustible;
+	private: System::Windows::Forms::TextBox^ txtBarcoCombustible;
+	private: System::Windows::Forms::TextBox^ txtDronBateria;
+	private: System::Windows::Forms::TextBox^ txtAreaLargo;
+	private: System::Windows::Forms::TextBox^ txtAreaAncho;
+	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Label^ label14;
+	private: System::Windows::Forms::ComboBox^ cmbIdCamion;
+	private: System::Windows::Forms::Button^ btnValidarCamion;
+	private: System::Windows::Forms::Button^ btnRecargarCmbCamion;
+	private: System::Windows::Forms::Label^ label5;
+	private: System::Windows::Forms::ComboBox^ cmbIdBarco;
+	private: System::Windows::Forms::Button^ btnValidarBarco;
+	private: System::Windows::Forms::Button^ btnRecargarCmbBarco;
+	private: System::Windows::Forms::Button^ btnRecargarBateria;
+	private: System::Windows::Forms::Label^ label4;
+	private: System::Windows::Forms::DataGridView^ dataGridView1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdDesecho;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCoordX;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CoordY;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdBarco;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CapacidadCoord;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCamion;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ MatriculaCamion;
+	private: System::Windows::Forms::ComboBox^ cmbIdDron;
+	private: System::Windows::Forms::Button^ btnValidarDron;
+	private: System::Windows::Forms::Button^ btnAumentarContenedor;
+	private: System::Windows::Forms::Button^ btnAsignarBarcos;
+	private: System::Windows::Forms::Button^ btnAsignarCamion;
+	private: System::Windows::Forms::Button^ btnAsignarDron;
+	private: System::Windows::Forms::Label^ label13;
+	private: System::Windows::Forms::Label^ label12;
+	private: System::Windows::Forms::Label^ label11;
+	private: System::Windows::Forms::Label^ label10;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::ComboBox^ cmb4Encargado;
+	private: System::Windows::Forms::ComboBox^ cmb3Encargado;
+	private: System::Windows::Forms::ComboBox^ cmb2Encargado;
+	private: System::Windows::Forms::ComboBox^ cmb1Encargado;
+	private: System::Windows::Forms::Button^ btnCursor;
+	private: System::Windows::Forms::Button^ btnAreaAnalisis;
+	private: System::Windows::Forms::Button^ btnReiniciar;
+	private: System::Windows::Forms::Button^ btnDetener;
+	private: System::Windows::Forms::Button^ btnIniciar;
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	private: System::Windows::Forms::ToolStripMenuItem^ deschosRecicladosToolStripMenuItem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -255,8 +336,8 @@ namespace GUIApp {
 	private: System::Windows::Forms::ToolStripMenuItem^ encargadosToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ barcosToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ dronToolStripMenuItem;
-	private: System::Windows::Forms::TextBox^ txtAreaLargo;
-	private: System::Windows::Forms::TextBox^ txtAreaAncho;
+
+
 
 
 
@@ -273,101 +354,101 @@ namespace GUIApp {
 
 
 
-	private: System::Windows::Forms::Button^ btnReiniciar;
 
-	private: System::Windows::Forms::Button^ btnDetener;
 
-	private: System::Windows::Forms::Button^ btnIniciar;
+
+
+
 
 
 	private: System::Windows::Forms::ToolStripMenuItem^ contenedoresToolStripMenuItem;
-	private: System::Windows::Forms::TabControl^ tabControl1;
-	private: System::Windows::Forms::TabPage^ tabPage1;
-	private: System::Windows::Forms::TabPage^ tabPage2;
-private: System::Windows::Forms::PictureBox^ videoCamara;
 
-	private: System::Windows::Forms::Label^ label8;
-	private: System::Windows::Forms::Button^ detener_proceso;
-	private: System::Windows::Forms::Button^ iniciar_proceso;
-	public: System::Windows::Forms::DataGridView^ desechogrid;
+
+
+
+
+
+
+
+
 	private:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ plasticobox;
+
 	public:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ cartonbox;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vidriobox;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
-	private: System::Windows::Forms::Button^ btnAreaAnalisis;
+
+
+
+
 
 	private: System::Windows::Forms::ToolTip^ toolTip1;
 	private: System::Windows::Forms::ToolTip^ toolTip2;
 	private: System::Windows::Forms::ToolTip^ toolTip3;
 	private: System::Windows::Forms::ToolTip^ toolTip4;
-	private: System::Windows::Forms::Button^ btnCursor;
-
-	private: System::Windows::Forms::Label^ label13;
-	private: System::Windows::Forms::Label^ label12;
-	private: System::Windows::Forms::Label^ label11;
-	private: System::Windows::Forms::Label^ label10;
-	private: System::Windows::Forms::Label^ label9;
-	private: System::Windows::Forms::ComboBox^ cmb4Encargado;
-
-	private: System::Windows::Forms::ComboBox^ cmb3Encargado;
-
-	private: System::Windows::Forms::ComboBox^ cmb2Encargado;
-
-	private: System::Windows::Forms::ComboBox^ cmb1Encargado;
-private: System::Windows::Forms::Button^ btnAumentarContenedor;
-
-
-	private: System::Windows::Forms::Button^ btnAsignarBarcos;
-	private: System::Windows::Forms::Button^ btnAsignarCamion;
-
-
-	private: System::Windows::Forms::Button^ btnAsignarDron;
-private: System::Windows::Forms::ComboBox^ cmbIdDron;
-
-private: System::Windows::Forms::Button^ btnValidarDron;
-
-
-
-private: System::Windows::Forms::DataGridView^ dataGridView1;
 
 
 
 
-private: System::Windows::Forms::Label^ label4;
-private: System::Windows::Forms::TextBox^ txtDronBateria;
 
 
-private: System::Windows::Forms::Button^ btnRecargarCmbBarco;
-
-private: System::Windows::Forms::Button^ btnRecargarBateria;
-
-private: System::Windows::Forms::Label^ label15;
-private: System::Windows::Forms::Label^ label14;
-private: System::Windows::Forms::TextBox^ txtCamionCombustible;
-
-private: System::Windows::Forms::ComboBox^ cmbIdCamion;
-
-private: System::Windows::Forms::Button^ btnValidarCamion;
-private: System::Windows::Forms::Button^ btnRecargarCmbCamion;
 
 
-private: System::Windows::Forms::Label^ label5;
-private: System::Windows::Forms::TextBox^ txtBarcoCombustible;
-
-private: System::Windows::Forms::ComboBox^ cmbIdBarco;
 
 
-private: System::Windows::Forms::Button^ btnValidarBarco;
 
-private: System::Windows::Forms::Label^ label17;
-private: System::Windows::Forms::TextBox^ txtCantContenedores;
 
-private: System::Windows::Forms::Label^ label16;
-private: System::Windows::Forms::DataGridView^ dgvBarcosAsignados;
 
-private: System::Windows::Forms::DataGridView^ dgvCamionesAsignados;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -391,7 +472,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 
 
 
-private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
+
 
 
 
@@ -438,13 +519,38 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->acercaDeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->integrantesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->informaciónDelProyectoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->txtAreaLargo = (gcnew System::Windows::Forms::TextBox());
-			this->txtAreaAncho = (gcnew System::Windows::Forms::TextBox());
+			this->reportesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->empleadosPorÁreaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->deschosRecicladosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->btnReiniciar = (gcnew System::Windows::Forms::Button());
-			this->btnDetener = (gcnew System::Windows::Forms::Button());
-			this->btnIniciar = (gcnew System::Windows::Forms::Button());
-			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip2 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip3 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip4 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip5 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip6 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip7 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip8 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip9 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip10 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip11 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip12 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip13 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip14 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
+			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->cbCamara = (gcnew System::Windows::Forms::ComboBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->videoCamara = (gcnew System::Windows::Forms::PictureBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
+			this->detener_proceso = (gcnew System::Windows::Forms::Button());
+			this->iniciar_proceso = (gcnew System::Windows::Forms::Button());
+			this->desechogrid = (gcnew System::Windows::Forms::DataGridView());
+			this->plasticobox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->cartonbox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->vidriobox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->otrosbox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -464,21 +570,23 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->CapacidadCoord = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->label17 = (gcnew System::Windows::Forms::Label());
 			this->txtCantContenedores = (gcnew System::Windows::Forms::TextBox());
+			this->txtCamionCombustible = (gcnew System::Windows::Forms::TextBox());
+			this->txtBarcoCombustible = (gcnew System::Windows::Forms::TextBox());
+			this->txtDronBateria = (gcnew System::Windows::Forms::TextBox());
+			this->txtAreaLargo = (gcnew System::Windows::Forms::TextBox());
+			this->txtAreaAncho = (gcnew System::Windows::Forms::TextBox());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->txtCamionCombustible = (gcnew System::Windows::Forms::TextBox());
 			this->cmbIdCamion = (gcnew System::Windows::Forms::ComboBox());
 			this->btnValidarCamion = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarCmbCamion = (gcnew System::Windows::Forms::Button());
 			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->txtBarcoCombustible = (gcnew System::Windows::Forms::TextBox());
 			this->cmbIdBarco = (gcnew System::Windows::Forms::ComboBox());
 			this->btnValidarBarco = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarCmbBarco = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarBateria = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->txtDronBateria = (gcnew System::Windows::Forms::TextBox());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->IdDesecho = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->IdCoordX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -500,52 +608,28 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->cmb1Encargado = (gcnew System::Windows::Forms::ComboBox());
 			this->btnCursor = (gcnew System::Windows::Forms::Button());
 			this->btnAreaAnalisis = (gcnew System::Windows::Forms::Button());
-			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
-			this->cbCamara = (gcnew System::Windows::Forms::ComboBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->videoCamara = (gcnew System::Windows::Forms::PictureBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->detener_proceso = (gcnew System::Windows::Forms::Button());
-			this->iniciar_proceso = (gcnew System::Windows::Forms::Button());
-			this->desechogrid = (gcnew System::Windows::Forms::DataGridView());
-			this->plasticobox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->cartonbox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->vidriobox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->otrosbox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip2 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip3 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip4 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip5 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip6 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip7 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip8 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip9 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip10 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip11 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip12 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip13 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip14 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
-			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
+			this->btnReiniciar = (gcnew System::Windows::Forms::Button());
+			this->btnDetener = (gcnew System::Windows::Forms::Button());
+			this->btnIniciar = (gcnew System::Windows::Forms::Button());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->menuStrip2->SuspendLayout();
-			this->tabControl1->SuspendLayout();
+			this->tabPage2->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->videoCamara))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->desechogrid))->BeginInit();
 			this->tabPage1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MapaWeb))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamionesAsignados))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcosAsignados))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->tabPage2->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->videoCamara))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->desechogrid))->BeginInit();
+			this->tabControl1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip2
 			// 
 			this->menuStrip2->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
 				this->archivoToolStripMenuItem,
-					this->mantenimientoToolStripMenuItem, this->ayudaToolStripMenuItem, this->acercaDeToolStripMenuItem
+					this->mantenimientoToolStripMenuItem, this->ayudaToolStripMenuItem, this->acercaDeToolStripMenuItem, this->reportesToolStripMenuItem
 			});
 			resources->ApplyResources(this->menuStrip2, L"menuStrip2");
 			this->menuStrip2->Name = L"menuStrip2";
@@ -631,51 +715,136 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->informaciónDelProyectoToolStripMenuItem->Name = L"informaciónDelProyectoToolStripMenuItem";
 			resources->ApplyResources(this->informaciónDelProyectoToolStripMenuItem, L"informaciónDelProyectoToolStripMenuItem");
 			// 
-			// txtAreaLargo
+			// reportesToolStripMenuItem
 			// 
-			resources->ApplyResources(this->txtAreaLargo, L"txtAreaLargo");
-			this->txtAreaLargo->Name = L"txtAreaLargo";
-			this->txtAreaLargo->ReadOnly = true;
+			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->empleadosPorÁreaToolStripMenuItem,
+					this->deschosRecicladosToolStripMenuItem
+			});
+			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
+			resources->ApplyResources(this->reportesToolStripMenuItem, L"reportesToolStripMenuItem");
+			this->reportesToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::reportesToolStripMenuItem_Click);
 			// 
-			// txtAreaAncho
+			// empleadosPorÁreaToolStripMenuItem
 			// 
-			resources->ApplyResources(this->txtAreaAncho, L"txtAreaAncho");
-			this->txtAreaAncho->Name = L"txtAreaAncho";
-			this->txtAreaAncho->ReadOnly = true;
+			this->empleadosPorÁreaToolStripMenuItem->Name = L"empleadosPorÁreaToolStripMenuItem";
+			resources->ApplyResources(this->empleadosPorÁreaToolStripMenuItem, L"empleadosPorÁreaToolStripMenuItem");
+			this->empleadosPorÁreaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::empleadosPorÁreaToolStripMenuItem_Click);
+			// 
+			// deschosRecicladosToolStripMenuItem
+			// 
+			this->deschosRecicladosToolStripMenuItem->Name = L"deschosRecicladosToolStripMenuItem";
+			resources->ApplyResources(this->deschosRecicladosToolStripMenuItem, L"deschosRecicladosToolStripMenuItem");
+			this->deschosRecicladosToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::deschosRecicladosToolStripMenuItem_Click);
 			// 
 			// label1
 			// 
 			resources->ApplyResources(this->label1, L"label1");
 			this->label1->Name = L"label1";
 			// 
-			// btnReiniciar
+			// toolTip1
 			// 
-			resources->ApplyResources(this->btnReiniciar, L"btnReiniciar");
-			this->btnReiniciar->Name = L"btnReiniciar";
-			this->btnReiniciar->UseVisualStyleBackColor = true;
-			this->btnReiniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnReiniciar_Click);
+			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
-			// btnDetener
+			// timer1
 			// 
-			resources->ApplyResources(this->btnDetener, L"btnDetener");
-			this->btnDetener->Name = L"btnDetener";
-			this->btnDetener->UseVisualStyleBackColor = true;
-			this->btnDetener->Click += gcnew System::EventHandler(this, &MyWindowMain::btnDetener_Click);
+			this->timer1->Tick += gcnew System::EventHandler(this, &MyWindowMain::timer1_Tick);
 			// 
-			// btnIniciar
+			// tabPage2
 			// 
-			resources->ApplyResources(this->btnIniciar, L"btnIniciar");
-			this->btnIniciar->Name = L"btnIniciar";
-			this->btnIniciar->UseVisualStyleBackColor = true;
-			this->btnIniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::button1_Click);
+			this->tabPage2->Controls->Add(this->cbCamara);
+			this->tabPage2->Controls->Add(this->label2);
+			this->tabPage2->Controls->Add(this->videoCamara);
+			this->tabPage2->Controls->Add(this->label8);
+			this->tabPage2->Controls->Add(this->detener_proceso);
+			this->tabPage2->Controls->Add(this->iniciar_proceso);
+			this->tabPage2->Controls->Add(this->desechogrid);
+			resources->ApplyResources(this->tabPage2, L"tabPage2");
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
-			// tabControl1
+			// cbCamara
 			// 
-			resources->ApplyResources(this->tabControl1, L"tabControl1");
-			this->tabControl1->Controls->Add(this->tabPage1);
-			this->tabControl1->Controls->Add(this->tabPage2);
-			this->tabControl1->Name = L"tabControl1";
-			this->tabControl1->SelectedIndex = 0;
+			this->cbCamara->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cbCamara->FormattingEnabled = true;
+			resources->ApplyResources(this->cbCamara, L"cbCamara");
+			this->cbCamara->Name = L"cbCamara";
+			// 
+			// label2
+			// 
+			resources->ApplyResources(this->label2, L"label2");
+			this->label2->Name = L"label2";
+			// 
+			// videoCamara
+			// 
+			resources->ApplyResources(this->videoCamara, L"videoCamara");
+			this->videoCamara->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->videoCamara->Name = L"videoCamara";
+			this->videoCamara->TabStop = false;
+			// 
+			// label8
+			// 
+			resources->ApplyResources(this->label8, L"label8");
+			this->label8->Name = L"label8";
+			// 
+			// detener_proceso
+			// 
+			resources->ApplyResources(this->detener_proceso, L"detener_proceso");
+			this->detener_proceso->Name = L"detener_proceso";
+			this->detener_proceso->UseVisualStyleBackColor = true;
+			// 
+			// iniciar_proceso
+			// 
+			resources->ApplyResources(this->iniciar_proceso, L"iniciar_proceso");
+			this->iniciar_proceso->Name = L"iniciar_proceso";
+			this->iniciar_proceso->UseVisualStyleBackColor = true;
+			this->iniciar_proceso->Click += gcnew System::EventHandler(this, &MyWindowMain::iniciar_proceso_Click);
+			// 
+			// desechogrid
+			// 
+			this->desechogrid->AllowUserToDeleteRows = false;
+			this->desechogrid->AllowUserToResizeColumns = false;
+			this->desechogrid->AllowUserToResizeRows = false;
+			resources->ApplyResources(this->desechogrid, L"desechogrid");
+			this->desechogrid->BackgroundColor = System::Drawing::SystemColors::Menu;
+			this->desechogrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
+			this->desechogrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+				this->plasticobox,
+					this->cartonbox, this->vidriobox, this->otrosbox
+			});
+			this->desechogrid->Name = L"desechogrid";
+			this->desechogrid->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+			this->desechogrid->RowHeadersVisible = false;
+			this->desechogrid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
+			this->desechogrid->RowTemplate->DividerHeight = 10;
+			this->desechogrid->RowTemplate->Height = 90;
+			this->desechogrid->RowTemplate->ReadOnly = true;
+			this->desechogrid->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			// 
+			// plasticobox
+			// 
+			resources->ApplyResources(this->plasticobox, L"plasticobox");
+			this->plasticobox->Name = L"plasticobox";
+			this->plasticobox->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->plasticobox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// cartonbox
+			// 
+			resources->ApplyResources(this->cartonbox, L"cartonbox");
+			this->cartonbox->Name = L"cartonbox";
+			this->cartonbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// vidriobox
+			// 
+			resources->ApplyResources(this->vidriobox, L"vidriobox");
+			this->vidriobox->Name = L"vidriobox";
+			this->vidriobox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
+			// 
+			// otrosbox
+			// 
+			resources->ApplyResources(this->otrosbox, L"otrosbox");
+			this->otrosbox->Name = L"otrosbox";
+			this->otrosbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			// 
 			// tabPage1
 			// 
@@ -694,21 +863,23 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->tabPage1->Controls->Add(this->dgvBarcosAsignados);
 			this->tabPage1->Controls->Add(this->label17);
 			this->tabPage1->Controls->Add(this->txtCantContenedores);
+			this->tabPage1->Controls->Add(this->txtCamionCombustible);
+			this->tabPage1->Controls->Add(this->txtBarcoCombustible);
+			this->tabPage1->Controls->Add(this->txtDronBateria);
+			this->tabPage1->Controls->Add(this->txtAreaLargo);
+			this->tabPage1->Controls->Add(this->txtAreaAncho);
 			this->tabPage1->Controls->Add(this->label16);
 			this->tabPage1->Controls->Add(this->label15);
 			this->tabPage1->Controls->Add(this->label14);
-			this->tabPage1->Controls->Add(this->txtCamionCombustible);
 			this->tabPage1->Controls->Add(this->cmbIdCamion);
 			this->tabPage1->Controls->Add(this->btnValidarCamion);
 			this->tabPage1->Controls->Add(this->btnRecargarCmbCamion);
 			this->tabPage1->Controls->Add(this->label5);
-			this->tabPage1->Controls->Add(this->txtBarcoCombustible);
 			this->tabPage1->Controls->Add(this->cmbIdBarco);
 			this->tabPage1->Controls->Add(this->btnValidarBarco);
 			this->tabPage1->Controls->Add(this->btnRecargarCmbBarco);
 			this->tabPage1->Controls->Add(this->btnRecargarBateria);
 			this->tabPage1->Controls->Add(this->label4);
-			this->tabPage1->Controls->Add(this->txtDronBateria);
 			this->tabPage1->Controls->Add(this->dataGridView1);
 			this->tabPage1->Controls->Add(this->cmbIdDron);
 			this->tabPage1->Controls->Add(this->btnValidarDron);
@@ -727,9 +898,7 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->tabPage1->Controls->Add(this->cmb1Encargado);
 			this->tabPage1->Controls->Add(this->btnCursor);
 			this->tabPage1->Controls->Add(this->btnAreaAnalisis);
-			this->tabPage1->Controls->Add(this->txtAreaLargo);
 			this->tabPage1->Controls->Add(this->btnReiniciar);
-			this->tabPage1->Controls->Add(this->txtAreaAncho);
 			this->tabPage1->Controls->Add(this->btnDetener);
 			this->tabPage1->Controls->Add(this->btnIniciar);
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
@@ -853,6 +1022,36 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->txtCantContenedores->Name = L"txtCantContenedores";
 			this->txtCantContenedores->ReadOnly = true;
 			// 
+			// txtCamionCombustible
+			// 
+			resources->ApplyResources(this->txtCamionCombustible, L"txtCamionCombustible");
+			this->txtCamionCombustible->Name = L"txtCamionCombustible";
+			this->txtCamionCombustible->ReadOnly = true;
+			// 
+			// txtBarcoCombustible
+			// 
+			resources->ApplyResources(this->txtBarcoCombustible, L"txtBarcoCombustible");
+			this->txtBarcoCombustible->Name = L"txtBarcoCombustible";
+			this->txtBarcoCombustible->ReadOnly = true;
+			// 
+			// txtDronBateria
+			// 
+			resources->ApplyResources(this->txtDronBateria, L"txtDronBateria");
+			this->txtDronBateria->Name = L"txtDronBateria";
+			this->txtDronBateria->ReadOnly = true;
+			// 
+			// txtAreaLargo
+			// 
+			resources->ApplyResources(this->txtAreaLargo, L"txtAreaLargo");
+			this->txtAreaLargo->Name = L"txtAreaLargo";
+			this->txtAreaLargo->ReadOnly = true;
+			// 
+			// txtAreaAncho
+			// 
+			resources->ApplyResources(this->txtAreaAncho, L"txtAreaAncho");
+			this->txtAreaAncho->Name = L"txtAreaAncho";
+			this->txtAreaAncho->ReadOnly = true;
+			// 
 			// label16
 			// 
 			resources->ApplyResources(this->label16, L"label16");
@@ -867,12 +1066,6 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			resources->ApplyResources(this->label14, L"label14");
 			this->label14->Name = L"label14";
-			// 
-			// txtCamionCombustible
-			// 
-			resources->ApplyResources(this->txtCamionCombustible, L"txtCamionCombustible");
-			this->txtCamionCombustible->Name = L"txtCamionCombustible";
-			this->txtCamionCombustible->ReadOnly = true;
 			// 
 			// cmbIdCamion
 			// 
@@ -899,12 +1092,6 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			resources->ApplyResources(this->label5, L"label5");
 			this->label5->Name = L"label5";
-			// 
-			// txtBarcoCombustible
-			// 
-			resources->ApplyResources(this->txtBarcoCombustible, L"txtBarcoCombustible");
-			this->txtBarcoCombustible->Name = L"txtBarcoCombustible";
-			this->txtBarcoCombustible->ReadOnly = true;
 			// 
 			// cmbIdBarco
 			// 
@@ -938,12 +1125,6 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			// 
 			resources->ApplyResources(this->label4, L"label4");
 			this->label4->Name = L"label4";
-			// 
-			// txtDronBateria
-			// 
-			resources->ApplyResources(this->txtDronBateria, L"txtDronBateria");
-			this->txtDronBateria->Name = L"txtDronBateria";
-			this->txtDronBateria->ReadOnly = true;
 			// 
 			// dataGridView1
 			// 
@@ -1087,133 +1268,34 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->btnAreaAnalisis->UseVisualStyleBackColor = true;
 			this->btnAreaAnalisis->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAreaAnalisis_Click);
 			// 
-			// tabPage2
+			// btnReiniciar
 			// 
-			this->tabPage2->Controls->Add(this->cbCamara);
-			this->tabPage2->Controls->Add(this->label2);
-			this->tabPage2->Controls->Add(this->videoCamara);
-			this->tabPage2->Controls->Add(this->label8);
-			this->tabPage2->Controls->Add(this->detener_proceso);
-			this->tabPage2->Controls->Add(this->iniciar_proceso);
-			this->tabPage2->Controls->Add(this->desechogrid);
-			resources->ApplyResources(this->tabPage2, L"tabPage2");
-			this->tabPage2->Name = L"tabPage2";
-			this->tabPage2->UseVisualStyleBackColor = true;
+			resources->ApplyResources(this->btnReiniciar, L"btnReiniciar");
+			this->btnReiniciar->Name = L"btnReiniciar";
+			this->btnReiniciar->UseVisualStyleBackColor = true;
+			this->btnReiniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnReiniciar_Click);
 			// 
-			// cbCamara
+			// btnDetener
 			// 
-			this->cbCamara->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->cbCamara->FormattingEnabled = true;
-			resources->ApplyResources(this->cbCamara, L"cbCamara");
-			this->cbCamara->Name = L"cbCamara";
+			resources->ApplyResources(this->btnDetener, L"btnDetener");
+			this->btnDetener->Name = L"btnDetener";
+			this->btnDetener->UseVisualStyleBackColor = true;
+			this->btnDetener->Click += gcnew System::EventHandler(this, &MyWindowMain::btnDetener_Click);
 			// 
-			// label2
+			// btnIniciar
 			// 
-			resources->ApplyResources(this->label2, L"label2");
-			this->label2->Name = L"label2";
+			resources->ApplyResources(this->btnIniciar, L"btnIniciar");
+			this->btnIniciar->Name = L"btnIniciar";
+			this->btnIniciar->UseVisualStyleBackColor = true;
+			this->btnIniciar->Click += gcnew System::EventHandler(this, &MyWindowMain::button1_Click);
 			// 
-			// videoCamara
+			// tabControl1
 			// 
-			resources->ApplyResources(this->videoCamara, L"videoCamara");
-			this->videoCamara->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->videoCamara->Name = L"videoCamara";
-			this->videoCamara->TabStop = false;
-			// 
-			// label8
-			// 
-			resources->ApplyResources(this->label8, L"label8");
-			this->label8->Name = L"label8";
-			// 
-			// detener_proceso
-			// 
-			this->detener_proceso->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->detener_proceso->Location = System::Drawing::Point(972, 101);
-			this->detener_proceso->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->detener_proceso->Name = L"detener_proceso";
-			this->detener_proceso->Size = System::Drawing::Size(175, 34);
-			this->detener_proceso->TabIndex = 11;
-			this->detener_proceso->Text = L"DETENER PROCESO";
-			this->detener_proceso->UseVisualStyleBackColor = true;
-			// 
-			// iniciar_proceso
-			// 
-			this->iniciar_proceso->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->iniciar_proceso->Location = System::Drawing::Point(743, 101);
-			this->iniciar_proceso->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->iniciar_proceso->Name = L"iniciar_proceso";
-			this->iniciar_proceso->Size = System::Drawing::Size(175, 34);
-			this->iniciar_proceso->TabIndex = 10;
-			this->iniciar_proceso->Text = L"INICIAR PROCESO";
-			this->iniciar_proceso->UseVisualStyleBackColor = true;
-			this->iniciar_proceso->Click += gcnew System::EventHandler(this, &MyWindowMain::iniciar_proceso_Click);
-			// 
-			// desechogrid
-			// 
-			this->desechogrid->AllowUserToDeleteRows = false;
-			this->desechogrid->AllowUserToResizeColumns = false;
-			this->desechogrid->AllowUserToResizeRows = false;
-			this->desechogrid->Anchor = System::Windows::Forms::AnchorStyles::None;
-			this->desechogrid->BackgroundColor = System::Drawing::SystemColors::Menu;
-			this->desechogrid->ColumnHeadersHeight = 60;
-			this->desechogrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
-			this->desechogrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
-				this->plasticobox,
-					this->cartonbox, this->vidriobox, this->otrosbox
-			});
-			this->desechogrid->Location = System::Drawing::Point(683, 164);
-			this->desechogrid->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->desechogrid->Name = L"desechogrid";
-			this->desechogrid->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-			this->desechogrid->RowHeadersVisible = false;
-			this->desechogrid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
-			this->desechogrid->RowTemplate->DividerHeight = 10;
-			this->desechogrid->RowTemplate->Height = 90;
-			this->desechogrid->RowTemplate->ReadOnly = true;
-			this->desechogrid->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::False;
-			this->desechogrid->ScrollBars = System::Windows::Forms::ScrollBars::None;
-			this->desechogrid->Size = System::Drawing::Size(644, 587);
-			this->desechogrid->TabIndex = 9;
-			// 
-			// plasticobox
-			// 
-			this->plasticobox->HeaderText = L"PLÁSTICO";
-			this->plasticobox->MinimumWidth = 100;
-			this->plasticobox->Name = L"plasticobox";
-			this->plasticobox->Resizable = System::Windows::Forms::DataGridViewTriState::False;
-			this->plasticobox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->plasticobox->Width = 125;
-			// 
-			// cartonbox
-			// 
-			this->cartonbox->HeaderText = L"CARTÓN";
-			this->cartonbox->MinimumWidth = 100;
-			this->cartonbox->Name = L"cartonbox";
-			this->cartonbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->cartonbox->Width = 125;
-			// 
-			// vidriobox
-			// 
-			this->vidriobox->HeaderText = L"VIDRIO";
-			this->vidriobox->MinimumWidth = 100;
-			this->vidriobox->Name = L"vidriobox";
-			this->vidriobox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->vidriobox->Width = 125;
-			// 
-			// otrosbox
-			// 
-			this->otrosbox->HeaderText = L"OTROS";
-			this->otrosbox->MinimumWidth = 100;
-			this->otrosbox->Name = L"otrosbox";
-			this->otrosbox->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
-			this->otrosbox->Width = 125;
-
-			// toolTip1
-			// 
-			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
-			// 
-			// timer1
-			// 
-			this->timer1->Tick += gcnew System::EventHandler(this, &MyWindowMain::timer1_Tick);
+			resources->ApplyResources(this->tabControl1, L"tabControl1");
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
 			// 
 			// MyWindowMain
 			// 
@@ -1229,17 +1311,17 @@ private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 			this->Load += gcnew System::EventHandler(this, &MyWindowMain::MyWindowMain_Load);
 			this->menuStrip2->ResumeLayout(false);
 			this->menuStrip2->PerformLayout();
-			this->tabControl1->ResumeLayout(false);
+			this->tabPage2->ResumeLayout(false);
+			this->tabPage2->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->videoCamara))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->desechogrid))->EndInit();
 			this->tabPage1->ResumeLayout(false);
 			this->tabPage1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MapaWeb))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamionesAsignados))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcosAsignados))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->tabPage2->ResumeLayout(false);
-			this->tabPage2->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->videoCamara))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->desechogrid))->EndInit();
+			this->tabControl1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -1756,5 +1838,17 @@ private: System::Void toolTip1_Popup(System::Object^ sender, System::Windows::Fo
 
 }
 
+private: System::Void reportesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void empleadosPorÁreaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	EmployeesReportForm^ form = gcnew EmployeesReportForm();
+	form->ShowDialog(); // Mostrar el formulario de forma modal
+
+}
+private: System::Void deschosRecicladosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	GarbageReportForm^ form = gcnew GarbageReportForm();
+	form->ShowDialog(); // Mostrar el formulario de forma modal
+
+}
 };
 }

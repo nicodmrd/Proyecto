@@ -6,6 +6,7 @@
 #pragma once
 #include "Coordenadas.h"
 #include "Contenedor.h"
+#include "Encargado.h"
 
 using namespace System;
 using namespace System::Collections::Generic;
@@ -20,6 +21,7 @@ namespace Model {
         double NivelCombustible;
         Coordenadas^ Posicion;
         List<Contenedor^>^ Contenedores;
+        List<Encargado^>^ EmpleadosBarco;
 
         void CargarContenedor();
 

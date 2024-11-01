@@ -2,6 +2,9 @@
 #pragma once
 #include "Coordenadas.h"
 #include "Contenedor.h"
+#include "Encargado.h"
+
+using namespace System;
 using namespace System::Collections::Generic;
 
 namespace Model {
@@ -14,6 +17,7 @@ namespace Model {
         Coordenadas^ Posicion;
         int CantCoordendas;
         Contenedor^ Contenedores;
+        List<Encargado^>^ EmpleadosBarco;
 
         
         void RecogerDesecho();

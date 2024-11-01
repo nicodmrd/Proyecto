@@ -121,47 +121,11 @@
     <value>481, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="salirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 26</value>
-  </data>
-  <data name="salirToolStripMenuItem.Text" xml:space="preserve">
-    <value>Salir</value>
-  </data>
   <data name="archivoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>73, 24</value>
   </data>
   <data name="archivoToolStripMenuItem.Text" xml:space="preserve">
     <value>Archivo</value>
-  </data>
-  <data name="encargadosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
-  </data>
-  <data name="encargadosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Encargados</value>
-  </data>
-  <data name="barcosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
-  </data>
-  <data name="barcosToolStripMenuItem.Text" xml:space="preserve">
-    <value>Barcos</value>
-  </data>
-  <data name="dronToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
-  </data>
-  <data name="dronToolStripMenuItem.Text" xml:space="preserve">
-    <value>Dron</value>
-  </data>
-  <data name="camionesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
-  </data>
-  <data name="camionesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Camiones</value>
-  </data>
-  <data name="contenedoresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 26</value>
-  </data>
-  <data name="contenedoresToolStripMenuItem.Text" xml:space="preserve">
-    <value>Contenedores</value>
   </data>
   <data name="mantenimientoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 24</value>
@@ -169,35 +133,35 @@
   <data name="mantenimientoToolStripMenuItem.Text" xml:space="preserve">
     <value>Mantenimiento</value>
   </data>
-  <data name="guíaDelSoftwareToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>208, 26</value>
-  </data>
-  <data name="guíaDelSoftwareToolStripMenuItem.Text" xml:space="preserve">
-    <value>Guía del software</value>
-  </data>
   <data name="ayudaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 24</value>
   </data>
   <data name="ayudaToolStripMenuItem.Text" xml:space="preserve">
     <value>Ayuda</value>
   </data>
-  <data name="integrantesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="integrantesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Integrantes</value>
-  </data>
-  <data name="informaciónDelProyectoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 26</value>
-  </data>
-  <data name="informaciónDelProyectoToolStripMenuItem.Text" xml:space="preserve">
-    <value>Información del proyecto</value>
-  </data>
   <data name="acercaDeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>89, 24</value>
   </data>
   <data name="acercaDeToolStripMenuItem.Text" xml:space="preserve">
     <value>Acerca de</value>
+  </data>
+  <data name="empleadosPorÁreaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 26</value>
+  </data>
+  <data name="empleadosPorÁreaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reporte de empleados</value>
+  </data>
+  <data name="deschosRecicladosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>226, 26</value>
+  </data>
+  <data name="deschosRecicladosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Desechos reciclados</value>
+  </data>
+  <data name="reportesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 24</value>
+  </data>
+  <data name="reportesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Reporte</value>
   </data>
   <data name="menuStrip2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -228,59 +192,59 @@
   <data name="&gt;&gt;menuStrip2.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="txtAreaLargo.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="salirToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 26</value>
   </data>
-  <data name="txtAreaLargo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 58</value>
+  <data name="salirToolStripMenuItem.Text" xml:space="preserve">
+    <value>Salir</value>
   </data>
-  <data name="txtAreaLargo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="encargadosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="txtAreaLargo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 22</value>
+  <data name="encargadosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Encargados</value>
   </data>
-  <data name="txtAreaLargo.TabIndex" type="System.Int32, mscorlib">
-    <value>33</value>
+  <data name="barcosToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;txtAreaLargo.Name" xml:space="preserve">
-    <value>txtAreaLargo</value>
+  <data name="barcosToolStripMenuItem.Text" xml:space="preserve">
+    <value>Barcos</value>
   </data>
-  <data name="&gt;&gt;txtAreaLargo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="dronToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="&gt;&gt;txtAreaLargo.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="dronToolStripMenuItem.Text" xml:space="preserve">
+    <value>Dron</value>
   </data>
-  <data name="&gt;&gt;txtAreaLargo.ZOrder" xml:space="preserve">
-    <value>47</value>
+  <data name="camionesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="txtAreaAncho.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="camionesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Camiones</value>
   </data>
-  <data name="txtAreaAncho.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 37</value>
+  <data name="contenedoresToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>224, 26</value>
   </data>
-  <data name="txtAreaAncho.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="contenedoresToolStripMenuItem.Text" xml:space="preserve">
+    <value>Contenedores</value>
   </data>
-  <data name="txtAreaAncho.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 22</value>
+  <data name="guíaDelSoftwareToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>208, 26</value>
   </data>
-  <data name="txtAreaAncho.TabIndex" type="System.Int32, mscorlib">
-    <value>32</value>
+  <data name="guíaDelSoftwareToolStripMenuItem.Text" xml:space="preserve">
+    <value>Guía del software</value>
   </data>
-  <data name="&gt;&gt;txtAreaAncho.Name" xml:space="preserve">
-    <value>txtAreaAncho</value>
+  <data name="integrantesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
   </data>
-  <data name="&gt;&gt;txtAreaAncho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="integrantesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Integrantes</value>
   </data>
-  <data name="&gt;&gt;txtAreaAncho.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="informaciónDelProyectoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 26</value>
   </data>
-  <data name="&gt;&gt;txtAreaAncho.ZOrder" xml:space="preserve">
-    <value>49</value>
+  <data name="informaciónDelProyectoToolStripMenuItem.Text" xml:space="preserve">
+    <value>Información del proyecto</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -309,32 +273,1016 @@
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnReiniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAICSURBVFhH7ZZN
-        SxVRHIdvqIEoIlkLbaMLC0wzcuEHcKGhbkSiXdCihUs3te4DKNUqI7RFCGrrlr5Ai3ClFmWLXpVExZYR
-        pfY8RycizDtzZ7pQ+MADc/5zzu/MnTlzz+SO+B/owjd4JbSKzCX8grt400Ix6cRo8nEswaIxhDvo5Fv4
-        BG9jB5bhX+cjOvlBruJ1LMVMqMITe4c/qcXX6ISfcRCH8d1+TZ9hHaaiHv1Fa/j7M67EWXSydWxC+1zD
-        T2h9Bc9iQZzEZTRozsIBeBGes493IOI0zqP1V1iNiXmABrzEGgt/oAIH0MfyK07q5GY8tJCEi7iN37HF
-        QoE04zc064KFuNxHr/xeaKVjBM0aC60Y+Pq4qBzUZiElZpi1ibFezVZ0gCv4mIWUmOGbZGasx9CNdp4J
-        rWwwy0yz83IV7fw4tLJhCs00Oy+9aOfp0MqG6A70hFYeokXzIbSywSwzfb3z4m7mDueA8xZS4sIzyz0j
-        9k75CB10J7TScRfNMjM27eh+/xUbLRTIGTTDLDMTMYle+QK66STFMYtoxoSFpJzCt2iA2667Y1wcG+2S
-        ZtguCBfhBhrkx0Y/Hvbv6LnL+B4d49jUC7kBo1upz/EW+lF6Dt3xPLb2AqN+S+jYTDiOfudFm9Rh+grf
-        wHLMHD8++nAUn6K3Wj225jn7HPGvkMv9ALlZi59y4wcaAAAAAElFTkSuQmCC
-</value>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>133, 17</value>
+  </metadata>
+  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>249, 17</value>
+  </metadata>
+  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>365, 17</value>
+  </metadata>
+  <metadata name="toolTip5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>617, 17</value>
+  </metadata>
+  <metadata name="toolTip6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>733, 17</value>
+  </metadata>
+  <metadata name="toolTip7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>849, 17</value>
+  </metadata>
+  <metadata name="toolTip8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>965, 17</value>
+  </metadata>
+  <metadata name="toolTip9.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1081, 17</value>
+  </metadata>
+  <metadata name="toolTip10.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1197, 17</value>
+  </metadata>
+  <metadata name="toolTip11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 58</value>
+  </metadata>
+  <metadata name="toolTip12.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>141, 58</value>
+  </metadata>
+  <metadata name="toolTip13.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>265, 58</value>
+  </metadata>
+  <metadata name="toolTip14.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>389, 58</value>
+  </metadata>
+  <metadata name="toolTip15.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>513, 58</value>
+  </metadata>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>637, 58</value>
+  </metadata>
+  <data name="&gt;&gt;cbCamara.Name" xml:space="preserve">
+    <value>cbCamara</value>
   </data>
-  <data name="btnReiniciar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>134, 28</value>
+  <data name="&gt;&gt;cbCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnReiniciar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="&gt;&gt;cbCamara.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;cbCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.Name" xml:space="preserve">
+    <value>videoCamara</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.Name" xml:space="preserve">
+    <value>detener_proceso</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.Name" xml:space="preserve">
+    <value>iniciar_proceso</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.Name" xml:space="preserve">
+    <value>desechogrid</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabPage2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.8pt</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="btnReiniciar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 54</value>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
   </data>
-  <data name="btnReiniciar.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1398, 753</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Simulación separador de desecho</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>235, 59</value>
+  </data>
+  <data name="cbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="cbCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>272, 24</value>
+  </data>
+  <data name="cbCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;cbCamara.Name" xml:space="preserve">
+    <value>cbCamara</value>
+  </data>
+  <data name="&gt;&gt;cbCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbCamara.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;cbCamara.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 10pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>45, 63</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 19</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Seleccionar cámara: </value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="videoCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="videoCamara.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="videoCamara.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 212</value>
+  </data>
+  <data name="videoCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="videoCamara.Size" type="System.Drawing.Size, System.Drawing">
+    <value>642, 349</value>
+  </data>
+  <data name="videoCamara.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.Name" xml:space="preserve">
+    <value>videoCamara</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;videoCamara.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 12pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>777, 35</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>303, 23</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Cantidad detectada por el sensor</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="detener_proceso.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="detener_proceso.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="detener_proceso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>972, 101</value>
+  </data>
+  <data name="detener_proceso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="detener_proceso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 34</value>
+  </data>
+  <data name="detener_proceso.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="detener_proceso.Text" xml:space="preserve">
+    <value>DETENER PROCESO</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.Name" xml:space="preserve">
+    <value>detener_proceso</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;detener_proceso.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="iniciar_proceso.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="iniciar_proceso.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="iniciar_proceso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>743, 101</value>
+  </data>
+  <data name="iniciar_proceso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="iniciar_proceso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>175, 34</value>
+  </data>
+  <data name="iniciar_proceso.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="iniciar_proceso.Text" xml:space="preserve">
+    <value>INICIAR PROCESO</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.Name" xml:space="preserve">
+    <value>iniciar_proceso</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;iniciar_proceso.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="desechogrid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="desechogrid.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="desechogrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>683, 164</value>
+  </data>
+  <data name="desechogrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="desechogrid.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="desechogrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>644, 587</value>
+  </data>
+  <data name="desechogrid.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.Name" xml:space="preserve">
+    <value>desechogrid</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;desechogrid.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="plasticobox.HeaderText" xml:space="preserve">
+    <value>PLÁSTICO</value>
+  </data>
+  <data name="plasticobox.MinimumWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="plasticobox.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="cartonbox.HeaderText" xml:space="preserve">
+    <value>CARTÓN</value>
+  </data>
+  <data name="cartonbox.MinimumWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="cartonbox.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="vidriobox.HeaderText" xml:space="preserve">
+    <value>VIDRIO</value>
+  </data>
+  <data name="vidriobox.MinimumWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="vidriobox.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="otrosbox.HeaderText" xml:space="preserve">
+    <value>OTROS</value>
+  </data>
+  <data name="otrosbox.MinimumWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="otrosbox.Width" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;lblCronometro.Name" xml:space="preserve">
+    <value>lblCronometro</value>
+  </data>
+  <data name="&gt;&gt;lblCronometro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblCronometro.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lblCronometro.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas2.Name" xml:space="preserve">
+    <value>btnPruebas2</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas2.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas.Name" xml:space="preserve">
+    <value>btnPruebas</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnPruebas.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;MapaWeb.Name" xml:space="preserve">
+    <value>MapaWeb</value>
+  </data>
+  <data name="&gt;&gt;MapaWeb.Type" xml:space="preserve">
+    <value>Microsoft.Web.WebView2.WinForms.WebView2, Microsoft.Web.WebView2.WinForms, Version=1.0.2849.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e</value>
+  </data>
+  <data name="&gt;&gt;MapaWeb.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;MapaWeb.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;dgvCamionesAsignados.Name" xml:space="preserve">
+    <value>dgvCamionesAsignados</value>
+  </data>
+  <data name="&gt;&gt;dgvCamionesAsignados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvCamionesAsignados.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;dgvCamionesAsignados.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dgvBarcosAsignados.Name" xml:space="preserve">
+    <value>dgvBarcosAsignados</value>
+  </data>
+  <data name="&gt;&gt;dgvBarcosAsignados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvBarcosAsignados.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;dgvBarcosAsignados.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtCantContenedores.Name" xml:space="preserve">
+    <value>txtCantContenedores</value>
+  </data>
+  <data name="&gt;&gt;txtCantContenedores.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtCantContenedores.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtCantContenedores.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;txtCamionCombustible.Name" xml:space="preserve">
+    <value>txtCamionCombustible</value>
+  </data>
+  <data name="&gt;&gt;txtCamionCombustible.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtCamionCombustible.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtCamionCombustible.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;txtBarcoCombustible.Name" xml:space="preserve">
+    <value>txtBarcoCombustible</value>
+  </data>
+  <data name="&gt;&gt;txtBarcoCombustible.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtBarcoCombustible.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtBarcoCombustible.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;txtDronBateria.Name" xml:space="preserve">
+    <value>txtDronBateria</value>
+  </data>
+  <data name="&gt;&gt;txtDronBateria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtDronBateria.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtDronBateria.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.Name" xml:space="preserve">
+    <value>txtAreaLargo</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.Name" xml:space="preserve">
+    <value>txtAreaAncho</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>19</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.Name" xml:space="preserve">
+    <value>cmbIdCamion</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.Name" xml:space="preserve">
+    <value>btnValidarCamion</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.Name" xml:space="preserve">
+    <value>btnRecargarCmbCamion</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.Name" xml:space="preserve">
+    <value>cmbIdBarco</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.Name" xml:space="preserve">
+    <value>btnValidarBarco</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.Name" xml:space="preserve">
+    <value>btnRecargarCmbBarco</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.Name" xml:space="preserve">
+    <value>btnRecargarBateria</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;cmbIdDron.Name" xml:space="preserve">
+    <value>cmbIdDron</value>
+  </data>
+  <data name="&gt;&gt;cmbIdDron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbIdDron.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmbIdDron.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;btnValidarDron.Name" xml:space="preserve">
+    <value>btnValidarDron</value>
+  </data>
+  <data name="&gt;&gt;btnValidarDron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnValidarDron.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnValidarDron.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;btnAumentarContenedor.Name" xml:space="preserve">
+    <value>btnAumentarContenedor</value>
+  </data>
+  <data name="&gt;&gt;btnAumentarContenedor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAumentarContenedor.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnAumentarContenedor.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarBarcos.Name" xml:space="preserve">
+    <value>btnAsignarBarcos</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarBarcos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarBarcos.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarBarcos.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarCamion.Name" xml:space="preserve">
+    <value>btnAsignarCamion</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarCamion.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarDron.Name" xml:space="preserve">
+    <value>btnAsignarDron</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarDron.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarDron.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnAsignarDron.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;cmb4Encargado.Name" xml:space="preserve">
+    <value>cmb4Encargado</value>
+  </data>
+  <data name="&gt;&gt;cmb4Encargado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmb4Encargado.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmb4Encargado.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="&gt;&gt;cmb3Encargado.Name" xml:space="preserve">
+    <value>cmb3Encargado</value>
+  </data>
+  <data name="&gt;&gt;cmb3Encargado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmb3Encargado.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmb3Encargado.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="&gt;&gt;cmb2Encargado.Name" xml:space="preserve">
+    <value>cmb2Encargado</value>
+  </data>
+  <data name="&gt;&gt;cmb2Encargado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmb2Encargado.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmb2Encargado.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="&gt;&gt;cmb1Encargado.Name" xml:space="preserve">
+    <value>cmb1Encargado</value>
+  </data>
+  <data name="&gt;&gt;cmb1Encargado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmb1Encargado.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmb1Encargado.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="&gt;&gt;btnCursor.Name" xml:space="preserve">
+    <value>btnCursor</value>
+  </data>
+  <data name="&gt;&gt;btnCursor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCursor.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnCursor.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="&gt;&gt;btnAreaAnalisis.Name" xml:space="preserve">
+    <value>btnAreaAnalisis</value>
+  </data>
+  <data name="&gt;&gt;btnAreaAnalisis.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAreaAnalisis.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnAreaAnalisis.ZOrder" xml:space="preserve">
+    <value>48</value>
   </data>
   <data name="&gt;&gt;btnReiniciar.Name" xml:space="preserve">
     <value>btnReiniciar</value>
@@ -346,40 +1294,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnReiniciar.ZOrder" xml:space="preserve">
-    <value>48</value>
-  </data>
-  <data name="btnDetener.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAN2SURBVFhHtZdZ
-        qE1RGMevmZChSJT5QckcikQKhczzAw+myCxD5geUuZChkCkKJSUPZLzGyDzPQuJBiTz7/9Z392rbZ+1z
-        jnuPX/26/7PPPufsvfZa3/pu0T/SVs6W+2WxvCMfyCvyoJwn28mCUklOls/kG7lZjpM9ZSvZXHaQI+R6
-        yTnPJRdaWZaJ0fKlPCK5+3zpJA/JF3IIB/6VKnK3vCbbc6CUdJY3JI8s79GoK/kQF1DmIRQ8wj3youS7
-        s8KdX5aL3avCskxel1lviufGnf8vGImdFjMZL69KhixOOckEZGIxH5j1jSXHI6rKjpJz2kjOaSCTMMK3
-        5Bj3KkZ1+UXyJUlWycfynOTDrP1Xcq2MOCmZN5zD+/hJsoqSsGQ/Sn7TM18esJjBUdnfoqeHPG3R8VQ2
-        suiZKVdbzOC45H0HQ8la58pCnJB9LHp6S+46ghGpb9FDVVxpMQMeJYXNwYvXFoOckr0sevrJYxYd72Ud
-        i55FcqnFIG8l88UNPyU0jTOyu0XPQEl1jPgsa1j08OMLLQbZLmcR2ESGE1I4K7ta9AyV8TnzTbIS4jB5
-        51oMMlJSId1Olvb8gQqWXB2jJGs64rusYNGzRs6wGITvvER4KJsSUqA2uGcVg90wXlB+lPyNw2OdajFI
-        C3mPcF9SONJg7bPtxpkgt1p0hC5gi5xoMUgzSS/hGotsj+CubGnRM0nSF0SELmCbpLqmQdV0jyDXJHwk
-        m1j0TJPrLLpnzxxIskuOtRiEebSPMEdytWlQMBpa9LB8oirH7P9q8S/2SrqkNDZKuibXw9FGpUGRqmfR
-        Q+2IqlxNSd1PwsgOtpgB1fedbO1eCXq4tJbrg6xt0UO/sMSiazKohEnYQwZYzIBOiQ3OQ9MZL61xqHK1
-        LHpWyAUW3R5AWU3CHtLXYgaH5XSLBj0AG1Ko/2N+/JS/JJMtspsEJuF5+VuyGqL3eSyhnoCqyrxK9h1u
-        72bN0zTkonzJ32yEzuFH+Y1B7lUAlk5aX1AI+H639NKgYaRxpIEsNMvlBZkx9EnY19mA2GxynpwH1Alq
-        QrHM2ZZHMBJslTdlFw6UEna823KHLNX/GJRSliHLhrWbL9QUliGzfRgHykI1Scl8IqlemyR1nM2EXRS5
-        U8ruBskOx7lTZEVZUCidXAwzmXlCL8FuSVPDMfYIX15zU1T0B2Vwp2wShnDIAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnDetener.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 28</value>
-  </data>
-  <data name="btnDetener.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnDetener.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 54</value>
-  </data>
-  <data name="btnDetener.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>49</value>
   </data>
   <data name="&gt;&gt;btnDetener.Name" xml:space="preserve">
     <value>btnDetener</value>
@@ -393,41 +1308,6 @@
   <data name="&gt;&gt;btnDetener.ZOrder" xml:space="preserve">
     <value>50</value>
   </data>
-  <data name="btnIniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
-        GwAAARsBjfdO5QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPfSURBVFhHrZdL
-        SJVBGIaPUVQELay83wgJiqKFRFGLSDeVULiINrVoI7SRCpEgiCihIIuCLi6TaBOtKoNSo5t0p+hGFytI
-        IUIJ05KI8vS8hxmZ85/vHE+p8OjMfO/3fvPPzPnPGIvH41lRUVExo6SkZB2cKC4uvgPvYBi+w3vohtPE
-        11ZWVk63PCzMwRAKF7iiPyDu6CsqKnrI38twER7AJ/DxIThWUFAwz/IMMQdFVVXVNEyawRfuZiINZWVl
-        8y29YFJl6LbDdZczTM4+eVl6YQ5q5iTecibPaK+3dJkgrxq0MnEmdhPmWrqUgcLCwoUkfVQihQ/HYrEp
-        UU228JND4b14jcpT3imasKNZuuI/YWsYmwg8SB1+Oqwfo+dirKF90lIh0rJPWnEP3hvwHdXWhmdiTEBg
-        n4pr2f3YZIP/HveAB/xY4pdben10nmfac8XQLM3Pz59lxbOBfL0vhv1W+MEjoNO6MRSH8DMVzTXpYAT2
-        /89EWOHVzuOI+t54kMCjqDiEE1zlEs9Au2v3kbcFjxwrJx3kdcKgaquzRmY8fZMl9qBZIR3sUJ/C62m/
-        cWP36C+P5qQDbb3LWyPjFnXYk0WW2IMmaQLCfXIaMfzGuD7rbeXl5YVhngV6pAmvFr8cA5YwBE3KBDzu
-        EJ+C36DX7+7xvpDQ9UCnkl/QeGqJQtCknYCntLR0MfEOp+tR39IJ4jdUW41+aLdEIWjGnYAHY710+qDD
-        igs054j3y3gALlmiEDRZT4AtqKPAZ/5+sOICn7MwIPFLGg8sUQiacSeA1xLiXU73hS1YZukE8WuqrYYS
-        ei1RCJrxDuFJ0CH8BS25ubmzo7oQNM+hS42jEM900RBoUibgLi27eBJ9DBXTDWlBmGeh1zC6P3BUxjWg
-        5J2W2EM8aQIUXUv7tRt7pX40Jx2s2DaXV+OfQl9E9y2xx33ElNQGl1z7K4Ub9Eq1ctJBzlVyh1Q7McCM
-        jsuQQMarF5rHrvBvtLqozrF0maDWKnmopvqJQd18GdTl80mmLxa3WrUkl1rxbCBXl54fqql+GDiomUGz
-        H5tsqNGoGqrlx8aCencTvOsEm/34ZMGWrcNbJ/9u+D2RJHJb0Qu6cGwKYxNBZws/HfRev/SeJKFArLeZ
-        JqHtOPCvl40orGYTPnryXnlH40kdj1sJvx36F6za0mWCvJXk3ZaHvKJP7kkZ8GifMDlEsrZDJl08QT0U
-        W3qRl5eXT45eMldczog8Mt0NzMEQXkBFGLXKzJkKXSb0dBfgPJPSv3FvQbeiRGFoVa7lGWIOWlBkJqa1
-        oJuPrtaahP7bEWprTLFaaS2PVOKxv3+E+yQDsMj6AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnIniciar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 28</value>
-  </data>
-  <data name="btnIniciar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnIniciar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 54</value>
-  </data>
-  <data name="btnIniciar.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
   <data name="&gt;&gt;btnIniciar.Name" xml:space="preserve">
     <value>btnIniciar</value>
   </data>
@@ -440,8 +1320,38 @@
   <data name="&gt;&gt;btnIniciar.ZOrder" xml:space="preserve">
     <value>51</value>
   </data>
-  <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
+  <data name="tabPage1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial, 7.8pt</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1398, 753</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Simulación para cada proceso</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="label20.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -654,6 +1564,9 @@
   <data name="lblCronometro.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 10.2pt, style=Bold</value>
   </data>
+  <data name="lblCronometro.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="lblCronometro.Location" type="System.Drawing.Point, System.Drawing">
     <value>741, 52</value>
   </data>
@@ -677,6 +1590,9 @@
   </data>
   <data name="&gt;&gt;lblCronometro.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="btnPruebas2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnPruebas2.Location" type="System.Drawing.Point, System.Drawing">
     <value>373, 28</value>
@@ -704,6 +1620,9 @@
   </data>
   <data name="&gt;&gt;btnPruebas2.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <data name="btnPruebas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnPruebas.Location" type="System.Drawing.Point, System.Drawing">
     <value>312, 28</value>
@@ -759,27 +1678,9 @@
   <metadata name="IdCamion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="IdCamion.HeaderText" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="IdCamion.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="IdCamion.Width" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
   <metadata name="MatriculaCamion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="MatriculaCamion.HeaderText" xml:space="preserve">
-    <value>Matricula (POO-123)</value>
-  </data>
-  <data name="MatriculaCamion.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="MatriculaCamion.Width" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
   <data name="dgvCamionesAsignados.Location" type="System.Drawing.Point, System.Drawing">
     <value>1118, 508</value>
   </data>
@@ -807,30 +1708,36 @@
   <data name="&gt;&gt;dgvCamionesAsignados.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <metadata name="IdCamion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="IdCamion.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdCamion.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="IdCamion.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="MatriculaCamion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MatriculaCamion.HeaderText" xml:space="preserve">
+    <value>Matricula (POO-123)</value>
+  </data>
+  <data name="MatriculaCamion.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="MatriculaCamion.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
   <metadata name="IdBarco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="IdBarco.HeaderText" xml:space="preserve">
-    <value>Id</value>
-  </data>
-  <data name="IdBarco.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="IdBarco.Width" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
   <metadata name="CapacidadCoord.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="CapacidadCoord.HeaderText" xml:space="preserve">
-    <value>Cantidad Coordenadas</value>
-  </data>
-  <data name="CapacidadCoord.MinimumWidth" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="CapacidadCoord.Width" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
   <data name="dgvBarcosAsignados.Location" type="System.Drawing.Point, System.Drawing">
     <value>1118, 319</value>
   </data>
@@ -858,8 +1765,35 @@
   <data name="&gt;&gt;dgvBarcosAsignados.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
+  <metadata name="IdBarco.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="IdBarco.HeaderText" xml:space="preserve">
+    <value>Id</value>
+  </data>
+  <data name="IdBarco.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="IdBarco.Width" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <metadata name="CapacidadCoord.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="CapacidadCoord.HeaderText" xml:space="preserve">
+    <value>Cantidad Coordenadas</value>
+  </data>
+  <data name="CapacidadCoord.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="CapacidadCoord.Width" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
   <data name="label17.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
     <value>971, 643</value>
@@ -912,90 +1846,6 @@
   <data name="&gt;&gt;txtCantContenedores.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 622</value>
-  </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 16</value>
-  </data>
-  <data name="label16.TabIndex" type="System.Int32, mscorlib">
-    <value>77</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Contenedor </value>
-  </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial Black, 7.8pt, style=Bold</value>
-  </data>
-  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 267</value>
-  </data>
-  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 18</value>
-  </data>
-  <data name="label15.TabIndex" type="System.Int32, mscorlib">
-    <value>76</value>
-  </data>
-  <data name="label15.Text" xml:space="preserve">
-    <value>ASIGNAR UNIDAD</value>
-  </data>
-  <data name="&gt;&gt;label15.Name" xml:space="preserve">
-    <value>label15</value>
-  </data>
-  <data name="&gt;&gt;label15.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>909, 511</value>
-  </data>
-  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 16</value>
-  </data>
-  <data name="label14.TabIndex" type="System.Int32, mscorlib">
-    <value>75</value>
-  </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Camion de traslado</value>
-  </data>
-  <data name="&gt;&gt;label14.Name" xml:space="preserve">
-    <value>label14</value>
-  </data>
-  <data name="&gt;&gt;label14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
   <data name="txtCamionCombustible.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1021,137 +1871,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;txtCamionCombustible.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="cmbIdCamion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>912, 529</value>
-  </data>
-  <data name="cmbIdCamion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="cmbIdCamion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 24</value>
-  </data>
-  <data name="cmbIdCamion.TabIndex" type="System.Int32, mscorlib">
-    <value>73</value>
-  </data>
-  <data name="&gt;&gt;cmbIdCamion.Name" xml:space="preserve">
-    <value>cmbIdCamion</value>
-  </data>
-  <data name="&gt;&gt;cmbIdCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbIdCamion.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;cmbIdCamion.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="btnValidarCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
-        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
-        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
-        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
-        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
-        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
-        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
-        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
-        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
-        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
-        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
-        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnValidarCamion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>912, 557</value>
-  </data>
-  <data name="btnValidarCamion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnValidarCamion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 50</value>
-  </data>
-  <data name="btnValidarCamion.TabIndex" type="System.Int32, mscorlib">
-    <value>72</value>
-  </data>
-  <data name="&gt;&gt;btnValidarCamion.Name" xml:space="preserve">
-    <value>btnValidarCamion</value>
-  </data>
-  <data name="&gt;&gt;btnValidarCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnValidarCamion.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;btnValidarCamion.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="btnRecargarCmbCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVFhH1Ze7
-        SiRBGEZHQcXEBRUFAw1cwVR9Al9CAwUfw1uo7oIYiU9gLigGXgMvb2AmKsjCwgoLCiYaiH5nqnuobnro
-        37Yq8MCBf6qrq762p6as2ndlSJ7KV/lukH4nclAGgckXZXv9Uzn0W5LH9U8B4IkY9FdSFz11KtfXZEdS
-        V2ZE/nBlfWBgwG5XNqVHvriycZ+Zcflb3so/8q/sl28SrAOm/cwBJuVNIn/mMdklL+W13JcQLcCZnJNM
-        Oiv35JPclTOyTcJ/yaBl0g+oS+mUF/JKMimTE4IwX8UUgPV6IENN6mMKwBes1ZXBMQXId7Ks9VS+tHAn
-        0/XvQ59S8p0sa70If/2nVApguqkJlcay3tQitxOpi4gaYEWeJ1IXES3AtLyXfYnUUzJPlAC9kj2Bn+cU
-        9gzauOYTJcCWXHdlhg256coGUQI8yGFXZvgp/7myQZQAz3LAlRlo45pPlACHct6VGRYk13yiBJiQj5IQ
-        PDVS08Y1nygBYFTuSN45UtOWJ1oAK0ECsBmxsXyWYJsRW6p1O/blnlXpQ3sppk4VMY1NcuuJ5zNwMMm/
-        kkL4n5BjVMgQjLUsTUczDp50rPLem8lYRzLY4TQQtdoHu2PVSH8+PNIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnRecargarCmbCamion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>979, 557</value>
-  </data>
-  <data name="btnRecargarCmbCamion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnRecargarCmbCamion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 50</value>
-  </data>
-  <data name="btnRecargarCmbCamion.TabIndex" type="System.Int32, mscorlib">
-    <value>71</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbCamion.Name" xml:space="preserve">
-    <value>btnRecargarCmbCamion</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbCamion.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbCamion.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>909, 399</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>102, 16</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>68</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Barco recolector</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>14</value>
   </data>
   <data name="txtBarcoCombustible.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1178,177 +1898,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;txtBarcoCombustible.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="cmbIdBarco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>912, 417</value>
-  </data>
-  <data name="cmbIdBarco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="cmbIdBarco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>49, 24</value>
-  </data>
-  <data name="cmbIdBarco.TabIndex" type="System.Int32, mscorlib">
-    <value>66</value>
-  </data>
-  <data name="&gt;&gt;cmbIdBarco.Name" xml:space="preserve">
-    <value>cmbIdBarco</value>
-  </data>
-  <data name="&gt;&gt;cmbIdBarco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cmbIdBarco.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;cmbIdBarco.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="btnValidarBarco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
-        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
-        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
-        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
-        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
-        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
-        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
-        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
-        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
-        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
-        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
-        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="btnValidarBarco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>912, 445</value>
-  </data>
-  <data name="btnValidarBarco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnValidarBarco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 50</value>
-  </data>
-  <data name="btnValidarBarco.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="&gt;&gt;btnValidarBarco.Name" xml:space="preserve">
-    <value>btnValidarBarco</value>
-  </data>
-  <data name="&gt;&gt;btnValidarBarco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnValidarBarco.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;btnValidarBarco.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="btnRecargarCmbBarco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVFhH1Ze7
-        SiRBGEZHQcXEBRUFAw1cwVR9Al9CAwUfw1uo7oIYiU9gLigGXgMvb2AmKsjCwgoLCiYaiH5nqnuobnro
-        37Yq8MCBf6qrq762p6as2ndlSJ7KV/lukH4nclAGgckXZXv9Uzn0W5LH9U8B4IkY9FdSFz11KtfXZEdS
-        V2ZE/nBlfWBgwG5XNqVHvriycZ+Zcflb3so/8q/sl28SrAOm/cwBJuVNIn/mMdklL+W13JcQLcCZnJNM
-        Oiv35JPclTOyTcJ/yaBl0g+oS+mUF/JKMimTE4IwX8UUgPV6IENN6mMKwBes1ZXBMQXId7Ks9VS+tHAn
-        0/XvQ59S8p0sa70If/2nVApguqkJlcay3tQitxOpi4gaYEWeJ1IXES3AtLyXfYnUUzJPlAC9kj2Bn+cU
-        9gzauOYTJcCWXHdlhg256coGUQI8yGFXZvgp/7myQZQAz3LAlRlo45pPlACHct6VGRYk13yiBJiQj5IQ
-        PDVS08Y1nygBYFTuSN45UtOWJ1oAK0ECsBmxsXyWYJsRW6p1O/blnlXpQ3sppk4VMY1NcuuJ5zNwMMm/
-        kkL4n5BjVMgQjLUsTUczDp50rPLem8lYRzLY4TQQtdoHu2PVSH8+PNIAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="btnRecargarCmbBarco.Location" type="System.Drawing.Point, System.Drawing">
-    <value>979, 445</value>
-  </data>
-  <data name="btnRecargarCmbBarco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnRecargarCmbBarco.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 50</value>
-  </data>
-  <data name="btnRecargarCmbBarco.TabIndex" type="System.Int32, mscorlib">
-    <value>63</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbBarco.Name" xml:space="preserve">
-    <value>btnRecargarCmbBarco</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbBarco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbBarco.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarCmbBarco.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="btnRecargarBateria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJLSURBVFhH7ZZL
-        6E1BHIBPyPudx4oUEgsWiJKFkpIFKVEe2UnZYGVn8VcsLJQFNhR5laTEBkvFljw2FGKjEIU8v2/OObl3
-        uPfM3P5Z3a++Or+559z5nZnfzJyiT59BYgG+wtkh6oEZeBAv4OUGz6H31wzD+/gTJ9sAGzB+7hiuwr9Y
-        iO/xOV7B+MHYOIEB/IWPQ1TyrwTuoknuxzZu4R0cEaI8luM3/IFnbGhgH37FaSGq+IQ7y8ssxuBT9AU+
-        4i5sYiw6WmtDVGHDpvIyixP4Dteh/7EIU/Bep+MoTq8bchNYg87nZvTNHUWLMYUjaE28RKc+O4Ep+BrP
-        hqgoTuPt8jKLHWg9ZCdwCV3zk0JUVv+h8jKLLfjdi5wEtqFDvzpERTEBjd0H4mV3HmdhJ7ITcO1bdG4o
-        NcPxFMade5910W1nzEpgCDrPj3CUDV1Yj46Kc9yNrAT2ohvO0hB1Zi5+wOMh6k5yAnPwM77BeKhP4mgU
-        N6YHeA9TdtXkBCwkCyru/CGamLubuCzf4swQNZNdhDE38Gp5WexGz4O2LbaBA+gh2FMCE9FNZCtaF1/Q
-        4zyFZ2ifetiGXhLw8LJTp8c/9EAaiinYn+fAshCB26pVnsP1SqfhBU7FFNxLTGBFiCpcMlb4Skx5C3c/
-        396j2GnwmyAFO7+JfviMtKFmHPo29bzE2slirNmO9W97bKhYgt7b+mysnXfcS+bjRrQeWnVna13X19A/
-        uxiiP3iP98bP1zrsbW/eC46Wa/8JjrfhfzMPLTo/w/v0GQSK4jdXMLN0JgXKFAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnRecargarBateria.Location" type="System.Drawing.Point, System.Drawing">
-    <value>979, 336</value>
-  </data>
-  <data name="btnRecargarBateria.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="btnRecargarBateria.Size" type="System.Drawing.Size, System.Drawing">
-    <value>51, 50</value>
-  </data>
-  <data name="btnRecargarBateria.TabIndex" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarBateria.Name" xml:space="preserve">
-    <value>btnRecargarBateria</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarBateria.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarBateria.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;btnRecargarBateria.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>913, 290</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 16</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Dron scanner</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>27</value>
+    <value>15</value>
   </data>
   <data name="txtDronBateria.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1375,7 +1925,511 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;txtDronBateria.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="txtAreaLargo.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAreaLargo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 58</value>
+  </data>
+  <data name="txtAreaLargo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtAreaLargo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 22</value>
+  </data>
+  <data name="txtAreaLargo.TabIndex" type="System.Int32, mscorlib">
+    <value>33</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.Name" xml:space="preserve">
+    <value>txtAreaLargo</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtAreaLargo.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="txtAreaAncho.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txtAreaAncho.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 37</value>
+  </data>
+  <data name="txtAreaAncho.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="txtAreaAncho.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 22</value>
+  </data>
+  <data name="txtAreaAncho.TabIndex" type="System.Int32, mscorlib">
+    <value>32</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.Name" xml:space="preserve">
+    <value>txtAreaAncho</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;txtAreaAncho.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 622</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 16</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Contenedor </value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label15.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label15.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Arial Black, 7.8pt, style=Bold</value>
+  </data>
+  <data name="label15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 267</value>
+  </data>
+  <data name="label15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>134, 18</value>
+  </data>
+  <data name="label15.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>ASIGNAR UNIDAD</value>
+  </data>
+  <data name="&gt;&gt;label15.Name" xml:space="preserve">
+    <value>label15</value>
+  </data>
+  <data name="&gt;&gt;label15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label15.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label15.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="label14.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 511</value>
+  </data>
+  <data name="label14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 16</value>
+  </data>
+  <data name="label14.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Camion de traslado</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="cmbIdCamion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>912, 529</value>
+  </data>
+  <data name="cmbIdCamion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="cmbIdCamion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 24</value>
+  </data>
+  <data name="cmbIdCamion.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.Name" xml:space="preserve">
+    <value>cmbIdCamion</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmbIdCamion.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="btnValidarCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
+        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
+        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
+        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
+        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
+        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
+        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
+        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
+        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
+        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
+        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
+        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnValidarCamion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnValidarCamion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>912, 557</value>
+  </data>
+  <data name="btnValidarCamion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnValidarCamion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 50</value>
+  </data>
+  <data name="btnValidarCamion.TabIndex" type="System.Int32, mscorlib">
+    <value>72</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.Name" xml:space="preserve">
+    <value>btnValidarCamion</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnValidarCamion.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="btnRecargarCmbCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVFhH1Ze7
+        SiRBGEZHQcXEBRUFAw1cwVR9Al9CAwUfw1uo7oIYiU9gLigGXgMvb2AmKsjCwgoLCiYaiH5nqnuobnro
+        37Yq8MCBf6qrq762p6as2ndlSJ7KV/lukH4nclAGgckXZXv9Uzn0W5LH9U8B4IkY9FdSFz11KtfXZEdS
+        V2ZE/nBlfWBgwG5XNqVHvriycZ+Zcflb3so/8q/sl28SrAOm/cwBJuVNIn/mMdklL+W13JcQLcCZnJNM
+        Oiv35JPclTOyTcJ/yaBl0g+oS+mUF/JKMimTE4IwX8UUgPV6IENN6mMKwBes1ZXBMQXId7Ks9VS+tHAn
+        0/XvQ59S8p0sa70If/2nVApguqkJlcay3tQitxOpi4gaYEWeJ1IXES3AtLyXfYnUUzJPlAC9kj2Bn+cU
+        9gzauOYTJcCWXHdlhg256coGUQI8yGFXZvgp/7myQZQAz3LAlRlo45pPlACHct6VGRYk13yiBJiQj5IQ
+        PDVS08Y1nygBYFTuSN45UtOWJ1oAK0ECsBmxsXyWYJsRW6p1O/blnlXpQ3sppk4VMY1NcuuJ5zNwMMm/
+        kkL4n5BjVMgQjLUsTUczDp50rPLem8lYRzLY4TQQtdoHu2PVSH8+PNIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRecargarCmbCamion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRecargarCmbCamion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>979, 557</value>
+  </data>
+  <data name="btnRecargarCmbCamion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRecargarCmbCamion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 50</value>
+  </data>
+  <data name="btnRecargarCmbCamion.TabIndex" type="System.Int32, mscorlib">
+    <value>71</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.Name" xml:space="preserve">
+    <value>btnRecargarCmbCamion</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbCamion.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>909, 399</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 16</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Barco recolector</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="cmbIdBarco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>912, 417</value>
+  </data>
+  <data name="cmbIdBarco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="cmbIdBarco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 24</value>
+  </data>
+  <data name="cmbIdBarco.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.Name" xml:space="preserve">
+    <value>cmbIdBarco</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;cmbIdBarco.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="btnValidarBarco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJ3SURBVFhH1ddZ
+        qE1RHMfxYyZDhkKIKCVJQqYXJUnEExESKRmSqXjihSJTSYnI+EASL/KCTGUIKeWFTCFDMqQQD3y/9ll1
+        7LPPPufsfd26v/rUurdz9/3v9V977XUKKVmB9TkNR6a0wy9szeE2PmM06o4FfIuGmbMd5/EWNRXRHAuw
+        GMvxsziuV28YCziGg3AmRiE1/fAV+3N4hKfwWtNwqsh2WExq/KPn0TBzjuIKQhEh83A8GlZOQxWwEYdg
+        EX1hMhUwDkmPVql16IUQ187dopfYBpOpgAlIerxKbUG4y3jWYGc0bLwWlCZ3ARORdNdpNsDH2eQuYAyS
+        +p7GNdAMpum3YDqSNps0u9ACJncBQ5G01aaZg5Cm34LZCHt5rQ6jwVowEDPr5AtoLBbiLE6iAxqlBf7T
+        F7gPZ2IfLuETbqLuArzghRrdgfv/SMTTA0fwGN39RaXEC+gDd8NqzuEyPEWlxbekMxF2yrJkaYF/8wFp
+        dzYVtmMYLmIREhMvYCnCq7WSZ3DzqZT58LW8GQ/hjN1AYuIFdMOIKm5hCtrAgmcgZC5eYRB8T3hSagUP
+        uy1RliwtuAcXnv29igfwEOIe8hqDsRIuQNeUeYOe0fDfxAtYjSdV/MBkbMIJOGsW9Q5D4NvRz4VDi5vU
+        d7T++1Ms8QLaY0AVHr29Yz/rDBxAJ3i3S+Aa8boh4+Ejm5gsLbCI9+iKUITPvD33Wv1RGr+oLIuG5clS
+        gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
+        XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnValidarBarco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnValidarBarco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>912, 445</value>
+  </data>
+  <data name="btnValidarBarco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnValidarBarco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 50</value>
+  </data>
+  <data name="btnValidarBarco.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.Name" xml:space="preserve">
+    <value>btnValidarBarco</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnValidarBarco.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="btnRecargarCmbBarco.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVFhH1Ze7
+        SiRBGEZHQcXEBRUFAw1cwVR9Al9CAwUfw1uo7oIYiU9gLigGXgMvb2AmKsjCwgoLCiYaiH5nqnuobnro
+        37Yq8MCBf6qrq762p6as2ndlSJ7KV/lukH4nclAGgckXZXv9Uzn0W5LH9U8B4IkY9FdSFz11KtfXZEdS
+        V2ZE/nBlfWBgwG5XNqVHvriycZ+Zcflb3so/8q/sl28SrAOm/cwBJuVNIn/mMdklL+W13JcQLcCZnJNM
+        Oiv35JPclTOyTcJ/yaBl0g+oS+mUF/JKMimTE4IwX8UUgPV6IENN6mMKwBes1ZXBMQXId7Ks9VS+tHAn
+        0/XvQ59S8p0sa70If/2nVApguqkJlcay3tQitxOpi4gaYEWeJ1IXES3AtLyXfYnUUzJPlAC9kj2Bn+cU
+        9gzauOYTJcCWXHdlhg256coGUQI8yGFXZvgp/7myQZQAz3LAlRlo45pPlACHct6VGRYk13yiBJiQj5IQ
+        PDVS08Y1nygBYFTuSN45UtOWJ1oAK0ECsBmxsXyWYJsRW6p1O/blnlXpQ3sppk4VMY1NcuuJ5zNwMMm/
+        kkL4n5BjVMgQjLUsTUczDp50rPLem8lYRzLY4TQQtdoHu2PVSH8+PNIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnRecargarCmbBarco.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRecargarCmbBarco.Location" type="System.Drawing.Point, System.Drawing">
+    <value>979, 445</value>
+  </data>
+  <data name="btnRecargarCmbBarco.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRecargarCmbBarco.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 50</value>
+  </data>
+  <data name="btnRecargarCmbBarco.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.Name" xml:space="preserve">
+    <value>btnRecargarCmbBarco</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarCmbBarco.ZOrder" xml:space="preserve">
     <value>28</value>
+  </data>
+  <data name="btnRecargarBateria.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAJLSURBVFhH7ZZL
+        6E1BHIBPyPudx4oUEgsWiJKFkpIFKVEe2UnZYGVn8VcsLJQFNhR5laTEBkvFljw2FGKjEIU8v2/OObl3
+        uPfM3P5Z3a++Or+559z5nZnfzJyiT59BYgG+wtkh6oEZeBAv4OUGz6H31wzD+/gTJ9sAGzB+7hiuwr9Y
+        iO/xOV7B+MHYOIEB/IWPQ1TyrwTuoknuxzZu4R0cEaI8luM3/IFnbGhgH37FaSGq+IQ7y8ssxuBT9AU+
+        4i5sYiw6WmtDVGHDpvIyixP4Dteh/7EIU/Bep+MoTq8bchNYg87nZvTNHUWLMYUjaE28RKc+O4Ep+BrP
+        hqgoTuPt8jKLHWg9ZCdwCV3zk0JUVv+h8jKLLfjdi5wEtqFDvzpERTEBjd0H4mV3HmdhJ7ITcO1bdG4o
+        NcPxFMade5910W1nzEpgCDrPj3CUDV1Yj46Kc9yNrAT2ohvO0hB1Zi5+wOMh6k5yAnPwM77BeKhP4mgU
+        N6YHeA9TdtXkBCwkCyru/CGamLubuCzf4swQNZNdhDE38Gp5WexGz4O2LbaBA+gh2FMCE9FNZCtaF1/Q
+        4zyFZ2ifetiGXhLw8LJTp8c/9EAaiinYn+fAshCB26pVnsP1SqfhBU7FFNxLTGBFiCpcMlb4Skx5C3c/
+        396j2GnwmyAFO7+JfviMtKFmHPo29bzE2slirNmO9W97bKhYgt7b+mysnXfcS+bjRrQeWnVna13X19A/
+        uxiiP3iP98bP1zrsbW/eC46Wa/8JjrfhfzMPLTo/w/v0GQSK4jdXMLN0JgXKFAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnRecargarBateria.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRecargarBateria.Location" type="System.Drawing.Point, System.Drawing">
+    <value>979, 336</value>
+  </data>
+  <data name="btnRecargarBateria.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="btnRecargarBateria.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 50</value>
+  </data>
+  <data name="btnRecargarBateria.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.Name" xml:space="preserve">
+    <value>btnRecargarBateria</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;btnRecargarBateria.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>913, 290</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 16</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Dron scanner</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <metadata name="IdDesecho.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="IdCoordX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="CoordY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1200, 58</value>
+  </data>
+  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 2, 3, 2</value>
+  </data>
+  <data name="dataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 227</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>31</value>
   </data>
   <metadata name="IdDesecho.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -1413,33 +2467,6 @@
   <data name="CoordY.Width" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1200, 58</value>
-  </data>
-  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="dataGridView1.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>51</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 227</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>58</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
   <data name="cmbIdDron.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 308</value>
   </data>
@@ -1462,7 +2489,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;cmbIdDron.ZOrder" xml:space="preserve">
-    <value>30</value>
+    <value>32</value>
   </data>
   <data name="btnValidarDron.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1480,6 +2507,9 @@
         gHGFe2Gn1SL24jQsrjS21F3ShZgYdyy/D36s0xf8xnW46OLpjD1wIZa2IzEd0SUDW7AKfg+8ht3YgTPw
         XeBhxc/897TFJFjMWsyCT0aFFAp/AHplBHVTz4uCAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="btnValidarDron.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnValidarDron.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 336</value>
@@ -1503,7 +2533,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnValidarDron.ZOrder" xml:space="preserve">
-    <value>31</value>
+    <value>33</value>
   </data>
   <data name="btnAumentarContenedor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1517,6 +2547,9 @@
         mgt0aYpUPY6xF1PRm1KHR0e899GorJG5Oj5rZDfjsyON434yhn+HRjT9adiJPcVkdHKgdp9ddNqnDadi
         VfuS1z5/lij6ADZW1fUMdoPKAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="btnAumentarContenedor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnAumentarContenedor.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 647</value>
@@ -1540,7 +2573,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnAumentarContenedor.ZOrder" xml:space="preserve">
-    <value>32</value>
+    <value>34</value>
   </data>
   <data name="btnAsignarBarcos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1566,6 +2599,9 @@
         g1KnXeu+5yMFzeJ5zoU0nsb27GDuf4i4uO/+7EckPEIJJAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnAsignarBarcos.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnAsignarBarcos.Location" type="System.Drawing.Point, System.Drawing">
     <value>1033, 445</value>
   </data>
@@ -1588,7 +2624,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnAsignarBarcos.ZOrder" xml:space="preserve">
-    <value>33</value>
+    <value>35</value>
   </data>
   <data name="btnAsignarCamion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1605,6 +2641,9 @@
         wCuDa3gBt9KFl5pxm3FNWmsOc5mz/To2B3K0f/oXO7JZjnCwpHCwpHCwpHCwnF71G9+JwD1dhIXLAAAA
         AElFTkSuQmCC
 </value>
+  </data>
+  <data name="btnAsignarCamion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnAsignarCamion.Location" type="System.Drawing.Point, System.Drawing">
     <value>1033, 557</value>
@@ -1628,7 +2667,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnAsignarCamion.ZOrder" xml:space="preserve">
-    <value>34</value>
+    <value>36</value>
   </data>
   <data name="btnAsignarDron.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1646,6 +2685,9 @@
         WnvYy56lsxt7sBK3LRTxpvKudyz+WpU1x8JmjWvt4Zg9S8e/EXy5/EB6A/lJdiDdgLX0U7rWHvbq9N1f
         Jr5gKj0+Sexhrzp16rRIo/EbFOexAxc6Vl8AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="btnAsignarDron.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnAsignarDron.Location" type="System.Drawing.Point, System.Drawing">
     <value>1033, 336</value>
@@ -1669,13 +2711,16 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnAsignarDron.ZOrder" xml:space="preserve">
-    <value>35</value>
+    <value>37</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial Black, 7.8pt, style=Bold</value>
+  </data>
+  <data name="label13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
     <value>909, 42</value>
@@ -1699,10 +2744,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>36</value>
+    <value>38</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
     <value>909, 214</value>
@@ -1726,10 +2774,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>37</value>
+    <value>39</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
     <value>911, 168</value>
@@ -1753,10 +2804,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>38</value>
+    <value>40</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
     <value>909, 120</value>
@@ -1780,10 +2834,13 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>39</value>
+    <value>41</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="label9.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
     <value>909, 74</value>
@@ -1807,7 +2864,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>40</value>
+    <value>42</value>
   </data>
   <data name="cmb4Encargado.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 232</value>
@@ -1831,7 +2888,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;cmb4Encargado.ZOrder" xml:space="preserve">
-    <value>41</value>
+    <value>43</value>
   </data>
   <data name="cmb3Encargado.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 186</value>
@@ -1855,7 +2912,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;cmb3Encargado.ZOrder" xml:space="preserve">
-    <value>42</value>
+    <value>44</value>
   </data>
   <data name="cmb2Encargado.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 139</value>
@@ -1879,7 +2936,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;cmb2Encargado.ZOrder" xml:space="preserve">
-    <value>43</value>
+    <value>45</value>
   </data>
   <data name="cmb1Encargado.Location" type="System.Drawing.Point, System.Drawing">
     <value>912, 92</value>
@@ -1903,7 +2960,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;cmb1Encargado.ZOrder" xml:space="preserve">
-    <value>44</value>
+    <value>46</value>
   </data>
   <data name="btnCursor.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1917,6 +2974,9 @@
         JmnPioki4QUWtWlDUmTVRBEwgK5NfZK2cHKfTRn9JK5N3JZ7+SpJRlIfV4TPf2loE39+kLxQThoW6ZJP
         kkOUhiG6lv5t8YuQnDl4lkOyMlwRTl55cgc9py1p8iT5BaYAaAA60cALAAAAAElFTkSuQmCC
 </value>
+  </data>
+  <data name="btnCursor.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnCursor.Location" type="System.Drawing.Point, System.Drawing">
     <value>252, 28</value>
@@ -1940,7 +3000,7 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnCursor.ZOrder" xml:space="preserve">
-    <value>45</value>
+    <value>47</value>
   </data>
   <data name="btnAreaAnalisis.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1955,6 +3015,9 @@
         dzqdM/+D45l7247kNxjnwJ9oCzAw61phhxttMhdAzdHMDpip9oAaOOaNWWsZsNReQeQPzlSs80ilFivW
         f1ci8QW6bDPqIBxtsQAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="btnAreaAnalisis.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="btnAreaAnalisis.Location" type="System.Drawing.Point, System.Drawing">
     <value>433, 28</value>
@@ -1978,316 +3041,150 @@
     <value>tabPage1</value>
   </data>
   <data name="&gt;&gt;btnAreaAnalisis.ZOrder" xml:space="preserve">
-    <value>46</value>
+    <value>48</value>
   </data>
-  <data name="tabPage1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.8pt</value>
+  <data name="btnReiniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAICSURBVFhH7ZZN
+        SxVRHIdvqIEoIlkLbaMLC0wzcuEHcKGhbkSiXdCihUs3te4DKNUqI7RFCGrrlr5Ai3ClFmWLXpVExZYR
+        pfY8RycizDtzZ7pQ+MADc/5zzu/MnTlzz+SO+B/owjd4JbSKzCX8grt400Ix6cRo8nEswaIxhDvo5Fv4
+        BG9jB5bhX+cjOvlBruJ1LMVMqMITe4c/qcXX6ISfcRCH8d1+TZ9hHaaiHv1Fa/j7M67EWXSydWxC+1zD
+        T2h9Bc9iQZzEZTRozsIBeBGes493IOI0zqP1V1iNiXmABrzEGgt/oAIH0MfyK07q5GY8tJCEi7iN37HF
+        QoE04zc064KFuNxHr/xeaKVjBM0aC60Y+Pq4qBzUZiElZpi1ibFezVZ0gCv4mIWUmOGbZGasx9CNdp4J
+        rWwwy0yz83IV7fw4tLJhCs00Oy+9aOfp0MqG6A70hFYeokXzIbSywSwzfb3z4m7mDueA8xZS4sIzyz0j
+        9k75CB10J7TScRfNMjM27eh+/xUbLRTIGTTDLDMTMYle+QK66STFMYtoxoSFpJzCt2iA2667Y1wcG+2S
+        ZtguCBfhBhrkx0Y/Hvbv6LnL+B4d49jUC7kBo1upz/EW+lF6Dt3xPLb2AqN+S+jYTDiOfudFm9Rh+grf
+        wHLMHD8++nAUn6K3Wj225jn7HPGvkMv9ALlZi59y4wcaAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
+  <data name="btnReiniciar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnReiniciar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 28</value>
+  </data>
+  <data name="btnReiniciar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+  <data name="btnReiniciar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 54</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1398, 753</value>
+  <data name="btnReiniciar.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="&gt;&gt;btnReiniciar.Name" xml:space="preserve">
+    <value>btnReiniciar</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Simulación para cada proceso</value>
+  <data name="&gt;&gt;btnReiniciar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+  <data name="&gt;&gt;btnReiniciar.Parent" xml:space="preserve">
     <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnReiniciar.ZOrder" xml:space="preserve">
+    <value>49</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="btnDetener.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAN2SURBVFhHtZdZ
+        qE1RGMevmZChSJT5QckcikQKhczzAw+myCxD5geUuZChkCkKJSUPZLzGyDzPQuJBiTz7/9Z392rbZ+1z
+        jnuPX/26/7PPPufsvfZa3/pu0T/SVs6W+2WxvCMfyCvyoJwn28mCUklOls/kG7lZjpM9ZSvZXHaQI+R6
+        yTnPJRdaWZaJ0fKlPCK5+3zpJA/JF3IIB/6VKnK3vCbbc6CUdJY3JI8s79GoK/kQF1DmIRQ8wj3youS7
+        s8KdX5aL3avCskxel1lviufGnf8vGImdFjMZL69KhixOOckEZGIxH5j1jSXHI6rKjpJz2kjOaSCTMMK3
+        5Bj3KkZ1+UXyJUlWycfynOTDrP1Xcq2MOCmZN5zD+/hJsoqSsGQ/Sn7TM18esJjBUdnfoqeHPG3R8VQ2
+        suiZKVdbzOC45H0HQ8la58pCnJB9LHp6S+46ghGpb9FDVVxpMQMeJYXNwYvXFoOckr0sevrJYxYd72Ud
+        i55FcqnFIG8l88UNPyU0jTOyu0XPQEl1jPgsa1j08OMLLQbZLmcR2ESGE1I4K7ta9AyV8TnzTbIS4jB5
+        51oMMlJSId1Olvb8gQqWXB2jJGs64rusYNGzRs6wGITvvER4KJsSUqA2uGcVg90wXlB+lPyNw2OdajFI
+        C3mPcF9SONJg7bPtxpkgt1p0hC5gi5xoMUgzSS/hGotsj+CubGnRM0nSF0SELmCbpLqmQdV0jyDXJHwk
+        m1j0TJPrLLpnzxxIskuOtRiEebSPMEdytWlQMBpa9LB8oirH7P9q8S/2SrqkNDZKuibXw9FGpUGRqmfR
+        Q+2IqlxNSd1PwsgOtpgB1fedbO1eCXq4tJbrg6xt0UO/sMSiazKohEnYQwZYzIBOiQ3OQ9MZL61xqHK1
+        LHpWyAUW3R5AWU3CHtLXYgaH5XSLBj0AG1Ko/2N+/JS/JJMtspsEJuF5+VuyGqL3eSyhnoCqyrxK9h1u
+        72bN0zTkonzJ32yEzuFH+Y1B7lUAlk5aX1AI+H639NKgYaRxpIEsNMvlBZkx9EnY19mA2GxynpwH1Alq
+        QrHM2ZZHMBJslTdlFw6UEna823KHLNX/GJRSliHLhrWbL9QUliGzfRgHykI1Scl8IqlemyR1nM2EXRS5
+        U8ruBskOx7lTZEVZUCidXAwzmXlCL8FuSVPDMfYIX15zU1T0B2Vwp2wShnDIAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="btnDetener.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="cbCamara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>235, 59</value>
+  <data name="btnDetener.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 28</value>
   </data>
-  <data name="cbCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnDetener.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="cbCamara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 24</value>
+  <data name="btnDetener.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 54</value>
   </data>
-  <data name="cbCamara.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="btnDetener.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
-  <data name="&gt;&gt;cbCamara.Name" xml:space="preserve">
-    <value>cbCamara</value>
+  <data name="&gt;&gt;btnDetener.Name" xml:space="preserve">
+    <value>btnDetener</value>
   </data>
-  <data name="&gt;&gt;cbCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbCamara.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;cbCamara.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 10pt</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 63</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 19</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Seleccionar cámara: </value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="videoCamara.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="videoCamara.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 212</value>
-  </data>
-  <data name="videoCamara.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="videoCamara.Size" type="System.Drawing.Size, System.Drawing">
-    <value>642, 349</value>
-  </data>
-  <data name="videoCamara.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;videoCamara.Name" xml:space="preserve">
-    <value>videoCamara</value>
-  </data>
-  <data name="&gt;&gt;videoCamara.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;videoCamara.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;videoCamara.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label8.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 12pt</value>
-  </data>
-  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>777, 35</value>
-  </data>
-  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>303, 23</value>
-  </data>
-  <data name="label8.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="label8.Text" xml:space="preserve">
-    <value>Cantidad detectada por el sensor</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="detener_proceso.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="detener_proceso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>972, 99</value>
-  </data>
-  <data name="detener_proceso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="detener_proceso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 34</value>
-  </data>
-  <data name="detener_proceso.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="detener_proceso.Text" xml:space="preserve">
-    <value>DETENER PROCESO</value>
-  </data>
-  <data name="&gt;&gt;detener_proceso.Name" xml:space="preserve">
-    <value>detener_proceso</value>
-  </data>
-  <data name="&gt;&gt;detener_proceso.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnDetener.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;detener_proceso.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;btnDetener.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;detener_proceso.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;btnDetener.ZOrder" xml:space="preserve">
+    <value>50</value>
   </data>
-  <data name="iniciar_proceso.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="btnIniciar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        GwAAARsBjfdO5QAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAPfSURBVFhHrZdL
+        SJVBGIaPUVQELay83wgJiqKFRFGLSDeVULiINrVoI7SRCpEgiCihIIuCLi6TaBOtKoNSo5t0p+hGFytI
+        IUIJ05KI8vS8hxmZ85/vHE+p8OjMfO/3fvPPzPnPGIvH41lRUVExo6SkZB2cKC4uvgPvYBi+w3vohtPE
+        11ZWVk63PCzMwRAKF7iiPyDu6CsqKnrI38twER7AJ/DxIThWUFAwz/IMMQdFVVXVNEyawRfuZiINZWVl
+        8y29YFJl6LbDdZczTM4+eVl6YQ5q5iTecibPaK+3dJkgrxq0MnEmdhPmWrqUgcLCwoUkfVQihQ/HYrEp
+        UU228JND4b14jcpT3imasKNZuuI/YWsYmwg8SB1+Oqwfo+dirKF90lIh0rJPWnEP3hvwHdXWhmdiTEBg
+        n4pr2f3YZIP/HveAB/xY4pdben10nmfac8XQLM3Pz59lxbOBfL0vhv1W+MEjoNO6MRSH8DMVzTXpYAT2
+        /89EWOHVzuOI+t54kMCjqDiEE1zlEs9Au2v3kbcFjxwrJx3kdcKgaquzRmY8fZMl9qBZIR3sUJ/C62m/
+        cWP36C+P5qQDbb3LWyPjFnXYk0WW2IMmaQLCfXIaMfzGuD7rbeXl5YVhngV6pAmvFr8cA5YwBE3KBDzu
+        EJ+C36DX7+7xvpDQ9UCnkl/QeGqJQtCknYCntLR0MfEOp+tR39IJ4jdUW41+aLdEIWjGnYAHY710+qDD
+        igs054j3y3gALlmiEDRZT4AtqKPAZ/5+sOICn7MwIPFLGg8sUQiacSeA1xLiXU73hS1YZukE8WuqrYYS
+        ei1RCJrxDuFJ0CH8BS25ubmzo7oQNM+hS42jEM900RBoUibgLi27eBJ9DBXTDWlBmGeh1zC6P3BUxjWg
+        5J2W2EM8aQIUXUv7tRt7pX40Jx2s2DaXV+OfQl9E9y2xx33ElNQGl1z7K4Ub9Eq1ctJBzlVyh1Q7McCM
+        jsuQQMarF5rHrvBvtLqozrF0maDWKnmopvqJQd18GdTl80mmLxa3WrUkl1rxbCBXl54fqql+GDiomUGz
+        H5tsqNGoGqrlx8aCencTvOsEm/34ZMGWrcNbJ/9u+D2RJHJb0Qu6cGwKYxNBZws/HfRev/SeJKFArLeZ
+        JqHtOPCvl40orGYTPnryXnlH40kdj1sJvx36F6za0mWCvJXk3ZaHvKJP7kkZ8GifMDlEsrZDJl08QT0U
+        W3qRl5eXT45eMldczog8Mt0NzMEQXkBFGLXKzJkKXSb0dBfgPJPSv3FvQbeiRGFoVa7lGWIOWlBkJqa1
+        oJuPrtaahP7bEWprTLFaaS2PVOKxv3+E+yQDsMj6AAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="iniciar_proceso.Location" type="System.Drawing.Point, System.Drawing">
-    <value>743, 99</value>
+  <data name="btnIniciar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="iniciar_proceso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="btnIniciar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 28</value>
+  </data>
+  <data name="btnIniciar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 2, 3, 2</value>
   </data>
-  <data name="iniciar_proceso.Size" type="System.Drawing.Size, System.Drawing">
-    <value>175, 34</value>
+  <data name="btnIniciar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 54</value>
   </data>
-  <data name="iniciar_proceso.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="btnIniciar.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
   </data>
-  <data name="iniciar_proceso.Text" xml:space="preserve">
-    <value>INICIAR PROCESO</value>
+  <data name="&gt;&gt;btnIniciar.Name" xml:space="preserve">
+    <value>btnIniciar</value>
   </data>
-  <data name="&gt;&gt;iniciar_proceso.Name" xml:space="preserve">
-    <value>iniciar_proceso</value>
-  </data>
-  <data name="&gt;&gt;iniciar_proceso.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnIniciar.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;iniciar_proceso.Parent" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="&gt;&gt;btnIniciar.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;iniciar_proceso.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;btnIniciar.ZOrder" xml:space="preserve">
+    <value>51</value>
   </data>
-  <data name="desechogrid.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="desechogrid.ColumnHeadersHeight" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="plasticobox.HeaderText" xml:space="preserve">
-    <value>PLÁSTICO</value>
-  </data>
-  <data name="plasticobox.MinimumWidth" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="plasticobox.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="cartonbox.HeaderText" xml:space="preserve">
-    <value>CARTÓN</value>
-  </data>
-  <data name="cartonbox.MinimumWidth" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="cartonbox.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="vidriobox.HeaderText" xml:space="preserve">
-    <value>VIDRIO</value>
-  </data>
-  <data name="vidriobox.MinimumWidth" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="vidriobox.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="otrosbox.HeaderText" xml:space="preserve">
-    <value>OTROS</value>
-  </data>
-  <data name="otrosbox.MinimumWidth" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="otrosbox.Width" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="desechogrid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>683, 162</value>
-  </data>
-  <data name="desechogrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="desechogrid.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="desechogrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>507, 587</value>
-  </data>
-  <data name="desechogrid.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;desechogrid.Name" xml:space="preserve">
-    <value>desechogrid</value>
-  </data>
-  <data name="&gt;&gt;desechogrid.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;desechogrid.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;desechogrid.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="tabPage2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Arial, 7.8pt</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1398, 753</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Simulación separador de desecho</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="tabControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 31</value>
@@ -2313,54 +3210,6 @@
   <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="toolTip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>133, 17</value>
-  </metadata>
-  <metadata name="toolTip3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>249, 17</value>
-  </metadata>
-  <metadata name="toolTip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>365, 17</value>
-  </metadata>
-  <metadata name="toolTip5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>617, 17</value>
-  </metadata>
-  <metadata name="toolTip6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>733, 17</value>
-  </metadata>
-  <metadata name="toolTip7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>849, 17</value>
-  </metadata>
-  <metadata name="toolTip8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>965, 17</value>
-  </metadata>
-  <metadata name="toolTip9.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1081, 17</value>
-  </metadata>
-  <metadata name="toolTip10.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1197, 17</value>
-  </metadata>
-  <metadata name="toolTip11.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 58</value>
-  </metadata>
-  <metadata name="toolTip12.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>141, 58</value>
-  </metadata>
-  <metadata name="toolTip13.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>265, 58</value>
-  </metadata>
-  <metadata name="toolTip14.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>389, 58</value>
-  </metadata>
-  <metadata name="toolTip15.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>513, 58</value>
-  </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>637, 58</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -2533,71 +3382,23 @@
   <data name="&gt;&gt;informaciónDelProyectoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;IdCamion.Name" xml:space="preserve">
-    <value>IdCamion</value>
+  <data name="&gt;&gt;reportesToolStripMenuItem.Name" xml:space="preserve">
+    <value>reportesToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;IdCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;reportesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MatriculaCamion.Name" xml:space="preserve">
-    <value>MatriculaCamion</value>
+  <data name="&gt;&gt;empleadosPorÁreaToolStripMenuItem.Name" xml:space="preserve">
+    <value>empleadosPorÁreaToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;MatriculaCamion.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;empleadosPorÁreaToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;IdBarco.Name" xml:space="preserve">
-    <value>IdBarco</value>
+  <data name="&gt;&gt;deschosRecicladosToolStripMenuItem.Name" xml:space="preserve">
+    <value>deschosRecicladosToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;IdBarco.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CapacidadCoord.Name" xml:space="preserve">
-    <value>CapacidadCoord</value>
-  </data>
-  <data name="&gt;&gt;CapacidadCoord.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IdDesecho.Name" xml:space="preserve">
-    <value>IdDesecho</value>
-  </data>
-  <data name="&gt;&gt;IdDesecho.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;IdCoordX.Name" xml:space="preserve">
-    <value>IdCoordX</value>
-  </data>
-  <data name="&gt;&gt;IdCoordX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;CoordY.Name" xml:space="preserve">
-    <value>CoordY</value>
-  </data>
-  <data name="&gt;&gt;CoordY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;plasticobox.Name" xml:space="preserve">
-    <value>plasticobox</value>
-  </data>
-  <data name="&gt;&gt;plasticobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cartonbox.Name" xml:space="preserve">
-    <value>cartonbox</value>
-  </data>
-  <data name="&gt;&gt;cartonbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;vidriobox.Name" xml:space="preserve">
-    <value>vidriobox</value>
-  </data>
-  <data name="&gt;&gt;vidriobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;otrosbox.Name" xml:space="preserve">
-    <value>otrosbox</value>
-  </data>
-  <data name="&gt;&gt;otrosbox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;deschosRecicladosToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
     <value>toolTip1</value>
@@ -2694,6 +3495,72 @@
   </data>
   <data name="&gt;&gt;timer1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;plasticobox.Name" xml:space="preserve">
+    <value>plasticobox</value>
+  </data>
+  <data name="&gt;&gt;plasticobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cartonbox.Name" xml:space="preserve">
+    <value>cartonbox</value>
+  </data>
+  <data name="&gt;&gt;cartonbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vidriobox.Name" xml:space="preserve">
+    <value>vidriobox</value>
+  </data>
+  <data name="&gt;&gt;vidriobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;otrosbox.Name" xml:space="preserve">
+    <value>otrosbox</value>
+  </data>
+  <data name="&gt;&gt;otrosbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IdCamion.Name" xml:space="preserve">
+    <value>IdCamion</value>
+  </data>
+  <data name="&gt;&gt;IdCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MatriculaCamion.Name" xml:space="preserve">
+    <value>MatriculaCamion</value>
+  </data>
+  <data name="&gt;&gt;MatriculaCamion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IdBarco.Name" xml:space="preserve">
+    <value>IdBarco</value>
+  </data>
+  <data name="&gt;&gt;IdBarco.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CapacidadCoord.Name" xml:space="preserve">
+    <value>CapacidadCoord</value>
+  </data>
+  <data name="&gt;&gt;CapacidadCoord.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IdDesecho.Name" xml:space="preserve">
+    <value>IdDesecho</value>
+  </data>
+  <data name="&gt;&gt;IdDesecho.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;IdCoordX.Name" xml:space="preserve">
+    <value>IdCoordX</value>
+  </data>
+  <data name="&gt;&gt;IdCoordX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CoordY.Name" xml:space="preserve">
+    <value>CoordY</value>
+  </data>
+  <data name="&gt;&gt;CoordY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>MyWindowMain</value>
