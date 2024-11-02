@@ -66,15 +66,15 @@ void loop() {
       // Determinar el color predominante
       String currentColor = "NEGRO"; // Por defecto es negro
 
-      if (redValue > 90 && greenValue > 90 && blueValue > 90) {
+      if (redValue > 95 && greenValue > 90 && blueValue > 90) {
           currentColor = "NEGRO";
-      }else if (redValue < 50 && greenValue > 70 && blueValue <85) {
+      }else if (redValue < 65 && greenValue > 175 && blueValue >125) {
           currentColor = "ROJO";
-      } else if (redValue > 55 && greenValue <90 && blueValue < 60) {
+      } else if (redValue > 130 && greenValue >110 && blueValue < 80) {
           currentColor = "AZUL";
       } else if (redValue < 65 && greenValue < 50 && blueValue >40 ) {
           currentColor = "VERDE";
-      } if (redValue < 40 && greenValue < 40 && blueValue <40 ) {
+      } if (redValue < 50 && greenValue < 50 && blueValue <50 ) {
           currentColor = "OTROS";
       } 
 

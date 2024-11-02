@@ -9,6 +9,10 @@
 #include "ContenedorForm.h"
 #include "ComboBoxItem.h"
 
+#include <vector>
+#include <algorithm>
+#include <string>
+
 namespace GUIApp {
 
 	using namespace System;
@@ -23,6 +27,7 @@ namespace GUIApp {
 	using namespace SimuladorService;
 	using namespace System::Threading;
 	using namespace System::IO::Ports;
+	using namespace System::Globalization;
 	//LIBRERIAS DE LA CAMARA
 	using namespace AForge::Video;
 	using namespace AForge::Video::DirectShow;
@@ -126,6 +131,9 @@ namespace GUIApp {
 	private: System::Windows::Forms::Button^ btnIniciar;
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::ToolStripMenuItem^ deschosRecicladosToolStripMenuItem;
+	private: System::Windows::Forms::ComboBox^ cb_arduino;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Button^ button2;
 
 
 
@@ -161,7 +169,11 @@ namespace GUIApp {
 			InitializeComponent();
 			ResetGrid();
 			LoadImage();
-			OpenPort();
+			
+
+			// Cargar puertos COM disponibles en cb_arduino
+			LoadAvailablePorts();
+			
 
 			//Inicialización del WebView2
 			this->MapaWeb->Source = gcnew System::Uri("file:///ruta/a/tu/HTMLPage.html");
@@ -207,10 +219,10 @@ namespace GUIApp {
 			toolTip14 = gcnew ToolTip();
 			toolTip15 = gcnew ToolTip();
 			
-			toolTip1->SetToolTip(btnAreaAnalisis, "Realizar área de análisis");
-			toolTip2->SetToolTip(btnReiniciar, "Reiniciar simulación");
-			toolTip3->SetToolTip(btnDetener, "Detener simulación");
-			toolTip4->SetToolTip(btnIniciar, "Iniciar simulación");
+			toolTip1->SetToolTip(btnAreaAnalisis, L"Realizar área de an\u00E1lisis");
+			toolTip2->SetToolTip(btnReiniciar, "Reiniciar simulaci\u00F3n");
+			toolTip3->SetToolTip(btnDetener, L"Detener simulaci\u00F3n");
+			toolTip4->SetToolTip(btnIniciar, L"Iniciar simulaci\u00F3n");
 			toolTip5->SetToolTip(btnCursor, "Cursor");
 
 			toolTip6->SetToolTip(btnValidarDron, "Validar batería del dron");
@@ -240,6 +252,19 @@ namespace GUIApp {
 			this->desechogrid->Rows[i]->Cells[1]->Value = "0";
 			this->desechogrid->Rows[i]->Cells[2]->Value = "0";
 			this->desechogrid->Rows[i]->Cells[3]->Value = "0";
+		}
+	}
+
+
+
+	private: void LoadAvailablePorts() {
+		array<String^>^ ports = SerialPort::GetPortNames();
+		cb_arduino->Items->Clear();
+		for each (String ^ port in ports) {
+			cb_arduino->Items->Add(port);
+		}
+		if (cb_arduino->Items->Count > 0) {
+			cb_arduino->SelectedIndex = 0; // Seleccionar el primer puerto por defecto
 		}
 	}
 
@@ -540,6 +565,9 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->toolTip15 = (gcnew System::Windows::Forms::ToolTip(this->components));
 			this->timer1 = (gcnew System::Windows::Forms::Timer(this->components));
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->cb_arduino = (gcnew System::Windows::Forms::ComboBox());
+			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->cbCamara = (gcnew System::Windows::Forms::ComboBox());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->videoCamara = (gcnew System::Windows::Forms::PictureBox());
@@ -633,6 +661,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			});
 			resources->ApplyResources(this->menuStrip2, L"menuStrip2");
 			this->menuStrip2->Name = L"menuStrip2";
+			this->menuStrip2->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyWindowMain::menuStrip2_ItemClicked);
 			// 
 			// archivoToolStripMenuItem
 			// 
@@ -752,6 +781,9 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->button2);
+			this->tabPage2->Controls->Add(this->cb_arduino);
+			this->tabPage2->Controls->Add(this->label6);
 			this->tabPage2->Controls->Add(this->cbCamara);
 			this->tabPage2->Controls->Add(this->label2);
 			this->tabPage2->Controls->Add(this->videoCamara);
@@ -762,6 +794,25 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->tabPage2, L"tabPage2");
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			resources->ApplyResources(this->button2, L"button2");
+			this->button2->Name = L"button2";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyWindowMain::button2_Click);
+			// 
+			// cb_arduino
+			// 
+			this->cb_arduino->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->cb_arduino->FormattingEnabled = true;
+			resources->ApplyResources(this->cb_arduino, L"cb_arduino");
+			this->cb_arduino->Name = L"cb_arduino";
+			// 
+			// label6
+			// 
+			resources->ApplyResources(this->label6, L"label6");
+			this->label6->Name = L"label6";
 			// 
 			// cbCamara
 			// 
@@ -792,6 +843,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->detener_proceso, L"detener_proceso");
 			this->detener_proceso->Name = L"detener_proceso";
 			this->detener_proceso->UseVisualStyleBackColor = true;
+			this->detener_proceso->Click += gcnew System::EventHandler(this, &MyWindowMain::detener_proceso_Click);
 			// 
 			// iniciar_proceso
 			// 
@@ -1362,14 +1414,14 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 					if (encargado->Cargo == "Escaneo") {
 						cmb1Encargado->Items->Add(encargado);
 					}
-					else if (encargado->Cargo == "Tratamiento de desechos") {
-						cmb4Encargado->Items->Add(encargado);
+					else if (encargado->Cargo == "Recolección") {
+						cmb3Encargado->Items->Add(encargado);
 					}
 					else if (encargado->Cargo == "Transporte") {
 						cmb3Encargado->Items->Add(encargado);
 					}
 					else {
-						cmb2Encargado->Items->Add(encargado);
+						cmb4Encargado->Items->Add(encargado);
 					}
 				}
 			}
@@ -1405,36 +1457,44 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 		// Método para abrir el puerto serial
 		void OpenPort() {
 			try {
-				// Si el puerto ya está abierto, ciérralo
+				// Verificar que se haya hecho una selección en el ComboBox cb_arduino
+				if (cb_arduino->SelectedIndex == -1) {
+					MessageBox::Show("Por favor, selecciona un puerto para el Arduino antes de abrir la conexión.",
+						"Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+					return; // Salir de la función si no se ha seleccionado un puerto
+				}
+
+				// Cierra el puerto si ya está abierto
 				if (ArduinoPort != nullptr && ArduinoPort->IsOpen) {
 					ArduinoPort->Close();
 				}
-		
-				if (ArduinoPort == nullptr) {
-					ArduinoPort = gcnew SerialPort("COM11", 9600, Parity::None, 8, StopBits::One);
-				}
-		
-				// Ahora abre el puerto
+
+				// Inicializa el puerto con el nombre seleccionado en cb_arduino
+				String^ selectedPort = cb_arduino->SelectedItem->ToString();
+				ArduinoPort = gcnew SerialPort(selectedPort, 9600, Parity::None, 8, StopBits::One);
+
+				// Abre el puerto y asigna el manejador de datos recibidos
 				ArduinoPort->Open();
 				ArduinoPort->DataReceived += gcnew SerialDataReceivedEventHandler(this, &MyWindowMain::OnDataReceived);
 			}
 			catch (UnauthorizedAccessException^ e) {
-				MessageBox::Show("Acceso denegado al puerto COM11: " + e->Message);
+				MessageBox::Show("Acceso denegado al puerto " + cb_arduino->SelectedItem + ": " + e->Message,
+					"Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 			catch (IOException^ e) {
-				MessageBox::Show("Error de E/S en el puerto COM11: " + e->Message);
+				MessageBox::Show("Error de E/S en el puerto " + cb_arduino->SelectedItem + ": " + e->Message,
+					"Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 			catch (Exception^ e) {
-				MessageBox::Show("Error al abrir el puerto COM11: " + e->Message);
+				MessageBox::Show("Error al abrir el puerto " + cb_arduino->SelectedItem + ": " + e->Message,
+					"Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 			}
 		}
-		
-		
 		
 		// Método para cerrar el puerto
 		void ClosePort() {
 			try {
-				if (ArduinoPort->IsOpen)
+				if (ArduinoPort != nullptr && ArduinoPort->IsOpen)
 					ArduinoPort->Close();
 			}
 			catch (Exception^ ex) {
@@ -1502,15 +1562,60 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 
 	private:
 		bool procesoIniciado = false; // Bandera para verificar si el proceso ha iniciado
+		bool procesoDetenido = false;
 
 	private: System::Void iniciar_proceso_Click(System::Object^ sender, System::EventArgs^ e) {
+		// Verificar si el proceso ya ha sido iniciado
+		if (procesoIniciado) {
+			MessageBox::Show("El proceso ya ha sido iniciado.", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			return;
+		}
+
+		// Verificar si el proceso ya ha sido iniciado
+		if (procesoDetenido) {
+			MessageBox::Show("El proceso ya ha sido iniciado y actualmente se encuentra detenido.\n\n"
+				"Haz click en 'CONTINUAR' para seguir con la lectura de los datos.",
+				"Proceso Detenido", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+			return;
+		}
+
+
+		// Verificar que se haya hecho una selección en el ComboBox cb_arduino
+		if (cb_arduino->SelectedIndex == -1) {
+			MessageBox::Show("Por favor, selecciona un puerto para el Arduino antes de iniciar el proceso.",
+				"Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+			return; // Salir de la función si no se ha seleccionado un puerto
+		}
+
+		// Verificar si el puerto está abierto; si no, llamar a OpenPort
+		if (ArduinoPort == nullptr || !ArduinoPort->IsOpen) {
+			OpenPort(); // Intenta abrir el puerto
+		}
+
+		// Verificar nuevamente si el puerto está abierto, en caso de que OpenPort fallara
 		if (ArduinoPort != nullptr && ArduinoPort->IsOpen) {
-			ArduinoPort->WriteLine("R"); // Enviar comando 'R' para reiniciar los contadores
+
+			UpdateDesechoGrid(0, 0, 0, 0);
+			MessageBox::Show("El proceso de lectura se ha iniciado correctamente.\n\n"
+				"Los datos en tiempo real se est\u00E1n registrando en la tabla de resultados.",
+				"Proceso Iniciado", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+
+
+			// Enviar el comando "R" al Arduino para comenzar la lectura del sensor de color
+			ArduinoPort->WriteLine("R");
+
+			// Reiniciar los valores en el DataGridView a cero
+			
+			procesoIniciado = true; // Marcar que el proceso ha comenzado
+			procesoDetenido = false;
+		}
+		else {
+			MessageBox::Show("No se pudo abrir el puerto para el Arduino. Revisa la conexión y vuelve a intentarlo.",
+				"Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	
-		// Reiniciar los valores en el DataGridView a cero
-		UpdateDesechoGrid(0, 0, 0, 0);
-		procesoIniciado = true; // Marcar que el proceso ha comenzado
+		
 
 	}	
 	private: System::Void salirToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1580,7 +1685,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 		CargarIdBarco();
 		CargarIdCamion();
 
-		OpenPort();
+		
 	}
 	private: System::Void contenedoresToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		ContenedorForm^ form = gcnew ContenedorForm();
@@ -1848,6 +1953,67 @@ private: System::Void empleadosPorÁreaToolStripMenuItem_Click(System::Object^ s
 private: System::Void deschosRecicladosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	GarbageReportForm^ form = gcnew GarbageReportForm();
 	form->ShowDialog(); // Mostrar el formulario de forma modal
+
+}
+private: System::Void menuStrip2_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
+}
+
+
+private: System::Void detener_proceso_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	if (procesoDetenido) {
+		MessageBox::Show("El proceso ya ha sido detenido.", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+		
+		return;
+	}
+
+	if (!procesoIniciado) {
+		MessageBox::Show("El proceso a\u00FAn no ha sido iniciado.",
+			"Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		return;
+	}
+
+	if (ArduinoPort->IsOpen) {
+		ArduinoPort->WriteLine("MN");
+		procesoDetenido = true;
+		procesoIniciado = false;
+
+		MessageBox::Show("El proceso de lectura se ha detenido correctamente.\n\n"
+			"Haz click en 'CONTINUAR' para seguir con la lectura de los datos.",
+			"Proceso Detenido", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	else {
+		MessageBox::Show("El puerto no está abierto.");
+	}
+
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	if (procesoIniciado && !procesoDetenido) {
+		MessageBox::Show("La lectura de datos ya se esta haciendo de manera correcta", "Advertencia", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+		return;
+	}
+
+	if (!procesoIniciado && !procesoDetenido) {
+		MessageBox::Show("El proceso a\u00FAn no ha sido iniciado.",
+			"Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		return;
+	}
+
+
+	if (ArduinoPort->IsOpen) {
+
+		MessageBox::Show("El proceso de lectura se ha restablecido correctamente.\n\n"
+			"Los datos en tiempo real se est\u00E1n registrando en la tabla de resultados",
+			"Proceso Restablecido", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+		ArduinoPort->WriteLine("MS");
+		procesoDetenido = false;
+		procesoIniciado = true;
+
+	}
+
 
 }
 };
