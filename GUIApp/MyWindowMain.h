@@ -54,7 +54,7 @@ namespace GUIApp {
 
 	private: System::Windows::Forms::Timer^ timer1;
 	private: System::Windows::Forms::ToolStripMenuItem^ reportesToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ empleadosPorÁreaToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ empleadosPorAreaToolStripMenuItem;
 	private: System::Windows::Forms::TabPage^ tabPage2;
 	private: System::Windows::Forms::ComboBox^ cbCamara;
 	private: System::Windows::Forms::Label^ label2;
@@ -545,7 +545,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->integrantesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->informaciónDelProyectoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->reportesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->empleadosPorÁreaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->empleadosPorAreaToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->deschosRecicladosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->toolTip1 = (gcnew System::Windows::Forms::ToolTip(this->components));
@@ -747,18 +747,18 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			// reportesToolStripMenuItem
 			// 
 			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->empleadosPorÁreaToolStripMenuItem,
+				this->empleadosPorAreaToolStripMenuItem,
 					this->deschosRecicladosToolStripMenuItem
 			});
 			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
 			resources->ApplyResources(this->reportesToolStripMenuItem, L"reportesToolStripMenuItem");
 			this->reportesToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::reportesToolStripMenuItem_Click);
 			// 
-			// empleadosPorÁreaToolStripMenuItem
+			// empleadosPorAreaToolStripMenuItem
 			// 
-			this->empleadosPorÁreaToolStripMenuItem->Name = L"empleadosPorÁreaToolStripMenuItem";
-			resources->ApplyResources(this->empleadosPorÁreaToolStripMenuItem, L"empleadosPorÁreaToolStripMenuItem");
-			this->empleadosPorÁreaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::empleadosPorÁreaToolStripMenuItem_Click);
+			this->empleadosPorAreaToolStripMenuItem->Name = L"empleadosPorAreaToolStripMenuItem";
+			resources->ApplyResources(this->empleadosPorAreaToolStripMenuItem, L"empleadosPorAreaToolStripMenuItem");
+			this->empleadosPorAreaToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::empleadosPorAreaToolStripMenuItem_Click);
 			// 
 			// deschosRecicladosToolStripMenuItem
 			// 
@@ -956,6 +956,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Click += gcnew System::EventHandler(this, &MyWindowMain::tabPage1_Click);
 			// 
 			// label20
 			// 
@@ -1945,7 +1946,7 @@ private: System::Void toolTip1_Popup(System::Object^ sender, System::Windows::Fo
 
 private: System::Void reportesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void empleadosPorÁreaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void empleadosPorAreaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	EmployeesReportForm^ form = gcnew EmployeesReportForm();
 	form->ShowDialog(); // Mostrar el formulario de forma modal
 
@@ -2015,6 +2016,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	}
 
 
+}
+private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

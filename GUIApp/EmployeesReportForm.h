@@ -9,6 +9,8 @@ namespace GUIApp {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace System::Collections::Generic;
+	using namespace Model;
+	using namespace SimuladorService;
 	/// <summary>
 	/// Resumen de EmployeesReportForm
 	/// </summary>
@@ -34,8 +36,11 @@ namespace GUIApp {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::DataVisualization::Charting::Chart^ EncargadosChart;
+	private: System::Windows::Forms::DataVisualization::Charting::Chart^ chart1;
+	protected:
+
+
+
 
 
 	protected:
@@ -57,73 +62,85 @@ namespace GUIApp {
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
 			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->EncargadosChart = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EncargadosChart))->BeginInit();
+			this->chart1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Chart());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// label2
+			// chart1
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(77, 37);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(455, 32);
-			this->label2->TabIndex = 1;
-			this->label2->Text = L"Empleados por área de la empresa";
-			// 
-			// EncargadosChart
-			// 
-			chartArea1->BackColor = System::Drawing::SystemColors::Control;
+			this->chart1->BackColor = System::Drawing::Color::Gainsboro;
+			chartArea1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			chartArea1->BorderColor = System::Drawing::Color::Transparent;
 			chartArea1->Name = L"ChartArea1";
-			this->EncargadosChart->ChartAreas->Add(chartArea1);
+			this->chart1->ChartAreas->Add(chartArea1);
+			legend1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
+				static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			legend1->Name = L"Legend1";
-			this->EncargadosChart->Legends->Add(legend1);
-			this->EncargadosChart->Location = System::Drawing::Point(49, 108);
-			this->EncargadosChart->Name = L"EncargadosChart";
+			this->chart1->Legends->Add(legend1);
+			this->chart1->Location = System::Drawing::Point(50, 42);
+			this->chart1->Name = L"chart1";
+			series1->BackImageTransparentColor = System::Drawing::Color::Transparent;
 			series1->ChartArea = L"ChartArea1";
+			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Bar;
 			series1->Legend = L"Legend1";
-			//series1->Name = L"Series1";
-			this->EncargadosChart->Series->Add(series1);
-			this->EncargadosChart->Size = System::Drawing::Size(507, 291);
-			this->EncargadosChart->TabIndex = 2;
-			this->EncargadosChart->Text = L"chart1";
+			series1->Name = L"Cantidad";
+			series1->YValuesPerPoint = 6;
+			this->chart1->Series->Add(series1);
+			this->chart1->Size = System::Drawing::Size(496, 300);
+			this->chart1->TabIndex = 3;
+			this->chart1->Text = L"chart1";
+			this->chart1->Click += gcnew System::EventHandler(this, &EmployeesReportForm::chart1_Click);
 			// 
 			// EmployeesReportForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
-			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(603, 779);
-			this->Controls->Add(this->EncargadosChart);
-			this->Controls->Add(this->label2);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::None;
+			this->BackColor = System::Drawing::Color::DarkGray;
+			this->ClientSize = System::Drawing::Size(592, 384);
+			this->Controls->Add(this->chart1);
+			this->ForeColor = System::Drawing::Color::White;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Name = L"EmployeesReportForm";
-			this->Text = L"Reporte de empleados";
+			this->Text = L"Encargados por área";
+			this->TransparencyKey = System::Drawing::Color::White;
 			this->Load += gcnew System::EventHandler(this, &EmployeesReportForm::EmployeesReportForm_Load);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->EncargadosChart))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void EmployeesReportForm_Load(System::Object^ sender, System::EventArgs^ e) {
-		// Suponemos que los datos ya se obtienen por áreas (barco, puerto, camión, acopio)
-		Dictionary<String^, int>^ empleadosPorArea = gcnew Dictionary<String^, int>();
-		empleadosPorArea["Barco"] = 30;    // Cambia estos valores por los datos reales de cada área
-		empleadosPorArea["Puerto"] = 45;
-		empleadosPorArea["Camión"] = 20;
-		empleadosPorArea["Acopio"] = 35;
-
-		// Limpiar series anteriores (si es necesario)
-		EncargadosChart->Series->Add("Número de Empleados");
-		// Añadir los datos al chart
-		int index = 0;
-		for each (KeyValuePair<String^, int> areaData in empleadosPorArea) {
-			EncargadosChart->Series["Número de Empleados"]->Points->Add(areaData.Value);
-			EncargadosChart->Series["Número de Empleados"]->Points[index]->AxisLabel = areaData.Key;
-			EncargadosChart->Series["Número de Empleados"]->Points[index]->Label = "Empleados: " + areaData.Value;
-			index++;
+		List<Encargado^>^ listaEncargado = Service::ConsultarEncargados();
+		if (listaEncargado != nullptr) {
+			// CARGOS: Escaneo, Recoleccion, Transporte y Tratamiento de desechos  
+			int escaneo = 0;
+			int recoleccion = 0;
+			int transporte = 0;
+			int tratamiento = 0;
+			for each (Encargado ^ e in listaEncargado) {
+				String^ cargo = e->Cargo;
+				if (cargo == "Escaneo") {
+					escaneo++;
+				}
+				else if (cargo == "Recolección") {
+					recoleccion++;
+				}
+				else if (cargo == "Transporte") {
+					transporte++;
+				}
+				else if (cargo == "Tratamiento de desechos") {
+					tratamiento++;
+				}
+			}
+			this->chart1->Series["Cantidad"]->Points->AddXY("Transporte", transporte);
+			this->chart1->Series["Cantidad"]->Points->AddXY("Recolección", recoleccion);
+			this->chart1->Series["Cantidad"]->Points->AddXY("Escaneo", escaneo);
+			this->chart1->Series["Cantidad"]->Points->AddXY("Tratamiento", tratamiento);
 		}
 	}
-	};
+	private: System::Void EncargadosChart_Click(System::Object ^ sender, System::EventArgs ^ e) {
+	}
+	private: System::Void chart1_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }
