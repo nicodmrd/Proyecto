@@ -2,12 +2,14 @@
 
 using namespace System;
 using namespace System::Windows::Forms;
+using namespace GUIApp;
+
 [STAThreadAttribute]
 void Main(array<String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	
-	GUIApp::MyWindowMain form;
-	Application::Run(% form);
+
+	// Iniciar la aplicación con la instancia Singleton de MyWindowMain
+	Application::Run(MyWindowMain::Instance);
 }
 

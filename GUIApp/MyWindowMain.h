@@ -39,6 +39,9 @@ namespace GUIApp {
 	{
 	// DE LA CÁMARA
 	private:
+		// Declaración del campo estático sin inicialización
+		static MyWindowMain^ instance = nullptr;
+
 		bool HayDispositivos;
 		FilterInfoCollection^ MisDispositivos;
 		VideoCaptureDevice^ MiWebCam;
@@ -1511,10 +1514,10 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			}
 		
 			// Restablece todos los valores a cero
-			desechogrid->Rows[0]->Cells["plasticobox"]->Value = 0;
-			desechogrid->Rows[0]->Cells["cartonbox"]->Value = 0;
-			desechogrid->Rows[0]->Cells["vidriobox"]->Value = 0;
-			desechogrid->Rows[0]->Cells["otrosbox"]->Value = 0;
+			desechogrid->Rows[0]->Cells["plasticobox"]->Value = System::Convert::ToInt32(0);
+			desechogrid->Rows[0]->Cells["cartonbox"]->Value = System::Convert::ToInt32(0);
+			desechogrid->Rows[0]->Cells["vidriobox"]->Value = System::Convert::ToInt32(0);
+			desechogrid->Rows[0]->Cells["otrosbox"]->Value = System::Convert::ToInt32(0);
 		}
 		
 		
@@ -2017,7 +2020,18 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 
 }
-private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
-}
+	private: 
+		System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
+		}
+	public:
+		// Propiedad Singleton para obtener la instancia de MyWindowMain
+		static property MyWindowMain^ Instance {
+			MyWindowMain^ get() {
+				if (instance == nullptr) {
+					instance = gcnew MyWindowMain();
+				}
+				return instance;
+			}
+		}
 };
 }

@@ -90,10 +90,12 @@ namespace GUIApp {
 			this->Controls->Add(this->chart1);
 			this->Name = L"GarbageReportForm";
 			this->Text = L"Desechos Reciclados";
+			this->Load += gcnew System::EventHandler(this, &GarbageReportForm::GarbageReportForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->chart1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void GarbageReportForm_Load(System::Object^ sender, System::EventArgs^ e);
 	};
 }
