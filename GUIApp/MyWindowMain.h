@@ -1978,7 +1978,7 @@ private: System::Void detener_proceso_Click(System::Object^ sender, System::Even
 	}
 
 	if (ArduinoPort->IsOpen) {
-		ArduinoPort->WriteLine("MN");
+		ArduinoPort->WriteLine("L");
 		procesoDetenido = true;
 		procesoIniciado = false;
 
@@ -2012,7 +2012,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 			"Los datos en tiempo real se est\u00E1n registrando en la tabla de resultados",
 			"Proceso Restablecido", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-		ArduinoPort->WriteLine("MS");
+		ArduinoPort->WriteLine("H");
 		procesoDetenido = false;
 		procesoIniciado = true;
 
