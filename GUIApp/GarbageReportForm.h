@@ -42,6 +42,7 @@ namespace GUIApp {
 		/// Variable del diseñador necesaria.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+		System::Windows::Forms::Timer^ updateTimer;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -96,6 +97,7 @@ namespace GUIApp {
 
 		}
 #pragma endregion
-	private: System::Void GarbageReportForm_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void GarbageReportForm_Load(System::Object^ sender, System::EventArgs^ e); // REVISA CPP !!!
+	private: System::Void UpdateChart(System::Object^ sender, System::EventArgs^ e);
 	};
 }
