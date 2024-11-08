@@ -1391,7 +1391,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 				}
 				/*
 				if (control->GetType() == ComboBox::typeid) {
-					dynamic_cast<ComboBox^>(control)->SelectedIndex = -1; // Reiniciar el ComboBox para que no haya selección
+					dynamic_cast<ComboBox^>(control)->SelectedIndex = -1; 
 				}
 				*/
 				txtAreaAncho->Text = "";
@@ -1418,14 +1418,14 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 					if (encargado->Cargo == "Escaneo") {
 						cmb1Encargado->Items->Add(encargado);
 					}
-					else if (encargado->Cargo == "Recolección") {
-						cmb3Encargado->Items->Add(encargado);
+					else if (encargado->Cargo == "Tratamiento de desechos") {
+						cmb4Encargado->Items->Add(encargado);
 					}
 					else if (encargado->Cargo == "Transporte") {
 						cmb3Encargado->Items->Add(encargado);
 					}
 					else {
-						cmb4Encargado->Items->Add(encargado);
+						cmb2Encargado->Items->Add(encargado);
 					}
 				}
 			}
