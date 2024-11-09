@@ -31,7 +31,6 @@
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
             elevator = new google.maps.ElevationService();  
-
         }
 
         function verificarSiEsMar(position, callback) {
@@ -90,6 +89,70 @@
             }
             animarPaso();
         }
+
+        // Función para mover el marcador del dron a una nueva posición con animación
+        function displayearDron() {
+            const posicionDron = { lat: -12.069041, lng: -77.079333 };
+            // Crear un marcador con una posición y un icono personalizado
+            const marcadorDron = new google.maps.Marker({
+                position: posicionDron, // La posición debe tener las propiedades lat y lng
+                map: map, // Mapa en el que se dibujará (debes tener ya un mapa inicializado)
+                icon: {
+                    url: "https://www.svgrepo.com/show/27184/drone.svg", // Reemplaza con la URL de la imagen de tu icono de dron
+                    scaledSize: new google.maps.Size(40, 40), // Tamaño de la imagen (ajústalo a tus necesidades)
+                    anchor: new google.maps.Point(20, 20), // Punto donde se centra el icono (depende del tamaño)
+                }
+            });
+
+            // Puedes opcionalmente añadir eventos al marcador si deseas, como información adicional
+            marcadorDron.addListener("click", () => {
+                const infoWindow = new google.maps.InfoWindow({
+                    content: "¡Dron localizado en esta posición!",
+                });
+                infoWindow.open(mapa, marcadorDron);
+            });
+
+            moverDron(marcadorDron);
+        }
+
+        function moverDron(marcadorDron) {
+            const nuevaPosicion = { lat: -12.067326, lng: -77.158193 };
+            const posicionInicial = marcadorDron.getPosition();
+            const latInicial = posicionInicial.lat();
+            const lngInicial = posicionInicial.lng();
+
+            animarMovimiento(marcadorDron, latInicial, lngInicial, nuevaPosicion.lat, nuevaPosicion.lng, 2000, 100);
+            // Después de mover, regresamos el dron a la posición inicial
+            setTimeout(() => {
+                regresarDron(marcadorDron, latInicial, lngInicial);
+            }, 2100); // Llamamos a regresarDron después de que se haya completado la animación (un poco más que 2000 ms)
+        }
+
+        function regresarDron(marcadorDron, latInicial, lngInicial) {
+            const duracion = 2000;
+            const pasos = 100;
+            animarMovimiento(marcadorDron, marcadorDron.getPosition().lat(), marcadorDron.getPosition().lng(), latInicial, lngInicial, duracion, pasos);
+        }
+
+        function animarMovimiento(marcadorDron, latInicial, lngInicial, latFinal, lngFinal, duracion, pasos) {
+            const incrementoLat = (latFinal - latInicial) / pasos;
+            const incrementoLng = (lngFinal - lngInicial) / pasos;
+            let contadorPaso = 0;
+
+            const intervalo = setInterval(() => {
+                contadorPaso++;
+                const nuevaLat = latInicial + incrementoLat * contadorPaso;
+                const nuevaLng = lngInicial + incrementoLng * contadorPaso;
+
+                marcadorDron.setPosition(new google.maps.LatLng(nuevaLat, nuevaLng));
+                marcadorDron.getMap().panTo(new google.maps.LatLng(nuevaLat, nuevaLng));
+
+                if (contadorPaso >= pasos) {
+                    clearInterval(intervalo);
+                }
+            }, duracion / pasos);
+        }
+
         function dibujarRectangulo(lat1, lng1, lat2, lng2) {
             if (rectangle) {
                 alert("Ya existe un rectángulo. No se puede crear otro.");
@@ -141,6 +204,45 @@
                 map.panTo(marcadores[marcadores.length - 1].getPosition());
             }
         }
+
+        function regresarDron(marcadorDron) {
+            const nuevaPosicion = { lat: -12.069041, lng: -77.079333 };
+            const duracion = 2000;
+            const posicionInicial = marcadorDron.getPosition();
+            const latInicial = posicionInicial.lat();
+            const lngInicial = posicionInicial.lng();
+
+            const latFinal = nuevaPosicion.lat;
+            const lngFinal = nuevaPosicion.lng;
+
+            // Cantidad de pasos de animación (puedes ajustar la precisión)
+            const pasos = 100;
+            let contadorPaso = 0;
+
+            // Calculamos los incrementos en latitud y longitud por cada paso
+            const incrementoLat = (latFinal - latInicial) / pasos;
+            const incrementoLng = (lngFinal - lngInicial) / pasos;
+
+            // Iniciamos la animación de movimiento
+            const intervalo = setInterval(() => {
+                contadorPaso++;
+
+                // Actualizamos la posición del dron en cada paso
+                const nuevaLat = latInicial + incrementoLat * contadorPaso;
+                const nuevaLng = lngInicial + incrementoLng * contadorPaso;
+
+                marcadorDron.setPosition(new google.maps.LatLng(nuevaLat, nuevaLng));
+
+                // Centramos el mapa en la nueva posición del dron
+                marcadorDron.getMap().panTo(new google.maps.LatLng(nuevaLat, nuevaLng));
+
+                // Si completamos todos los pasos, detenemos la animación
+                if (contadorPaso >= pasos) {
+                    clearInterval(intervalo);
+                }
+            }, duracion / pasos); // Intervalo de tiempo para cada paso
+        }
+
         function eliminarPuntos() {
             for (let marker of marcadores) {
                 marker.setMap(null);

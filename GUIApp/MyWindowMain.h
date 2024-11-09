@@ -1020,6 +1020,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->MapaWeb, L"MapaWeb");
 			this->MapaWeb->Name = L"MapaWeb";
 			this->MapaWeb->ZoomFactor = 1;
+			this->MapaWeb->Click += gcnew System::EventHandler(this, &MyWindowMain::MapaWeb_Click);
 			// 
 			// dgvCamionesAsignados
 			// 
@@ -1658,10 +1659,10 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		cantBtnInicio++;
 		if (cantBtnInicio == 1) {
+			
 			//GENERA RUTA DEL CAMION
 			puerto->Posicion = gcnew Coordenadas(-12.069060413055682, -77.07815928837975);
 			pucp->Posicion = gcnew Coordenadas(-12.053763093969444, -77.14634104154212);
-
 			this->MapaWeb->CoreWebView2->ExecuteScriptAsync("calculateAndDisplayRoute(" + puerto->Posicion + ", " + pucp->Posicion + ");");
 
 			segundos = 0;
@@ -1669,6 +1670,10 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			horas = 0;
 			lblCronometro->Text = "00:00:00";  
 			timer1->Enabled = true;             // Activa el Timer
+
+			// Anadiremos el simbolo del dron en el mapa
+
+
 		}
 		else {
 			MessageBox::Show("La simulación se ejecutando");
@@ -1909,7 +1914,8 @@ private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::E
 
 }
 private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs^ e) {
-	MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");
+	this->MapaWeb->CoreWebView2->ExecuteScriptAsync("displayearDron();");
+	MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");	
 }
 private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
 	MapaWeb->ExecuteScriptAsync("eliminarPuntos();");
@@ -2033,5 +2039,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 				return instance;
 			}
 		}
+private: System::Void MapaWeb_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
