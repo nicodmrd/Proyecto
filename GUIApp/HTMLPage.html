@@ -92,10 +92,11 @@
 
         // Función para mover el marcador del dron a una nueva posición con animación
         function displayearDron() {
-            const posicionDron = { lat: -12.069041, lng: -77.079333 };
+            // Posición inicial del dron (-12.053763093969444, -77.14634104154212)
+            const posicionDronInicial = { lat: -12.053763093969444, lng: -77.14634104154212 };
             // Crear un marcador con una posición y un icono personalizado
             const marcadorDron = new google.maps.Marker({
-                position: posicionDron, // La posición debe tener las propiedades lat y lng
+                position: posicionDronInicial, // La posición debe tener las propiedades lat y lng
                 map: map, // Mapa en el que se dibujará (debes tener ya un mapa inicializado)
                 icon: {
                     url: "https://www.svgrepo.com/show/27184/drone.svg", // Reemplaza con la URL de la imagen de tu icono de dron
@@ -104,34 +105,83 @@
                 }
             });
 
-            // Puedes opcionalmente añadir eventos al marcador si deseas, como información adicional
-            marcadorDron.addListener("click", () => {
-                const infoWindow = new google.maps.InfoWindow({
-                    content: "¡Dron localizado en esta posición!",
-                });
-                infoWindow.open(mapa, marcadorDron);
+            if (!bounds) {
+                alert("Debe seleccionar el área.");
+                return;
+            }
+
+            // Obtener las esquinas noroeste, noreste, suroeste y sureste del área
+            const esquinaNoreste = bounds.getNorthEast();
+            const esquinaSuroeste = bounds.getSouthWest();
+
+            // A partir de estas dos esquinas, podemos calcular las otras dos
+            const esquinaNoroeste = new google.maps.LatLng(esquinaNoreste.lat(), esquinaSuroeste.lng());
+            const esquinaSureste = new google.maps.LatLng(esquinaSuroeste.lat(), esquinaNoreste.lng());
+
+            generarPuntosZigzag(marcadorDron.position, esquinaNoroeste, esquinaNoreste, esquinaSureste, esquinaSuroeste, function (puntosRecorrido) {
+                // Cuando la generación de puntos termine, ejecutamos el recorrido
+                iniciarRecorridoDron(marcadorDron, puntosRecorrido, generarPuntosAleatorios);
             });
-
-            moverDron(marcadorDron);
         }
 
-        function moverDron(marcadorDron) {
-            const nuevaPosicion = { lat: -12.067326, lng: -77.158193 };
-            const posicionInicial = marcadorDron.getPosition();
-            const latInicial = posicionInicial.lat();
-            const lngInicial = posicionInicial.lng();
+        function generarPuntosZigzag(posicionInicial, esquinaNoroeste, esquinaNoreste, esquinaSureste, esquinaSuroeste, callback) {
+            const puntos = [];
+            const filas = 5; // Número de filas en el zigzag
+            const deltaLat = (esquinaNoreste.lat() - esquinaSuroeste.lat()) / (filas - 1); // Diferencia de latitud entre filas
 
-            animarMovimiento(marcadorDron, latInicial, lngInicial, nuevaPosicion.lat, nuevaPosicion.lng, 2000, 100);
-            // Después de mover, regresamos el dron a la posición inicial
-            setTimeout(() => {
-                regresarDron(marcadorDron, latInicial, lngInicial);
-            }, 2100); // Llamamos a regresarDron después de que se haya completado la animación (un poco más que 2000 ms)
+            for (let i = 0; i < filas; i++) {
+                const lat = esquinaSuroeste.lat() + i * deltaLat;
+
+                if (i % 2 === 0) {
+                    // En las filas pares, vamos de oeste a este (de la izquierda a la derecha)
+                    puntos.push(new google.maps.LatLng(lat, esquinaNoroeste.lng())); // Esquina noroeste
+                    puntos.push(new google.maps.LatLng(lat, esquinaNoreste.lng())); // Esquina noreste
+                } else {
+                    // En las filas impares, vamos de este a oeste (de la derecha a la izquierda)
+                    puntos.push(new google.maps.LatLng(lat, esquinaNoreste.lng())); // Esquina noreste
+                    puntos.push(new google.maps.LatLng(lat, esquinaNoroeste.lng())); // Esquina noroeste
+                }
+            }
+
+            // Si quieres cerrar el ciclo en el último punto
+            puntos.push(posicionInicial); // Regresar a la posición inicial
+
+            // Resolver la promesa con los puntos generados
+            callback(puntos);
         }
 
-        function regresarDron(marcadorDron, latInicial, lngInicial) {
-            const duracion = 2000;
-            const pasos = 100;
-            animarMovimiento(marcadorDron, marcadorDron.getPosition().lat(), marcadorDron.getPosition().lng(), latInicial, lngInicial, duracion, pasos);
+        // Función para escanear el área rectangular en un patrón y luego ejecutar una función de callback
+        function iniciarRecorridoDron(marcadorDron, puntosRecorrido, callback) {
+            // Define el recorrido en un patrón (por ejemplo, un zigzag o ruta en cuadrícula)
+
+            let index = 0;
+
+            function moverAlSiguientePunto() {
+                if (index < puntosRecorrido.length) {
+                    const destino = puntosRecorrido[index];
+                    const posicionActual = marcadorDron.getPosition();
+                    const latInicial = posicionActual.lat();
+                    const lngInicial = posicionActual.lng();
+                    const latFinal = destino.lat();
+                    const lngFinal = destino.lng();
+
+                    animarMovimiento(marcadorDron, latInicial, lngInicial, latFinal, lngFinal, 2000, 100);
+
+                    // Pasar al siguiente punto tras un breve delay para completar la animación
+                    setTimeout(() => {
+                        index++;
+                        moverAlSiguientePunto();
+                    }, 2100);
+                } else {
+                    // Cuando termine el recorrido, ejecutar el callback
+                    if (callback) {
+                        callback();  // Ejecutar la función que genera puntos aleatorios
+                    }
+                }
+            }
+
+            // Comenzar el movimiento hacia el primer punto
+            moverAlSiguientePunto(); 
         }
 
         function animarMovimiento(marcadorDron, latInicial, lngInicial, latFinal, lngFinal, duracion, pasos) {
@@ -183,10 +233,6 @@
         }
 
         function generarPuntosAleatorios() {
-            if (!bounds) {
-                alert("Debe seleccionar el área.");
-                return;
-            }
 
             const puntosRestantes = 100 - marcadores.length;
             if (puntosRestantes <= 0) {
@@ -195,62 +241,22 @@
             }
 
             const cantidadPuntos = Math.floor(Math.random() * puntosRestantes) + 1;
-
+            let puntosGenerados = 0;
+            // Llamar a la función generarPuntoMar por cada punto
             for (let i = 0; i < cantidadPuntos; i++) {
-                generarPuntoMar();
-            }
-
-            if (marcadores.length > 0) {
-                map.panTo(marcadores[marcadores.length - 1].getPosition());
+                generarPuntoMar(() => {
+                    puntosGenerados++;
+                    if (puntosGenerados === cantidadPuntos) {
+                        // Cuando todos los puntos se hayan generado, hacer el pan al último marcador
+                        if (marcadores.length > 0) {
+                            map.panTo(marcadores[marcadores.length - 1].getPosition());
+                        }
+                    }
+                });
             }
         }
 
-        function regresarDron(marcadorDron) {
-            const nuevaPosicion = { lat: -12.069041, lng: -77.079333 };
-            const duracion = 2000;
-            const posicionInicial = marcadorDron.getPosition();
-            const latInicial = posicionInicial.lat();
-            const lngInicial = posicionInicial.lng();
-
-            const latFinal = nuevaPosicion.lat;
-            const lngFinal = nuevaPosicion.lng;
-
-            // Cantidad de pasos de animación (puedes ajustar la precisión)
-            const pasos = 100;
-            let contadorPaso = 0;
-
-            // Calculamos los incrementos en latitud y longitud por cada paso
-            const incrementoLat = (latFinal - latInicial) / pasos;
-            const incrementoLng = (lngFinal - lngInicial) / pasos;
-
-            // Iniciamos la animación de movimiento
-            const intervalo = setInterval(() => {
-                contadorPaso++;
-
-                // Actualizamos la posición del dron en cada paso
-                const nuevaLat = latInicial + incrementoLat * contadorPaso;
-                const nuevaLng = lngInicial + incrementoLng * contadorPaso;
-
-                marcadorDron.setPosition(new google.maps.LatLng(nuevaLat, nuevaLng));
-
-                // Centramos el mapa en la nueva posición del dron
-                marcadorDron.getMap().panTo(new google.maps.LatLng(nuevaLat, nuevaLng));
-
-                // Si completamos todos los pasos, detenemos la animación
-                if (contadorPaso >= pasos) {
-                    clearInterval(intervalo);
-                }
-            }, duracion / pasos); // Intervalo de tiempo para cada paso
-        }
-
-        function eliminarPuntos() {
-            for (let marker of marcadores) {
-                marker.setMap(null);
-            }
-            marcadores = [];
-        }
-
-        function generarPuntoMar() {
+        function generarPuntoMar(callback) {
             const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
             const lng = Math.random() * (bounds.getNorthEast().lng() - bounds.getSouthWest().lng()) + bounds.getSouthWest().lng();
             const position = { lat: lat, lng: lng };
@@ -265,9 +271,17 @@
                     });
                     marcadores.push(marker);
                 } else {
-                    generarPuntoMar();
+                    generarPuntoMar(callback);
                 }
+                callback();
             });
+        }
+
+        function eliminarPuntos() {
+            for (let marker of marcadores) {
+                marker.setMap(null);
+            }
+            marcadores = [];
         }
 
         function eliminarPuntosFueraDeRectangulo() {
