@@ -268,29 +268,3 @@ Dron^ SimuladorService::Service::QueryDronById(int DronId) {
     return nullptr;
 
 }
-
-String^ SimuladorService::Service::TiposDesechosSistema(Protocol protocol, int _cantPlastico, int _cantVidrio, int _cantCarton, int _cantOtros)
-{
-    String^ result;
-    try {
-        desechoList = (List<Desecho^>^)Persistance::LoadTextFile(TXT_DESECHOS_FILE_NAME);
-        String^ message;
-        switch (protocol) {
-        case Protocol::UART:
-            message = "PLASTICO=" + Convert::ToString(_cantPlastico) +
-                ",VIDRIO=" + Convert::ToString(_cantVidrio) +
-                ",CARTON=" + Convert::ToString(_cantCarton) +
-                ",OTROS=" + Convert::ToString(_cantOtros) + "\n";
-            result = message;
-            break;
-
-        case Protocol::NMEA:
-            result = "";
-            break;
-        }
-    }
-    catch (Exception^ ex) {
-        throw ex;
-    }
-    return result;
-}

@@ -43,49 +43,14 @@ Object^ SimuladorPersistance::Persistance::LoadBinaryFile(String^ fileName)
     return result;
 }
 
-
-int cantPlastico = 0, cantVidrio = 0, cantCarton = 0, cantOtros = 0;
-
-Object^ SimuladorPersistance::Persistance::LoadTextFile(String^ fileName)
+void SimuladorPersistance::Persistance::PersistDesechosTextFile(String^ fileName, Object^ persistObject)
 {
-    FileStream^ file;
-    StreamReader^ reader;
-    Object^ result = gcnew List<Desecho^>();
-    try {
-        file = gcnew FileStream(fileName, FileMode::Open, FileAccess::Read);
-        reader = gcnew StreamReader(file);
-
-        while (!reader->EndOfStream) {
-            String^ line = reader->ReadLine();
-            array<String^>^ record = line->Split('|');
-
-            for each (String ^ tipo in record) {
-                Desecho^ _desecho = gcnew Desecho();
-                _desecho->Tipo = tipo;
-                if (tipo->Equals("Plastico")) {
-                    cantPlastico++;
-                }
-                else if (tipo->Equals("Vidrio")) {
-                    cantVidrio++;
-                }
-                else if (tipo->Equals("Carton")) {
-                    cantCarton++;
-                }
-                else if (tipo->Equals("Otros")) {
-                    cantOtros++;
-                }
-                ((List<Desecho^>^)result)->Add(_desecho);
-            }
-        }
-    }
-    catch (Exception^ ex) {
-        throw ex;
-    }
-    finally {
-        if (reader != nullptr) reader->Close();
-        if (file != nullptr) file->Close();
-    }
-    return result;
+    throw gcnew System::NotImplementedException();
 }
 
+Object^ SimuladorPersistance::Persistance::LoadDesechosTextFile(String^ fileName)
+{
+    throw gcnew System::NotImplementedException();
+    // TODO: Insertar una instrucción "return" aquí
+}
 

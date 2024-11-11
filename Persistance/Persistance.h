@@ -13,6 +13,8 @@ namespace SimuladorPersistance {
 		static void PersistBinaryFile(String^ fileName, Object^ persistObject);
 		static Object^ LoadBinaryFile(String^ fileName);
 
-		static Object^ LoadTextFile(String^ fileName);
+		static void PersistDesechosTextFile(String^ fileName, Object^ persistObject);
+		static Object^ LoadDesechosTextFile(String^ fileName);
+
 	};
 }

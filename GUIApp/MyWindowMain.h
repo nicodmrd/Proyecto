@@ -108,7 +108,8 @@ namespace GUIApp {
 	private: System::Windows::Forms::Button^ btnRecargarCmbBarco;
 	private: System::Windows::Forms::Button^ btnRecargarBateria;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridView^ dgvCoordenadas;
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdDesecho;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCoordX;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CoordY;
@@ -618,7 +619,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->btnRecargarCmbBarco = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarBateria = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->dgvCoordenadas = (gcnew System::Windows::Forms::DataGridView());
 			this->IdDesecho = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->IdCoordX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->CoordY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -651,7 +652,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MapaWeb))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamionesAsignados))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcosAsignados))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCoordenadas))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -664,7 +665,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			});
 			resources->ApplyResources(this->menuStrip2, L"menuStrip2");
 			this->menuStrip2->Name = L"menuStrip2";
-			this->menuStrip2->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &MyWindowMain::menuStrip2_ItemClicked);
 			// 
 			// archivoToolStripMenuItem
 			// 
@@ -755,7 +755,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			});
 			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
 			resources->ApplyResources(this->reportesToolStripMenuItem, L"reportesToolStripMenuItem");
-			this->reportesToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyWindowMain::reportesToolStripMenuItem_Click);
 			// 
 			// empleadosPorAreaToolStripMenuItem
 			// 
@@ -773,10 +772,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			// 
 			resources->ApplyResources(this->label1, L"label1");
 			this->label1->Name = L"label1";
-			// 
-			// toolTip1
-			// 
-			this->toolTip1->Popup += gcnew System::Windows::Forms::PopupEventHandler(this, &MyWindowMain::toolTip1_Popup);
 			// 
 			// timer1
 			// 
@@ -935,7 +930,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->tabPage1->Controls->Add(this->btnRecargarCmbBarco);
 			this->tabPage1->Controls->Add(this->btnRecargarBateria);
 			this->tabPage1->Controls->Add(this->label4);
-			this->tabPage1->Controls->Add(this->dataGridView1);
+			this->tabPage1->Controls->Add(this->dgvCoordenadas);
 			this->tabPage1->Controls->Add(this->cmbIdDron);
 			this->tabPage1->Controls->Add(this->btnValidarDron);
 			this->tabPage1->Controls->Add(this->btnAumentarContenedor);
@@ -959,7 +954,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->tabPage1->Name = L"tabPage1";
-			this->tabPage1->Click += gcnew System::EventHandler(this, &MyWindowMain::tabPage1_Click);
 			// 
 			// label20
 			// 
@@ -1020,7 +1014,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->MapaWeb, L"MapaWeb");
 			this->MapaWeb->Name = L"MapaWeb";
 			this->MapaWeb->ZoomFactor = 1;
-			this->MapaWeb->Click += gcnew System::EventHandler(this, &MyWindowMain::MapaWeb_Click);
 			// 
 			// dgvCamionesAsignados
 			// 
@@ -1183,18 +1176,18 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->label4, L"label4");
 			this->label4->Name = L"label4";
 			// 
-			// dataGridView1
+			// dgvCoordenadas
 			// 
-			this->dataGridView1->AllowUserToAddRows = false;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+			this->dgvCoordenadas->AllowUserToAddRows = false;
+			this->dgvCoordenadas->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dgvCoordenadas->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->IdDesecho,
 					this->IdCoordX, this->CoordY
 			});
-			resources->ApplyResources(this->dataGridView1, L"dataGridView1");
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersVisible = false;
-			this->dataGridView1->RowTemplate->Height = 24;
+			resources->ApplyResources(this->dgvCoordenadas, L"dgvCoordenadas");
+			this->dgvCoordenadas->Name = L"dgvCoordenadas";
+			this->dgvCoordenadas->RowHeadersVisible = false;
+			this->dgvCoordenadas->RowTemplate->Height = 24;
 			// 
 			// IdDesecho
 			// 
@@ -1377,7 +1370,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MapaWeb))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamionesAsignados))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcosAsignados))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCoordenadas))->EndInit();
 			this->tabControl1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -1673,7 +1666,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 
 			// Anadiremos el simbolo del dron en el mapa
 
-
 		}
 		else {
 			MessageBox::Show("La simulación se ejecutando");
@@ -1756,6 +1748,12 @@ private: System::Void btnReiniciar_Click(System::Object^ sender, System::EventAr
 	btnAumentarContenedor->Enabled = true;
 	
 }
+private: 
+	void recibirCoordenadas(double latitud, double longitud) {
+		Coordenadas^ coord = gcnew Coordenadas(latitud, longitud);
+		dgvCoordenadas->Rows->Add(coord->X, coord->Y);
+	}
+
 private: System::Void btnAsignarCamion_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ idSeleccionado = cmbIdCamion->SelectedItem->ToString();
 	List<Camion^>^ _camionList = Service::ConsultarCamion();
@@ -1915,6 +1913,7 @@ private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::E
 }
 private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->MapaWeb->CoreWebView2->ExecuteScriptAsync("displayearDron();");
+
 	//MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");	
 }
 private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1949,12 +1948,6 @@ private: System::Void MyWindowMain_FormClosing(System::Object^ sender, System::W
 	}
 	ClosePort();
 }
-private: System::Void toolTip1_Popup(System::Object^ sender, System::Windows::Forms::PopupEventArgs^ e) {
-
-}
-
-private: System::Void reportesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 private: System::Void empleadosPorAreaToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	EmployeesReportForm^ form = gcnew EmployeesReportForm();
 	form->ShowDialog(); // Mostrar el formulario de forma modal
@@ -1965,9 +1958,6 @@ private: System::Void deschosRecicladosToolStripMenuItem_Click(System::Object^ s
 	form->ShowDialog(); // Mostrar el formulario de forma modal
 
 }
-private: System::Void menuStrip2_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
-}
-
 
 private: System::Void detener_proceso_Click(System::Object^ sender, System::EventArgs^ e) {
 
@@ -2023,12 +2013,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		procesoIniciado = true;
 
 	}
-
-
 }
-	private: 
-		System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
-		}
 	public:
 		// Propiedad Singleton para obtener la instancia de MyWindowMain
 		static property MyWindowMain^ Instance {
@@ -2039,7 +2024,5 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 				return instance;
 			}
 		}
-private: System::Void MapaWeb_Click(System::Object^ sender, System::EventArgs^ e) {
-}
 };
 }

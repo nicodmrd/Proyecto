@@ -6,10 +6,7 @@ using namespace System::Collections::Generic;
 using namespace SimuladorPersistance;
 
 namespace SimuladorService {
-	public enum class Protocol {
-		UART,
-		NMEA
-	};
+	
 	public ref class Service
 	{
 		public:
@@ -70,19 +67,6 @@ namespace SimuladorService {
 			static void DeleteDron(int DronId);
 			static List<Dron^>^ QueryDron();
 			static Dron^ QueryDronById(int DronId);
-
-
-			//Diccionario con los protocolos de comunicación UART y NMEA
-			static Dictionary<String^, Protocol>^ protocolDictionary = gcnew Dictionary<String^, Protocol>();
-			static Service() {
-				// Agregar elementos al diccionario
-				protocolDictionary->Add("UART", Protocol::UART);
-				protocolDictionary->Add("NMEA", Protocol::NMEA);
-			}
-
-			//----------Sistema Automatizado---------------
-			static String^ TiposDesechosSistema(Protocol protocol, int _cantPlastico, int _cantVidrio, int _cantCarton, int cantOtros);
-
 
 	};
 }
