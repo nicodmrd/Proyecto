@@ -9,15 +9,19 @@ using namespace System::IO;
 //------------------------------------Encargados----------------------------------------------
 void SimuladorService::Service::AgregearEncargado(Encargado^ encargado)
 {
+    /*
     for each (Encargado ^ _encargado in lista_encargados) {
         if (_encargado->Id == encargado->Id)
             throw gcnew DuplicatedException("El encargado con el id ingresado ya existe en la base de datos.");
     }
     lista_encargados->Add(encargado);
     Persistance::PersistBinaryFile(BIN_ENCARGADO_FILE_NAME, lista_encargados);
+    */
+    Persistance::AgregarEncargado(encargado);
 }
 void SimuladorService::Service::ActualizarEncargado(Encargado^ encargado)
 {
+    /*
     for (int i = 0; i < lista_encargados->Count; i++) {
         if (lista_encargados[i]->Id == encargado->Id) {
             lista_encargados[i] = encargado;
@@ -26,9 +30,12 @@ void SimuladorService::Service::ActualizarEncargado(Encargado^ encargado)
         }
     }
     throw gcnew DoesNotExistException("El encargado no existe en la base de datos.");
+    */
+    Persistance::ActualizarEncargado(encargado);
 }
 void SimuladorService::Service::EliminarEncargado(int EncargadoId)
 {
+    /*
     for (int i = 0; i < lista_encargados->Count; i++) {
         if (lista_encargados[i]->Id == EncargadoId) {
             lista_encargados->RemoveAt(i);
@@ -37,9 +44,12 @@ void SimuladorService::Service::EliminarEncargado(int EncargadoId)
         }
     }
     throw gcnew DoesNotExistException("El encargado no existe en la base de datos.");
+    */
+    Persistance::EliminarEncargado(EncargadoId);
 }
 List<Encargado^>^ SimuladorService::Service::ConsultarEncargados()
 {
+    /*
     try {
         lista_encargados = (List<Encargado^>^)Persistance::LoadBinaryFile(BIN_ENCARGADO_FILE_NAME);
         if (lista_encargados == nullptr)
@@ -48,9 +58,12 @@ List<Encargado^>^ SimuladorService::Service::ConsultarEncargados()
     catch (FileNotFoundException^ ) {
     }
     return lista_encargados;
+    */
+    return Persistance::ConsultarEncargados();
 }
 Encargado^ SimuladorService::Service::ConsultarEncargadoPorId(int EncargadoId)
 {
+    /*
     lista_encargados = ConsultarEncargados();
     for (int i = 0; i < lista_encargados->Count; i++) {
         if (lista_encargados[i]->Id == EncargadoId) {
@@ -58,6 +71,8 @@ Encargado^ SimuladorService::Service::ConsultarEncargadoPorId(int EncargadoId)
         }
     }
     return nullptr;
+    */
+    return Persistance::ConsultarEncargadoPorId(EncargadoId);
 }
 
 
