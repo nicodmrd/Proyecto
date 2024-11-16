@@ -248,7 +248,7 @@ namespace GUIApp {
 		this->desechogrid->Rows->Add("0"); // Plástico (ROJO)
 		this->desechogrid->Rows->Add("0"); // Cartón (VERDE)
 		this->desechogrid->Rows->Add("0"); // Vidrio (AZUL)
-		this->desechogrid->Rows->Add("0"); // Otros
+		this->desechogrid->Rows->Add("0"); // Otros (AMARILLO)
 
 		// Configurar las celdas como numéricas
 		for (int i = 0; i < this->desechogrid->Rows->Count; i++) {

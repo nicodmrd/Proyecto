@@ -16,24 +16,43 @@ System::Void GUIApp::GarbageReportForm::GarbageReportForm_Load(System::Object^ s
     UpdateChart(nullptr, nullptr);
 }
 
-System::Void GUIApp::GarbageReportForm::UpdateChart(System::Object^ sender, System::EventArgs^ e)
+System::Void GUIApp::GarbageReportForm::UpdateChart(System::Object ^ sender, System::EventArgs ^ e)
 {
     DataGridView^ desechogridcopia = MyWindowMain::Instance->desechogrid;
 
     // Limpia los puntos previos del gráfico para evitar duplicados
     this->chart1->Series["Cantidad"]->Points->Clear();
 
-    int plastico = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["plasticobox"]->Value);
-    int vidrio = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["vidriobox"]->Value);
-    int carton = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["cartonbox"]->Value);
-    int otros = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["otrosbox"]->Value);
+    if (desechogridcopia->Rows->Count > 0)
+    {
+        int plastico = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["plasticobox"]->Value);
+        int vidrio = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["vidriobox"]->Value);
+        int carton = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["cartonbox"]->Value);
+        int otros = Convert::ToInt32(desechogridcopia->Rows[0]->Cells["otrosbox"]->Value);
+    
+        // Añade los puntos actualizados al gráfico con los colores correspondientes
+        int index;
 
-    // Añade los puntos actualizados al gráfico
-    this->chart1->Series["Cantidad"]->Points->AddXY("Plastico", plastico);
-    this->chart1->Series["Cantidad"]->Points->AddXY("Cartón", carton);
-    this->chart1->Series["Cantidad"]->Points->AddXY("Vidrio", vidrio);
-    this->chart1->Series["Cantidad"]->Points->AddXY("Otros", otros);
+        index = this->chart1->Series["Cantidad"]->Points->AddXY("Plastico", plastico);
+        this->chart1->Series["Cantidad"]->Points[index]->Color = System::Drawing::Color::Red;
+
+        index = this->chart1->Series["Cantidad"]->Points->AddXY("Cartón", carton);
+        this->chart1->Series["Cantidad"]->Points[index]->Color = System::Drawing::Color::Green;
+
+        index = this->chart1->Series["Cantidad"]->Points->AddXY("Vidrio", vidrio);
+        this->chart1->Series["Cantidad"]->Points[index]->Color = System::Drawing::Color::Blue;
+
+        index = this->chart1->Series["Cantidad"]->Points->AddXY("Otros", otros);
+        this->chart1->Series["Cantidad"]->Points[index]->Color = System::Drawing::Color::White;
+	}
+	else
+	{
+		// Si no hay datos, muestra un mensaje en el gráfico
+		this->chart1->Series["Cantidad"]->Points->AddXY("No hay datos", Convert::ToDouble(0));
+    }
+
 }
+
 
 
 
