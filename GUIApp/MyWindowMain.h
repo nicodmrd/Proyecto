@@ -67,11 +67,11 @@ namespace GUIApp {
 	private: System::Windows::Forms::Button^ iniciar_proceso;
 	public: System::Windows::Forms::DataGridView^ desechogrid;
 	private:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ plasticobox;
+
 	public:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ cartonbox;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ vidriobox;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
+
+
+
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label18;
@@ -138,6 +138,10 @@ namespace GUIApp {
 	private: System::Windows::Forms::ComboBox^ cb_arduino;
 	private: System::Windows::Forms::Label^ label6;
 	private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ plasticobox;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ cartonbox;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ vidriobox;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
 
 
 
@@ -248,7 +252,7 @@ namespace GUIApp {
 		this->desechogrid->Rows->Add("0"); // Plástico (ROJO)
 		this->desechogrid->Rows->Add("0"); // Cartón (VERDE)
 		this->desechogrid->Rows->Add("0"); // Vidrio (AZUL)
-		this->desechogrid->Rows->Add("0"); // Otros (AMARILLO)
+		this->desechogrid->Rows->Add("0"); // Otros (BLANCO)
 
 		// Configurar las celdas como numéricas
 		for (int i = 0; i < this->desechogrid->Rows->Count; i++) {
@@ -852,10 +856,13 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			// 
 			// desechogrid
 			// 
+			this->desechogrid->AllowUserToAddRows = false;
 			this->desechogrid->AllowUserToDeleteRows = false;
 			this->desechogrid->AllowUserToResizeColumns = false;
 			this->desechogrid->AllowUserToResizeRows = false;
+			this->desechogrid->ReadOnly = false; // Asegúrate de que el DataGridView no sea de solo lectura
 			resources->ApplyResources(this->desechogrid, L"desechogrid");
+			this->desechogrid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->desechogrid->BackgroundColor = System::Drawing::SystemColors::Menu;
 			this->desechogrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->desechogrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
@@ -868,8 +875,15 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->desechogrid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
 			this->desechogrid->RowTemplate->DividerHeight = 10;
 			this->desechogrid->RowTemplate->Height = 90;
-			this->desechogrid->RowTemplate->ReadOnly = true;
+			this->desechogrid->RowTemplate->ReadOnly = false;
 			this->desechogrid->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::False;
+			this->desechogrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyWindowMain::desechogrid_CellContentClick);
+			// Centralizar el texto en las celdas y en la fila de encabezado
+			System::Windows::Forms::DataGridViewCellStyle^ cellStyle = gcnew System::Windows::Forms::DataGridViewCellStyle();
+			cellStyle->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			this->desechogrid->ColumnHeadersDefaultCellStyle = cellStyle;
+			this->desechogrid->DefaultCellStyle = cellStyle;
+
 			// 
 			// plasticobox
 			// 
@@ -1354,9 +1368,11 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->menuStrip2);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->IsMdiContainer = true;
 			this->KeyPreview = true;
 			this->MainMenuStrip = this->menuStrip2;
+			this->MaximizeBox = false;
 			this->Name = L"MyWindowMain";
 			this->Load += gcnew System::EventHandler(this, &MyWindowMain::MyWindowMain_Load);
 			this->menuStrip2->ResumeLayout(false);
@@ -1546,16 +1562,28 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 		}
 		
 		void UpdateDesechoGrid(int plastico, int carton, int vidrio, int otros) {
+			// Deshabilita la actualización de la interfaz de usuario
+			this->desechogrid->SuspendLayout();
+
 			// Restablece los valores antes de la actualización
 			if (desechogrid->Rows->Count == 0) {
 				desechogrid->Rows->Add();
 			}
+
+			// Guarda el índice de la primera columna visible
+			int firstDisplayedColumnIndex = desechogrid->FirstDisplayedScrollingColumnIndex;
 		
 			// Actualiza los valores directamente
 			desechogrid->Rows[0]->Cells["plasticobox"]->Value = plastico;
 			desechogrid->Rows[0]->Cells["cartonbox"]->Value = carton;
 			desechogrid->Rows[0]->Cells["vidriobox"]->Value = vidrio;
 			desechogrid->Rows[0]->Cells["otrosbox"]->Value = otros;
+
+			// Restaura el índice de la primera columna visible
+			desechogrid->FirstDisplayedScrollingColumnIndex = firstDisplayedColumnIndex;
+
+			// Habilita la actualización de la interfaz de usuario
+			this->desechogrid->ResumeLayout();
 		}
 
 	private:
@@ -2023,6 +2051,8 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 				}
 				return instance;
 			}
+		}
+private: System::Void desechogrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		}
 };
 }

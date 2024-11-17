@@ -51,8 +51,6 @@ namespace GUIApp {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			int pointCount = 10; // Puedes cambiar este valor según sea necesario
-
 			System::Windows::Forms::DataVisualization::Charting::ChartArea^ chartArea1 = (gcnew System::Windows::Forms::DataVisualization::Charting::ChartArea());
 			System::Windows::Forms::DataVisualization::Charting::Legend^ legend1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Legend());
 			System::Windows::Forms::DataVisualization::Charting::Series^ series1 = (gcnew System::Windows::Forms::DataVisualization::Charting::Series());
@@ -62,61 +60,49 @@ namespace GUIApp {
 			// 
 			// chart1
 			// 
-			// Configuración del fondo y estilo del gráfico
 			this->chart1->BackColor = System::Drawing::Color::Gainsboro;
+			chartArea1->AxisX->LabelStyle->Angle = -45;
+			chartArea1->AxisX->LabelStyle->Font = (gcnew System::Drawing::Font(L"Arial", 10, System::Drawing::FontStyle::Bold));
+			chartArea1->AxisX->MajorGrid->LineColor = System::Drawing::Color::LightGray;
+			chartArea1->AxisX->Title = L"Tipos de desechos";
+			chartArea1->AxisX->TitleFont = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold));
+			chartArea1->AxisY->LabelStyle->Font = (gcnew System::Drawing::Font(L"Arial", 10, System::Drawing::FontStyle::Bold));
+			chartArea1->AxisY->LabelStyle->Format = L"N0";
+			chartArea1->AxisY->MajorGrid->LineColor = System::Drawing::Color::LightGray;
+			chartArea1->AxisY->Title = L"Cantidad de desechos";
+			chartArea1->AxisY->TitleFont = (gcnew System::Drawing::Font(L"Arial", 12, System::Drawing::FontStyle::Bold));
 			chartArea1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				static_cast<System::Int32>(static_cast<System::Byte>(224)));
 			chartArea1->BorderColor = System::Drawing::Color::Transparent;
 			chartArea1->Name = L"ChartArea1";
 			this->chart1->ChartAreas->Add(chartArea1);
-			// Configuración de la leyenda
 			legend1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)), static_cast<System::Int32>(static_cast<System::Byte>(224)),
 				static_cast<System::Int32>(static_cast<System::Byte>(224)));
+			legend1->Enabled = false;
 			legend1->Name = L"Legend1";
-			legend1->Enabled = false; // Deshabilitar la leyenda
 			this->chart1->Legends->Add(legend1);
-			// Posición y tamaño del gráfico
-			this->chart1->Location = System::Drawing::Point(57, 60);
+			this->chart1->Location = System::Drawing::Point(57, 41);
 			this->chart1->Name = L"chart1";
-			this->chart1->Size = System::Drawing::Size(704, 300);
-			this->chart1->TabIndex = 4;
-			this->chart1->Text = L"chart1";
-			// Configuración de la serie
 			series1->BackImageTransparentColor = System::Drawing::Color::Transparent;
 			series1->ChartArea = L"ChartArea1";
 			series1->Legend = L"Legend1";
 			series1->Name = L"Cantidad";
+			series1->ToolTip = L"Cantidad: #VALY";
 			series1->YValuesPerPoint = 6;
-			series1->ToolTip = "Cantidad: #VALY"; // Configurar el ToolTip para mostrar la cantidad
 			this->chart1->Series->Add(series1);
-			// Configuración adicional del gráfico
-			this->chart1->ResetAutoValues();
-
-			// Títulos del gráfico
-			this->chart1->Titles->Clear();
-			this->chart1->Titles->Add(String::Format("Cantidad de Desechos Reciclados por Tipo"));  // Título dinámico
-
-			// Configuración de los ejes
-			this->chart1->ChartAreas[0]->AxisX->Title = "Tipos de desechos";  // Título del eje X
-			this->chart1->ChartAreas[0]->AxisY->Title = "Cantidad de desechos";  // Título del eje Y
-			this->chart1->ChartAreas[0]->AxisY->MajorGrid->LineColor = Color::LightGray;  // Color de la cuadrícula mayor en el eje Y
-			this->chart1->ChartAreas[0]->AxisX->MajorGrid->LineColor = Color::LightGray;  // Color de la cuadrícula mayor en el eje X
-
-			// Asegúrate de que el gráfico se dibuje con las columnas (SeriesChartType::Column)
-			series1->ChartType = System::Windows::Forms::DataVisualization::Charting::SeriesChartType::Column;  // Tipo de gráfico de columnas
-			this->chart1->Series->Clear();  // Limpiar las series existentes antes de agregar nuevas
-			this->chart1->Series->Add(series1);  // Añadir la serie de nuevo si es necesario
-
+			this->chart1->Size = System::Drawing::Size(704, 329);
+			this->chart1->TabIndex = 4;
+			this->chart1->Text = L"chart1";
 			this->chart1->Click += gcnew System::EventHandler(this, &GarbageReportForm::chart1_Click);
 			// 
 			// GarbageReportForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(824, 421);
+			this->ClientSize = System::Drawing::Size(824, 416);
 			this->Controls->Add(this->chart1);
-			this->MaximizeBox = false; // Ocultar el botón de maximizar
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog; // Hacer el borde no redimensionable
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
+			this->MaximizeBox = false;
 			this->Name = L"GarbageReportForm";
 			this->Text = L"Desechos Reciclados";
 			this->Load += gcnew System::EventHandler(this, &GarbageReportForm::GarbageReportForm_Load);
