@@ -240,6 +240,7 @@ namespace GUIApp {
 			// 
 			// dgvCamion
 			// 
+			this->dgvCamion->AllowUserToAddRows = false;
 			this->dgvCamion->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgvCamion->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->IdCamion, this->MatriculaCamion,
@@ -247,12 +248,12 @@ namespace GUIApp {
 			});
 			this->dgvCamion->Location = System::Drawing::Point(12, 223);
 			this->dgvCamion->Name = L"dgvCamion";
+			this->dgvCamion->RowHeadersVisible = false;
 			this->dgvCamion->RowHeadersWidth = 51;
 			this->dgvCamion->RowTemplate->Height = 24;
 			this->dgvCamion->Size = System::Drawing::Size(459, 269);
 			this->dgvCamion->TabIndex = 30;
 			this->dgvCamion->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &CamionesForm::dgvCamion_CellClick);
-			this->dgvCamion->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &CamionesForm::dgvCamion_CellContentClick);
 			// 
 			// IdCamion
 			// 
@@ -428,11 +429,6 @@ private: System::Void dgvCamion_CellClick(System::Object^ sender, System::Window
 	txtCamionCombustible->Text = "" + _camion->NivelCombustible;
 	txtCamionPlaca->Text = _camion->Placa;
 	txtCamionCapacidadCont->Text = "" + _camion->CapacidadContenedores;
-
-}
-	
-
-private: System::Void dgvCamion_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 }
 };
 }

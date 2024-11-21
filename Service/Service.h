@@ -34,23 +34,23 @@ namespace SimuladorService {
 			//Operaciones CRUD (Create, Request, Update, Delete) 
 
 			//---------Encargados----------------
-			static void AgregearEncargado(Encargado^);
-			static void ActualizarEncargado(Encargado^);
-			static void EliminarEncargado(int EncargadoId);
+			static int AgregearEncargado(Encargado^);
+			static int ActualizarEncargado(Encargado^);
+			static int EliminarEncargado(int EncargadoId);
 			static List<Encargado^>^ ConsultarEncargados();
 			static Encargado^ ConsultarEncargadoPorId(int EncargadoId);
 
 			//---------Camiones------------------
-			static void AgregarCamion(Camion^);
-			static void ActualizarCamion(Camion^);
-			static void EliminarCamion(int CarmionId);
+			static int AgregarCamion(Camion^);
+			static int ActualizarCamion(Camion^);
+			static int EliminarCamion(int CarmionId);
 			static List<Camion^>^ ConsultarCamion();
 			static Camion^ ConsultarCamionPorId(int CamionId);
 			
 			//----------Barco---------------------
-			static void AgregarBarco(Barco^);
-			static void ActualizarBarco(Barco^);
-			static void EliminarBarco(int BarcoId);
+			static int AgregarBarco(Barco^);
+			static int ActualizarBarco(Barco^);
+			static int EliminarBarco(int BarcoId);
 			static List<Barco^>^ ConsultarBarcos();
 			static Barco^ ConsultarBarcoPorId(int BarcoId);
 
@@ -62,9 +62,9 @@ namespace SimuladorService {
 			static Contenedor^ QueryContenedorById(int ContenedorId);
 
 			//---------Dron-----------------------
-			static void AddDron(Dron^);
-			static void UpdateDron(Dron^);
-			static void DeleteDron(int DronId);
+			static int AddDron(Dron^);
+			static int UpdateDron(Dron^);
+			static int DeleteDron(int DronId);
 			static List<Dron^>^ QueryDron();
 			static Dron^ QueryDronById(int DronId);
 

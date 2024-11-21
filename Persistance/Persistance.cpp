@@ -182,7 +182,9 @@ int SimuladorPersistance::Persistance::ActualizarEncargado(Encargado^ encargado)
         //Paso 2: Preparar la sentencia de BD
         String^ sqlStr = "dbo.usp_ActualizarEncargado";
         SqlCommand^ cmd = gcnew SqlCommand(sqlStr, conn);
+
         cmd->CommandType = System::Data::CommandType::StoredProcedure;
+        cmd->Parameters->Add("@Id", System::Data::SqlDbType::Int);
         cmd->Parameters->Add("@Nombre", System::Data::SqlDbType::VarChar, 20);
         cmd->Parameters->Add("@Apellido", System::Data::SqlDbType::VarChar, 20);
         cmd->Parameters->Add("@Correo", System::Data::SqlDbType::VarChar, 20);
@@ -192,6 +194,8 @@ int SimuladorPersistance::Persistance::ActualizarEncargado(Encargado^ encargado)
         cmd->Parameters->Add("@Contacto", System::Data::SqlDbType::VarChar, 20);
         cmd->Parameters->Add("@Foto", System::Data::SqlDbType::Image);
         cmd->Prepare();
+
+        cmd->Parameters["@Id"]->Value = encargado->Id;
         cmd->Parameters["@Nombre"]->Value = encargado->Nombre;
         cmd->Parameters["@Apellido"]->Value = encargado->Apellido;
         cmd->Parameters["@Correo"]->Value = encargado->Correo;
@@ -394,7 +398,9 @@ int SimuladorPersistance::Persistance::ActualizarBarco(Barco^ barco)
         //Paso 2: Preparar la sentencia de BD
         String^ sqlStr = "dbo.usp_ActualizarBarco";
         SqlCommand^ cmd = gcnew SqlCommand(sqlStr, conn);
+
         cmd->CommandType = System::Data::CommandType::StoredProcedure;
+        cmd->Parameters->Add("@Id", System::Data::SqlDbType::Int);
         cmd->Parameters->Add("@CapacidadMax", System::Data::SqlDbType::Decimal);
         cmd->Parameters["@CapacidadMax"]->Precision = 10;
         cmd->Parameters["@CapacidadMax"]->Scale = 2;
@@ -403,6 +409,8 @@ int SimuladorPersistance::Persistance::ActualizarBarco(Barco^ barco)
         cmd->Parameters["@Combustible"]->Scale = 2;
         cmd->Parameters->Add("@Cantidad", System::Data::SqlDbType::Int);
         cmd->Prepare();
+
+        cmd->Parameters["@Id"]->Value = barco->Id;
         cmd->Parameters["@CapacidadMax"]->Value = barco->CapacidadMax;
         cmd->Parameters["@Combustible"]->Value = barco->NivelCombustible;
         cmd->Parameters["@Cantidad"]->Value = barco->CantCoordendas;
@@ -475,7 +483,7 @@ Barco^ SimuladorPersistance::Persistance::ConsultarBarcoPorId(int barcoId)
             barco->Id = Convert::ToInt32(reader["Id"]->ToString());
             barco->CapacidadMax = Convert::ToDouble(reader["CapacidadMax"]->ToString());
             barco->NivelCombustible = Convert::ToDouble(reader["Combustible"]->ToString());
-            barco->CantCoordendas = Convert::ToInt32(reader["Cantiadad"]->ToString());
+            barco->CantCoordendas = Convert::ToInt32(reader["Cantidad"]->ToString());
         }
     }
     catch (Exception^ ex) {
@@ -590,7 +598,9 @@ int SimuladorPersistance::Persistance::ActualizarCamion(Camion^ camion)
         //Paso 2: Preparar la sentencia de BD
         String^ sqlStr = "dbo.usp_ActualizarCamion";
         SqlCommand^ cmd = gcnew SqlCommand(sqlStr, conn);
+
         cmd->CommandType = System::Data::CommandType::StoredProcedure;
+        cmd->Parameters->Add("@Id", System::Data::SqlDbType::Int);
         cmd->Parameters->Add("@Velocidad", System::Data::SqlDbType::Decimal);
         cmd->Parameters["@Velocidad"]->Precision = 10;
         cmd->Parameters["@Velocidad"]->Scale = 2;
@@ -600,6 +610,8 @@ int SimuladorPersistance::Persistance::ActualizarCamion(Camion^ camion)
         cmd->Parameters->Add("@Matricula", System::Data::SqlDbType::VarChar, 10);
         cmd->Parameters->Add("@Cantidad", System::Data::SqlDbType::Int);
         cmd->Prepare();
+
+        cmd->Parameters["@Id"]->Value = camion->Id;
         cmd->Parameters["@Velocidad"]->Value = camion->Velocidad;
         cmd->Parameters["@Combustible"]->Value = camion->NivelCombustible;
         cmd->Parameters["@Matricula"]->Value = camion->Placa;
@@ -758,8 +770,8 @@ List<Dron^>^ SimuladorPersistance::Persistance::ConsultarDron()
 
             dron->Id = Convert::ToInt32(reader["Id"]->ToString());
             dron->Velocidad = Convert::ToDouble(reader["Velocidad"]->ToString());
-            dron->Bateria = Convert::ToInt32(reader["Combustible"]->ToString());
-            dron->Alcance = Convert::ToDouble(reader["Velocidad"]->ToString());
+            dron->Bateria = Convert::ToInt32(reader["Bateria"]->ToString());
+            dron->Alcance = Convert::ToDouble(reader["Alcance"]->ToString());
             dronList->Add(dron);
         }
     }
@@ -784,7 +796,9 @@ int SimuladorPersistance::Persistance::ActualizarDron(Dron^ dron)
         //Paso 2: Preparar la sentencia de BD
         String^ sqlStr = "dbo.usp_ActualizarDron";
         SqlCommand^ cmd = gcnew SqlCommand(sqlStr, conn);
+
         cmd->CommandType = System::Data::CommandType::StoredProcedure;
+        cmd->Parameters->Add("@Id", System::Data::SqlDbType::Int);
         cmd->Parameters->Add("@Velocidad", System::Data::SqlDbType::Decimal);
         cmd->Parameters["@Velocidad"]->Precision = 10;
         cmd->Parameters["@Velocidad"]->Scale = 2;
@@ -793,6 +807,8 @@ int SimuladorPersistance::Persistance::ActualizarDron(Dron^ dron)
         cmd->Parameters["@Alcance"]->Precision = 10;
         cmd->Parameters["@Alcance"]->Scale = 2;
         cmd->Prepare();
+
+        cmd->Parameters["@Id"]->Value = dron->Id;
         cmd->Parameters["@Velocidad"]->Value = dron->Velocidad;
         cmd->Parameters["@Bateria"]->Value = dron->Bateria;
         cmd->Parameters["@Alcance"]->Value = dron->Alcance;
@@ -864,8 +880,8 @@ Dron^ SimuladorPersistance::Persistance::ConsultarDronPorId(int dronId)
             dron = gcnew Dron();
             dron->Id = Convert::ToInt32(reader["Id"]->ToString());
             dron->Velocidad = Convert::ToDouble(reader["Velocidad"]->ToString());
-            dron->Bateria = Convert::ToInt32(reader["Combustible"]->ToString());
-            dron->Alcance = Convert::ToDouble(reader["Velocidad"]->ToString());   
+            dron->Bateria = Convert::ToInt32(reader["Bateria"]->ToString());
+            dron->Alcance = Convert::ToDouble(reader["Alcance"]->ToString());   
         }
     }
     catch (Exception^ ex) {

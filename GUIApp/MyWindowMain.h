@@ -371,38 +371,11 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
 	private: System::Windows::Forms::ToolStripMenuItem^ dronToolStripMenuItem;
 
 
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label1;
 
 
 
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::ToolStripMenuItem^ contenedoresToolStripMenuItem;
-
-
-
-
-
-
-
-
 
 	private:
 
@@ -410,85 +383,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
 
 
 
-
-
 	private: System::Windows::Forms::ToolTip^ toolTip1;
 	private: System::Windows::Forms::ToolTip^ toolTip2;
 	private: System::Windows::Forms::ToolTip^ toolTip3;
 	private: System::Windows::Forms::ToolTip^ toolTip4;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 private: System::Windows::Forms::ToolTip^ toolTip5;
 private: System::Windows::Forms::ToolTip^ toolTip6;
@@ -501,16 +399,6 @@ private: System::Windows::Forms::ToolTip^ toolTip12;
 private: System::Windows::Forms::ToolTip^ toolTip13;
 private: System::Windows::Forms::ToolTip^ toolTip14;
 private: System::Windows::Forms::ToolTip^ toolTip15;
-
-
-
-
-
-
-
-
-
-
 
 
 

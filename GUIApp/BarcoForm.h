@@ -76,6 +76,9 @@ namespace GUIApp {
 
 
 
+
+
+
 	private: System::Windows::Forms::PictureBox^ imgInterceptor3;
 
 	protected:
@@ -118,15 +121,15 @@ namespace GUIApp {
 			this->txtBarcoCantidadCoord = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
 			this->dgvBarcos = (gcnew System::Windows::Forms::DataGridView());
-			this->IdBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->CapacidadBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->CantCoordenadasBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->btnAgregarBarco = (gcnew System::Windows::Forms::Button());
 			this->btnModificarBarco = (gcnew System::Windows::Forms::Button());
 			this->btnEliminarBarco = (gcnew System::Windows::Forms::Button());
 			this->imgInterceptor1 = (gcnew System::Windows::Forms::PictureBox());
 			this->imgInterceptor2 = (gcnew System::Windows::Forms::PictureBox());
 			this->imgInterceptor3 = (gcnew System::Windows::Forms::PictureBox());
+			this->IdBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->CapacidadBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->CantCoordenadasBarco = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcos))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imgInterceptor1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->imgInterceptor2))->BeginInit();
@@ -229,6 +232,7 @@ namespace GUIApp {
 			// 
 			// dgvBarcos
 			// 
+			this->dgvBarcos->AllowUserToAddRows = false;
 			this->dgvBarcos->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgvBarcos->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
 				this->IdBarco, this->CapacidadBarco,
@@ -236,32 +240,12 @@ namespace GUIApp {
 			});
 			this->dgvBarcos->Location = System::Drawing::Point(22, 341);
 			this->dgvBarcos->Name = L"dgvBarcos";
+			this->dgvBarcos->RowHeadersVisible = false;
 			this->dgvBarcos->RowHeadersWidth = 51;
 			this->dgvBarcos->RowTemplate->Height = 24;
 			this->dgvBarcos->Size = System::Drawing::Size(361, 493);
 			this->dgvBarcos->TabIndex = 10;
 			this->dgvBarcos->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &BarcoForm::dgvBarcos_CellClick);
-			// 
-			// IdBarco
-			// 
-			this->IdBarco->HeaderText = L"Id";
-			this->IdBarco->MinimumWidth = 6;
-			this->IdBarco->Name = L"IdBarco";
-			this->IdBarco->Width = 50;
-			// 
-			// CapacidadBarco
-			// 
-			this->CapacidadBarco->HeaderText = L"Capacidad (kg)";
-			this->CapacidadBarco->MinimumWidth = 6;
-			this->CapacidadBarco->Name = L"CapacidadBarco";
-			this->CapacidadBarco->Width = 80;
-			// 
-			// CantCoordenadasBarco
-			// 
-			this->CantCoordenadasBarco->HeaderText = L"Cantidad (x, y)";
-			this->CantCoordenadasBarco->MinimumWidth = 6;
-			this->CantCoordenadasBarco->Name = L"CantCoordenadasBarco";
-			this->CantCoordenadasBarco->Width = 125;
 			// 
 			// btnAgregarBarco
 			// 
@@ -322,6 +306,27 @@ namespace GUIApp {
 			this->imgInterceptor3->Size = System::Drawing::Size(480, 270);
 			this->imgInterceptor3->TabIndex = 16;
 			this->imgInterceptor3->TabStop = false;
+			// 
+			// IdBarco
+			// 
+			this->IdBarco->HeaderText = L"Id";
+			this->IdBarco->MinimumWidth = 6;
+			this->IdBarco->Name = L"IdBarco";
+			this->IdBarco->Width = 50;
+			// 
+			// CapacidadBarco
+			// 
+			this->CapacidadBarco->HeaderText = L"Capacidad (kg)";
+			this->CapacidadBarco->MinimumWidth = 6;
+			this->CapacidadBarco->Name = L"CapacidadBarco";
+			this->CapacidadBarco->Width = 80;
+			// 
+			// CantCoordenadasBarco
+			// 
+			this->CantCoordenadasBarco->HeaderText = L"Cantidad Coord";
+			this->CantCoordenadasBarco->MinimumWidth = 6;
+			this->CantCoordenadasBarco->Name = L"CantCoordenadasBarco";
+			this->CantCoordenadasBarco->Width = 150;
 			// 
 			// BarcoForm
 			// 

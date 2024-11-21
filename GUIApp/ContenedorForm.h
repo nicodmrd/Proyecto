@@ -147,6 +147,7 @@ namespace GUIApp {
 			// 
 			// dgvContenedores
 			// 
+			this->dgvContenedores->AllowUserToAddRows = false;
 			this->dgvContenedores->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->dgvContenedores->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(2) {
 				this->IdContenedor,
@@ -154,14 +155,13 @@ namespace GUIApp {
 			});
 			this->dgvContenedores->Location = System::Drawing::Point(23, 214);
 			this->dgvContenedores->Name = L"dgvContenedores";
+			this->dgvContenedores->RowHeadersVisible = false;
 			this->dgvContenedores->RowHeadersWidth = 51;
 			this->dgvContenedores->RowTemplate->Height = 24;
 			this->dgvContenedores->Size = System::Drawing::Size(479, 132);
 			this->dgvContenedores->TabIndex = 70;
-			//this->dgvContenedores->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ContenedorForm::dgvContenedores_CellClick);
 			this->dgvContenedores->CellClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ContenedorForm::dgvContenedores_CellClick);
 			this->dgvContenedores->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ContenedorForm::dgvContenedores_CellContentClick);
-			// 
 			// 
 			// IdContenedor
 			// 
