@@ -8,9 +8,14 @@ using namespace System::IO;
 SqlConnection^ SimuladorPersistance::Persistance::GetConnection()
 {
     SqlConnection^ conn = gcnew SqlConnection();
-    String^ password = "GESTION_DESECHOS";
-    String^ serverName = "db-gestiondesechos.cuaqice5yrvx.us-east-1.rds.amazonaws.com";
-    conn->ConnectionString = "Server=" + serverName + ";Database = dbgestiondesechos;User ID = user_proyecto; Password = " +
+    //String^ password = "GESTION_DESECHOS";
+    String^ password = "uxN3sjWvdajQ";
+
+    //String^ serverName = "db-gestiondesechos.cuaqice5yrvx.us-east-1.rds.amazonaws.com";
+    String^ serverName = "200.16.7.140";
+
+    
+    conn->ConnectionString = "Server=" + serverName + ";Database = a20217398;User ID = a20217398; Password = " +
         password + ";";
     conn->Open();
     return conn;

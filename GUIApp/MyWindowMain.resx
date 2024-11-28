@@ -128,7 +128,7 @@
     <value>Salir</value>
   </data>
   <data name="archivoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 24</value>
+    <value>73, 26</value>
   </data>
   <data name="archivoToolStripMenuItem.Text" xml:space="preserve">
     <value>Archivo</value>
@@ -164,7 +164,7 @@
     <value>Contenedores</value>
   </data>
   <data name="mantenimientoToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 24</value>
+    <value>124, 26</value>
   </data>
   <data name="mantenimientoToolStripMenuItem.Text" xml:space="preserve">
     <value>Mantenimiento</value>
@@ -176,7 +176,7 @@
     <value>Guía del software</value>
   </data>
   <data name="ayudaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 24</value>
+    <value>65, 26</value>
   </data>
   <data name="ayudaToolStripMenuItem.Text" xml:space="preserve">
     <value>Ayuda</value>
@@ -194,7 +194,7 @@
     <value>Información del proyecto</value>
   </data>
   <data name="acercaDeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 24</value>
+    <value>89, 26</value>
   </data>
   <data name="acercaDeToolStripMenuItem.Text" xml:space="preserve">
     <value>Acerca de</value>
@@ -212,7 +212,7 @@
     <value>Desechos/Tipo</value>
   </data>
   <data name="reportesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
+    <value>76, 26</value>
   </data>
   <data name="reportesToolStripMenuItem.Text" xml:space="preserve">
     <value>Reporte</value>
@@ -225,7 +225,7 @@
     <value>5, 2, 0, 2</value>
   </data>
   <data name="menuStrip2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1428, 28</value>
+    <value>1428, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip2.TabIndex" type="System.Int32, mscorlib">
