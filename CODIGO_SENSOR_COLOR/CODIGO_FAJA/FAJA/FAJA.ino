@@ -117,14 +117,14 @@ void loop() {
     // Determinar el color predominante
     String currentColor = "NEGRO"; // Por defecto es negro
 
-    if (redValue > 95 && greenValue > 90 && blueValue > 90) {
-        currentColor = "NEGRO";
-    }else if (redValue < 65 && greenValue > 175 && blueValue >125) {
-        currentColor = "ROJO";
-    } else if (redValue > 130 && greenValue >110 && blueValue < 80) {
-        currentColor = "AZUL";
-    } else if (redValue < 65 && greenValue < 50 && blueValue >40 ) {
-        currentColor = "VERDE";
+    if ((redValue > 390 && redValue < 420) && (greenValue > 415 && greenValue < 440) && (blueValue > 330 && blueValue < 360)) {
+        currentColor = "NEGRO"; 
+    }else if ((redValue > 290 && redValue < 400) && (greenValue > 340 && greenValue < 400) && (blueValue > 290 && blueValue < 345)) {
+        currentColor = "ROJO"; //PLASTICO
+    } else if (redValue < 65 && greenValue < 50 && blueValue >40) {
+        currentColor = "AZUL"; //VIDRIO
+    } else if ((redValue > 240 && redValue < 280) && (greenValue > 300 && greenValue < 335) && (blueValue > 260 && blueValue < 290) ) {
+        currentColor = "VERDE"; //CARTON
     } if (redValue < 50 && greenValue < 50 && blueValue <50 ) {
         currentColor = "OTROS";
     } 
