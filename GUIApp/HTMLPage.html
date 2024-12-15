@@ -21,7 +21,6 @@
         let bounds;
         let markerCamion;
         let rutaPuntos = [];
-        let puntosMar = [];
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
@@ -234,27 +233,28 @@
         }
 
         function generarPuntosAleatorios() {
-            const puntosRestantes = 30 - marcadores.length;
+
+            const puntosRestantes = 100 - marcadores.length;
             if (puntosRestantes <= 0) {
                 alert("No se pueden generar más de 100 puntos.");
                 return;
             }
+
             const cantidadPuntos = Math.floor(Math.random() * puntosRestantes) + 1;
             let puntosGenerados = 0;
-
+            // Llamar a la función generarPuntoMar por cada punto
             for (let i = 0; i < cantidadPuntos; i++) {
                 generarPuntoMar(() => {
                     puntosGenerados++;
                     if (puntosGenerados === cantidadPuntos) {
+                        // Cuando todos los puntos se hayan generado, hacer el pan al último marcador
                         if (marcadores.length > 0) {
                             map.panTo(marcadores[marcadores.length - 1].getPosition());
                         }
-                        generarRutaPuntosMar();
                     }
                 });
             }
         }
-
 
         function generarPuntoMar(callback) {
             const lat = Math.random() * (bounds.getNorthEast().lat() - bounds.getSouthWest().lat()) + bounds.getSouthWest().lat();
@@ -270,7 +270,6 @@
                         icon: "https://maps.google.com/mapfiles/ms/icons/blue-dot.png"
                     });
                     marcadores.push(marker);
-                    puntosMar.push(position); // Almacenar el punto en el array puntosMar
                 } else {
                     generarPuntoMar(callback);
                 }
@@ -294,192 +293,6 @@
                 return true;
             });
         }
-
-        //---------------------------------Funciones para funcionamiento del barco--------------------------------
-
-        // Coordenadas del puerto (donde se genera el dron)
-        const coordenadasPuerto = { lat: -12.053763093969444, lng: -77.14634104154212 };
-
-        // Verifica que cada punto esté sobre el agua
-        function verificarSiEsMar(position, callback) {
-            const elevator = new google.maps.ElevationService();
-            elevator.getElevationForLocations({ locations: [position] }, (results, status) => {
-                if (status === "OK" && results[0]) {
-                    callback(results[0].elevation <= 0);
-                } else {
-                    alert("No se pudo obtener la elevación: " + status);
-                }
-            });
-        }
-
-        // Verifica que todas las coordenadas interpoladas entre dos puntos estén sobre el agua
-        function verificarRutaMar(puntoInicio, puntoFin, pasos, callback) {
-            const puntosInterpolados = interpolarPuntos(puntoInicio, puntoFin, pasos);
-            let pendientes = puntosInterpolados.length;
-
-            for (const punto of puntosInterpolados) {
-                verificarSiEsMar(punto, (esMar) => {
-                    if (!esMar) {
-                        callback(false);
-                        return;
-                    }
-
-                    pendientes--;
-                    if (pendientes === 0) {
-                        callback(true);
-                    }
-                });
-            }
-        }
-
-        // Genera una ruta eficiente utilizando el algoritmo del vecino más cercano y verificando el agua
-        function generarRutaEficiente(callback) {
-            if (puntosMar.length < 1) {
-                alert("Se necesita al menos un punto para generar una ruta.");
-                return;
-            }
-
-            let ruta = [coordenadasPuerto]; // Inicia en el puerto
-            let puntosRestantes = [...puntosMar];
-
-            let puntoActual = coordenadasPuerto;
-
-            function procesarSiguientePunto() {
-                if (puntosRestantes.length === 0) {
-                    // Regresa al puerto
-                    ruta.push(coordenadasPuerto);
-                    callback(ruta);
-                    return;
-                }
-
-                let indiceMasCercano = -1;
-                let distanciaMinima = Infinity;
-
-                for (let i = 0; i < puntosRestantes.length; i++) {
-                    const distancia = calcularDistancia(puntoActual, puntosRestantes[i]);
-                    if (distancia < distanciaMinima) {
-                        distanciaMinima = distancia;
-                        indiceMasCercano = i;
-                    }
-                }
-
-                const puntoCandidato = puntosRestantes[indiceMasCercano];
-
-                // Verifica que la ruta hacia el punto candidato esté sobre el agua
-                verificarRutaMar(puntoActual, puntoCandidato, 10, (esValida) => {
-                    if (esValida) {
-                        puntoActual = puntosRestantes.splice(indiceMasCercano, 1)[0];
-                        ruta.push(puntoActual);
-                    }
-
-                    procesarSiguientePunto();
-                });
-            }
-
-            procesarSiguientePunto();
-        }
-
-        // Calcula la distancia entre dos puntos
-        function calcularDistancia(p1, p2) {
-            const R = 6371; // Radio de la Tierra en km
-            const dLat = ((p2.lat - p1.lat) * Math.PI) / 180;
-            const dLng = ((p2.lng - p1.lng) * Math.PI) / 180;
-            const lat1 = (p1.lat * Math.PI) / 180;
-            const lat2 = (p2.lat * Math.PI) / 180;
-
-            const a =
-                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.sin(dLng / 2) * Math.sin(dLng / 2) * Math.cos(lat1) * Math.cos(lat2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            return R * c; // Retorna la distancia en km
-        }
-
-        // Interpola coordenadas entre dos puntos
-        function interpolarPuntos(puntoInicio, puntoFin, pasos) {
-            const puntosInterpolados = [];
-            const deltaLat = (puntoFin.lat - puntoInicio.lat) / pasos;
-            const deltaLng = (puntoFin.lng - puntoInicio.lng) / pasos;
-
-            for (let i = 1; i <= pasos; i++) {
-                puntosInterpolados.push({
-                    lat: puntoInicio.lat + deltaLat * i,
-                    lng: puntoInicio.lng + deltaLng * i,
-                });
-            }
-            return puntosInterpolados;
-        }
-
-        // Variable global para el marcador del barco
-        let marcadorBarco;
-
-        // Mueve el barco a lo largo de la ruta generada
-        function moverBarcoRutaManual(ruta) {
-            if (ruta.length === 0) {
-                alert("No hay una ruta válida en el agua.");
-                return;
-            }
-
-            if (!marcadorBarco) {
-                marcadorBarco = new google.maps.Marker({
-                    position: ruta[0],
-                    map: map,
-                    icon: {
-                        url: "https://www.svgrepo.com/show/391077/ship.svg",
-                        scaledSize: new google.maps.Size(40, 40),
-                        anchor: new google.maps.Point(20, 20),
-                    },
-                });
-            } else {
-                marcadorBarco.setPosition(ruta[0]);
-            }
-
-            let pasoActual = 0;
-            let puntosInterpolados = [];
-
-            for (let i = 0; i < ruta.length - 1; i++) {
-                puntosInterpolados = puntosInterpolados.concat(interpolarPuntos(ruta[i], ruta[i + 1], 10));
-            }
-
-            function animarPaso() {
-                if (pasoActual < puntosInterpolados.length) {
-                    marcadorBarco.setPosition(puntosInterpolados[pasoActual]);
-                    map.panTo(puntosInterpolados[pasoActual]);
-                    pasoActual++;
-                    setTimeout(animarPaso, 100);
-                } else {
-                    alert("El barco ha regresado al puerto.");
-                }
-            }
-
-            animarPaso();
-        }
-
-        // Genera el barco en el puerto
-        function generarBarco() {
-            if (!marcadorBarco) {
-                marcadorBarco = new google.maps.Marker({
-                    position: coordenadasPuerto,
-                    map: map,
-                    icon: {
-                        url: "https://www.svgrepo.com/show/391077/ship.svg",
-                        scaledSize: new google.maps.Size(40, 40),
-                        anchor: new google.maps.Point(20, 20),
-                    },
-                });
-            } else {
-                marcadorBarco.setPosition(coordenadasPuerto);
-            }
-        }
-
-        // Función principal para generar la ruta y mover el barco
-        function generarYMoverBarcoManual() {
-            generarBarco();
-            generarRutaEficiente((rutaValida) => {
-                moverBarcoRutaManual(rutaValida);
-            });
-        }
-
-
 
     </script>
 </head>
