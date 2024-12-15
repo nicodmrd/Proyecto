@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Mapa de Google</title>
-	<style>
+    <style>
         html, body, #map {
             height: 100%;
             margin: 0;
@@ -19,19 +19,19 @@
         let marcadores = [];
         let rectangle;
         let bounds;
-        let markerCamion; 
+        let markerCamion;
         let rutaPuntos = [];
         let puntosMar = [];
 
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
-                center: { lat: -12.07488, lng: -77.155983 }, 
+                center: { lat: -12.07488, lng: -77.155983 },
                 zoom: 14,
             });
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer();
             directionsRenderer.setMap(map);
-            elevator = new google.maps.ElevationService();  
+            elevator = new google.maps.ElevationService();
         }
 
         function verificarSiEsMar(position, callback) {
@@ -40,7 +40,7 @@
             }, (results, status) => {
                 if (status === "OK" && results[0]) {
                     const elevacion = results[0].elevation;
-                    callback(elevacion <= 0); 
+                    callback(elevacion <= 0);
                 } else {
                     alert("No se pudo obtener la elevación: " + status);
                 }
@@ -182,7 +182,7 @@
             }
 
             // Comenzar el movimiento hacia el primer punto
-            moverAlSiguientePunto(); 
+            moverAlSiguientePunto();
         }
 
         function animarMovimiento(marcadorDron, latInicial, lngInicial, latFinal, lngFinal, duracion, pasos) {
