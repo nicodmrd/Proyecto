@@ -1833,7 +1833,7 @@ private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs
 	//MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");	
 }
 private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
-	MapaWeb->ExecuteScriptAsync("eliminarPuntos();");
+	MapaWeb->ExecuteScriptAsync("generarYMoverBarcoManual();");
 }
 
 private:
