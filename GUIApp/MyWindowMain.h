@@ -75,13 +75,13 @@ namespace GUIApp {
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::Label^ label20;
 	private: System::Windows::Forms::Label^ label18;
-	private: System::Windows::Forms::Label^ label7;
+
 	private: System::Windows::Forms::Label^ label19;
 	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::Label^ lblCronometro;
-	private: System::Windows::Forms::Button^ btnPruebas2;
-	private: System::Windows::Forms::Button^ btnPruebas;
+
+
 	private: Microsoft::Web::WebView2::WinForms::WebView2^ MapaWeb;
 	private: System::Windows::Forms::DataGridView^ dgvCamionesAsignados;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCamion;
@@ -108,11 +108,11 @@ namespace GUIApp {
 	private: System::Windows::Forms::Button^ btnRecargarCmbBarco;
 	private: System::Windows::Forms::Button^ btnRecargarBateria;
 	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::DataGridView^ dgvCoordenadas;
 
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdDesecho;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ IdCoordX;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ CoordY;
+
+
+
+
 	private: System::Windows::Forms::ComboBox^ cmbIdDron;
 	private: System::Windows::Forms::Button^ btnValidarDron;
 	private: System::Windows::Forms::Button^ btnAumentarContenedor;
@@ -128,7 +128,7 @@ namespace GUIApp {
 	private: System::Windows::Forms::ComboBox^ cmb3Encargado;
 	private: System::Windows::Forms::ComboBox^ cmb2Encargado;
 	private: System::Windows::Forms::ComboBox^ cmb1Encargado;
-	private: System::Windows::Forms::Button^ btnCursor;
+
 	private: System::Windows::Forms::Button^ btnAreaAnalisis;
 	private: System::Windows::Forms::Button^ btnReiniciar;
 	private: System::Windows::Forms::Button^ btnDetener;
@@ -142,6 +142,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ plasticobox;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ cartonbox;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ vidriobox;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Button^ btnAcabar;
 
 
 
@@ -187,7 +189,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
 			this->MapaWeb->Source = gcnew System::Uri("file:///ruta/a/tu/HTMLPage.html");
 
 			// Vincular el evento Click del botón btnPruebas
-			this->btnPruebas->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas_Click);
+			this->btnValidarDron->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAsignarDron_Click);
 
 
 			// DE LA CÁMARA 
@@ -231,7 +233,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ otrosbox;
 			toolTip2->SetToolTip(btnReiniciar, "Reiniciar simulaci\u00F3n");
 			toolTip3->SetToolTip(btnDetener, L"Detener simulaci\u00F3n");
 			toolTip4->SetToolTip(btnIniciar, L"Iniciar simulaci\u00F3n");
-			toolTip5->SetToolTip(btnCursor, "Cursor");
 
 			toolTip6->SetToolTip(btnValidarDron, "Validar batería del dron");
 			toolTip7->SetToolTip(btnValidarBarco, "Validar combustible del barco");
@@ -426,6 +427,8 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 		{
 			this->components = (gcnew System::ComponentModel::Container());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyWindowMain::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->archivoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->salirToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -476,15 +479,12 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->vidriobox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->otrosbox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label19 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->lblCronometro = (gcnew System::Windows::Forms::Label());
-			this->btnPruebas2 = (gcnew System::Windows::Forms::Button());
-			this->btnPruebas = (gcnew System::Windows::Forms::Button());
 			this->MapaWeb = (gcnew Microsoft::Web::WebView2::WinForms::WebView2());
 			this->dgvCamionesAsignados = (gcnew System::Windows::Forms::DataGridView());
 			this->IdCamion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -511,10 +511,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->btnRecargarCmbBarco = (gcnew System::Windows::Forms::Button());
 			this->btnRecargarBateria = (gcnew System::Windows::Forms::Button());
 			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->dgvCoordenadas = (gcnew System::Windows::Forms::DataGridView());
-			this->IdDesecho = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->IdCoordX = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->CoordY = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->cmbIdDron = (gcnew System::Windows::Forms::ComboBox());
 			this->btnValidarDron = (gcnew System::Windows::Forms::Button());
 			this->btnAumentarContenedor = (gcnew System::Windows::Forms::Button());
@@ -530,12 +526,12 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->cmb3Encargado = (gcnew System::Windows::Forms::ComboBox());
 			this->cmb2Encargado = (gcnew System::Windows::Forms::ComboBox());
 			this->cmb1Encargado = (gcnew System::Windows::Forms::ComboBox());
-			this->btnCursor = (gcnew System::Windows::Forms::Button());
 			this->btnAreaAnalisis = (gcnew System::Windows::Forms::Button());
 			this->btnReiniciar = (gcnew System::Windows::Forms::Button());
 			this->btnDetener = (gcnew System::Windows::Forms::Button());
 			this->btnIniciar = (gcnew System::Windows::Forms::Button());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->btnAcabar = (gcnew System::Windows::Forms::Button());
 			this->menuStrip2->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->videoCamara))->BeginInit();
@@ -544,7 +540,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MapaWeb))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamionesAsignados))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcosAsignados))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCoordenadas))->BeginInit();
 			this->tabControl1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -748,30 +743,33 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->desechogrid->AllowUserToDeleteRows = false;
 			this->desechogrid->AllowUserToResizeColumns = false;
 			this->desechogrid->AllowUserToResizeRows = false;
-			this->desechogrid->ReadOnly = false; // Asegúrate de que el DataGridView no sea de solo lectura
 			resources->ApplyResources(this->desechogrid, L"desechogrid");
 			this->desechogrid->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
 			this->desechogrid->BackgroundColor = System::Drawing::SystemColors::Menu;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F));
+			this->desechogrid->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->desechogrid->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::DisableResizing;
 			this->desechogrid->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
 				this->plasticobox,
 					this->cartonbox, this->vidriobox, this->otrosbox
 			});
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Arial", 7.8F));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->desechogrid->DefaultCellStyle = dataGridViewCellStyle2;
 			this->desechogrid->Name = L"desechogrid";
 			this->desechogrid->RowHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
 			this->desechogrid->RowHeadersVisible = false;
 			this->desechogrid->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToAllHeaders;
 			this->desechogrid->RowTemplate->DividerHeight = 10;
 			this->desechogrid->RowTemplate->Height = 90;
-			this->desechogrid->RowTemplate->ReadOnly = false;
 			this->desechogrid->RowTemplate->Resizable = System::Windows::Forms::DataGridViewTriState::False;
 			this->desechogrid->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &MyWindowMain::desechogrid_CellContentClick);
-			// Centralizar el texto en las celdas y en la fila de encabezado
-			System::Windows::Forms::DataGridViewCellStyle^ cellStyle = gcnew System::Windows::Forms::DataGridViewCellStyle();
-			cellStyle->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			this->desechogrid->ColumnHeadersDefaultCellStyle = cellStyle;
-			this->desechogrid->DefaultCellStyle = cellStyle;
-
 			// 
 			// plasticobox
 			// 
@@ -801,15 +799,13 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			// tabPage1
 			// 
 			this->tabPage1->BackColor = System::Drawing::Color::White;
+			this->tabPage1->Controls->Add(this->btnAcabar);
+			this->tabPage1->Controls->Add(this->label7);
 			this->tabPage1->Controls->Add(this->label20);
 			this->tabPage1->Controls->Add(this->label18);
-			this->tabPage1->Controls->Add(this->label7);
 			this->tabPage1->Controls->Add(this->label19);
 			this->tabPage1->Controls->Add(this->label3);
-			this->tabPage1->Controls->Add(this->button1);
 			this->tabPage1->Controls->Add(this->lblCronometro);
-			this->tabPage1->Controls->Add(this->btnPruebas2);
-			this->tabPage1->Controls->Add(this->btnPruebas);
 			this->tabPage1->Controls->Add(this->MapaWeb);
 			this->tabPage1->Controls->Add(this->dgvCamionesAsignados);
 			this->tabPage1->Controls->Add(this->dgvBarcosAsignados);
@@ -832,7 +828,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->tabPage1->Controls->Add(this->btnRecargarCmbBarco);
 			this->tabPage1->Controls->Add(this->btnRecargarBateria);
 			this->tabPage1->Controls->Add(this->label4);
-			this->tabPage1->Controls->Add(this->dgvCoordenadas);
 			this->tabPage1->Controls->Add(this->cmbIdDron);
 			this->tabPage1->Controls->Add(this->btnValidarDron);
 			this->tabPage1->Controls->Add(this->btnAumentarContenedor);
@@ -848,7 +843,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->tabPage1->Controls->Add(this->cmb3Encargado);
 			this->tabPage1->Controls->Add(this->cmb2Encargado);
 			this->tabPage1->Controls->Add(this->cmb1Encargado);
-			this->tabPage1->Controls->Add(this->btnCursor);
 			this->tabPage1->Controls->Add(this->btnAreaAnalisis);
 			this->tabPage1->Controls->Add(this->btnReiniciar);
 			this->tabPage1->Controls->Add(this->btnDetener);
@@ -856,6 +850,11 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->tabPage1->Name = L"tabPage1";
+			// 
+			// label7
+			// 
+			resources->ApplyResources(this->label7, L"label7");
+			this->label7->Name = L"label7";
 			// 
 			// label20
 			// 
@@ -867,11 +866,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->label18, L"label18");
 			this->label18->Name = L"label18";
 			// 
-			// label7
-			// 
-			resources->ApplyResources(this->label7, L"label7");
-			this->label7->Name = L"label7";
-			// 
 			// label19
 			// 
 			resources->ApplyResources(this->label19, L"label19");
@@ -882,31 +876,10 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->label3, L"label3");
 			this->label3->Name = L"label3";
 			// 
-			// button1
-			// 
-			this->button1->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			resources->ApplyResources(this->button1, L"button1");
-			this->button1->Name = L"button1";
-			this->button1->UseVisualStyleBackColor = true;
-			// 
 			// lblCronometro
 			// 
 			resources->ApplyResources(this->lblCronometro, L"lblCronometro");
 			this->lblCronometro->Name = L"lblCronometro";
-			// 
-			// btnPruebas2
-			// 
-			resources->ApplyResources(this->btnPruebas2, L"btnPruebas2");
-			this->btnPruebas2->Name = L"btnPruebas2";
-			this->btnPruebas2->UseVisualStyleBackColor = true;
-			this->btnPruebas2->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas2_Click);
-			// 
-			// btnPruebas
-			// 
-			resources->ApplyResources(this->btnPruebas, L"btnPruebas");
-			this->btnPruebas->Name = L"btnPruebas";
-			this->btnPruebas->UseVisualStyleBackColor = true;
-			this->btnPruebas->Click += gcnew System::EventHandler(this, &MyWindowMain::btnPruebas_Click);
 			// 
 			// MapaWeb
 			// 
@@ -1078,34 +1051,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->label4, L"label4");
 			this->label4->Name = L"label4";
 			// 
-			// dgvCoordenadas
-			// 
-			this->dgvCoordenadas->AllowUserToAddRows = false;
-			this->dgvCoordenadas->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dgvCoordenadas->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
-				this->IdDesecho,
-					this->IdCoordX, this->CoordY
-			});
-			resources->ApplyResources(this->dgvCoordenadas, L"dgvCoordenadas");
-			this->dgvCoordenadas->Name = L"dgvCoordenadas";
-			this->dgvCoordenadas->RowHeadersVisible = false;
-			this->dgvCoordenadas->RowTemplate->Height = 24;
-			// 
-			// IdDesecho
-			// 
-			resources->ApplyResources(this->IdDesecho, L"IdDesecho");
-			this->IdDesecho->Name = L"IdDesecho";
-			// 
-			// IdCoordX
-			// 
-			resources->ApplyResources(this->IdCoordX, L"IdCoordX");
-			this->IdCoordX->Name = L"IdCoordX";
-			// 
-			// CoordY
-			// 
-			resources->ApplyResources(this->CoordY, L"CoordY");
-			this->CoordY->Name = L"CoordY";
-			// 
 			// cmbIdDron
 			// 
 			this->cmbIdDron->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
@@ -1150,6 +1095,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->btnAsignarDron, L"btnAsignarDron");
 			this->btnAsignarDron->Name = L"btnAsignarDron";
 			this->btnAsignarDron->UseVisualStyleBackColor = true;
+			this->btnAsignarDron->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAsignarDron_Click);
 			// 
 			// label13
 			// 
@@ -1204,14 +1150,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->cmb1Encargado, L"cmb1Encargado");
 			this->cmb1Encargado->Name = L"cmb1Encargado";
 			// 
-			// btnCursor
-			// 
-			this->btnCursor->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			resources->ApplyResources(this->btnCursor, L"btnCursor");
-			this->btnCursor->Name = L"btnCursor";
-			this->btnCursor->UseVisualStyleBackColor = true;
-			this->btnCursor->Click += gcnew System::EventHandler(this, &MyWindowMain::btnCursor_Click);
-			// 
 			// btnAreaAnalisis
 			// 
 			this->btnAreaAnalisis->ForeColor = System::Drawing::SystemColors::ActiveBorder;
@@ -1249,6 +1187,14 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			// 
+			// btnAcabar
+			// 
+			this->btnAcabar->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			resources->ApplyResources(this->btnAcabar, L"btnAcabar");
+			this->btnAcabar->Name = L"btnAcabar";
+			this->btnAcabar->UseVisualStyleBackColor = true;
+			this->btnAcabar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAcabar_Click);
+			// 
 			// MyWindowMain
 			// 
 			resources->ApplyResources(this, L"$this");
@@ -1274,7 +1220,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MapaWeb))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCamionesAsignados))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvBarcosAsignados))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvCoordenadas))->EndInit();
 			this->tabControl1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -1313,17 +1258,18 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			List<Encargado^>^ _encargadoList = Service::ConsultarEncargados();
 			if (_encargadoList != nullptr) {
 				for each (Encargado ^ encargado in _encargadoList) {
+
 					if (encargado->Cargo == "Escaneo") {
-						cmb1Encargado->Items->Add(encargado);
+						cmb1Encargado->Items->Add(encargado); 
 					}
-					else if (encargado->Cargo == "Tratamiento de desechos") {
-						cmb4Encargado->Items->Add(encargado);
+					else if (encargado->Cargo == "Recoleccion") {
+						cmb2Encargado->Items->Add(encargado);
 					}
 					else if (encargado->Cargo == "Transporte") {
 						cmb3Encargado->Items->Add(encargado);
 					}
 					else {
-						cmb2Encargado->Items->Add(encargado);
+						cmb4Encargado->Items->Add(encargado);
 					}
 				}
 			}
@@ -1566,6 +1512,11 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 		int cantBtnInicio = 0;
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		cmb1Encargado->Enabled = false;
+		cmb2Encargado->Enabled = false;
+		cmb3Encargado->Enabled = false;
+		cmb4Encargado->Enabled = false;
+
 		cantBtnInicio++;
 		if (cantBtnInicio == 1) {
 			
@@ -1635,9 +1586,10 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 		txtAreaLargo->Text = ""+largo;
 	}
 	private: System::Void btnCursor_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+
 	}
 	private: System::Void btnDetener_Click(System::Object^ sender, System::EventArgs^ e) {
+		cantBtnInicio = 0;
 		btnValidarBarco->Enabled = false;
 		btnValidarDron->Enabled = false;
 		btnValidarCamion->Enabled = false;
@@ -1662,13 +1614,16 @@ private: System::Void btnReiniciar_Click(System::Object^ sender, System::EventAr
 	btnAsignarBarcos->Enabled = true;
 	btnAsignarCamion->Enabled = true;
 	btnAumentarContenedor->Enabled = true;
-	
+	cmb1Encargado->Enabled = true;
+	cmb2Encargado->Enabled = true;
+	cmb3Encargado->Enabled = true;
+	cmb4Encargado->Enabled = true;
+
+	segundos = 0;
+	minutos = 0;
+	horas = 0;
+	lblCronometro->Text = "00:00:00";
 }
-private: 
-	void recibirCoordenadas(double latitud, double longitud) {
-		Coordenadas^ coord = gcnew Coordenadas(latitud, longitud);
-		dgvCoordenadas->Rows->Add(coord->X, coord->Y);
-	}
 
 private: System::Void btnAsignarCamion_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ idSeleccionado = cmbIdCamion->SelectedItem->ToString();
@@ -1697,6 +1652,7 @@ private: System::Void btnAsignarCamion_Click(System::Object^ sender, System::Eve
 
 }
 private: System::Void btnAsignarBarcos_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	String^ idSeleccionado = cmbIdBarco->SelectedItem->ToString();
 	List<Barco^>^ _barcos = Service::ConsultarBarcos();
 	if (_barcos != nullptr) {
@@ -1717,6 +1673,7 @@ private: System::Void btnAsignarBarcos_Click(System::Object^ sender, System::Eve
 			dgvBarcosAsignados->Rows->Add(barcoSelecionado->Id, barcoSelecionado->CantCoordendas);
 		}
 	}
+	MapaWeb->ExecuteScriptAsync("generarYMoverBarcoManual();");
 }
 //BOTONES DE VALIDAR| RECARGAR
 private:
@@ -1828,12 +1785,10 @@ private: System::Void btnRecargarBateria_Click(System::Object^ sender, System::E
 
 }
 private: System::Void btnPruebas_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->MapaWeb->CoreWebView2->ExecuteScriptAsync("displayearDron();");
-
-	//MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");	
+	
 }
 private: System::Void btnPruebas2_Click(System::Object^ sender, System::EventArgs^ e) {
-	MapaWeb->ExecuteScriptAsync("generarYMoverBarcoManual();");
+	
 }
 
 private:
@@ -1942,5 +1897,34 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		}
 private: System::Void desechogrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		}
+private: System::Void btnAsignarDron_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->MapaWeb->CoreWebView2->ExecuteScriptAsync("displayearDron();");
+
+	//MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");	
+}
+private: System::Void btnAcabar_Click(System::Object^ sender, System::EventArgs^ e) {
+	cantBtnInicio = 0;
+	ClearControls();
+	btnValidarBarco->Enabled = true;
+	btnValidarDron->Enabled = true;
+	btnValidarCamion->Enabled = true;
+	btnRecargarBateria->Enabled = true;
+	btnRecargarCmbBarco->Enabled = true;
+	btnRecargarCmbCamion->Enabled = true;
+	btnAsignarDron->Enabled = true;
+	btnAsignarBarcos->Enabled = true;
+	btnAsignarCamion->Enabled = true;
+	btnAumentarContenedor->Enabled = true;
+	cmb1Encargado->Enabled = true;
+	cmb2Encargado->Enabled = true;
+	cmb3Encargado->Enabled = true;
+	cmb4Encargado->Enabled = true;
+
+	segundos = 0;
+	minutos = 0;
+	horas = 0;
+	lblCronometro->Text = "00:00:00";
+	timer1->Enabled = false;
+}
 };
 }

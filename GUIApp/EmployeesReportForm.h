@@ -173,18 +173,18 @@ namespace GUIApp {
 				if (cargo == "Escaneo") {
 					escaneo++;
 				}
-				else if (cargo == "Recolección") {
+				else if (cargo == "Recoleccion") {
 					recoleccion++;
 				}
 				else if (cargo == "Transporte") {
 					transporte++;
 				}
-				else if (cargo == "Tratamiento de desechos") {
+				else if (cargo == "Tratamiento") {
 					tratamiento++;
 				}
 			}
 			this->chart1->Series["Cantidad"]->Points->AddXY("Transporte", transporte);
-			this->chart1->Series["Cantidad"]->Points->AddXY("Recolección", recoleccion);
+			this->chart1->Series["Cantidad"]->Points->AddXY("Recoleccion", recoleccion);
 			this->chart1->Series["Cantidad"]->Points->AddXY("Escaneo", escaneo);
 			this->chart1->Series["Cantidad"]->Points->AddXY("Tratamiento", tratamiento);
 		}

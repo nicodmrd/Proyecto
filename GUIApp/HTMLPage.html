@@ -79,7 +79,7 @@
             });
 
             let pasoActual = 0;
-
+            /*
             function animarPaso() {
                 if (pasoActual < routePoints.length) {
                     markerCamion.setPosition(routePoints[pasoActual]);
@@ -88,6 +88,23 @@
                     setTimeout(animarPaso, 100); // Ajusta el tiempo para velocidad de la animación
                 }
             }
+            */
+            let ida = true; // Bandera para controlar si es ida o vuelta
+            function animarPaso() {
+                if (pasoActual < routePoints.length) {
+                    markerCamion.setPosition(routePoints[pasoActual]);
+                    map.panTo(routePoints[pasoActual]);
+                    pasoActual++;
+                    setTimeout(animarPaso, 100); // Ajusta el tiempo para velocidad de la animación
+                } else if (ida) {
+                    // Cuando termina la ida, invertir puntos para la vuelta
+                    ida = false;
+                    routePoints.reverse();
+                    pasoActual = 0;
+                    setTimeout(animarPaso, 100);
+                }
+            }
+            
             animarPaso();
         }
 

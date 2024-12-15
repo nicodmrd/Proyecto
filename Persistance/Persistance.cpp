@@ -523,7 +523,7 @@ int SimuladorPersistance::Persistance::AgregarCamion(Camion^ camion)
         cmd->Parameters["@Combustible"]->Precision = 10;
         cmd->Parameters["@Combustible"]->Scale = 2;
         cmd->Parameters->Add("@Matricula", System::Data::SqlDbType::VarChar,10);
-        cmd->Parameters->Add("@Cantidad", System::Data::SqlDbType::Int);
+        cmd->Parameters->Add("@Capacidad", System::Data::SqlDbType::Int);
 
         SqlParameter^ outputIdParam = gcnew SqlParameter("@Id", System::Data::SqlDbType::Int);
         outputIdParam->Direction = System::Data::ParameterDirection::Output;
@@ -533,7 +533,7 @@ int SimuladorPersistance::Persistance::AgregarCamion(Camion^ camion)
         cmd->Parameters["@Velocidad"]->Value = camion->Velocidad;
         cmd->Parameters["@Combustible"]->Value = camion->NivelCombustible;
         cmd->Parameters["@Matricula"]->Value = camion->Placa;
-        cmd->Parameters["@Cantidad"]->Value = camion->CapacidadContenedores;
+        cmd->Parameters["@Capacidad"]->Value = camion->CapacidadContenedores;
         //Paso 3: Ejecutar la sentencia de BD
         cmd->ExecuteNonQuery();
 
@@ -613,14 +613,14 @@ int SimuladorPersistance::Persistance::ActualizarCamion(Camion^ camion)
         cmd->Parameters["@Combustible"]->Precision = 10;
         cmd->Parameters["@Combustible"]->Scale = 2;
         cmd->Parameters->Add("@Matricula", System::Data::SqlDbType::VarChar, 10);
-        cmd->Parameters->Add("@Cantidad", System::Data::SqlDbType::Int);
+        cmd->Parameters->Add("@Capacidad", System::Data::SqlDbType::Int);
         cmd->Prepare();
 
         cmd->Parameters["@Id"]->Value = camion->Id;
         cmd->Parameters["@Velocidad"]->Value = camion->Velocidad;
         cmd->Parameters["@Combustible"]->Value = camion->NivelCombustible;
         cmd->Parameters["@Matricula"]->Value = camion->Placa;
-        cmd->Parameters["@Cantidad"]->Value = camion->CapacidadContenedores;
+        cmd->Parameters["@Capacidad"]->Value = camion->CapacidadContenedores;
         //Paso 3: Ejecutar la sentencia de BD
         cmd->ExecuteNonQuery();
 

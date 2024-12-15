@@ -554,9 +554,9 @@ namespace GUIApp {
 			List<Encargado^>^ _encargadoList = Service::ConsultarEncargados();
 			if (_encargadoList != nullptr) {
 				comboBox1->Items->Add("Escaneo");
-				comboBox1->Items->Add("Recolección");
+				comboBox1->Items->Add("Recoleccion");
 				comboBox1->Items->Add("Transporte");
-				comboBox1->Items->Add("Tratamiento de desechos");
+				comboBox1->Items->Add("Tratamiento");
 			}
 		}
 
