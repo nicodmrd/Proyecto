@@ -125,7 +125,7 @@ void loop() {
         currentColor = "VERDE"; // VERDE // CARTON
     } else if ((redValue > 280 && redValue < 300) && (greenValue > 260 && greenValue < 275) && (blueValue > 170 && blueValue < 180)) {
         currentColor = "AZUL"; // AZUL // VIDRIO
-    } else if ((redValue > 370 && redValue < 400) && (greenValue > 375 && greenValue < 405) && (blueValue > 305 && blueValue < 335)) {
+    } else if ((redValue > 385 && redValue < 415) && (greenValue > 390 && greenValue < 420) && (blueValue > 315 && blueValue < 345)) {
         currentColor = "OTROS"; // OTROS // OTROS
     } 
 

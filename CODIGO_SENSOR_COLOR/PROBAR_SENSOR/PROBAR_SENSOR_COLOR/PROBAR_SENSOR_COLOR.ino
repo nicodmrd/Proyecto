@@ -56,7 +56,7 @@ void loop() {
   if ((redValue > 100 && redValue < 110) && (greenValue > 230 && greenValue < 240) && (blueValue > 190 && blueValue < 280)) Serial.print(" *** PLASTICO ***"); // rojo
   if ((redValue > 290 && redValue < 320) && (greenValue > 330 && greenValue < 360) && (blueValue > 275 && blueValue < 305)) Serial.print(" *** CARTON ***"); // verde
   if ((redValue > 280 && redValue < 300) && (greenValue > 260 && greenValue < 275) && (blueValue > 170 && blueValue < 180)) Serial.print(" *** VIDRIO ***"); // azul
-  if ((redValue > 370 && redValue < 400) && (greenValue > 375 && greenValue < 405) && (blueValue > 305 && blueValue < 335)) Serial.print(" *** OTROS ***"); // blanco
+  if ((redValue > 385 && redValue < 415) && (greenValue > 390 && greenValue < 420) && (blueValue > 315 && blueValue < 345)) Serial.print(" *** OTROS ***"); // blanco
 
   
 
