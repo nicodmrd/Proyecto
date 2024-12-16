@@ -52,11 +52,13 @@ void loop() {
   Serial.print(" A: "); Serial.println(blueValue);
 
   // Clasificación del material con valores promedios
-  if ((redValue > 390 && redValue < 420) && (greenValue > 415 && greenValue < 440) && (blueValue > 330 && blueValue < 360)) Serial.print(" *** NEGRO ***");                 
-  if ((redValue > 240 && redValue < 280) && (greenValue > 300 && greenValue < 335) && (blueValue > 260 && blueValue < 290)) Serial.print(" *** CARTÓN ***");
-  if ((redValue > 290 && redValue < 400) && (greenValue > 340 && greenValue < 400) && (blueValue > 290 && blueValue < 345)) Serial.print(" *** PLASTICA ***");
-  if ((redValue > 35 && redValue < 40) && (greenValue > 47 && greenValue < 52) && (blueValue > 44 && blueValue < 49)) Serial.print(" *** VIDRIO ***");
-  if ((redValue > 35 && redValue < 40) && (greenValue > 47 && greenValue < 52) && (blueValue > 44 && blueValue < 49)) Serial.print(" *** OTROS ***");
+  if ((redValue > 500 && redValue < 520) && (greenValue > 480 && greenValue < 500) && (blueValue > 380 && blueValue < 400)) Serial.print(" *** NEGRO ***");                 
+  if ((redValue > 100 && redValue < 110) && (greenValue > 230 && greenValue < 240) && (blueValue > 190 && blueValue < 280)) Serial.print(" *** PLASTICO ***"); // rojo
+  if ((redValue > 100 && redValue < 120) && (greenValue > 130 && greenValue < 150) && (blueValue > 120 && blueValue < 130)) Serial.print(" *** CARTON ***");
+  if ((redValue > 280 && redValue < 300) && (greenValue > 260 && greenValue < 275) && (blueValue > 170 && blueValue < 180)) Serial.print(" *** VIDRIO ***"); // azul
+  if ((redValue > 365 && redValue < 380) && (greenValue > 370 && greenValue < 380) && (blueValue > 300 && blueValue < 310)) Serial.print(" *** OTROS ***"); // blanco
+
+  
 
   Serial.println();
   delay(200);
