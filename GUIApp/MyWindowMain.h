@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include "EncargadosForm.h"
 #include "EmployeesReportForm.h"
@@ -479,6 +479,7 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->vidriobox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->otrosbox = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->btnAcabar = (gcnew System::Windows::Forms::Button());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->label20 = (gcnew System::Windows::Forms::Label());
 			this->label18 = (gcnew System::Windows::Forms::Label());
@@ -531,7 +532,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->btnDetener = (gcnew System::Windows::Forms::Button());
 			this->btnIniciar = (gcnew System::Windows::Forms::Button());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
-			this->btnAcabar = (gcnew System::Windows::Forms::Button());
 			this->menuStrip2->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->videoCamara))->BeginInit();
@@ -850,6 +850,14 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			resources->ApplyResources(this->tabPage1, L"tabPage1");
 			this->tabPage1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->tabPage1->Name = L"tabPage1";
+			// 
+			// btnAcabar
+			// 
+			this->btnAcabar->ForeColor = System::Drawing::SystemColors::ActiveBorder;
+			resources->ApplyResources(this->btnAcabar, L"btnAcabar");
+			this->btnAcabar->Name = L"btnAcabar";
+			this->btnAcabar->UseVisualStyleBackColor = true;
+			this->btnAcabar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAcabar_Click);
 			// 
 			// label7
 			// 
@@ -1186,14 +1194,6 @@ private: System::Windows::Forms::ToolTip^ toolTip15;
 			this->tabControl1->Controls->Add(this->tabPage2);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
-			// 
-			// btnAcabar
-			// 
-			this->btnAcabar->ForeColor = System::Drawing::SystemColors::ActiveBorder;
-			resources->ApplyResources(this->btnAcabar, L"btnAcabar");
-			this->btnAcabar->Name = L"btnAcabar";
-			this->btnAcabar->UseVisualStyleBackColor = true;
-			this->btnAcabar->Click += gcnew System::EventHandler(this, &MyWindowMain::btnAcabar_Click);
 			// 
 			// MyWindowMain
 			// 
@@ -1648,7 +1648,18 @@ private: System::Void btnAsignarCamion_Click(System::Object^ sender, System::Eve
 	}
 	puerto->Posicion = gcnew Coordenadas(-12.069060413055682, -77.07815928837975);
 	pucp->Posicion = gcnew Coordenadas(-12.053763093969444, -77.14634104154212);
-	MapaWeb->ExecuteScriptAsync("moverCamion("+puerto->Posicion+","+""+pucp->Posicion+"); ");
+	if (txtBarcoCombustible->Text == "100%") {
+		MapaWeb->ExecuteScriptAsync("moverCamion(" + puerto->Posicion + "," + "" + pucp->Posicion + "); ");
+	}
+	else {
+		MessageBox::Show(
+			"El combustible del barco no está al 100%. Por favor, recargue antes de continuar.",
+			"Error de Batería",
+			MessageBoxButtons::OK,
+			MessageBoxIcon::Error
+		);
+	}
+
 
 }
 private: System::Void btnAsignarBarcos_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1673,7 +1684,18 @@ private: System::Void btnAsignarBarcos_Click(System::Object^ sender, System::Eve
 			dgvBarcosAsignados->Rows->Add(barcoSelecionado->Id, barcoSelecionado->CantCoordendas);
 		}
 	}
-	MapaWeb->ExecuteScriptAsync("generarYMoverBarcoManual();");
+	if (txtBarcoCombustible->Text == "100%") {
+		MapaWeb->ExecuteScriptAsync("generarYMoverBarcoManual();");
+	}
+	else {
+		MessageBox::Show(
+			"El combustible del barco no está al 100%. Por favor, recargue antes de continuar.",
+			"Error de Batería",
+			MessageBoxButtons::OK,
+			MessageBoxIcon::Error
+		);
+	}
+	
 }
 //BOTONES DE VALIDAR| RECARGAR
 private:
@@ -1898,7 +1920,19 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void desechogrid_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 		}
 private: System::Void btnAsignarDron_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->MapaWeb->CoreWebView2->ExecuteScriptAsync("displayearDron();");
+	if (txtDronBateria -> Text == "100%") {
+		this->MapaWeb->CoreWebView2->ExecuteScriptAsync("displayearDron();");
+	}
+	else {
+		MessageBox::Show(
+			"La batería del dron no está al 100%. Por favor, recargue antes de continuar.",
+			"Error de Batería",
+			MessageBoxButtons::OK,
+			MessageBoxIcon::Error
+		);
+	}
+
+	
 
 	//MapaWeb->ExecuteScriptAsync("generarPuntosAleatorios();");	
 }
