@@ -23,7 +23,7 @@ Servo ServoMotor;
 LiquidCrystal_I2C lcd(0x27,16,2);
 
 //Variable
-int VELOCIDAD = 160;			// variable para almacenar valor de velocidad
+int VELOCIDAD = 80;			// variable para almacenar valor de velocidad
 
 // Variables para almacenar los valores de cada color
 int redValue = 0;
@@ -117,16 +117,16 @@ void loop() {
     // Determinar el color predominante
     String currentColor = "NEGRO"; // Por defecto es negro
 
-    if ((redValue > 500 && redValue < 520) && (greenValue > 480 && greenValue < 500) && (blueValue > 380 && blueValue < 400)) {
+    if ((redValue > 490 && redValue < 550) && (greenValue > 480 && greenValue < 540) && (blueValue > 380 && blueValue < 440)) {
         currentColor = "NEGRO";
     } else if ((redValue > 100 && redValue < 110) && (greenValue > 230 && greenValue < 240) && (blueValue > 190 && blueValue < 280)) {
-        currentColor = "PLASTICO";
-    } else if ((redValue > 100 && redValue < 120) && (greenValue > 130 && greenValue < 150) && (blueValue > 120 && blueValue < 130)) {
-        currentColor = "CARTON";
+        currentColor = "ROJO"; // ROJO // PLASTICO
+    } else if ((redValue > 290 && redValue < 320) && (greenValue > 330 && greenValue < 360) && (blueValue > 275 && blueValue < 305)) {
+        currentColor = "VERDE"; // VERDE // CARTON
     } else if ((redValue > 280 && redValue < 300) && (greenValue > 260 && greenValue < 275) && (blueValue > 170 && blueValue < 180)) {
-        currentColor = "VIDRIO";
-    } else if ((redValue > 365 && redValue < 380) && (greenValue > 370 && greenValue < 380) && (blueValue > 300 && blueValue < 310)) {
-        currentColor = "OTROS";
+        currentColor = "AZUL"; // AZUL // VIDRIO
+    } else if ((redValue > 370 && redValue < 400) && (greenValue > 375 && greenValue < 405) && (blueValue > 305 && blueValue < 335)) {
+        currentColor = "OTROS"; // OTROS // OTROS
     } 
 
     // Registrar el color solo si ha cambiado de negro a un color válido
